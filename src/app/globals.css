@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Animations ──────────────────────────────────────────────────────────── */
+
+@keyframes orb-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(28px, -18px) scale(1.04); }
+  66%       { transform: translate(-16px, 24px) scale(0.97); }
+}
+
+@keyframes orb-drift-alt {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(-22px, 14px) scale(1.02); }
+  75%       { transform: translate(18px, -12px) scale(0.98); }
+}
+
+@keyframes orb-drift-slow {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50%       { transform: translate(12px, -8px) scale(1.03) rotate(8deg); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Design Tokens ───────────────────────────────────────────────────────── */
+:root {
+  /* Brand colors */
+  --color-navy:       #1e3a5f;
+  --color-navy-light: #2d5278;
+  --color-navy-dark:  #0e1e33;
+  --color-gold:       #c9a84c;
+  --color-gold-light: #edc96a;
+  --color-gold-dark:  #8c6d24;
+
+  /* Backgrounds */
+  --color-bg:         #faf8f5;
+  --color-bg-card:    #ffffff;
+  --color-bg-muted:   #f4f0ea;
+
+  /* Text */
+  --color-text:       #1e293b;
+  --color-text-muted: #64748b;
+  --color-text-faint: #94a3b8;
+
+  /* Borders */
+  --color-border:       #e2e8f0;
+  --color-border-light: #f1f5f9;
+
+  /* Shadows */
+  --shadow-card:    0 1px 3px 0 rgba(30, 58, 95, 0.06), 0 1px 2px -1px rgba(30, 58, 95, 0.04);
+  --shadow-card-md: 0 4px 12px 0 rgba(30, 58, 95, 0.08), 0 2px 4px -1px rgba(30, 58, 95, 0.05);
+
+  /* Spacing rhythm */
+  --section-gap:  6rem;
+  --content-width: 72rem;
+}
+
+/* ── Base Reset & Document ───────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* ── Heading hierarchy ────────────────────────────────────────────────── */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-crimson), Georgia, serif;
+    color: var(--color-navy);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h1 { font-size: 2.75rem; letter-spacing: -0.02em; }
+  h2 { font-size: 2rem;    letter-spacing: -0.01em; }
+  h3 { font-size: 1.5rem;  letter-spacing: -0.005em; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+
+  /* ── Body text ────────────────────────────────────────────────────────── */
+  p {
+    color: var(--color-text);
+    line-height: 1.75;
+  }
+
+  /* ── Links ────────────────────────────────────────────────────────────── */
+  a {
+    color: var(--color-navy);
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+
+  a:hover {
+    color: var(--color-gold-dark);
+  }
+
+  /* ── Lists ────────────────────────────────────────────────────────────── */
+  ul, ol {
+    padding-left: 1.25rem;
+  }
+
+  li {
+    margin-bottom: 0.25rem;
+    line-height: 1.65;
+  }
+
+  /* ── Horizontal rule ──────────────────────────────────────────────────── */
+  hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 2rem 0;
+  }
+
+  /* ── Focus ring ───────────────────────────────────────────────────────── */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* ── Selection ────────────────────────────────────────────────────────── */
+  ::selection {
+    background-color: rgba(201, 168, 76, 0.2);
+    color: var(--color-navy-dark);
+  }
+}
+
+/* ── Component Utilities ─────────────────────────────────────────────────── */
+@layer components {
+
+  /* Layout containers */
+  .container-main {
+    @apply max-w-site mx-auto px-4 sm:px-6 lg:px-10;
+  }
+
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-4 sm:px-6;
+  }
+
+  /* Section spacing */
+  .section {
+    padding-top: var(--section-gap);
+    padding-bottom: var(--section-gap);
+  }
+
+  .section-sm {
+    @apply py-10 sm:py-14;
+  }
+
+  /* Divider with gold accent */
+  .gold-rule {
+    @apply border-none h-px;
+    background: linear-gradient(to right, var(--color-gold), transparent);
+  }
+
+  /* Scholarly prose body — used in bios, abstracts */
+  .prose-scholar {
+    font-family: var(--font-crimson), Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text);
+  }
+
+  .prose-scholar p + p {
+    margin-top: 1.25em;
+  }
+
+  /* Subtle inset surface — used for quoted text, info blocks */
+  .surface-inset {
+    background-color: var(--color-bg-muted);
+    border-left: 3px solid var(--color-gold);
+    @apply px-5 py-4 rounded-r-lg;
+  }
+
+  /* Gold underline accent on hover — for nav links, card titles */
+  .link-accent {
+    @apply relative inline-block;
+  }
+
+  .link-accent::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px transition-all duration-300;
+    background-color: var(--color-gold);
+  }
+
+  .link-accent:hover::after {
+    @apply w-full;
+  }
+}
+
+/* ── Utility Overrides ───────────────────────────────────────────────────── */
+@layer utilities {
+  .text-navy       { color: var(--color-navy); }
+  .text-gold       { color: var(--color-gold); }
+  .text-muted      { color: var(--color-text-muted); }
+  .text-faint      { color: var(--color-text-faint); }
+  .bg-site         { background-color: var(--color-bg); }
+  .bg-card         { background-color: var(--color-bg-card); }
+  .bg-muted        { background-color: var(--color-bg-muted); }
+  .border-default  { border-color: var(--color-border); }
+  .shadow-card     { box-shadow: var(--shadow-card); }
+  .shadow-card-md  { box-shadow: var(--shadow-card-md); }
+
+  /* Font shorthand */
+  .font-display    { font-family: var(--font-crimson), Georgia, serif; }
+  .font-body       { font-family: var(--font-inter), system-ui, sans-serif; }
+}

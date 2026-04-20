@@ -1,0 +1,32 @@
+{
+  "id": "scale-development-2021",
+  "title": {
+    "en": "Development and Validation of the Academic Self-Efficacy Scale for Turkish University Students",
+    "tr": "Türk Üniversite Öğrencileri için Akademik Öz-Yeterlik Ölçeğinin Geliştirilmesi ve Geçerlik Çalışması"
+  },
+  "status": "completed",
+  "description": {
+    "en": "A three-year psychometric project focused on developing a culturally adapted measure of academic self-efficacy for use in the Turkish higher education context. The project involved item generation, expert review, pilot testing, and large-scale validation with over 1,200 students across five universities.",
+    "tr": "Türk yükseköğretim bağlamında kullanılmak üzere kültürel açıdan uyarlanmış bir akademik öz-yeterlik ölçümü geliştirmeye odaklanan üç yıllık psikometrik bir proje. Proje; madde oluşturma, uzman incelemesi, pilot uygulama ve beş üniversiteden 1200'den fazla öğrenciyle büyük ölçekli geçerlik çalışmalarını kapsamaktadır."
+  },
+  "role": "Principal Investigator",
+  "funding": {
+    "agency": "BAP (Scientific Research Projects Coordination Unit)",
+    "grant_number": "BAP-2021-001",
+    "amount": "75.000 TL"
+  },
+  "collaborators": [
+    {
+      "name": "Dr. Fatma Demir",
+      "affiliation": "Istanbul University, Faculty of Education"
+    }
+  ],
+  "start_date": "2021-01",
+  "end_date": "2023-12",
+  "outputs": [
+    "erken-2022-conference-example",
+    "erken-2024-example"
+  ],
+  "image": "",
+  "featured": false
+}

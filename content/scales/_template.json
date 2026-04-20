@@ -1,0 +1,75 @@
+{
+  "__instructions": "Copy this file, rename it to your-scale-name.json, and fill in the fields. Delete all __note keys before saving.",
+
+  "id": "your-scale-name",
+  "__id_note": "Must exactly match the filename without .json. Use lowercase letters, numbers, and hyphens.",
+
+  "name": {
+    "en": "Full Name of the Scale in English",
+    "tr": "Ölçeğin Türkçe Tam Adı"
+  },
+
+  "abbreviation": "ABBR",
+  "__abbreviation_note": "Short acronym used to refer to the scale. Leave empty string if none.",
+
+  "description": {
+    "en": "A brief description of what this scale measures, who it is for, and its main use cases.",
+    "tr": "Bu ölçeğin ne ölçtüğüne, kime yönelik olduğuna ve temel kullanım alanlarına ilişkin kısa bir açıklama."
+  },
+
+  "item_count": 20,
+  "__item_count_note": "Total number of items (questions) in the scale as an integer.",
+
+  "subscales": [
+    "Subscale 1 Name",
+    "Subscale 2 Name"
+  ],
+  "__subscales_note": "Array of subscale names. Leave as empty array [] if the scale has no subscales.",
+
+  "response_format": "5-point Likert (1 = Never, 5 = Always)",
+  "__response_format_note": "Describe the response options. E.g. '7-point Likert', 'Yes/No', 'Frequency scale (0-3)'.",
+
+  "target_population": "University students aged 18-25",
+  "__target_population_note": "Who the scale is designed to be used with.",
+
+  "languages_available": ["tr", "en"],
+  "__languages_available_note": "Array of ISO 639-1 language codes for available translations.",
+
+  "reliability": {
+    "cronbach_alpha_total": 0.89,
+    "__cronbach_note": "Overall Cronbach's alpha. Remove this comment key before saving.",
+    "cronbach_alpha_subscales": {
+      "Subscale 1 Name": 0.82,
+      "Subscale 2 Name": 0.85
+    },
+    "__subscale_alpha_note": "Alpha per subscale. Match names exactly to the subscales array. Remove this key.",
+    "test_retest": "r = .78 (4-week interval)",
+    "__test_retest_note": "Test-retest reliability if available. Leave empty string if not."
+  },
+
+  "validity_notes": {
+    "en": "Brief description of validity evidence: factor structure, convergent/discriminant validity, etc.",
+    "tr": "Geçerlilik kanıtlarının kısa açıklaması: faktör yapısı, yakınsak/ayrışan geçerlilik vb."
+  },
+
+  "downloads": {
+    "scale_form": "/downloads/your-scale-form.pdf",
+    "__form_note": "PDF of the scale form participants fill out. Remove this key.",
+    "scoring_guide": "/downloads/your-scale-scoring.pdf",
+    "__scoring_note": "PDF scoring/interpretation guide for researchers. Remove this key.",
+    "manual": "/downloads/your-scale-manual.pdf",
+    "__manual_note": "Full technical manual PDF. Leave empty string if not available. Remove this key."
+  },
+
+  "citation": {
+    "en": "Lastname, F. (2024). Full scale name [Scale name in brackets]. Journal Name, 10(2), 1-20. https://doi.org/10.xxxx/xxxx",
+    "tr": "Soyadı, A. (2024). Ölçeğin tam adı [Köşeli parantez içinde kısa ad]. Dergi Adı, 10(2), 1-20. https://doi.org/10.xxxx/xxxx"
+  },
+  "__citation_note": "APA-format citation for how others should cite this scale.",
+
+  "reference_publication": "lastname-2024-keyword",
+  "__reference_publication_note": "The id field of the publication JSON where this scale was originally published/validated. Leave empty string if not in your publications list.",
+
+  "featured": false,
+  "__featured_note": "Set to true to highlight this scale at the top of the scales page."
+}

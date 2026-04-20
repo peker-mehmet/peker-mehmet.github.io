@@ -1,0 +1,31 @@
+{
+  "id": "erken-2024-example",
+  "type": "journal",
+  "title": {
+    "en": "Cognitive Load and Working Memory in Second Language Acquisition",
+    "tr": "İkinci Dil Ediniminde Bilişsel Yük ve Çalışma Belleği"
+  },
+  "authors": [
+    "Erken, Mehmet",
+    "Yılmaz, Ayşe",
+    "Smith, John"
+  ],
+  "year": 2024,
+  "journal": "Journal of Cognitive Psychology",
+  "conference": "",
+  "publisher": "",
+  "book_title": "",
+  "editors": [],
+  "volume": "36",
+  "issue": "2",
+  "pages": "145-168",
+  "doi": "10.1080/20445911.2024.000000",
+  "url": "",
+  "pdf": "/downloads/erken-2024-example.pdf",
+  "abstract": {
+    "en": "This study investigates the relationship between cognitive load and working memory capacity during second language acquisition tasks. Using a dual-task paradigm with 120 undergraduate participants, we demonstrate that high cognitive load significantly impairs phonological loop functioning, with implications for classroom instruction.",
+    "tr": "Bu çalışma, ikinci dil edinimi görevleri sırasında bilişsel yük ile çalışma belleği kapasitesi arasındaki ilişkiyi incelemektedir. 120 lisans öğrencisiyle çift görev paradigması kullanılarak, yüksek bilişsel yükün fonolojik döngü işlevselliğini anlamlı biçimde bozduğu gösterilmiştir."
+  },
+  "tags": ["working memory", "cognitive load", "second language acquisition", "phonological loop"],
+  "featured": true
+}

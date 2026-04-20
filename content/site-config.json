@@ -1,0 +1,216 @@
+{
+  "__instructions": "This is the central configuration file for your academic website. Fill in your own details below. Delete all __note keys when you are done. Bilingual fields use { 'en': '...', 'tr': '...' } — fill in both languages.",
+
+  "owner": {
+    "name": {
+      "full": "Your Full Name",
+      "__full_note": "Your name as it appears on publications, e.g. 'Mehmet Erken'",
+
+      "display": "Your Name",
+      "__display_note": "Shorter form used in the nav bar and hero section, e.g. 'M. Erken'"
+    },
+
+    "title": {
+      "en": "Assistant Professor",
+      "tr": "Dr. Öğr. Üyesi",
+      "__note": "Your academic rank in both languages. Examples: 'Associate Professor' / 'Doç. Dr.', 'Professor' / 'Prof. Dr.'"
+    },
+
+    "position": {
+      "en": "Researcher in Cognitive Psychology",
+      "tr": "Bilişsel Psikoloji Araştırmacısı",
+      "__note": "One-line description of your role/specialty shown under your name on the homepage."
+    }
+  },
+
+  "institution": {
+    "name": {
+      "en": "Your University Name",
+      "tr": "Üniversitenizin Adı",
+      "__note": "Full official name of your institution in both languages."
+    },
+
+    "department": {
+      "en": "Department of Psychology",
+      "tr": "Psikoloji Bölümü",
+      "__note": "Your department or faculty in both languages."
+    },
+
+    "faculty": {
+      "en": "Faculty of Arts and Sciences",
+      "tr": "Fen-Edebiyat Fakültesi",
+      "__note": "The faculty/college your department belongs to. Leave empty string if not applicable."
+    },
+
+    "address": {
+      "en": "Your University, Department of Psychology, 00000 City, Country",
+      "tr": "Üniversite Adı, Psikoloji Bölümü, 00000 Şehir, Türkiye",
+      "__note": "Full mailing address. Shown on the Contact page."
+    },
+
+    "office": {
+      "en": "Room 000, Building Name",
+      "tr": "Bina Adı, Oda 000",
+      "__note": "Office room and building. Shown on the Contact page."
+    }
+  },
+
+  "photo": {
+    "profile": "/images/profile.jpg",
+    "__profile_note": "Path to your profile photo. Place the image in /public/images/ and reference it here. Recommended size: 400×400 px square.",
+
+    "alt": {
+      "en": "Photo of Your Full Name",
+      "tr": "Fotoğraf: Adınız Soyadınız",
+      "__note": "Alt text for accessibility. Replace with your actual name."
+    }
+  },
+
+  "bio": {
+    "short": {
+      "en": "Your Name is an Assistant Professor of Psychology at Your University, specializing in cognitive psychology and memory research.",
+      "tr": "Adınız Soyadınız, Üniversite Adı'nda Psikoloji Bölümü'nde Öğretim Üyesi olup bilişsel psikoloji ve bellek araştırmaları üzerine çalışmaktadır.",
+      "__note": "1–2 sentence bio. Used on the homepage hero section and in page meta descriptions."
+    },
+
+    "full": {
+      "en": [
+        "Paragraph 1 — Background and current position: Describe where you work, your general research area, and how long you have been in academia. Example: 'I am an Assistant Professor of Psychology at [University], where I have been a faculty member since [year]. My research lies at the intersection of cognitive psychology and educational science, with a particular focus on how memory and attention shape learning outcomes.'",
+
+        "Paragraph 2 — Research focus and methods: Go deeper into what you study and how. Example: 'My empirical work draws on behavioral experiments, psychometric scale development, and longitudinal survey methods. A central theme in my research is understanding how individual differences in working memory capacity predict performance in complex cognitive tasks such as language learning and academic problem-solving.'",
+
+        "Paragraph 3 — Funding, projects, and collaborations: Mention key grants or projects. Example: 'My research has been supported by TÜBİTAK and institutional funding. I lead an ongoing TÜBİTAK 1001 project examining metacognition and resilience in first-generation university students, in collaboration with researchers at [Partner University A] and [Partner University B].'",
+
+        "Paragraph 4 — Teaching, mentorship, and broader goals: Example: 'Beyond research, I am committed to training the next generation of psychological scientists. I teach undergraduate and graduate courses in cognitive psychology, research methods, and psychometrics. I welcome inquiries from prospective graduate students whose interests align with my lab's work.'"
+      ],
+      "tr": [
+        "1. Paragraf — Geçmiş ve mevcut pozisyon: Çalıştığınız yeri, genel araştırma alanınızı ve akademide geçirdiğiniz süreyi açıklayın. Örnek: '[Üniversite] Psikoloji Bölümü'nde Öğretim Üyesi olarak görev yapmaktayım ve [yıl]'dan bu yana bu kurumda çalışmaktayım. Araştırmalarım bilişsel psikoloji ile eğitim bilimi kesişiminde yer almakta olup bellek ve dikkat süreçlerinin öğrenme çıktılarını nasıl şekillendirdiğine odaklanmaktadır.'",
+
+        "2. Paragraf — Araştırma odağı ve yöntemler: Örnek: 'Deneysel çalışmalarımda davranışsal deneyler, psikometrik ölçek geliştirme ve boylamsal anket yöntemlerini kullanmaktayım. Araştırmalarımın temel eksenini, çalışma belleği kapasitesindeki bireysel farklılıkların dil öğrenimi ve akademik problem çözme gibi karmaşık bilişsel görevlerdeki performansı nasıl yordadığını anlamak oluşturmaktadır.'",
+
+        "3. Paragraf — Fonlar, projeler ve işbirlikleri: Örnek: 'Araştırmalarım TÜBİTAK ve kurumsal fonlarla desteklenmektedir. [Ortak Üniversite A] ve [Ortak Üniversite B] araştırmacılarıyla iş birliği içinde, birinci nesil üniversite öğrencilerinde üstbiliş ve dayanıklılığı inceleyen bir TÜBİTAK 1001 projesini yürütmekteyim.'",
+
+        "4. Paragraf — Öğretim, mentorluk ve genel hedefler: Örnek: 'Araştırmanın yanı sıra gelecek nesil psikoloji bilimciler yetiştirmeye önem veriyorum. Bilişsel psikoloji, araştırma yöntemleri ve psikometri alanlarında lisans ve lisansüstü dersler vermekteyim. Araştırma ilgi alanları laboratuvarımın çalışmalarıyla örtüşen lisansüstü öğrenci adaylarının başvurularını memnuniyetle karşılıyorum.'"
+      ],
+      "__note": "Full bio shown on the About page. Each item in the array is one paragraph. Write in first person."
+    }
+  },
+
+  "research_interests": {
+    "en": [
+      "Working Memory and Cognitive Load",
+      "Second Language Acquisition and Bilingualism",
+      "Psychometric Scale Development",
+      "Academic Self-Efficacy and Motivation",
+      "Metacognition and Self-Regulated Learning"
+    ],
+    "tr": [
+      "Çalışma Belleği ve Bilişsel Yük",
+      "İkinci Dil Edinimi ve İki Dillilik",
+      "Psikometrik Ölçek Geliştirme",
+      "Akademik Öz-Yeterlik ve Motivasyon",
+      "Üstbiliş ve Öz-Düzenlemeli Öğrenme"
+    ],
+    "__note": "Shown as a bullet list on the About and Research pages. Keep each item short (3–6 words)."
+  },
+
+  "education": [
+    {
+      "degree": {
+        "en": "Ph.D. in Psychology",
+        "tr": "Psikoloji Doktorası (Ph.D.)"
+      },
+      "institution": {
+        "en": "Name of University, City, Country",
+        "tr": "Üniversite Adı, Şehir, Ülke"
+      },
+      "year": "20XX",
+      "thesis": {
+        "en": "Thesis title goes here",
+        "tr": "Tez başlığı buraya yazılır"
+      },
+      "__thesis_note": "Leave thesis as empty strings if you prefer not to list it."
+    },
+    {
+      "degree": {
+        "en": "M.Sc. in Psychology",
+        "tr": "Psikoloji Yüksek Lisansı (M.Sc.)"
+      },
+      "institution": {
+        "en": "Name of University, City, Country",
+        "tr": "Üniversite Adı, Şehir, Ülke"
+      },
+      "year": "20XX",
+      "thesis": {
+        "en": "Thesis title goes here",
+        "tr": "Tez başlığı buraya yazılır"
+      }
+    },
+    {
+      "degree": {
+        "en": "B.Sc. in Psychology",
+        "tr": "Psikoloji Lisansı (B.Sc.)"
+      },
+      "institution": {
+        "en": "Name of University, City, Country",
+        "tr": "Üniversite Adı, Şehir, Ülke"
+      },
+      "year": "20XX",
+      "thesis": {
+        "en": "",
+        "tr": ""
+      }
+    }
+  ],
+  "__education_note": "List degrees from most recent to oldest. Add or remove objects as needed.",
+
+  "links": {
+    "email": "yourname@university.edu.tr",
+    "__email_note": "Your institutional email address. Shown on the Contact page and footer.",
+
+    "google_scholar": "https://scholar.google.com/citations?user=YOUR_ID",
+    "__scholar_note": "Full URL to your Google Scholar profile. Leave empty string to hide this link.",
+
+    "orcid": "https://orcid.org/0000-0000-0000-0000",
+    "__orcid_note": "Full ORCID profile URL. Your ORCID iD has the format 0000-0000-0000-0000.",
+
+    "researchgate": "https://www.researchgate.net/profile/Your-Name",
+    "__researchgate_note": "Full URL to your ResearchGate profile. Leave empty string to hide.",
+
+    "linkedin": "https://www.linkedin.com/in/your-profile",
+    "__linkedin_note": "Full URL to your LinkedIn profile. Leave empty string to hide.",
+
+    "twitter": "https://twitter.com/yourhandle",
+    "__twitter_note": "Full URL to your Twitter/X profile. Leave empty string to hide.",
+
+    "cv": "/downloads/cv-en.pdf",
+    "__cv_note": "Path to your CV PDF in /public/downloads/. Provide separate paths per language or use one for both.",
+
+    "cv_tr": "/downloads/cv-tr.pdf",
+    "__cv_tr_note": "Turkish CV. Leave same as cv or empty string if you have only one version."
+  },
+
+  "languages": [
+    {
+      "name": { "en": "Turkish", "tr": "Türkçe" },
+      "level": { "en": "Native", "tr": "Anadili" }
+    },
+    {
+      "name": { "en": "English", "tr": "İngilizce" },
+      "level": { "en": "Fluent (C1)", "tr": "İleri Düzey (C1)" }
+    },
+    {
+      "name": { "en": "German", "tr": "Almanca" },
+      "level": { "en": "Intermediate (B1)", "tr": "Orta Düzey (B1)" }
+    }
+  ],
+  "__languages_note": "Add or remove language objects. Shown on the About page. Use CEFR levels (A1–C2) or descriptors like 'Native', 'Fluent', 'Basic'.",
+
+  "contact": {
+    "note": {
+      "en": "I welcome inquiries from students, collaborators, and journalists. I aim to respond to all emails within five working days. For graduate program applications, please review my research interests above before getting in touch.",
+      "tr": "Öğrenci, iş birlikçi ve gazetecilerin sorularını memnuniyetle karşılıyorum. Tüm e-postalara beş iş günü içinde yanıt vermeye çalışıyorum. Lisansüstü program başvuruları için iletişime geçmeden önce lütfen yukarıdaki araştırma ilgi alanlarımı inceleyin."
+    },
+    "__note": "Message shown at the top of the Contact page to set expectations for email responses."
+  }
+}

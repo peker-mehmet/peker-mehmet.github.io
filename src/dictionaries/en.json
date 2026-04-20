@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "site_name": "Academic Website",
+    "home": "Home",
+    "about": "About",
+    "research": "Research",
+    "publications": "Publications",
+    "scales": "Scales",
+    "news": "News",
+    "teaching": "Teaching",
+    "contact": "Contact",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "switch_lang": "Switch to Turkish"
+  },
+  "home": {
+    "greeting": "Welcome",
+    "role": "Researcher & Academic",
+    "tagline": "Exploring the frontiers of knowledge through rigorous research.",
+    "cta_scales": "View My Scales",
+    "cta_publications": "See Publications",
+    "cta_research": "View Research",
+    "cta_contact": "Get in Touch",
+    "research_interests_title": "Research Interests",
+    "highlights_title": "Recent Highlights",
+    "recent_publications_title": "Recent Publications",
+    "featured_scales_title": "Scales & Measures",
+    "latest_news_title": "Latest News",
+    "see_all_news": "See all updates",
+    "see_all_publications": "All publications",
+    "see_all_scales": "All scales",
+    "read_more": "Read more",
+    "download_form": "Download Form",
+    "scoring_guide": "Scoring Guide",
+    "connect_title": "Connect",
+    "no_publications": "Publications coming soon.",
+    "no_scales": "Scales coming soon.",
+    "no_news": "No news yet.",
+    "published_in": "in",
+    "items": "items",
+    "subscales": "subscales",
+    "available_in": "Available in",
+    "alpha": "α",
+    "cv_download": "Download CV",
+    "view_abstract": "Abstract",
+    "type_journal": "Journal Article",
+    "type_conference": "Conference Paper",
+    "type_book": "Book",
+    "type_book_chapter": "Book Chapter",
+    "type_thesis": "Thesis",
+    "type_preprint": "Preprint"
+  },
+  "about": {
+    "title": "About Me",
+    "bio_placeholder": "I am a researcher at [University]. My work focuses on [research area]. I completed my PhD at [University] in [year]."
+  },
+  "research": {
+    "title": "Research",
+    "interests_title": "Research Interests",
+    "projects_title": "Current Projects"
+  },
+  "publications": {
+    "title": "Publications",
+    "journal": "Journal Articles",
+    "conference": "Conference Papers",
+    "book": "Books & Chapters"
+  },
+  "scales": {
+    "title": "Scales"
+  },
+  "news": {
+    "title": "News"
+  },
+  "teaching": {
+    "title": "Teaching",
+    "courses_title": "Courses"
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "Email",
+    "office": "Office",
+    "address": "Address",
+    "form_name": "Your Name",
+    "form_email": "Your Email",
+    "form_message": "Message",
+    "form_submit": "Send Message"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "quick_links": "Quick Links",
+    "connect": "Connect",
+    "last_updated": "Last updated",
+    "back_to_top": "Back to top"
+  }
+}

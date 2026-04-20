@@ -1,0 +1,69 @@
+{
+  "__instructions": "Copy this file, rename it to lastname-year-keyword.json, and fill in the fields. Delete all __note keys before saving.",
+
+  "id": "lastname-year-keyword",
+  "__id_note": "Must exactly match the filename without .json. Use lowercase letters, numbers, and hyphens only.",
+
+  "type": "journal",
+  "__type_note": "One of: journal | conference | book | book-chapter | thesis | preprint",
+
+  "title": {
+    "en": "Full title of the publication in English",
+    "tr": "Yayının Türkçe tam başlığı"
+  },
+  "__title_note": "If you only have one language, leave the other as an empty string.",
+
+  "authors": [
+    "Your Lastname, Your Firstname",
+    "Coauthor Lastname, Coauthor Firstname"
+  ],
+  "__authors_note": "List all authors in order. Format: 'Lastname, Firstname'. Your own name should be first.",
+
+  "year": 2024,
+  "__year_note": "Four-digit publication year as a number, not a string.",
+
+  "journal": "Name of the Journal",
+  "__journal_note": "For type=journal only. Leave empty string for other types.",
+
+  "conference": "",
+  "__conference_note": "For type=conference only. Full conference name.",
+
+  "publisher": "",
+  "__publisher_note": "For type=book or book-chapter. Publisher name.",
+
+  "book_title": "",
+  "__book_title_note": "For type=book-chapter only. Title of the edited volume this chapter appears in.",
+
+  "editors": [],
+  "__editors_note": "For type=book-chapter or type=book. Array of editor names, format 'Lastname, Firstname'.",
+
+  "volume": "15",
+  "__volume_note": "Journal volume number as a string. Leave empty if not applicable.",
+
+  "issue": "3",
+  "__issue_note": "Journal issue number as a string. Leave empty if not applicable.",
+
+  "pages": "201-225",
+  "__pages_note": "Page range as a string, e.g. '201-225'. Leave empty if not yet assigned.",
+
+  "doi": "10.1000/xyz123",
+  "__doi_note": "DOI only — do NOT include https://doi.org/. Example: 10.1037/abc0000123",
+
+  "url": "",
+  "__url_note": "Full URL to the paper online. Use this if there is no DOI.",
+
+  "pdf": "",
+  "__pdf_note": "Path to a PDF stored in /public/downloads/. Example: /downloads/lastname-2024.pdf",
+
+  "abstract": {
+    "en": "Write the abstract in English here.",
+    "tr": "Türkçe özeti buraya yazın."
+  },
+  "__abstract_note": "Optional but recommended. Bilingual object. Leave as empty string if not available.",
+
+  "tags": ["keyword1", "keyword2"],
+  "__tags_note": "Array of lowercase keywords used for filtering on the publications page.",
+
+  "featured": false,
+  "__featured_note": "Set to true to highlight this paper on the homepage or a featured section."
+}

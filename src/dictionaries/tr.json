@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "site_name": "Akademik Web Sitesi",
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "research": "Araştırma",
+    "publications": "Yayınlar",
+    "scales": "Ölçekler",
+    "news": "Haberler",
+    "teaching": "Dersler",
+    "contact": "İletişim",
+    "open_menu": "Menüyü aç",
+    "close_menu": "Menüyü kapat",
+    "switch_lang": "İngilizce'ye geç"
+  },
+  "home": {
+    "greeting": "Hoşgeldiniz",
+    "role": "Araştırmacı & Akademisyen",
+    "tagline": "Titiz araştırmalar yoluyla bilginin sınırlarını keşfediyorum.",
+    "cta_scales": "Ölçeklerimi Gör",
+    "cta_publications": "Yayınları Gör",
+    "cta_research": "Araştırmalarımı Gör",
+    "cta_contact": "İletişime Geç",
+    "research_interests_title": "Araştırma İlgi Alanları",
+    "highlights_title": "Öne Çıkanlar",
+    "recent_publications_title": "Son Yayınlar",
+    "featured_scales_title": "Ölçekler",
+    "latest_news_title": "Son Haberler",
+    "see_all_news": "Tüm haberler",
+    "see_all_publications": "Tüm yayınlar",
+    "see_all_scales": "Tüm ölçekler",
+    "read_more": "Devamını oku",
+    "download_form": "Formu İndir",
+    "scoring_guide": "Puanlama Kılavuzu",
+    "connect_title": "Bağlantılar",
+    "no_publications": "Yayınlar yakında eklenecek.",
+    "no_scales": "Ölçekler yakında eklenecek.",
+    "no_news": "Henüz haber yok.",
+    "published_in": "dergisinde",
+    "items": "madde",
+    "subscales": "alt ölçek",
+    "available_in": "Dil",
+    "alpha": "α",
+    "cv_download": "CV İndir",
+    "view_abstract": "Özet",
+    "type_journal": "Dergi Makalesi",
+    "type_conference": "Konferans Bildirisi",
+    "type_book": "Kitap",
+    "type_book_chapter": "Kitap Bölümü",
+    "type_thesis": "Tez",
+    "type_preprint": "Önbaskı"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "bio_placeholder": "[Üniversite] bünyesinde araştırmacıyım. Çalışmalarım [araştırma alanı] üzerine yoğunlaşmaktadır. Doktoramı [yıl] yılında [Üniversite]'den aldım."
+  },
+  "research": {
+    "title": "Araştırma",
+    "interests_title": "Araştırma İlgi Alanları",
+    "projects_title": "Devam Eden Projeler"
+  },
+  "publications": {
+    "title": "Yayınlar",
+    "journal": "Dergi Makaleleri",
+    "conference": "Konferans Bildirileri",
+    "book": "Kitaplar & Bölümler"
+  },
+  "scales": {
+    "title": "Ölçekler"
+  },
+  "news": {
+    "title": "Haberler"
+  },
+  "teaching": {
+    "title": "Dersler",
+    "courses_title": "Verilen Dersler"
+  },
+  "contact": {
+    "title": "İletişim",
+    "email": "E-posta",
+    "office": "Ofis",
+    "address": "Adres",
+    "form_name": "Adınız",
+    "form_email": "E-posta Adresiniz",
+    "form_message": "Mesajınız",
+    "form_submit": "Gönder"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır.",
+    "quick_links": "Hızlı Bağlantılar",
+    "connect": "Bağlantılar",
+    "last_updated": "Son güncelleme",
+    "back_to_top": "Başa dön"
+  }
+}
