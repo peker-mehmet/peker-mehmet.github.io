@@ -2,35 +2,13 @@
 # Decap CMS Configuration
 # https://decapcms.org/docs/
 # =============================================================================
-#
-# HOW TO ENABLE GITHUB LOGIN (one-time setup):
-#
-# 1. Go to https://github.com/settings/developers
-#    → "OAuth Apps" → "New OAuth App"
-#
-# 2. Fill in:
-#      Application name:             peker-mehmet.github.io CMS
-#      Homepage URL:                 https://peker-mehmet.github.io
-#      Authorization callback URL:   https://peker-mehmet.github.io/
-#
-# 3. Click "Register application".
-#    Copy the "Client ID" shown on the next screen.
-#
-# 4. Replace YOUR_GITHUB_OAUTH_CLIENT_ID below with that Client ID.
-#    (No client secret is needed — PKCE auth is entirely client-side.)
-#
-# 5. Commit and push this file, then visit:
-#      https://peker-mehmet.github.io/admin/
-#    and click "Login with GitHub".
-#
+# Backend: Netlify Git Gateway + Netlify Identity
+# Login is managed via the Netlify Identity widget.
 # =============================================================================
 
 backend:
-  name: github
-  repo: peker-mehmet/peker-mehmet.github.io
+  name: git-gateway
   branch: main
-  auth_type: pkce
-  app_id: Ov23liDa7GLrOVRLEkUB
 
 # Where uploaded media files are stored (relative to project root)
 media_folder: public/images
