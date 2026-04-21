@@ -160,7 +160,7 @@ export function getScales(): Scale[] {
 export type Project = {
   id: string;
   title: { en: string; tr: string };
-  status: 'active' | 'completed' | 'planned';
+  status: 'active' | 'completed' | 'planned' | 'submitted';
   description: { en: string; tr: string };
   role: string;
   funding?: { agency?: string; grant_number?: string; amount?: string };
@@ -176,6 +176,66 @@ export type Project = {
 
 export function getProjects(): Project[] {
   return readJsonDir<Project>('projects');
+}
+
+// ── Collaborations ────────────────────────────────────────────────────────────
+
+export type Collaboration = {
+  id: string;
+  organization: { en: string; tr: string };
+  type: 'industry' | 'ngo' | 'public' | 'university' | 'healthcare' | 'other';
+  active: boolean;
+  period_start: string;
+  period_end?: string;
+  description: { en: string; tr: string };
+  outputs?: { en: string; tr: string }[];
+  website?: string;
+  logo?: string;
+};
+
+export function getCollaborations(): Collaboration[] {
+  return readJsonDir<Collaboration>('collaborations');
+}
+
+// ── Teaching ──────────────────────────────────────────────────────────────────
+
+export type Course = {
+  id: string;
+  code: string;
+  name: { en: string; tr: string };
+  level: 'undergraduate' | 'graduate';
+  term: string;
+  term_label: { en: string; tr: string };
+  credits: number;
+  current: boolean;
+  description: { en: string; tr: string };
+  syllabus_url?: string;
+};
+
+export type Supervision = {
+  name: string;
+  type: 'phd' | 'masters' | 'undergrad';
+  topic: { en: string; tr: string };
+  year_start: string;
+  status: 'current' | 'completed';
+  year_end?: string;
+  thesis_url?: string;
+};
+
+export type TeachingData = {
+  courses: Course[];
+  supervision: Supervision[];
+  office_hours?: { en: string; tr: string };
+};
+
+export function getTeachingData(): TeachingData {
+  try {
+    const filePath = path.join(contentDir, 'teaching', 'index.json');
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(raw) as TeachingData;
+  } catch {
+    return { courses: [], supervision: [] };
+  }
 }
 
 // ── News ─────────────────────────────────────────────────────────────────────
@@ -197,11 +257,12 @@ export function getNewsItems(): NewsItem[] {
   const dir = path.join(contentDir, 'news');
   return fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.md') && !f.startsWith('_'))
+    .filter((f) => f.endsWith('.md') && !f.startsWith('_') && f.toLowerCase() !== 'readme.md')
     .map((f) => {
       const raw = fs.readFileSync(path.join(dir, f), 'utf-8');
       const { data, content } = matter(raw);
       return { slug: f.replace(/\.md$/, ''), ...data, content } as NewsItem;
     })
+    .filter((item) => !!item.date)
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }

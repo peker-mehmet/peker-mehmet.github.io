@@ -15,6 +15,7 @@ type NavDict = {
   publications: string;
   scales: string;
   news: string;
+  collaborations: string;
   teaching: string;
   contact: string;
   open_menu: string;
@@ -360,9 +361,10 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     { href: `/${lang}/about`,         label: dict.about },
     { href: `/${lang}/research`,      label: dict.research },
     { href: `/${lang}/publications`,  label: dict.publications },
-    { href: `/${lang}/scales`,        label: dict.scales },
-    { href: `/${lang}/news`,          label: dict.news },
-    { href: `/${lang}/contact`,       label: dict.contact },
+    { href: `/${lang}/scales`,          label: dict.scales },
+    { href: `/${lang}/news`,            label: dict.news },
+    { href: `/${lang}/collaborations`,  label: dict.collaborations },
+    { href: `/${lang}/contact`,         label: dict.contact },
   ];
 
   // ── Scroll shadow ─────────────────────────────────────────────────────────

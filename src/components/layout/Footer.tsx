@@ -15,6 +15,7 @@ type FooterDict = {
     news: string;
     teaching: string;
     contact: string;
+    collaborations: string;
   };
   footer: {
     rights: string;
@@ -126,9 +127,10 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: FooterDict 
     { href: `/${lang}/research`,      label: dict.nav.research },
     { href: `/${lang}/publications`,  label: dict.nav.publications },
     { href: `/${lang}/scales`,        label: dict.nav.scales },
-    { href: `/${lang}/news`,          label: dict.nav.news },
-    { href: `/${lang}/teaching`,      label: dict.nav.teaching },
-    { href: `/${lang}/contact`,       label: dict.nav.contact },
+    { href: `/${lang}/news`,            label: dict.nav.news },
+    { href: `/${lang}/collaborations`, label: dict.nav.collaborations },
+    { href: `/${lang}/teaching`,       label: dict.nav.teaching },
+    { href: `/${lang}/contact`,        label: dict.nav.contact },
   ];
 
   // Social / academic links — only render entries that have a URL

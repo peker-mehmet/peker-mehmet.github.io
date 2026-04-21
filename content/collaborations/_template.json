@@ -1,0 +1,42 @@
+{
+  "__instructions": "Copy this file, rename it to your-org-name.json, fill in the fields, and delete all __note keys.",
+
+  "id": "org-name-year",
+  "__id_note": "Lowercase letters, numbers, hyphens. Must match the filename without .json.",
+
+  "organization": {
+    "en": "Organization Name in English",
+    "tr": "Kuruluşun Türkçe Adı"
+  },
+
+  "type": "public",
+  "__type_note": "One of: industry | ngo | public | university | healthcare | other",
+
+  "active": true,
+  "__active_note": "true if the collaboration is ongoing, false if completed.",
+
+  "period_start": "2022",
+  "__period_start_note": "Year the collaboration began (YYYY).",
+
+  "period_end": "",
+  "__period_end_note": "Year it ended (YYYY), or leave empty string if still active.",
+
+  "description": {
+    "en": "Two to three sentences describing the nature of the collaboration, what was investigated or developed, and the role of each partner.",
+    "tr": "İş birliğinin niteliğini, ne araştırıldığını veya geliştirdiğini ve her ortağın rolünü açıklayan iki-üç cümle."
+  },
+
+  "outputs": [
+    {
+      "en": "Title or description of a key output (report, publication, tool, dataset)",
+      "tr": "Temel çıktının başlığı veya açıklaması (rapor, yayın, araç, veri seti)"
+    }
+  ],
+  "__outputs_note": "Array of outputs produced through this collaboration. Use empty array [] if none yet.",
+
+  "website": "",
+  "__website_note": "Full URL of the organization's website. Leave empty string if not applicable.",
+
+  "logo": "",
+  "__logo_note": "Path to logo image placed in /public/images/. Leave empty string to show monogram fallback."
+}

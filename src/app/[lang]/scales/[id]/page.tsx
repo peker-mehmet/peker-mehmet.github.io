@@ -211,7 +211,7 @@ export default async function ScaleDetailPage({
 
             {/* Core facts */}
             <section>
-              <SectionTitle as="h2" eyebrow="Overview" accent>
+              <SectionTitle as="h2" eyebrow={d.detail_eyebrow_overview} accent>
                 {name}
               </SectionTitle>
               <p className="font-body text-body-lg text-slate-700 leading-relaxed mb-6">{description}</p>
@@ -238,7 +238,7 @@ export default async function ScaleDetailPage({
             {/* Subscales */}
             {hasSubscales && (
               <section>
-                <SectionTitle as="h2" eyebrow="Structure" accent>
+                <SectionTitle as="h2" eyebrow={d.detail_eyebrow_structure} accent>
                   {d.detail_subscales}
                 </SectionTitle>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -277,7 +277,7 @@ export default async function ScaleDetailPage({
             {/* Psychometrics */}
             {hasPsychometrics && (
               <section>
-                <SectionTitle as="h2" eyebrow="Statistics" accent>
+                <SectionTitle as="h2" eyebrow={d.detail_eyebrow_statistics} accent>
                   {d.detail_psychometrics}
                 </SectionTitle>
                 <div className="bg-white rounded-xl border border-warm-200 shadow-card overflow-hidden">
@@ -317,7 +317,7 @@ export default async function ScaleDetailPage({
             {/* Validity notes */}
             {validity && (
               <section>
-                <SectionTitle as="h2" eyebrow="Evidence" accent>
+                <SectionTitle as="h2" eyebrow={d.detail_eyebrow_evidence} accent>
                   {d.detail_validity}
                 </SectionTitle>
                 <div className="surface-inset">
@@ -373,7 +373,7 @@ export default async function ScaleDetailPage({
                 {doiUrl && (
                   <div className="mt-3 pt-3 border-t border-warm-100">
                     <p className="font-body text-xs text-slate-400 mb-2">{d.detail_reference}</p>
-                    <PillLink href={doiUrl} label="DOI" />
+                    <PillLink href={doiUrl} label={d.detail_doi_label} />
                   </div>
                 )}
               </div>

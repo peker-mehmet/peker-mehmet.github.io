@@ -10,7 +10,7 @@
   },
 
   "status": "active",
-  "__status_note": "One of: active | completed | planned",
+  "__status_note": "One of: active | completed | planned | submitted",
 
   "description": {
     "en": "A paragraph describing the project's aims, methods, and expected outcomes.",
@@ -18,15 +18,15 @@
   },
 
   "role": "Principal Investigator",
-  "__role_note": "Your role in the project. E.g. 'Principal Investigator', 'Co-Investigator', 'Researcher'.",
+  "__role_note": "Your role: 'Principal Investigator', 'Co-PI', or 'Collaborator'.",
 
   "funding": {
     "agency": "TÜBİTAK",
-    "__agency_note": "Name of the funding body. Leave empty string if unfunded. Remove this key.",
+    "__agency_note": "Name of the funding body. Leave empty string if unfunded.",
     "grant_number": "123ABC",
-    "__grant_note": "Grant or project number assigned by the funding body. Remove this key.",
+    "__grant_note": "Grant or project number assigned by the funding body.",
     "amount": "500.000 TL",
-    "__amount_note": "Funded amount as a string. You can include currency. Leave empty string if confidential. Remove this key."
+    "__amount_note": "Funded amount as a string. Leave empty string if confidential."
   },
 
   "collaborators": [
@@ -35,7 +35,7 @@
       "affiliation": "Their University or Institution"
     }
   ],
-  "__collaborators_note": "Array of collaborator objects. Remove this key. Use empty array [] if solo project.",
+  "__collaborators_note": "Array of collaborator objects. Use empty array [] if solo project.",
 
   "start_date": "2023-09",
   "__start_date_note": "Project start date in YYYY-MM format.",
@@ -48,8 +48,14 @@
   ],
   "__outputs_note": "Array of publication IDs (from /content/publications/) produced by this project. Use empty array [] if none yet.",
 
-  "image": "/images/project-placeholder.jpg",
-  "__image_note": "Optional image for the project card. Place the file in /public/images/ and reference it here. Leave empty string if none.",
+  "url": "",
+  "__url_note": "Public project website URL. Leave empty string if none.",
+
+  "osf_url": "",
+  "__osf_note": "OSF preregistration URL (e.g. https://osf.io/abc123). Leave empty string if none.",
+
+  "image": "",
+  "__image_note": "Optional image for the project card. Place the file in /public/images/. Leave empty string if none.",
 
   "featured": false,
   "__featured_note": "Set to true to show this project on the homepage."

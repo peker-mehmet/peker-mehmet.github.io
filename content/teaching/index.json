@@ -1,0 +1,175 @@
+{
+  "courses": [
+    {
+      "id": "psy301-2024",
+      "code": "PSY 301",
+      "name": {
+        "en": "Cognitive Psychology",
+        "tr": "Bilişsel Psikoloji"
+      },
+      "level": "undergraduate",
+      "term": "2024-fall",
+      "term_label": {
+        "en": "Fall 2024",
+        "tr": "Güz 2024"
+      },
+      "credits": 3,
+      "current": true,
+      "description": {
+        "en": "An introduction to human cognition covering perception, attention, memory, language, problem-solving, and reasoning. Students engage with both classic and contemporary experimental research and complete a hands-on replication project.",
+        "tr": "Algı, dikkat, bellek, dil, problem çözme ve akıl yürütme konularını kapsayan insan bilimine giriş dersi. Öğrenciler hem klasik hem de güncel deneysel araştırmalarla etkileşime girer ve uygulamalı bir replikasyon projesi tamamlar."
+      },
+      "syllabus_url": ""
+    },
+    {
+      "id": "psy501-2024",
+      "code": "PSY 501",
+      "name": {
+        "en": "Psychometrics and Scale Development",
+        "tr": "Psikometri ve Ölçek Geliştirme"
+      },
+      "level": "graduate",
+      "term": "2024-fall",
+      "term_label": {
+        "en": "Fall 2024",
+        "tr": "Güz 2024"
+      },
+      "credits": 3,
+      "current": true,
+      "description": {
+        "en": "A graduate-level seminar on the theory and practice of psychological measurement. Topics include classical test theory, item response theory, confirmatory factor analysis, reliability, and construct validity. Students develop or adapt a measurement instrument as their course project.",
+        "tr": "Psikolojik ölçümün teorisi ve pratiğine ilişkin lisansüstü düzeyinde seminer. Klasik test teorisi, madde tepki teorisi, doğrulayıcı faktör analizi, güvenirlik ve yapı geçerliği konularını kapsar. Öğrenciler ders projesi olarak bir ölçüm aracı geliştirir veya uyarlar."
+      },
+      "syllabus_url": ""
+    },
+    {
+      "id": "psy201-2024",
+      "code": "PSY 201",
+      "name": {
+        "en": "Research Methods in Psychology",
+        "tr": "Psikolojide Araştırma Yöntemleri"
+      },
+      "level": "undergraduate",
+      "term": "2024-spring",
+      "term_label": {
+        "en": "Spring 2024",
+        "tr": "Bahar 2024"
+      },
+      "credits": 3,
+      "current": false,
+      "description": {
+        "en": "Foundations of empirical research in psychology: experimental design, survey methods, observational approaches, and introductory statistics. Emphasis on research ethics and open science practices.",
+        "tr": "Psikolojide ampirik araştırmanın temelleri: deneysel tasarım, anket yöntemleri, gözlemsel yaklaşımlar ve temel istatistik. Araştırma etiği ve açık bilim uygulamalarına vurgu yapılmaktadır."
+      },
+      "syllabus_url": ""
+    },
+    {
+      "id": "psy410-2023",
+      "code": "PSY 410",
+      "name": {
+        "en": "Memory and Learning",
+        "tr": "Bellek ve Öğrenme"
+      },
+      "level": "undergraduate",
+      "term": "2023-fall",
+      "term_label": {
+        "en": "Fall 2023",
+        "tr": "Güz 2023"
+      },
+      "credits": 3,
+      "current": false,
+      "description": {
+        "en": "An advanced undergraduate course examining the cognitive and neural bases of memory encoding, consolidation, retrieval, and forgetting. Applications to education and eyewitness testimony are discussed.",
+        "tr": "Bellek kodlama, pekiştirme, geri getirme ve unutmanın bilişsel ve nöral temellerini inceleyen ileri düzey lisans dersi. Eğitime ve görgü tanığı ifadelerine uygulamalar tartışılmaktadır."
+      },
+      "syllabus_url": ""
+    },
+    {
+      "id": "psy502-2023",
+      "code": "PSY 502",
+      "name": {
+        "en": "Advanced Research Methods",
+        "tr": "İleri Araştırma Yöntemleri"
+      },
+      "level": "graduate",
+      "term": "2023-spring",
+      "term_label": {
+        "en": "Spring 2023",
+        "tr": "Bahar 2023"
+      },
+      "credits": 3,
+      "current": false,
+      "description": {
+        "en": "Covers multivariate techniques, structural equation modeling, and meta-analysis, with a focus on open science workflows and reproducibility. Students complete a full data analysis project using real datasets.",
+        "tr": "Açık bilim iş akışlarına ve tekrarlanabilirliğe odaklanarak çok değişkenli teknikler, yapısal eşitlik modellemesi ve meta-analizi kapsar. Öğrenciler gerçek veri setleri kullanarak tam bir veri analizi projesi tamamlar."
+      },
+      "syllabus_url": ""
+    }
+  ],
+  "supervision": [
+    {
+      "name": "Student Name A",
+      "type": "phd",
+      "topic": {
+        "en": "The role of working memory in second language vocabulary acquisition",
+        "tr": "Çalışma belleğinin ikinci dil sözcük edinimindeki rolü"
+      },
+      "year_start": "2022",
+      "status": "current",
+      "year_end": "",
+      "thesis_url": ""
+    },
+    {
+      "name": "Student Name B",
+      "type": "masters",
+      "topic": {
+        "en": "Psychometric properties of the Turkish adaptation of the Self-Regulated Learning Scale",
+        "tr": "Öz-Düzenlemeli Öğrenme Ölçeği Türkçe uyarlamasının psikometrik özellikleri"
+      },
+      "year_start": "2023",
+      "status": "current",
+      "year_end": "",
+      "thesis_url": ""
+    },
+    {
+      "name": "Student Name C",
+      "type": "masters",
+      "topic": {
+        "en": "Academic stress, self-efficacy, and burnout in first-generation university students",
+        "tr": "Birinci nesil üniversite öğrencilerinde akademik stres, öz-yeterlik ve tükenmişlik"
+      },
+      "year_start": "2021",
+      "status": "completed",
+      "year_end": "2023",
+      "thesis_url": ""
+    },
+    {
+      "name": "Student Name D",
+      "type": "undergrad",
+      "topic": {
+        "en": "Attentional biases toward emotional stimuli in test-anxious students",
+        "tr": "Sınav kaygılı öğrencilerde duygusal uyaranlara yönelik dikkat yanlılıkları"
+      },
+      "year_start": "2023",
+      "status": "current",
+      "year_end": "",
+      "thesis_url": ""
+    },
+    {
+      "name": "Student Name E",
+      "type": "undergrad",
+      "topic": {
+        "en": "The relationship between metacognitive awareness and academic achievement",
+        "tr": "Üstbilişsel farkındalık ile akademik başarı arasındaki ilişki"
+      },
+      "year_start": "2022",
+      "status": "completed",
+      "year_end": "2023",
+      "thesis_url": ""
+    }
+  ],
+  "office_hours": {
+    "en": "Tuesdays and Thursdays, 14:00–16:00 (or by appointment via email)",
+    "tr": "Salı ve Perşembe, 14:00–16:00 (veya e-posta ile randevuyla)"
+  }
+}

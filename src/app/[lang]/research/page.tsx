@@ -35,7 +35,7 @@ export default async function ResearchPage({
 
   const d = (dict as any).research as ResearchDict;
 
-  const ongoing   = projects.filter((p) => p.status === 'active' || p.status === 'planned');
+  const ongoing   = projects.filter((p) => p.status === 'active' || p.status === 'planned' || p.status === 'submitted');
   const completed = projects.filter((p) => p.status === 'completed');
 
   return (
