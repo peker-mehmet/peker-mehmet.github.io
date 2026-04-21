@@ -1,0 +1,604 @@
+# =============================================================================
+# Decap CMS Configuration
+# https://decapcms.org/docs/
+# =============================================================================
+#
+# HOW TO ENABLE GITHUB LOGIN (one-time setup):
+#
+# 1. Go to https://github.com/settings/developers
+#    → "OAuth Apps" → "New OAuth App"
+#
+# 2. Fill in:
+#      Application name:             peker-mehmet.github.io CMS
+#      Homepage URL:                 https://peker-mehmet.github.io
+#      Authorization callback URL:   https://peker-mehmet.github.io/
+#
+# 3. Click "Register application".
+#    Copy the "Client ID" shown on the next screen.
+#
+# 4. Replace YOUR_GITHUB_OAUTH_CLIENT_ID below with that Client ID.
+#    (No client secret is needed — PKCE auth is entirely client-side.)
+#
+# 5. Commit and push this file, then visit:
+#      https://peker-mehmet.github.io/admin/
+#    and click "Login with GitHub".
+#
+# =============================================================================
+
+backend:
+  name: github
+  repo: peker-mehmet/peker-mehmet.github.io
+  branch: main
+  auth_type: pkce
+  app_id: YOUR_GITHUB_OAUTH_CLIENT_ID
+
+# Where uploaded media files are stored (relative to project root)
+media_folder: public/images
+# The path used in content fields to reference those files
+public_folder: /images
+
+# Generate clean ASCII slugs for new file names
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+# =============================================================================
+# COLLECTIONS
+# =============================================================================
+
+collections:
+
+  # ── Publications ────────────────────────────────────────────────────────────
+  - name: publications
+    label: Publications
+    label_singular: Publication
+    folder: content/publications
+    create: true
+    delete: true
+    extension: json
+    format: json
+    identifier_field: id
+    summary: "{{fields.year}} · {{fields.title.en}}"
+    slug: "{{fields.id}}"
+    fields:
+      - name: id
+        label: ID (filename)
+        widget: string
+        hint: "Unique slug used as the filename — e.g. author-2024-keyword. Must be lowercase with hyphens only."
+
+      - name: type
+        label: Publication Type
+        widget: select
+        options:
+          - { label: "Journal Article",  value: journal }
+          - { label: "Conference Paper", value: conference }
+          - { label: "Book",             value: book }
+          - { label: "Book Chapter",     value: book-chapter }
+          - { label: "Thesis",           value: thesis }
+          - { label: "Preprint",         value: preprint }
+
+      - name: title
+        label: Title
+        widget: object
+        fields:
+          - { name: en, label: English, widget: string }
+          - { name: tr, label: Turkish, widget: string, required: false,
+              hint: "Leave blank or copy English if no Turkish version." }
+
+      - name: authors
+        label: Authors
+        widget: list
+        field: { label: Author, name: author, widget: string }
+        hint: "One entry per author. Format: Last, First M. — e.g. Erken, Mehmet"
+
+      - { name: year,       label: Year,       widget: number, value_type: int }
+      - { name: journal,    label: Journal,    widget: string, required: false }
+      - { name: conference, label: Conference, widget: string, required: false }
+      - { name: publisher,  label: Publisher,  widget: string, required: false }
+      - { name: book_title, label: Book Title, widget: string, required: false }
+
+      - name: editors
+        label: Editors
+        widget: list
+        required: false
+        field: { label: Editor, name: editor, widget: string }
+
+      - { name: volume, label: Volume, widget: string, required: false }
+      - { name: issue,  label: Issue,  widget: string, required: false }
+      - { name: pages,  label: Pages,  widget: string, required: false, hint: "e.g. 123–145" }
+      - { name: doi,    label: DOI,    widget: string, required: false, hint: "e.g. 10.1000/xyz123 (without https://doi.org/)" }
+      - { name: url,    label: URL,    widget: string, required: false }
+      - { name: pdf,    label: PDF Path, widget: string, required: false, hint: "e.g. /downloads/paper.pdf" }
+
+      - name: abstract
+        label: Abstract
+        widget: object
+        required: false
+        fields:
+          - { name: en, label: English, widget: text, required: false }
+          - { name: tr, label: Turkish, widget: text, required: false }
+
+      - name: tags
+        label: Keywords / Tags
+        widget: list
+        required: false
+        field: { label: Tag, name: tag, widget: string }
+
+      - { name: featured, label: Featured on homepage, widget: boolean, default: false, required: false }
+
+  # ── Scales & Instruments ────────────────────────────────────────────────────
+  - name: scales
+    label: Scales & Instruments
+    label_singular: Scale
+    folder: content/scales
+    create: true
+    delete: true
+    extension: json
+    format: json
+    identifier_field: id
+    summary: "{{fields.name.en}}{% if fields.abbreviation %} ({{fields.abbreviation}}){% endif %}"
+    slug: "{{fields.id}}"
+    fields:
+      - name: id
+        label: ID (filename)
+        widget: string
+        hint: "Unique slug — e.g. working-memory-scale. Lowercase, hyphens only."
+
+      - name: name
+        label: Scale Name
+        widget: object
+        fields:
+          - { name: en, label: English, widget: string }
+          - { name: tr, label: Turkish, widget: string }
+
+      - { name: abbreviation, label: Abbreviation, widget: string, required: false, hint: "e.g. WMS-R" }
+
+      - name: role
+        label: My Role
+        widget: select
+        options:
+          - { label: "Developed (I am the original author)",         value: developed }
+          - { label: "Adapted (full psychometric validation done)",   value: adapted }
+          - { label: "Translated (factor analytic evidence provided)", value: translated }
+
+      - name: construct
+        label: Construct Measured
+        widget: object
+        required: false
+        fields:
+          - { name: en, label: English, widget: string, required: false }
+          - { name: tr, label: Turkish, widget: string, required: false }
+
+      - { name: year, label: Original Publication Year, widget: number, value_type: int, required: false }
+
+      - name: original_authors
+        label: Original Authors
+        widget: list
+        required: false
+        field: { label: Author, name: author, widget: string }
+        hint: "Leave empty if you are the original author."
+
+      - { name: adaptation_year, label: Adaptation / Translation Year, widget: number, value_type: int, required: false }
+
+      - name: description
+        label: Description
+        widget: object
+        fields:
+          - { name: en, label: English, widget: text }
+          - { name: tr, label: Turkish, widget: text }
+
+      - { name: item_count, label: Number of Items, widget: number, value_type: int }
+
+      - name: subscales
+        label: Subscales / Factors
+        widget: list
+        required: false
+        fields:
+          - { name: name,       label: Subscale Name, widget: string }
+          - { name: item_count, label: Item Count,    widget: number, value_type: int, required: false }
+          - name: description
+            label: Description
+            widget: object
+            required: false
+            fields:
+              - { name: en, label: English, widget: text, required: false }
+              - { name: tr, label: Turkish, widget: text, required: false }
+
+      - { name: response_format,    label: Response Format,    widget: string, hint: "e.g. 5-point Likert (1 = Strongly Disagree … 5 = Strongly Agree)" }
+      - { name: target_population,  label: Target Population,  widget: string, hint: "e.g. University students, Adults (18–65)" }
+
+      - name: languages_available
+        label: Languages Available
+        widget: list
+        field: { label: Language Code, name: lang, widget: string, hint: "ISO 639-1 code: en, tr, de, fr …" }
+
+      - name: reliability
+        label: Reliability
+        widget: object
+        required: false
+        fields:
+          - { name: cronbach_alpha_total, label: "Cronbach's α (Total Scale)", widget: number, value_type: float, required: false, hint: "e.g. 0.87" }
+          - { name: test_retest,          label: "Test-Retest Reliability",    widget: string, required: false, hint: "e.g. r = .82 over 4 weeks (n = 85)" }
+
+      - name: validity_notes
+        label: Validity Notes
+        widget: object
+        required: false
+        fields:
+          - { name: en, label: English, widget: text, required: false }
+          - { name: tr, label: Turkish, widget: text, required: false }
+
+      - name: downloads
+        label: Downloadable Files
+        widget: object
+        required: false
+        fields:
+          - { name: scale_form,    label: Scale Form,    widget: string, required: false, hint: "Path in /public — e.g. /downloads/scale-form.pdf" }
+          - { name: scoring_guide, label: Scoring Guide, widget: string, required: false }
+          - { name: manual,        label: Manual,        widget: string, required: false }
+
+      - name: citation
+        label: How to Cite
+        widget: object
+        fields:
+          - { name: en, label: English, widget: text }
+          - { name: tr, label: Turkish, widget: text }
+
+      - { name: reference_publication, label: Related Publication ID, widget: string, required: false,
+          hint: "The 'id' of the corresponding entry in Publications — e.g. erken-2024-keyword" }
+
+      - { name: featured, label: Featured on homepage, widget: boolean, default: false, required: false }
+
+  # ── Research Projects ───────────────────────────────────────────────────────
+  - name: projects
+    label: Research Projects
+    label_singular: Project
+    folder: content/projects
+    create: true
+    delete: true
+    extension: json
+    format: json
+    identifier_field: id
+    summary: "{{fields.title.en}} — {{fields.status}}"
+    slug: "{{fields.id}}"
+    fields:
+      - name: id
+        label: ID (filename)
+        widget: string
+        hint: "Unique slug — e.g. tubitak-memory-2023. Lowercase, hyphens only."
+
+      - name: title
+        label: Project Title
+        widget: object
+        fields:
+          - { name: en, label: English, widget: string }
+          - { name: tr, label: Turkish, widget: string }
+
+      - name: status
+        label: Status
+        widget: select
+        options:
+          - { label: Active,    value: active }
+          - { label: Planned,   value: planned }
+          - { label: Submitted, value: submitted }
+          - { label: Completed, value: completed }
+
+      - name: description
+        label: Description
+        widget: object
+        fields:
+          - { name: en, label: English, widget: text }
+          - { name: tr, label: Turkish, widget: text }
+
+      - { name: role, label: My Role, widget: string, hint: "e.g. Principal Investigator, Co-Investigator" }
+
+      - name: funding
+        label: Funding
+        widget: object
+        required: false
+        fields:
+          - { name: agency,        label: Funding Agency, widget: string, required: false, hint: "e.g. TÜBİTAK, European Commission" }
+          - { name: grant_number,  label: Grant Number,   widget: string, required: false }
+          - { name: amount,        label: Amount,         widget: string, required: false }
+
+      - name: collaborators
+        label: Collaborators
+        widget: list
+        required: false
+        fields:
+          - { name: name,        label: Name,        widget: string }
+          - { name: affiliation, label: Affiliation, widget: string }
+
+      - { name: start_date, label: Start Date, widget: string, hint: "e.g. 2023 or 2023-03" }
+      - { name: end_date,   label: End Date,   widget: string, required: false, hint: "Leave empty if ongoing" }
+
+      - name: outputs
+        label: Outputs (Publication IDs)
+        widget: list
+        required: false
+        field: { label: Publication ID, name: output, widget: string }
+        hint: "The 'id' values of related publications — e.g. erken-2024-keyword"
+
+      - { name: url,     label: Project Website URL, widget: string, required: false }
+      - { name: osf_url, label: OSF URL,             widget: string, required: false }
+      - { name: featured, label: Featured on homepage, widget: boolean, default: false, required: false }
+
+  # ── Collaborations ──────────────────────────────────────────────────────────
+  - name: collaborations
+    label: Collaborations
+    label_singular: Collaboration
+    folder: content/collaborations
+    create: true
+    delete: true
+    extension: json
+    format: json
+    identifier_field: id
+    summary: "{{fields.organization.en}} ({{fields.type}})"
+    slug: "{{fields.id}}"
+    fields:
+      - name: id
+        label: ID (filename)
+        widget: string
+        hint: "Unique slug — e.g. meb-2022. Lowercase, hyphens only."
+
+      - name: organization
+        label: Organisation Name
+        widget: object
+        fields:
+          - { name: en, label: English, widget: string }
+          - { name: tr, label: Turkish, widget: string }
+
+      - name: type
+        label: Sector / Type
+        widget: select
+        options:
+          - { label: Industry / Private Sector, value: industry }
+          - { label: NGO,                       value: ngo }
+          - { label: Public Institution,        value: public }
+          - { label: University,                value: university }
+          - { label: Healthcare,                value: healthcare }
+          - { label: Other,                     value: other }
+
+      - { name: active,       label: Currently Active, widget: boolean, default: true }
+      - { name: period_start, label: Start Year,       widget: string, hint: "e.g. 2022" }
+      - { name: period_end,   label: End Year,         widget: string, required: false, hint: "Leave empty if ongoing" }
+
+      - name: description
+        label: Description
+        widget: object
+        fields:
+          - { name: en, label: English, widget: text }
+          - { name: tr, label: Turkish, widget: text }
+
+      - name: outputs
+        label: Key Outputs
+        widget: list
+        required: false
+        fields:
+          - { name: en, label: English, widget: string }
+          - { name: tr, label: Turkish, widget: string }
+
+      - { name: website, label: Website URL, widget: string, required: false }
+
+  # ── News ────────────────────────────────────────────────────────────────────
+  - name: news
+    label: News
+    label_singular: News Item
+    folder: content/news
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{fields.date}} · {{fields.title}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: title,      label: "Title (English)", widget: string }
+      - { name: title_tr,   label: "Title (Turkish)", widget: string }
+      - name: date
+        label: Date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - name: category
+        label: Category
+        widget: select
+        options:
+          - { label: Award,       value: award }
+          - { label: Publication, value: publication }
+          - { label: Conference,  value: conference }
+          - { label: Grant,       value: grant }
+          - { label: Media,       value: media }
+          - { label: Teaching,    value: teaching }
+          - { label: Other,       value: other }
+      - { name: summary,    label: "Summary (English)", widget: text, hint: "1–2 sentences shown in the news feed." }
+      - { name: summary_tr, label: "Summary (Turkish)", widget: text }
+      - { name: link,       label: External Link, widget: string, required: false, hint: "Optional URL for a 'Read more' button linking outside the site." }
+      - { name: featured,   label: Featured,      widget: boolean, default: false, required: false }
+      - { name: body,       label: Body,          widget: markdown, required: false,
+          hint: "Full article content in Markdown. Optional — only the summary is shown if left empty." }
+
+  # ── Site Settings ────────────────────────────────────────────────────────────
+  - name: settings
+    label: Site Settings
+    files:
+      - name: site_config
+        label: Site Configuration
+        file: content/site-config.json
+        fields:
+
+          - name: owner
+            label: Owner / Author
+            widget: object
+            fields:
+              - name: name
+                label: Name
+                widget: object
+                fields:
+                  - { name: full,    label: Full Name,    widget: string, hint: "As it appears on publications — e.g. Mehmet Peker" }
+                  - { name: display, label: Display Name, widget: string, hint: "Short form used in the navbar — e.g. M. Peker" }
+              - name: title
+                label: Academic Title
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string, hint: "e.g. Assistant Professor" }
+                  - { name: tr, label: Turkish, widget: string, hint: "e.g. Dr. Öğr. Üyesi" }
+              - name: position
+                label: Position / Specialty (one line)
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: tr, label: Turkish, widget: string }
+
+          - name: institution
+            label: Institution
+            widget: object
+            fields:
+              - name: name
+                label: University Name
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: tr, label: Turkish, widget: string }
+              - name: department
+                label: Department
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: tr, label: Turkish, widget: string }
+              - name: faculty
+                label: Faculty / College
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string, required: false }
+                  - { name: tr, label: Turkish, widget: string, required: false }
+              - name: address
+                label: Mailing Address
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: tr, label: Turkish, widget: string }
+              - name: office
+                label: Office Room & Building
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: tr, label: Turkish, widget: string }
+
+          - name: photo
+            label: Profile Photo
+            widget: object
+            fields:
+              - { name: profile, label: Photo Path, widget: image, hint: "Upload or enter path — e.g. /images/profile.jpg" }
+              - name: alt
+                label: Alt Text (accessibility)
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string, hint: "e.g. Photo of Mehmet Peker" }
+                  - { name: tr, label: Turkish, widget: string }
+
+          - name: bio
+            label: Biography
+            widget: object
+            fields:
+              - name: short
+                label: "Short Bio (1–2 sentences, used on homepage & footer)"
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: text }
+                  - { name: tr, label: Turkish, widget: text }
+              - name: full
+                label: Full Bio (About page — one item per paragraph)
+                widget: object
+                fields:
+                  - name: en
+                    label: English Paragraphs
+                    widget: list
+                    field: { label: Paragraph, name: paragraph, widget: text }
+                  - name: tr
+                    label: Turkish Paragraphs
+                    widget: list
+                    field: { label: Paragraph, name: paragraph, widget: text }
+
+          - name: research_interests
+            label: Research Interests
+            widget: object
+            hint: "Keep each item short (3–6 words). Shown on About and Research pages."
+            fields:
+              - name: en
+                label: English
+                widget: list
+                field: { label: Interest, name: interest, widget: string }
+              - name: tr
+                label: Turkish
+                widget: list
+                field: { label: Interest, name: interest, widget: string }
+
+          - name: education
+            label: Education
+            widget: list
+            hint: "Most recent degree first."
+            fields:
+              - name: degree
+                label: Degree
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string, hint: "e.g. Ph.D. in Psychology" }
+                  - { name: tr, label: Turkish, widget: string, hint: "e.g. Psikoloji Doktorası (Ph.D.)" }
+              - name: institution
+                label: Institution
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: tr, label: Turkish, widget: string }
+              - { name: year, label: Year, widget: string }
+              - name: thesis
+                label: Thesis Title
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string, required: false }
+                  - { name: tr, label: Turkish, widget: string, required: false }
+
+          - name: links
+            label: Links & Academic Profiles
+            widget: object
+            fields:
+              - { name: email,        label: Email Address,     widget: string }
+              - { name: google_scholar, label: Google Scholar URL, widget: string, required: false }
+              - { name: orcid,        label: ORCID URL,         widget: string, required: false, hint: "e.g. https://orcid.org/0000-0000-0000-0000" }
+              - { name: researchgate, label: ResearchGate URL,  widget: string, required: false }
+              - { name: linkedin,     label: LinkedIn URL,      widget: string, required: false }
+              - { name: twitter,      label: Twitter / X URL,   widget: string, required: false }
+              - { name: cv,    label: "CV Path (English)", widget: string, required: false, hint: "e.g. /downloads/cv-en.pdf" }
+              - { name: cv_tr, label: "CV Path (Turkish)", widget: string, required: false }
+
+          - name: languages
+            label: Languages
+            widget: list
+            hint: "Your spoken languages. Shown on the About page."
+            fields:
+              - name: name
+                label: Language
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string, hint: "e.g. Turkish" }
+                  - { name: tr, label: Turkish, widget: string, hint: "e.g. Türkçe" }
+              - name: level
+                label: Proficiency
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string, hint: "e.g. Native, Fluent (C1), Intermediate (B1)" }
+                  - { name: tr, label: Turkish, widget: string }
+
+          - name: contact
+            label: Contact Note
+            widget: object
+            fields:
+              - name: note
+                label: "Introductory note shown at the top of the Contact page"
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: text }
+                  - { name: tr, label: Turkish, widget: text }
