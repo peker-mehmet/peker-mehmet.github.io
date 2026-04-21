@@ -138,7 +138,11 @@
         "en": "Middle East Technical University, Ankara, Türkiye",
         "tr": "Orta Doğu Teknik Üniversitesi, Ankara, Türkiye"
       },
-      "year": "2013"
+      "year": "2013",
+      "thesis": {
+        "en": "",
+        "tr": ""
+      }
     }
   ],
   "links": {

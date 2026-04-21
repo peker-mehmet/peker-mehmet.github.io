@@ -2,10 +2,7 @@
 
 import { useState } from 'react';
 
-// ── Replace with your actual Formspree form ID ────────────────────────────────
-// Sign up free at https://formspree.io → create a form → copy the ID from the URL.
-const FORMSPREE_ID = 'YOUR_FORM_ID';
-// ─────────────────────────────────────────────────────────────────────────────
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgornkpb';
 
 export type ContactDict = {
   title: string;
@@ -117,7 +114,7 @@ export default function ContactForm({ dict }: { dict: ContactDict }) {
     if (form.honeypot) return; // silently drop bot submissions
     setStatus('submitting');
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
