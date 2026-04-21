@@ -1,0 +1,13 @@
+{
+  "featured": false,
+  "id": "peker2024",
+  "type": "journal",
+  "title": {
+    "en": "deneme",
+    "tr": "deneme2"
+  },
+  "authors": [
+    "mehmet peker"
+  ],
+  "year": 2023
+}
