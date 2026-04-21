@@ -30,7 +30,7 @@ backend:
   repo: peker-mehmet/peker-mehmet.github.io
   branch: main
   auth_type: pkce
-  app_id: YOUR_GITHUB_OAUTH_CLIENT_ID
+  app_id: Ov23liDa7GLrOVRLEkUB
 
 # Where uploaded media files are stored (relative to project root)
 media_folder: public/images
