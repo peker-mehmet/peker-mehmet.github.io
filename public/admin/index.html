@@ -9,6 +9,16 @@
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
+      // Handle identity tokens in URL
+      if (window.location.hash && (
+        window.location.hash.includes('recovery_token') ||
+        window.location.hash.includes('invite_token') ||
+        window.location.hash.includes('confirmation_token')
+      )) {
+        // Already on admin page, netlify identity widget will handle it
+        console.log('Identity token detected');
+      }
+
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {

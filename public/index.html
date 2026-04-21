@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting…</title>
+  <script>
+    (function () {
+      var hash = window.location.hash;
+      if (
+        hash.includes('recovery_token') ||
+        hash.includes('invite_token') ||
+        hash.includes('confirmation_token')
+      ) {
+        window.location.replace('/admin/' + hash);
+      } else {
+        window.location.replace('/tr/');
+      }
+    })();
+  </script>
+</head>
+<body></body>
+</html>
