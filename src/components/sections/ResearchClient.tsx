@@ -1,0 +1,328 @@
+'use client';
+
+import { useState } from 'react';
+import { type Locale } from '@/lib/i18n';
+import { type Project } from '@/lib/content';
+
+// ── Dict type ─────────────────────────────────────────────────────────────────
+
+export type ResearchDict = {
+  title: string;
+  interests_title: string;
+  ongoing_title: string;
+  completed_title: string;
+  show_completed: string;
+  hide_completed: string;
+  collaborators_title: string;
+  role_pi: string;
+  role_co_pi: string;
+  role_collaborator: string;
+  status_active: string;
+  status_completed: string;
+  status_planned: string;
+  funding_label: string;
+  duration_label: string;
+  ongoing: string;
+  grant_label: string;
+  amount_label: string;
+  collaborators_label: string;
+  outputs_label: string;
+  visit_project: string;
+  visit_osf: string;
+  no_ongoing: string;
+  no_completed: string;
+  [key: string]: string;
+};
+
+type Props = {
+  ongoing: Project[];
+  completed: Project[];
+  lang: Locale;
+  dict: ResearchDict;
+};
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+
+function roleLabel(role: string, dict: ResearchDict) {
+  if (role === 'Principal Investigator') return dict.role_pi;
+  if (role === 'Co-PI') return dict.role_co_pi;
+  if (role === 'Collaborator') return dict.role_collaborator;
+  return role;
+}
+
+const ROLE_STYLE: Record<string, string> = {
+  'Principal Investigator': 'bg-navy-700 text-white',
+  'Co-PI': 'bg-navy-100 text-navy-700 border border-navy-200',
+  'Collaborator': 'bg-slate-100 text-slate-600 border border-slate-200',
+};
+
+function roleBadgeStyle(role: string) {
+  return ROLE_STYLE[role] ?? 'bg-slate-100 text-slate-600 border border-slate-200';
+}
+
+function statusBadge(status: string, dict: ResearchDict) {
+  if (status === 'active')    return { label: dict.status_active,    cls: 'bg-green-50 text-green-700 border border-green-200' };
+  if (status === 'completed') return { label: dict.status_completed,  cls: 'bg-slate-100 text-slate-500 border border-slate-200' };
+  if (status === 'planned')   return { label: dict.status_planned,    cls: 'bg-gold-50 text-gold-700 border border-gold-200' };
+  return { label: status, cls: 'bg-slate-100 text-slate-500 border border-slate-200' };
+}
+
+function formatDate(dateStr: string) {
+  const [year, month] = dateStr.split('-');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return month ? `${months[parseInt(month, 10) - 1]} ${year}` : year;
+}
+
+// ── Project card ──────────────────────────────────────────────────────────────
+
+function ProjectCard({
+  project, lang, dict, muted = false,
+}: {
+  project: Project; lang: Locale; dict: ResearchDict; muted?: boolean;
+}) {
+  const title = project.title[lang] || project.title.en;
+  const desc  = project.description[lang] || project.description.en;
+  const { label: statusLabel, cls: statusCls } = statusBadge(project.status, dict);
+
+  const start = formatDate(project.start_date);
+  const end   = project.end_date ? formatDate(project.end_date) : dict.ongoing;
+  const duration = `${start} – ${end}`;
+
+  return (
+    <article className={`relative flex flex-col bg-white rounded-xl border shadow-card overflow-hidden transition-all duration-200
+      ${muted ? 'border-warm-200 opacity-80' : 'border-warm-200 hover:shadow-card-md hover:-translate-y-0.5'}`}
+    >
+      {/* Top gold accent */}
+      <div className={`absolute top-0 left-0 right-0 h-[3px] ${muted ? 'bg-warm-200' : 'bg-gradient-to-r from-gold-400 to-gold-200'}`} />
+
+      <div className="pt-6 px-6 pb-6 flex flex-col gap-4">
+        {/* Header row */}
+        <div className="flex flex-wrap items-start gap-2">
+          <span className={`inline-block px-2 py-[3px] rounded text-[10px] font-semibold font-body uppercase tracking-wider ${roleBadgeStyle(project.role)}`}>
+            {roleLabel(project.role, dict)}
+          </span>
+          <span className={`ml-auto inline-block px-2 py-[3px] rounded text-[10px] font-semibold font-body uppercase tracking-wider ${statusCls}`}>
+            {statusLabel}
+          </span>
+        </div>
+
+        {/* Title */}
+        <h3 className="font-display text-[1.1rem] font-semibold text-navy-800 leading-snug">
+          {title}
+        </h3>
+
+        {/* Description */}
+        <p className="font-body text-[0.8125rem] text-slate-600 leading-relaxed">
+          {desc}
+        </p>
+
+        {/* Meta grid */}
+        <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-[0.8125rem]">
+          {/* Duration */}
+          <div>
+            <dt className="font-body text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-0.5">
+              {dict.duration_label}
+            </dt>
+            <dd className="font-body text-slate-700">{duration}</dd>
+          </div>
+
+          {/* Funding */}
+          {project.funding?.agency && (
+            <div>
+              <dt className="font-body text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-0.5">
+                {dict.funding_label}
+              </dt>
+              <dd className="font-body text-slate-700">
+                {project.funding.agency}
+                {project.funding.grant_number && (
+                  <span className="text-slate-400 ml-1">· {project.funding.grant_number}</span>
+                )}
+                {project.funding.amount && (
+                  <span className="block text-slate-500 text-xs mt-0.5">{project.funding.amount}</span>
+                )}
+              </dd>
+            </div>
+          )}
+
+          {/* Collaborators */}
+          {project.collaborators && project.collaborators.length > 0 && (
+            <div className="sm:col-span-2">
+              <dt className="font-body text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
+                {dict.collaborators_label}
+              </dt>
+              <dd className="flex flex-wrap gap-2">
+                {project.collaborators.map((c) => (
+                  <span
+                    key={c.name}
+                    className="inline-block px-2.5 py-1 bg-warm-50 border border-warm-200 rounded-md text-[0.75rem] font-body text-slate-700"
+                  >
+                    <span className="font-semibold">{c.name}</span>
+                    <span className="text-slate-400 ml-1">· {c.affiliation}</span>
+                  </span>
+                ))}
+              </dd>
+            </div>
+          )}
+        </dl>
+
+        {/* External links */}
+        {(project.url || project.osf_url) && (
+          <div className="flex flex-wrap gap-2 pt-1">
+            {project.url && (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-warm-300 bg-white
+                           text-xs font-medium font-body text-navy-600
+                           hover:bg-navy-50 hover:border-navy-300 transition-colors"
+              >
+                <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3" aria-hidden="true">
+                  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                </svg>
+                {dict.visit_project}
+              </a>
+            )}
+            {project.osf_url && (
+              <a
+                href={project.osf_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-warm-300 bg-white
+                           text-xs font-medium font-body text-navy-600
+                           hover:bg-navy-50 hover:border-navy-300 transition-colors"
+              >
+                <svg viewBox="0 0 16 16" fill="currentColor" className="w-3 h-3" aria-hidden="true">
+                  <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                  <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                </svg>
+                {dict.visit_osf}
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+    </article>
+  );
+}
+
+// ── Collaborators grid ────────────────────────────────────────────────────────
+
+function CollaboratorsGrid({ projects, dict }: { projects: Project[]; dict: ResearchDict }) {
+  const seen = new Set<string>();
+  const collaborators: { name: string; affiliation: string }[] = [];
+
+  for (const p of projects) {
+    for (const c of p.collaborators ?? []) {
+      if (!seen.has(c.name)) {
+        seen.add(c.name);
+        collaborators.push(c);
+      }
+    }
+  }
+
+  if (collaborators.length === 0) return null;
+
+  return (
+    <section className="container-main pb-14 lg:pb-20">
+      <h2 className="font-display text-2xl font-semibold text-navy-800 mb-6">
+        {dict.collaborators_title}
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {collaborators.map((c) => (
+          <div
+            key={c.name}
+            className="flex items-start gap-3 p-4 bg-white rounded-xl border border-warm-200 shadow-card"
+          >
+            <div className="flex-shrink-0 w-9 h-9 rounded-full bg-navy-50 border border-navy-100 flex items-center justify-center">
+              <span className="font-display text-sm font-bold text-navy-600">
+                {c.name.split(' ').pop()?.[0] ?? '?'}
+              </span>
+            </div>
+            <div className="min-w-0">
+              <p className="font-body text-sm font-semibold text-navy-800 leading-snug">{c.name}</p>
+              <p className="font-body text-xs text-slate-500 leading-snug mt-0.5">{c.affiliation}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// ── Main component ────────────────────────────────────────────────────────────
+
+export default function ResearchClient({ ongoing, completed, lang, dict }: Props) {
+  const [showCompleted, setShowCompleted] = useState(false);
+
+  const allProjects = [...ongoing, ...completed];
+
+  return (
+    <>
+      {/* ── Ongoing projects ─────────────────────────────────────── */}
+      <section className="container-main py-10 lg:py-14">
+        <h2 className="font-display text-2xl font-semibold text-navy-800 mb-6">
+          {dict.ongoing_title}
+        </h2>
+        {ongoing.length === 0 ? (
+          <p className="font-body text-slate-500 italic">{dict.no_ongoing}</p>
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            {ongoing.map((p) => (
+              <ProjectCard key={p.id} project={p} lang={lang} dict={dict} />
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* ── Completed projects ───────────────────────────────────── */}
+      {completed.length > 0 && (
+        <section className="container-main pb-10 lg:pb-14">
+          <div className="flex items-center gap-4 mb-6">
+            <h2 className="font-display text-2xl font-semibold text-navy-800">
+              {dict.completed_title}
+            </h2>
+            <button
+              onClick={() => setShowCompleted((v) => !v)}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-warm-300 bg-white
+                         text-sm font-body text-slate-600 hover:border-navy-300 hover:text-navy-700
+                         transition-colors shadow-card"
+              aria-expanded={showCompleted}
+            >
+              <svg
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${showCompleted ? 'rotate-180' : ''}`}
+                aria-hidden="true"
+              >
+                <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
+              {showCompleted ? dict.hide_completed : dict.show_completed}
+            </button>
+          </div>
+
+          <div
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-5 transition-all duration-300 origin-top
+              ${showCompleted ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden pointer-events-none'}`}
+          >
+            {completed.map((p) => (
+              <ProjectCard key={p.id} project={p} lang={lang} dict={dict} muted />
+            ))}
+          </div>
+
+          {!showCompleted && (
+            <p className="font-body text-sm text-slate-400 italic">
+              {completed.length} {dict.completed_title.toLowerCase()} — {dict.show_completed.toLowerCase()}
+            </p>
+          )}
+        </section>
+      )}
+
+      {/* ── Collaborators ─────────────────────────────────────────── */}
+      <div className="border-t border-warm-200 bg-warm-50">
+        <CollaboratorsGrid projects={allProjects} dict={dict} />
+      </div>
+    </>
+  );
+}

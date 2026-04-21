@@ -114,13 +114,24 @@ export function getPublications(): Publication[] {
 
 // ── Scales ───────────────────────────────────────────────────────────────────
 
+export type Subscale = {
+  name: string;
+  item_count?: number;
+  description?: { en: string; tr: string };
+};
+
 export type Scale = {
   id: string;
   name: { en: string; tr: string };
   abbreviation?: string;
+  role?: 'developed' | 'translated' | 'adapted';
+  construct?: { en: string; tr: string };
+  year?: number;
+  original_authors?: string[];
+  adaptation_year?: number | null;
   description: { en: string; tr: string };
   item_count: number;
-  subscales?: string[];
+  subscales?: Subscale[];
   response_format: string;
   target_population: string;
   languages_available: string[];
@@ -159,6 +170,8 @@ export type Project = {
   outputs?: string[];
   image?: string;
   featured?: boolean;
+  url?: string;
+  osf_url?: string;
 };
 
 export function getProjects(): Project[] {

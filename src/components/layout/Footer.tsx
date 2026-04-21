@@ -132,13 +132,13 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: FooterDict 
   ];
 
   // Social / academic links — only render entries that have a URL
-  const socialLinks: { key: keyof typeof ICON_PATHS; label: string; href: string; external: boolean }[] = [
+  const socialLinks = [
     { key: 'email',       label: 'Email',          href: links.email ? `mailto:${links.email}` : '', external: false },
     { key: 'scholar',     label: 'Google Scholar', href: links.google_scholar, external: true },
     { key: 'orcid',       label: 'ORCID',          href: links.orcid,          external: true },
     { key: 'researchgate',label: 'ResearchGate',   href: links.researchgate,   external: true },
     { key: 'linkedin',    label: 'LinkedIn',        href: links.linkedin,       external: true },
-  ].filter((l) => Boolean(l.href));
+  ].filter((l) => Boolean(l.href)) as { key: keyof typeof ICON_PATHS; label: string; href: string; external: boolean }[];
 
   // Build date — renders at static-build time, giving a true "last updated" stamp
   const lastUpdated = new Intl.DateTimeFormat(lang === 'tr' ? 'tr-TR' : 'en-US', {

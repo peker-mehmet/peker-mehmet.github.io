@@ -1,14 +1,23 @@
+import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
-import type { Metadata } from 'next';
+import { getSiteConfig, getProjects } from '@/lib/content';
+import { PageTitle } from '@/components/ui/SectionTitle';
+import ResearchClient, { type ResearchDict } from '@/components/sections/ResearchClient';
 
 export async function generateMetadata({
   params,
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
-  return { title: dict.research.title };
+  const [dict, config] = await Promise.all([
+    getDictionary(params.lang),
+    Promise.resolve(getSiteConfig()),
+  ]);
+  return {
+    title: `${(dict as any).research.title} — ${config.owner.name.full}`,
+    description: config.bio.short[params.lang],
+  };
 }
 
 export default async function ResearchPage({
@@ -16,27 +25,33 @@ export default async function ResearchPage({
 }: {
   params: { lang: Locale };
 }) {
-  const dict = await getDictionary(params.lang);
+  const lang = params.lang;
+
+  const [dict, config, projects] = await Promise.all([
+    getDictionary(lang),
+    Promise.resolve(getSiteConfig()),
+    Promise.resolve(getProjects()),
+  ]);
+
+  const d = (dict as any).research as ResearchDict;
+
+  const ongoing   = projects.filter((p) => p.status === 'active' || p.status === 'planned');
+  const completed = projects.filter((p) => p.status === 'completed');
 
   return (
-    <div className="container-main section">
-      <h1 className="section-title">{dict.research.title}</h1>
-      <section className="mb-12">
-        <h2 className="text-2xl font-serif font-semibold mb-4">
-          {dict.research.interests_title}
-        </h2>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
-          <li>Research Interest 1</li>
-          <li>Research Interest 2</li>
-          <li>Research Interest 3</li>
-        </ul>
-      </section>
-      <section>
-        <h2 className="text-2xl font-serif font-semibold mb-4">
-          {dict.research.projects_title}
-        </h2>
-        <p className="text-gray-500 italic">Projects coming soon.</p>
-      </section>
-    </div>
+    <>
+      <PageTitle
+        eyebrow={`${config.owner.title[lang]} · ${config.institution.department[lang]}`}
+      >
+        {d.title}
+      </PageTitle>
+
+      <ResearchClient
+        ongoing={ongoing}
+        completed={completed}
+        lang={lang}
+        dict={d}
+      />
+    </>
   );
 }

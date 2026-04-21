@@ -1,14 +1,23 @@
+import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
-import type { Metadata } from 'next';
+import { getSiteConfig, getScales } from '@/lib/content';
+import { PageTitle } from '@/components/ui/SectionTitle';
+import ScalesClient, { type ScalesDict } from '@/components/sections/ScalesClient';
 
 export async function generateMetadata({
   params,
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
-  return { title: dict.scales.title };
+  const [dict, config] = await Promise.all([
+    getDictionary(params.lang),
+    Promise.resolve(getSiteConfig()),
+  ]);
+  return {
+    title: `${(dict as any).scales.title} — ${config.owner.name.full}`,
+    description: config.bio.short[params.lang],
+  };
 }
 
 export default async function ScalesPage({
@@ -16,12 +25,25 @@ export default async function ScalesPage({
 }: {
   params: { lang: Locale };
 }) {
-  const dict = await getDictionary(params.lang);
+  const lang = params.lang;
+
+  const [dict, config, scales] = await Promise.all([
+    getDictionary(lang),
+    Promise.resolve(getSiteConfig()),
+    Promise.resolve(getScales()),
+  ]);
+
+  const d = (dict as any).scales as ScalesDict;
 
   return (
-    <div className="container-main section">
-      <h1 className="section-title">{dict.scales.title}</h1>
-      <p className="text-slate-500 italic">Scale entries coming soon.</p>
-    </div>
+    <>
+      <PageTitle
+        eyebrow={`${config.owner.title[lang]} · ${config.institution.department[lang]}`}
+      >
+        {d.title}
+      </PageTitle>
+
+      <ScalesClient scales={scales} lang={lang} dict={d} />
+    </>
   );
 }

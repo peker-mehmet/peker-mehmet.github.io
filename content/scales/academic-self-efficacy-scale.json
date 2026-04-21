@@ -5,15 +5,44 @@
     "tr": "Akademik Öz-Yeterlik Ölçeği"
   },
   "abbreviation": "ASES",
+  "role": "developed",
+  "construct": {
+    "en": "Academic Self-Efficacy",
+    "tr": "Akademik Öz-Yeterlik"
+  },
+  "year": 2024,
+  "original_authors": [],
+  "adaptation_year": null,
   "description": {
     "en": "The ASES measures students' beliefs in their ability to complete academic tasks, manage their learning environment, and overcome academic challenges. It is designed for use with university populations and can be administered individually or in groups.",
     "tr": "AÖÖ, öğrencilerin akademik görevleri tamamlama, öğrenme ortamlarını yönetme ve akademik zorluklarla başa çıkma konusundaki inançlarını ölçmektedir. Üniversite öğrencilerine yönelik olup bireysel veya grup olarak uygulanabilir."
   },
   "item_count": 24,
   "subscales": [
-    "Task Completion Efficacy",
-    "Learning Management Efficacy",
-    "Challenge Coping Efficacy"
+    {
+      "name": "Task Completion Efficacy",
+      "item_count": 8,
+      "description": {
+        "en": "Assesses confidence in completing academic tasks, assignments, and examinations under typical and time-pressured conditions.",
+        "tr": "Normal ve zaman baskısı altındaki koşullarda akademik görevleri, ödevleri ve sınavları tamamlamadaki güveni değerlendirir."
+      }
+    },
+    {
+      "name": "Learning Management Efficacy",
+      "item_count": 8,
+      "description": {
+        "en": "Measures perceived ability to organize study sessions, allocate attention effectively, and regulate one's learning environment.",
+        "tr": "Çalışma seanslarını organize etme, dikkati etkin biçimde dağıtma ve öğrenme ortamını düzenleme konusundaki algılanan yetkinliği ölçer."
+      }
+    },
+    {
+      "name": "Challenge Coping Efficacy",
+      "item_count": 8,
+      "description": {
+        "en": "Captures beliefs about persisting through academic setbacks, managing failure, and seeking help when needed.",
+        "tr": "Akademik başarısızlıklarla başa çıkma, başarısızlıkla baş etme ve gerektiğinde yardım arama konusundaki inançları ölçer."
+      }
+    }
   ],
   "response_format": "5-point Likert (1 = Not at all confident, 5 = Completely confident)",
   "target_population": "University students",
@@ -28,8 +57,8 @@
     "test_retest": "r = .81 (6-week interval, n = 85)"
   },
   "validity_notes": {
-    "en": "Confirmatory factor analysis supported the three-factor structure (CFI = .96, RMSEA = .051). Convergent validity was established through significant positive correlations with GPA (r = .43) and intrinsic motivation (r = .51).",
-    "tr": "Doğrulayıcı faktör analizi üç faktörlü yapıyı desteklemiştir (CFI = .96, RMSEA = .051). Akademik ortalama (r = .43) ve içsel motivasyon (r = .51) ile anlamlı pozitif korelasyonlar aracılığıyla yakınsak geçerlilik sağlanmıştır."
+    "en": "Confirmatory factor analysis supported the three-factor structure (CFI = .96, RMSEA = .051). Convergent validity was established through significant positive correlations with GPA (r = .43) and intrinsic motivation (r = .51). Discriminant validity was confirmed against a measure of academic anxiety (r = −.38).",
+    "tr": "Doğrulayıcı faktör analizi üç faktörlü yapıyı desteklemiştir (CFI = .96, RMSEA = .051). Akademik ortalama (r = .43) ve içsel motivasyon (r = .51) ile anlamlı pozitif korelasyonlar aracılığıyla yakınsak geçerlilik sağlanmıştır. Akademik kaygı ölçümüyle (r = −.38) ayrışan geçerlilik doğrulanmıştır."
   },
   "downloads": {
     "scale_form": "/downloads/ases-form-tr.pdf",

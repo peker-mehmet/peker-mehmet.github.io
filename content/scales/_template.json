@@ -10,7 +10,25 @@
   },
 
   "abbreviation": "ABBR",
-  "__abbreviation_note": "Short acronym used to refer to the scale. Leave empty string if none.",
+  "__abbreviation_note": "Short acronym for the scale (e.g. 'ASES'). Leave empty string if none.",
+
+  "role": "developed",
+  "__role_note": "Your relationship to this scale. One of: 'developed' (you created it from scratch), 'translated' (you translated an existing scale), 'adapted' (you culturally adapted an existing scale).",
+
+  "construct": {
+    "en": "Name of the Psychological Construct",
+    "tr": "Psikolojik Yapının Adı"
+  },
+  "__construct_note": "Short label for the construct being measured (e.g. 'Academic Self-Efficacy'). Shown on the scale card.",
+
+  "year": 2024,
+  "__year_note": "Year the scale was developed or your adaptation was published.",
+
+  "original_authors": [],
+  "__original_authors_note": "For translated/adapted scales: list the original authors as ['Lastname, Firstname']. Leave as empty array [] for scales you developed.",
+
+  "adaptation_year": null,
+  "__adaptation_year_note": "For translated/adapted scales: year of your adaptation/translation. Leave null if not applicable.",
 
   "description": {
     "en": "A brief description of what this scale measures, who it is for, and its main use cases.",
@@ -21,10 +39,24 @@
   "__item_count_note": "Total number of items (questions) in the scale as an integer.",
 
   "subscales": [
-    "Subscale 1 Name",
-    "Subscale 2 Name"
+    {
+      "name": "Subscale 1 Name",
+      "item_count": 10,
+      "description": {
+        "en": "Brief description of what this subscale measures.",
+        "tr": "Bu alt ölçeğin ne ölçtüğünün kısa açıklaması."
+      }
+    },
+    {
+      "name": "Subscale 2 Name",
+      "item_count": 10,
+      "description": {
+        "en": "Brief description of what this subscale measures.",
+        "tr": "Bu alt ölçeğin ne ölçtüğünün kısa açıklaması."
+      }
+    }
   ],
-  "__subscales_note": "Array of subscale names. Leave as empty array [] if the scale has no subscales.",
+  "__subscales_note": "Array of subscale objects. Each must have 'name' (string matching the key in cronbach_alpha_subscales), 'item_count' (integer), and 'description' (bilingual). Leave as empty array [] if the scale has no subscales.",
 
   "response_format": "5-point Likert (1 = Never, 5 = Always)",
   "__response_format_note": "Describe the response options. E.g. '7-point Likert', 'Yes/No', 'Frequency scale (0-3)'.",
@@ -37,39 +69,34 @@
 
   "reliability": {
     "cronbach_alpha_total": 0.89,
-    "__cronbach_note": "Overall Cronbach's alpha. Remove this comment key before saving.",
     "cronbach_alpha_subscales": {
       "Subscale 1 Name": 0.82,
       "Subscale 2 Name": 0.85
     },
-    "__subscale_alpha_note": "Alpha per subscale. Match names exactly to the subscales array. Remove this key.",
-    "test_retest": "r = .78 (4-week interval)",
-    "__test_retest_note": "Test-retest reliability if available. Leave empty string if not."
+    "__subscale_alpha_note": "Keys must exactly match the 'name' field in each subscale object. Remove this key.",
+    "test_retest": "r = .78 (4-week interval)"
   },
 
   "validity_notes": {
-    "en": "Brief description of validity evidence: factor structure, convergent/discriminant validity, etc.",
-    "tr": "Geçerlilik kanıtlarının kısa açıklaması: faktör yapısı, yakınsak/ayrışan geçerlilik vb."
+    "en": "Brief description of validity evidence: factor structure, convergent/discriminant validity, sample characteristics, etc.",
+    "tr": "Geçerlilik kanıtlarının kısa açıklaması: faktör yapısı, yakınsak/ayrışan geçerlilik, örneklem özellikleri vb."
   },
 
   "downloads": {
     "scale_form": "/downloads/your-scale-form.pdf",
-    "__form_note": "PDF of the scale form participants fill out. Remove this key.",
     "scoring_guide": "/downloads/your-scale-scoring.pdf",
-    "__scoring_note": "PDF scoring/interpretation guide for researchers. Remove this key.",
-    "manual": "/downloads/your-scale-manual.pdf",
-    "__manual_note": "Full technical manual PDF. Leave empty string if not available. Remove this key."
+    "manual": ""
   },
 
   "citation": {
-    "en": "Lastname, F. (2024). Full scale name [Scale name in brackets]. Journal Name, 10(2), 1-20. https://doi.org/10.xxxx/xxxx",
-    "tr": "Soyadı, A. (2024). Ölçeğin tam adı [Köşeli parantez içinde kısa ad]. Dergi Adı, 10(2), 1-20. https://doi.org/10.xxxx/xxxx"
+    "en": "Lastname, F. (2024). Full scale name [Abbreviation]. Journal Name, 10(2), 1-20. https://doi.org/10.xxxx/xxxx",
+    "tr": "Soyadı, A. (2024). Ölçeğin tam adı [Kısaltma]. Dergi Adı, 10(2), 1-20. https://doi.org/10.xxxx/xxxx"
   },
-  "__citation_note": "APA-format citation for how others should cite this scale.",
+  "__citation_note": "APA-format citation string for how others should cite this scale.",
 
   "reference_publication": "lastname-2024-keyword",
-  "__reference_publication_note": "The id field of the publication JSON where this scale was originally published/validated. Leave empty string if not in your publications list.",
+  "__reference_publication_note": "The 'id' of the publication JSON where this scale was originally published/validated. Leave empty string if not in your publications list.",
 
   "featured": false,
-  "__featured_note": "Set to true to highlight this scale at the top of the scales page."
+  "__featured_note": "Set to true to feature this scale at the top of the scales list."
 }

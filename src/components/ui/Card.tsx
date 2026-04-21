@@ -11,7 +11,7 @@ const variants: Record<Variant, string> = {
   elevated: 'shadow-card-md hover:shadow-card-lg border border-warm-100',
 };
 
-type CardProps = HTMLAttributes<HTMLDivElement> & {
+type CardProps = Omit<HTMLAttributes<HTMLElement>, 'onToggle'> & {
   variant?: Variant;
   padding?: 'none' | 'sm' | 'md' | 'lg';
   as?: 'div' | 'article' | 'section' | 'li';
