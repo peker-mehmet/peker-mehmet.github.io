@@ -9,6 +9,7 @@
 backend:
   name: git-gateway
   branch: main
+  site_domain: courageous-clafoutis-36a19d.netlify.app
 
 # Where uploaded media files are stored (relative to project root)
 media_folder: public/images
