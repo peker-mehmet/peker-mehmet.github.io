@@ -133,7 +133,8 @@
     "type_thesis": "Tez",
     "type_preprint": "Önbaskı",
     "items_count_singular": "yayın",
-    "items_count_plural": "yayın"
+    "items_count_plural": "yayın",
+    "interest_filter_label": "İlgi alanı filtresi:"
   },
   "scales": {
     "title": "Ölçekler & Ölçüm Araçları",

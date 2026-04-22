@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
@@ -394,19 +395,21 @@ export default async function AboutPage({
           <SectionTitle eyebrow={d.eyebrow_interests}>{d.interests_title}</SectionTitle>
           <div className="flex flex-wrap gap-2.5 max-w-3xl">
             {research_interests[lang].map((interest, i) => (
-              <span
+              <Link
                 key={i}
-                className={`px-4 py-2 rounded-full text-sm font-medium font-body border cursor-default transition-colors
-                  ${
-                    i % 3 === 0
-                      ? 'bg-navy-700 text-white border-navy-700'
-                      : i % 3 === 1
-                      ? 'bg-gold-50 text-navy-700 border-gold-200 hover:bg-gold-100'
-                      : 'bg-white text-slate-600 border-warm-300 hover:border-navy-300 hover:text-navy-600'
-                  }`}
+                href={`/${lang}/publications?interest=${encodeURIComponent(research_interests.en[i] ?? interest)}`}
+                className="
+                  inline-flex items-center gap-2 px-4 py-2 rounded-full
+                  font-body text-sm font-medium border
+                  bg-warm-50 text-navy-700 border-navy-700
+                  hover:bg-navy-700 hover:text-white
+                  transition-all duration-200
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400
+                "
               >
+                <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-gold-400 flex-shrink-0" />
                 {interest}
-              </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -61,8 +61,8 @@
   },
   "__abstract_note": "Optional but recommended. Bilingual object. Leave as empty string if not available.",
 
-  "tags": ["keyword1", "keyword2"],
-  "__tags_note": "Array of lowercase keywords used for filtering on the publications page.",
+  "tags": [],
+  "__tags_note": "Research interest tags for filtering. Add values that match site-config.json research_interests.en EXACTLY (e.g. 'Emotional Labor', 'Employee Well-Being') for interest-based filtering from the homepage pills. You may also include other descriptive keywords.",
 
   "featured": false,
   "__featured_note": "Set to true to highlight this paper on the homepage or a featured section."

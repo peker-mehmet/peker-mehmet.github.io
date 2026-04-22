@@ -133,7 +133,8 @@
     "type_thesis": "Thesis",
     "type_preprint": "Preprint",
     "items_count_singular": "item",
-    "items_count_plural": "items"
+    "items_count_plural": "items",
+    "interest_filter_label": "Filtered by interest:"
   },
   "scales": {
     "title": "Scales & Measures",

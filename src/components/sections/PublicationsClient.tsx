@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import { type Locale } from '@/lib/i18n';
 import { type Publication } from '@/lib/content';
 
@@ -38,6 +38,7 @@ export type PubsDict = {
   type_preprint: string;
   items_count_singular: string;
   items_count_plural: string;
+  interest_filter_label: string;
 };
 
 type Tab = 'all' | 'journal' | 'conference' | 'books' | 'theses';
@@ -409,11 +410,19 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
   const [activeTab,          setActiveTab]          = useState<Tab>('all');
   const [search,             setSearch]             = useState('');
   const [yearFilter,         setYearFilter]         = useState('');
+  const [interestFilter,     setInterestFilter]     = useState('');
   const [expandedAbstracts,  setExpandedAbstracts]  = useState<Set<string>>(new Set());
   const [expandedCitations,  setExpandedCitations]  = useState<Set<string>>(new Set());
   const [copiedId,           setCopiedId]           = useState<string | null>(null);
 
   const ownerLastName = ownerName.split(' ').filter(Boolean).pop() ?? '';
+
+  // Read ?interest= query param from URL on mount (compatible with static export)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const interest = params.get('interest');
+    if (interest) setInterestFilter(interest);
+  }, []);
 
   // ── Derived data ────────────────────────────────────────────────────────────
 
@@ -442,6 +451,9 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
 
   const filtered = useMemo(() => {
     let res = tabFiltered;
+    if (interestFilter) {
+      res = res.filter(p => p.tags?.includes(interestFilter));
+    }
     if (search.trim()) {
       const q = search.toLowerCase();
       res = res.filter(p =>
@@ -453,12 +465,12 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
     }
     if (yearFilter) res = res.filter(p => String(p.year) === yearFilter);
     return res;
-  }, [tabFiltered, search, yearFilter, lang]);
+  }, [tabFiltered, search, yearFilter, interestFilter, lang]);
 
   const featured = useMemo(() => {
-    if (activeTab !== 'all' || search.trim() || yearFilter) return [];
+    if (activeTab !== 'all' || search.trim() || yearFilter || interestFilter) return [];
     return publications.filter(p => p.featured).slice(0, 3);
-  }, [publications, activeTab, search, yearFilter]);
+  }, [publications, activeTab, search, yearFilter, interestFilter]);
 
   const byYear = useMemo(() => {
     const map = new Map<number, Publication[]>();
@@ -475,7 +487,7 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
     [publications]
   );
 
-  const hasFilters = Boolean(search.trim() || yearFilter);
+  const hasFilters = Boolean(search.trim() || yearFilter || interestFilter);
 
   // ── Handlers ────────────────────────────────────────────────────────────────
 
@@ -605,7 +617,7 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
             {/* Clear filters */}
             {hasFilters && (
               <button
-                onClick={() => { setSearch(''); setYearFilter(''); }}
+                onClick={() => { setSearch(''); setYearFilter(''); setInterestFilter(''); }}
                 className="px-4 py-2.5 rounded-lg border border-warm-300 bg-white text-sm font-body text-slate-600
                            hover:border-navy-300 hover:text-navy-700 transition-colors shadow-card"
               >
@@ -615,6 +627,30 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
           </div>
         </div>
       </div>
+
+      {/* ── Active interest filter chip ─────────────────────────── */}
+      {interestFilter && (
+        <div className="bg-gold-50 border-b border-gold-200">
+          <div className="container-main py-3 flex items-center gap-3">
+            <span className="font-body text-xs font-semibold text-gold-700 uppercase tracking-wider flex-shrink-0">
+              {dict.interest_filter_label}
+            </span>
+            <span className="inline-flex items-center gap-2 pl-3 pr-2 py-1 rounded-full bg-navy-700 text-white font-body text-sm font-medium">
+              <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-gold-400 flex-shrink-0" />
+              {interestFilter}
+              <button
+                onClick={() => setInterestFilter('')}
+                aria-label="Remove interest filter"
+                className="flex items-center justify-center w-4 h-4 rounded-full hover:bg-white/20 transition-colors"
+              >
+                <svg viewBox="0 0 12 12" fill="currentColor" className="w-2.5 h-2.5" aria-hidden="true">
+                  <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round"/>
+                </svg>
+              </button>
+            </span>
+          </div>
+        </div>
+      )}
 
       {/* ── Main content ────────────────────────────────────────── */}
       <div className="container-main py-10 lg:py-14">
@@ -654,7 +690,7 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
             <p className="font-body text-slate-500 text-body-sm">{dict.no_results}</p>
             {hasFilters && (
               <button
-                onClick={() => { setSearch(''); setYearFilter(''); }}
+                onClick={() => { setSearch(''); setYearFilter(''); setInterestFilter(''); }}
                 className="mt-3 text-sm font-body text-gold-600 hover:text-gold-700 underline underline-offset-2"
               >
                 {dict.clear_filters}
