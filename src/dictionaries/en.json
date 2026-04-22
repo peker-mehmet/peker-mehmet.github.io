@@ -1,6 +1,6 @@
 {
   "nav": {
-    "site_name": "Academic Website",
+    "site_name": "Mehmet Peker",
     "home": "Home",
     "about": "About",
     "research": "Research",
@@ -67,7 +67,11 @@
     "linkedin": "LinkedIn",
     "view_profile": "View Profile",
     "toggle_en": "English",
-    "toggle_tr": "Türkçe"
+    "toggle_tr": "Türkçe",
+    "eyebrow_bio": "About",
+    "eyebrow_interests": "Focus Areas",
+    "eyebrow_education": "Academic Background",
+    "eyebrow_profiles": "Find Me Online"
   },
   "research": {
     "title": "Research",

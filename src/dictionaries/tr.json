@@ -1,6 +1,6 @@
 {
   "nav": {
-    "site_name": "Akademik Web Sitesi",
+    "site_name": "Mehmet Peker",
     "home": "Ana Sayfa",
     "about": "Hakkımda",
     "research": "Araştırma",
@@ -67,7 +67,11 @@
     "linkedin": "LinkedIn",
     "view_profile": "Profile Git",
     "toggle_en": "English",
-    "toggle_tr": "Türkçe"
+    "toggle_tr": "Türkçe",
+    "eyebrow_bio": "Hakkımda",
+    "eyebrow_interests": "Odak Alanları",
+    "eyebrow_education": "Akademik Geçmiş",
+    "eyebrow_profiles": "Çevrimiçi Bul"
   },
   "research": {
     "title": "Araştırma",

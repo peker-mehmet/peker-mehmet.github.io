@@ -24,6 +24,10 @@ type AboutDict = {
   view_profile: string;
   toggle_en: string;
   toggle_tr: string;
+  eyebrow_bio: string;
+  eyebrow_interests: string;
+  eyebrow_education: string;
+  eyebrow_profiles: string;
 };
 
 // ── Profile photo ─────────────────────────────────────────────────────────────
@@ -372,7 +376,7 @@ export default async function AboutPage({
       {/* ── Biography ────────────────────────────────────────────────────── */}
       <section className="bg-warm-50 border-b border-warm-200">
         <div className="container-main py-14 lg:py-16">
-          <SectionTitle eyebrow="About">{d.bio_title}</SectionTitle>
+          <SectionTitle eyebrow={d.eyebrow_bio}>{d.bio_title}</SectionTitle>
           <div className="max-w-3xl">
             <BiographySection
               bioEn={bio.full.en}
@@ -387,7 +391,7 @@ export default async function AboutPage({
       {/* ── Research Interests ───────────────────────────────────────────── */}
       <section className="bg-white border-b border-warm-200">
         <div className="container-main py-14 lg:py-16">
-          <SectionTitle eyebrow="Focus Areas">{d.interests_title}</SectionTitle>
+          <SectionTitle eyebrow={d.eyebrow_interests}>{d.interests_title}</SectionTitle>
           <div className="flex flex-wrap gap-2.5 max-w-3xl">
             {research_interests[lang].map((interest, i) => (
               <span
@@ -411,7 +415,7 @@ export default async function AboutPage({
       {/* ── Education timeline ───────────────────────────────────────────── */}
       <section className="bg-warm-50 border-b border-warm-200">
         <div className="container-main py-14 lg:py-16">
-          <SectionTitle eyebrow="Academic Background">{d.education_title}</SectionTitle>
+          <SectionTitle eyebrow={d.eyebrow_education}>{d.education_title}</SectionTitle>
           <div className="max-w-2xl">
             <EducationTimeline
               education={education}
@@ -426,7 +430,7 @@ export default async function AboutPage({
       {profiles.length > 0 && (
         <section className="bg-white">
           <div className="container-main py-14 lg:py-16">
-            <SectionTitle eyebrow="Find Me Online">{d.profiles_title}</SectionTitle>
+            <SectionTitle eyebrow={d.eyebrow_profiles}>{d.profiles_title}</SectionTitle>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl">
               {profiles.map((p) => (
                 <ProfileCard
