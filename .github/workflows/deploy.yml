@@ -34,6 +34,7 @@ jobs:
         env:
           # Set to your GitHub repo name, e.g. /academic-website
           NEXT_PUBLIC_BASE_PATH: ''
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

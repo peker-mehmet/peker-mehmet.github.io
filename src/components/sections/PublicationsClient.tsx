@@ -3,6 +3,7 @@
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import { type Locale } from '@/lib/i18n';
 import { type Publication } from '@/lib/content';
+import { trackDownload } from '@/lib/analytics';
 
 // ── Dict type ─────────────────────────────────────────────────────────────────
 
@@ -185,9 +186,9 @@ function AuthorList({ authors, ownerLastName }: { authors: string[]; ownerLastNa
 // ── Pill link ─────────────────────────────────────────────────────────────────
 
 function PillLink({
-  href, label, icon, disabled = false,
+  href, label, icon, disabled = false, onClick,
 }: {
-  href: string; label: string; icon: React.ReactNode; disabled?: boolean;
+  href: string; label: string; icon: React.ReactNode; disabled?: boolean; onClick?: () => void;
 }) {
   if (disabled) {
     return (
@@ -207,6 +208,7 @@ function PillLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={onClick}
       className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold font-body
                  bg-navy-50 text-navy-600 border border-navy-200
                  hover:bg-navy-700 hover:text-gold-300 hover:border-navy-700
@@ -237,6 +239,10 @@ function PillRow({ pub, dict }: { pub: Publication; dict: PubsDict }) {
         label={dict.pdf}
         icon={<IconFile />}
         disabled={!hasPdf}
+        onClick={hasPdf ? () => {
+          const fileName = (pub.pdf ?? '').split('/').pop() ?? 'unknown.pdf';
+          trackDownload(fileName, 'pdf', window.location.pathname);
+        } : undefined}
       />
     </div>
   );

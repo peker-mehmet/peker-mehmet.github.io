@@ -7,6 +7,7 @@ import { getSiteConfig } from '@/lib/content';
 import { DEFAULT_OG_IMAGE } from '@/lib/metadata';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 
 const crimsonPro = Crimson_Pro({
   subsets: ['latin'],
@@ -71,6 +72,7 @@ export default async function LangLayout({
       className={`${crimsonPro.variable} ${inter.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-site">
+        <GoogleAnalytics />
         <Navbar lang={params.lang as Locale} dict={dict.nav} />
         <main className="flex-1">{children}</main>
         <Footer lang={params.lang as Locale} dict={dict} />

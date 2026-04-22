@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { type Locale, locales } from '@/lib/i18n';
+import { trackLanguageSwitch } from '@/lib/analytics';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -399,6 +400,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
   // ── Language switch ───────────────────────────────────────────────────────
   const handleLangSwitch = useCallback((targetLang: Locale) => {
     if (targetLang === lang) return;
+    trackLanguageSwitch(lang, targetLang);
     safeLocalStorage('set', 'preferred-lang', targetLang);
     router.push(getLangHref(pathname, targetLang));
   }, [lang, pathname, router]);

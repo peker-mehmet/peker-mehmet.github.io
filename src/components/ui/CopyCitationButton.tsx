@@ -1,14 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+import { trackCitationCopy } from '@/lib/analytics';
 
 type Props = {
   text: string;
   copyLabel: string;
   copiedLabel: string;
+  sourceName?: string;
 };
 
-export default function CopyCitationButton({ text, copyLabel, copiedLabel }: Props) {
+export default function CopyCitationButton({ text, copyLabel, copiedLabel, sourceName }: Props) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -16,6 +18,7 @@ export default function CopyCitationButton({ text, copyLabel, copiedLabel }: Pro
       await navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
+      if (sourceName) trackCitationCopy(sourceName);
     } catch {}
   };
 

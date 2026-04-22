@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { type Locale } from '@/lib/i18n';
 import { type SiteConfig } from '@/lib/content';
+import { trackInterestClick } from '@/lib/analytics';
 
 type ResearchInterestsProps = {
   lang: Locale;
@@ -38,6 +41,7 @@ export default function ResearchInterests({ lang, config, dict }: ResearchIntere
             <Link
               key={i}
               href={`/${lang}/publications?interest=${encodeURIComponent(interestsEn[i] ?? interest)}`}
+              onClick={() => trackInterestClick(interestsEn[i] ?? interest)}
               className="
                 inline-flex items-center gap-2 px-4 py-2 rounded-full
                 font-body text-sm font-medium border
