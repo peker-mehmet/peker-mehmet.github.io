@@ -184,7 +184,24 @@ function AuthorList({ authors, ownerLastName }: { authors: string[]; ownerLastNa
 
 // ── Pill link ─────────────────────────────────────────────────────────────────
 
-function PillLink({ href, label, icon }: { href: string; label: string; icon: React.ReactNode }) {
+function PillLink({
+  href, label, icon, disabled = false,
+}: {
+  href: string; label: string; icon: React.ReactNode; disabled?: boolean;
+}) {
+  if (disabled) {
+    return (
+      <span
+        aria-disabled="true"
+        className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold font-body
+                   bg-slate-50 text-slate-400 border border-slate-200
+                   opacity-40 cursor-not-allowed select-none"
+      >
+        {icon}
+        {label}
+      </span>
+    );
+  }
   return (
     <a
       href={href}
@@ -204,19 +221,23 @@ function PillLink({ href, label, icon }: { href: string; label: string; icon: Re
 // ── Publication pills row ─────────────────────────────────────────────────────
 
 function PillRow({ pub, dict }: { pub: Publication; dict: PubsDict }) {
-  const hasPills = pub.doi || pub.pdf || pub.url;
-  if (!hasPills) return null;
+  const hasPdf = Boolean(pub.pdf);
   return (
     <div className="flex flex-wrap gap-1.5">
+      {/* DOI and URL: only shown when present */}
       {pub.doi && (
         <PillLink href={`https://doi.org/${pub.doi}`} label={dict.doi} icon={<IconChain />} />
-      )}
-      {pub.pdf && (
-        <PillLink href={pub.pdf} label={dict.pdf} icon={<IconFile />} />
       )}
       {pub.url && !pub.doi && (
         <PillLink href={pub.url} label="Link" icon={<IconExternalLink />} />
       )}
+      {/* PDF: always shown — disabled (grayed out) when link is missing */}
+      <PillLink
+        href={pub.pdf ?? ''}
+        label={dict.pdf}
+        icon={<IconFile />}
+        disabled={!hasPdf}
+      />
     </div>
   );
 }
