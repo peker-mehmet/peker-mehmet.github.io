@@ -94,6 +94,12 @@
   },
   "__citation_note": "APA-format citation string for how others should cite this scale.",
 
+  "original_citation": {
+    "en": "",
+    "tr": ""
+  },
+  "__original_citation_note": "For translated/adapted scales only: APA-format citation for the original scale. This appears as a second citation box on the detail page under 'Citation for Original Scale'. Leave empty strings for scales you developed.",
+
   "reference_publication": "lastname-2024-keyword",
   "__reference_publication_note": "The 'id' of the publication JSON where this scale was originally published/validated. Leave empty string if not in your publications list.",
 

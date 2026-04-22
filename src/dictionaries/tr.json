@@ -190,7 +190,15 @@
     "section_developed": "Geliştirilen Ölçekler",
     "section_adapted": "Uyarlanan ve Psikometrik Özellikleri Test Edilen Ölçekler",
     "section_translated": "Faktör Analizi Kanıtı Olan Çeviri Ölçekler",
-    "scales_unit": "ölçek"
+    "scales_unit": "ölçek",
+    "tab_adapted": "Uyarlanan Ölçekler",
+    "tab_adapted_desc": "Kapsamlı psikometrik çalışmalarla Türkçeye uyarlanan ölçekler. Faktör yapısı, güvenirlik ve geçerlik kanıtları Türk örneklemleriyle test edilmiştir.",
+    "tab_translated": "Çevrilen Ölçekler",
+    "tab_translated_desc": "Türkçeye çevrilen ve faktör analizi ile güvenirlik kanıtları sunulan ölçekler. Kapsamlı bir uyarlama çalışması yapılmamıştır.",
+    "tab_developed": "Geliştirilen Ölçekler",
+    "tab_developed_desc": "Tarafımdan özgün olarak geliştirilen ve psikometrik özellikleri Türk örneklemleriyle test edilmiş ölçekler.",
+    "detail_citation_original": "Orijinal Ölçek İçin Atıf",
+    "download_form_and_scoring": "Ölçek Formu ve Puanlama Kılavuzu"
   },
   "news": {
     "title": "Haberler",

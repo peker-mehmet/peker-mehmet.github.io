@@ -157,10 +157,19 @@ export default async function ScaleDetailPage({
     scale.reliability?.cronbach_alpha_total !== undefined ||
     scale.reliability?.test_retest;
 
-  const hasDownloads =
-    scale.downloads?.scale_form ||
-    scale.downloads?.scoring_guide ||
-    scale.downloads?.manual;
+  // Merge scale_form and scoring_guide into one download card
+  const primaryFormHref = scale.downloads?.scale_form || scale.downloads?.scoring_guide || '';
+  const formCardLabel = scale.downloads?.scoring_guide
+    ? d.download_form_and_scoring
+    : d.download_form;
+
+  const hasDownloads = Boolean(primaryFormHref || scale.downloads?.manual);
+
+  // Original citation (for translated/adapted scales)
+  const originalCitation =
+    scale.original_citation?.[lang] || scale.original_citation?.en || '';
+  const showOriginalCitation =
+    (scale.role === 'translated' || scale.role === 'adapted') && Boolean(originalCitation);
 
   // Extract DOI from citation string for the pill
   const doiMatch = citation.match(/https?:\/\/doi\.org\/[^\s]+/);
@@ -338,14 +347,11 @@ export default async function ScaleDetailPage({
                     {d.detail_downloads}
                   </h2>
                   <div className="space-y-2.5">
-                    {scale.downloads?.scale_form && (
-                      <DownloadCard href={scale.downloads.scale_form}   label={d.download_form}    btnLabel={d.download_btn} />
-                    )}
-                    {scale.downloads?.scoring_guide && (
-                      <DownloadCard href={scale.downloads.scoring_guide} label={d.download_scoring}  btnLabel={d.download_btn} />
+                    {primaryFormHref && (
+                      <DownloadCard href={primaryFormHref} label={formCardLabel} btnLabel={d.download_btn} />
                     )}
                     {scale.downloads?.manual && (
-                      <DownloadCard href={scale.downloads.manual}        label={d.download_manual}   btnLabel={d.download_btn} />
+                      <DownloadCard href={scale.downloads.manual} label={d.download_manual} btnLabel={d.download_btn} />
                     )}
                   </div>
                 </div>
@@ -378,23 +384,23 @@ export default async function ScaleDetailPage({
                 )}
               </div>
 
-              {/* Language versions */}
-              {scale.languages_available.length > 0 && (
+              {/* Original scale citation — translated/adapted only */}
+              {showOriginalCitation && (
                 <div className="bg-white rounded-xl border border-warm-200 shadow-card p-5">
-                  <h2 className="font-display text-title font-semibold text-navy-700 mb-4">
-                    {d.detail_languages}
-                  </h2>
-                  <div className="space-y-2">
-                    {scale.languages_available.map((lc) => (
-                      <div key={lc} className="flex items-center gap-3 p-3 bg-warm-50 rounded-lg border border-warm-200">
-                        <span className="flex-shrink-0 inline-block px-2.5 py-1 bg-navy-700 text-white rounded text-xs font-bold font-mono tracking-wider">
-                          {lc.toUpperCase()}
-                        </span>
-                        <span className="font-body text-sm text-slate-700">
-                          {(d as any)[`lang_${lc}`] ?? lc.toUpperCase()}
-                        </span>
-                      </div>
-                    ))}
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h2 className="font-display text-title font-semibold text-navy-700">
+                      {d.detail_citation_original}
+                    </h2>
+                    <CopyCitationButton
+                      text={originalCitation}
+                      copyLabel={d.copy_citation}
+                      copiedLabel={d.copied}
+                    />
+                  </div>
+                  <div className="bg-warm-50 rounded-lg border border-warm-200 p-3.5">
+                    <p className="font-mono text-[0.7rem] text-slate-600 leading-relaxed select-all">
+                      {originalCitation}
+                    </p>
                   </div>
                 </div>
               )}

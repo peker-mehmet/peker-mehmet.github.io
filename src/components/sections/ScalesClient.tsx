@@ -11,12 +11,8 @@ export type ScalesDict = {
   title: string;
   intro: string;
   search_placeholder: string;
-  filter_language: string;
-  filter_population: string;
-  all_languages: string;
-  all_populations: string;
-  clear_filters: string;
   no_results: string;
+  clear_filters: string;
   view_details: string;
   items: string;
   factors: string;
@@ -27,15 +23,16 @@ export type ScalesDict = {
   section_adapted: string;
   section_translated: string;
   scales_unit: string;
-  lang_en: string;
-  lang_tr: string;
-  lang_de: string;
-  lang_fr: string;
-  lang_es: string;
-  lang_ar: string;
-  lang_zh: string;
+  tab_adapted: string;
+  tab_adapted_desc: string;
+  tab_translated: string;
+  tab_translated_desc: string;
+  tab_developed: string;
+  tab_developed_desc: string;
   [key: string]: string;
 };
+
+type Tab = 'adapted' | 'translated' | 'developed';
 
 type Props = {
   scales: Scale[];
@@ -131,71 +128,31 @@ function ScaleCard({ scale, lang, dict }: { scale: Scale; lang: Locale; dict: Sc
   );
 }
 
-// ── Section heading with gold accent rule ─────────────────────────────────────
-
-function ScaleSection({
-  title,
-  scales,
-  lang,
-  dict,
-}: {
-  title: string;
-  scales: Scale[];
-  lang: Locale;
-  dict: ScalesDict;
-}) {
-  if (scales.length === 0) return null;
-
-  return (
-    <section className="mb-14 last:mb-0">
-      {/* Heading row */}
-      <div className="flex flex-wrap items-start gap-3 mb-5">
-        <div className="flex-1 min-w-0">
-          <h2 className="font-display text-2xl font-semibold text-navy-800 leading-tight">{title}</h2>
-          {/* Gold accent rule */}
-          <div className="mt-3 flex items-center gap-1.5" aria-hidden="true">
-            <div className="h-px w-12 bg-gold-400" />
-            <div className="h-1.5 w-1.5 rounded-full bg-gold-400" />
-            <div className="h-px w-6 bg-gold-200" />
-          </div>
-        </div>
-        {/* Count badge */}
-        <span className="mt-1 inline-block px-3 py-1 bg-gold-50 border border-gold-200 rounded-full text-xs font-semibold font-body text-gold-700 whitespace-nowrap">
-          {scales.length} {dict.scales_unit}
-        </span>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-        {scales.map(scale => (
-          <ScaleCard key={scale.id} scale={scale} lang={lang} dict={dict} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
 // ── Main client component ─────────────────────────────────────────────────────
 
 export default function ScalesClient({ scales, lang, dict }: Props) {
-  const [search,     setSearch]     = useState('');
-  const [langFilter, setLangFilter] = useState('');
-  const [popFilter,  setPopFilter]  = useState('');
+  const counts = useMemo(() => ({
+    adapted:    scales.filter(s => s.role === 'adapted').length,
+    translated: scales.filter(s => s.role === 'translated').length,
+    developed:  scales.filter(s => s.role === 'developed').length,
+  }), [scales]);
 
-  const allLangs = useMemo(() => {
-    const s = new Set<string>();
-    for (const sc of scales) sc.languages_available.forEach(l => s.add(l));
-    return Array.from(s).sort();
-  }, [scales]);
+  // Default to the first non-empty tab in order: adapted → translated → developed
+  const [activeTab, setActiveTab] = useState<Tab>(() =>
+    counts.adapted > 0 ? 'adapted' : counts.translated > 0 ? 'translated' : 'developed'
+  );
+  const [search, setSearch] = useState('');
 
-  const allPops = useMemo(() => {
-    const s = new Set<string>();
-    for (const sc of scales) if (sc.target_population) s.add(sc.target_population);
-    return Array.from(s).sort();
-  }, [scales]);
+  const TABS: { id: Tab; label: string; desc: string }[] = (
+    [
+      { id: 'adapted'    as Tab, label: dict.tab_adapted,    desc: dict.tab_adapted_desc },
+      { id: 'translated' as Tab, label: dict.tab_translated, desc: dict.tab_translated_desc },
+      { id: 'developed'  as Tab, label: dict.tab_developed,  desc: dict.tab_developed_desc },
+    ] as { id: Tab; label: string; desc: string }[]
+  ).filter(t => counts[t.id] > 0);
 
-  // Apply search + language + population filters across the full list
   const filtered = useMemo(() => {
-    let res = scales;
+    let res = scales.filter(s => s.role === activeTab);
     if (search.trim()) {
       const q = search.toLowerCase();
       res = res.filter(s =>
@@ -204,19 +161,10 @@ export default function ScalesClient({ scales, lang, dict }: Props) {
         (s.description[lang] || s.description.en).toLowerCase().includes(q)
       );
     }
-    if (langFilter) res = res.filter(s => s.languages_available.includes(langFilter));
-    if (popFilter)  res = res.filter(s => s.target_population === popFilter);
     return res;
-  }, [scales, search, langFilter, popFilter, lang]);
+  }, [scales, activeTab, search, lang]);
 
-  // Split filtered results by role
-  const developed  = filtered.filter(s => s.role === 'developed');
-  const adapted    = filtered.filter(s => s.role === 'adapted');
-  const translated = filtered.filter(s => s.role === 'translated');
-  const other      = filtered.filter(s => !s.role || !['developed', 'adapted', 'translated'].includes(s.role));
-
-  const hasFilters  = Boolean(search.trim() || langFilter || popFilter);
-  const totalShown  = filtered.length;
+  const activeTabDef = TABS.find(t => t.id === activeTab);
 
   return (
     <>
@@ -229,12 +177,42 @@ export default function ScalesClient({ scales, lang, dict }: Props) {
         </div>
       </div>
 
-      {/* ── Sticky filter bar ───────────────────────────────────── */}
+      {/* ── Sticky tab bar ──────────────────────────────────────── */}
       <div className="sticky top-16 z-20 bg-warm-50 border-b border-warm-200 shadow-sm">
-        <div className="container-main py-4">
-          <div className="flex flex-col sm:flex-row gap-3">
+        <div className="container-main py-3">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+
+            {/* Tab buttons */}
+            <div className="flex flex-wrap gap-2 flex-1" role="tablist" aria-label={dict.title}>
+              {TABS.map(tab => {
+                const isActive = activeTab === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    role="tab"
+                    aria-selected={isActive}
+                    onClick={() => { setActiveTab(tab.id); setSearch(''); }}
+                    className={`
+                      inline-flex items-center gap-2 px-4 py-2 rounded-full font-body text-sm font-medium
+                      transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400
+                      ${isActive
+                        ? 'bg-navy-700 text-white shadow-sm'
+                        : 'bg-white text-slate-600 border border-warm-300 hover:border-navy-300 hover:text-navy-700'}
+                    `}
+                  >
+                    {tab.label}
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full leading-none ${
+                      isActive ? 'bg-white/20 text-white' : 'bg-warm-200 text-slate-500'
+                    }`}>
+                      {counts[tab.id]}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
             {/* Search */}
-            <div className="relative flex-1">
+            <div className="relative sm:w-64 lg:w-72 flex-shrink-0">
               <svg viewBox="0 0 20 20" fill="currentColor"
                 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none"
                 aria-hidden="true">
@@ -245,71 +223,30 @@ export default function ScalesClient({ scales, lang, dict }: Props) {
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 placeholder={dict.search_placeholder}
-                className="w-full pl-9 pr-4 py-2.5 rounded-lg border border-warm-300 bg-white
+                className="w-full pl-9 pr-4 py-2 rounded-full border border-warm-300 bg-white
                            text-sm font-body text-slate-700 placeholder:text-slate-400
                            focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent shadow-card"
               />
             </div>
 
-            {/* Language filter */}
-            <div className="relative">
-              <select
-                value={langFilter}
-                onChange={e => setLangFilter(e.target.value)}
-                className="appearance-none pl-4 pr-9 py-2.5 rounded-lg border border-warm-300 bg-white
-                           text-sm font-body text-slate-700
-                           focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent shadow-card cursor-pointer"
-              >
-                <option value="">{dict.all_languages}</option>
-                {allLangs.map(lc => (
-                  <option key={lc} value={lc}>{dict[`lang_${lc}`] ?? lc.toUpperCase()}</option>
-                ))}
-              </select>
-              <svg viewBox="0 0 20 20" fill="currentColor"
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none"
-                aria-hidden="true">
-                <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-              </svg>
-            </div>
-
-            {/* Population filter */}
-            {allPops.length > 1 && (
-              <div className="relative">
-                <select
-                  value={popFilter}
-                  onChange={e => setPopFilter(e.target.value)}
-                  className="appearance-none pl-4 pr-9 py-2.5 rounded-lg border border-warm-300 bg-white
-                             text-sm font-body text-slate-700
-                             focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent shadow-card cursor-pointer"
-                >
-                  <option value="">{dict.all_populations}</option>
-                  {allPops.map(p => <option key={p} value={p}>{p}</option>)}
-                </select>
-                <svg viewBox="0 0 20 20" fill="currentColor"
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none"
-                  aria-hidden="true">
-                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-                </svg>
-              </div>
-            )}
-
-            {/* Clear filters */}
-            {hasFilters && (
-              <button
-                onClick={() => { setSearch(''); setLangFilter(''); setPopFilter(''); }}
-                className="px-4 py-2.5 rounded-lg border border-warm-300 bg-white text-sm font-body text-slate-600
-                           hover:border-navy-300 hover:text-navy-700 transition-colors shadow-card"
-              >
-                {dict.clear_filters}
-              </button>
-            )}
           </div>
         </div>
       </div>
 
-      {/* ── Role sections ───────────────────────────────────────── */}
+      {/* ── Tab description ──────────────────────────────────────── */}
+      {activeTabDef && (
+        <div className="bg-white border-b border-warm-200">
+          <div className="container-main py-5">
+            <p className="font-body text-sm text-slate-500 leading-relaxed max-w-3xl">
+              {activeTabDef.desc}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* ── Scale cards ──────────────────────────────────────────── */}
       <div className="container-main py-10 lg:py-14">
-        {totalShown === 0 ? (
+        {filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-center">
             <div className="w-16 h-16 rounded-full bg-warm-100 flex items-center justify-center mb-4">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-8 h-8 text-slate-400" aria-hidden="true">
@@ -317,9 +254,9 @@ export default function ScalesClient({ scales, lang, dict }: Props) {
               </svg>
             </div>
             <p className="font-body text-slate-500 text-body-sm mb-3">{dict.no_results}</p>
-            {hasFilters && (
+            {search && (
               <button
-                onClick={() => { setSearch(''); setLangFilter(''); setPopFilter(''); }}
+                onClick={() => setSearch('')}
                 className="text-sm font-body text-gold-600 hover:text-gold-700 underline underline-offset-2"
               >
                 {dict.clear_filters}
@@ -327,14 +264,10 @@ export default function ScalesClient({ scales, lang, dict }: Props) {
             )}
           </div>
         ) : (
-          <div>
-            <ScaleSection title={dict.section_adapted}    scales={adapted}    lang={lang} dict={dict} />
-            <ScaleSection title={dict.section_translated} scales={translated} lang={lang} dict={dict} />
-            <ScaleSection title={dict.section_developed}  scales={developed}  lang={lang} dict={dict} />
-            {/* Catch-all for scales without a recognised role */}
-            {other.length > 0 && (
-              <ScaleSection title={dict.title} scales={other} lang={lang} dict={dict} />
-            )}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5" role="tabpanel">
+            {filtered.map(scale => (
+              <ScaleCard key={scale.id} scale={scale} lang={lang} dict={dict} />
+            ))}
           </div>
         )}
       </div>

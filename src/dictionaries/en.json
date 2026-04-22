@@ -190,7 +190,15 @@
     "section_developed": "Original Scales I Developed",
     "section_adapted": "Adapted & Validated Scales",
     "section_translated": "Translated Scales with Factor Analytic Evidence",
-    "scales_unit": "scales"
+    "scales_unit": "scales",
+    "tab_adapted": "Adapted Scales",
+    "tab_adapted_desc": "Scales adapted into Turkish through comprehensive psychometric studies. Factor structure, reliability, and validity evidence have been tested with Turkish samples.",
+    "tab_translated": "Translated Scales",
+    "tab_translated_desc": "Scales translated into Turkish with factorial and reliability evidence. A full adaptation study has not been conducted.",
+    "tab_developed": "Developed Scales",
+    "tab_developed_desc": "Original scales developed by me, with psychometric properties tested on Turkish samples.",
+    "detail_citation_original": "Citation for Original Scale",
+    "download_form_and_scoring": "Scale Form & Scoring Guide"
   },
   "news": {
     "title": "News",

@@ -150,6 +150,7 @@ export type Scale = {
     manual?: string;
   };
   citation: { en: string; tr: string };
+  original_citation?: { en: string; tr: string };
   reference_publication?: string;
   featured?: boolean;
 };
