@@ -88,7 +88,8 @@ collections:
       - { name: pages,  label: Pages,  widget: string, required: false, hint: "e.g. 123–145" }
       - { name: doi,    label: DOI,    widget: string, required: false, hint: "e.g. 10.1000/xyz123 (without https://doi.org/)" }
       - { name: url,    label: URL,    widget: string, required: false }
-      - { name: pdf,    label: PDF Path, widget: string, required: false, hint: "e.g. /downloads/paper.pdf" }
+      - { name: pdf,    label: PDF Path, widget: string, required: false,
+          hint: "e.g. /downloads/paper.pdf — Leave empty if PDF is not available (the PDF button will be shown in a grayed-out disabled state)." }
 
       - name: abstract
         label: Abstract
@@ -99,10 +100,11 @@ collections:
           - { name: tr, label: Turkish, widget: text, required: false }
 
       - name: tags
-        label: Keywords / Tags
+        label: Research Interest Tags
         widget: list
         required: false
         field: { label: Tag, name: tag, widget: string }
+        hint: "Use exact names from the Research Interests list in Site Settings (e.g. 'Emotional Labor', 'Employee Well-Being') for interest-based filtering from the homepage pills. You may also add other descriptive keywords."
 
       - { name: featured, label: Featured on homepage, widget: boolean, default: false, required: false }
 
@@ -136,6 +138,7 @@ collections:
       - name: role
         label: My Role
         widget: select
+        hint: "adapted = I conducted a full psychometric adaptation (translation + CFA + reliability/validity evidence) for a new language/culture. translated = I translated and provided basic factor-analytic evidence only. developed = I am the original author of this scale."
         options:
           - { label: "Developed (I am the original author)",         value: developed }
           - { label: "Adapted (full psychometric validation done)",   value: adapted }
@@ -159,6 +162,15 @@ collections:
         hint: "Leave empty if you are the original author."
 
       - { name: adaptation_year, label: Adaptation / Translation Year, widget: number, value_type: int, required: false }
+
+      - name: original_citation
+        label: "Orijinal Ölçek Atfı / Original Scale Citation"
+        widget: object
+        required: false
+        hint: "For adapted and translated scales only. The APA-style citation for the original scale you adapted/translated. Shown on the scale detail page."
+        fields:
+          - { name: en, label: English, widget: text, required: false, hint: "Full APA citation in English." }
+          - { name: tr, label: Turkish, widget: text, required: false, hint: "Türkçe atıf (yoksa İngilizce ile aynı bırakın)." }
 
       - name: description
         label: Description
@@ -213,8 +225,8 @@ collections:
         widget: object
         required: false
         fields:
-          - { name: scale_form,    label: Scale Form,    widget: string, required: false, hint: "Path in /public — e.g. /downloads/scale-form.pdf" }
-          - { name: scoring_guide, label: Scoring Guide, widget: string, required: false }
+          - { name: scale_form,    label: Scale Form,    widget: string, required: false, hint: "Path in /public — e.g. /downloads/scale-form.pdf. If both Scale Form and Scoring Guide are set, they are shown as a single merged download button on the site." }
+          - { name: scoring_guide, label: Scoring Guide, widget: string, required: false, hint: "Path in /public — e.g. /downloads/scoring-guide.pdf. Merged with Scale Form into one download card on the detail page when both are present." }
           - { name: manual,        label: Manual,        widget: string, required: false }
 
       - name: citation
@@ -545,9 +557,12 @@ collections:
             widget: object
             fields:
               - { name: email,        label: Email Address,     widget: string }
+              - { name: phone,        label: Work Phone,        widget: string, required: false, hint: "e.g. +90 232 123 45 67 — Shown on the homepage hero section." }
               - { name: google_scholar, label: Google Scholar URL, widget: string, required: false }
               - { name: orcid,        label: ORCID URL,         widget: string, required: false, hint: "e.g. https://orcid.org/0000-0000-0000-0000" }
               - { name: researchgate, label: ResearchGate URL,  widget: string, required: false }
+              - { name: unisis,       label: "ÜNİSİS Profile URL", widget: string, required: false, hint: "Your profile on akademik.yok.gov.tr — shown as a pill on the homepage hero." }
+              - { name: yoksis,       label: "YÖKSİS Profile URL", widget: string, required: false, hint: "Your YÖKSİS academic profile URL — shown as a pill on the homepage hero." }
               - { name: linkedin,     label: LinkedIn URL,      widget: string, required: false }
               - { name: twitter,      label: Twitter / X URL,   widget: string, required: false }
               - { name: cv,    label: "CV Path (English)", widget: string, required: false, hint: "e.g. /downloads/cv-en.pdf" }
