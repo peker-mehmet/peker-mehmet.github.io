@@ -22,12 +22,30 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = params;
   const config = getSiteConfig();
-  const title = lang === 'tr'
+
+  const pageTitle = lang === 'tr'
     ? `${config.owner.name.full} | Psikoloji`
     : `${config.owner.name.full} | Psychology`;
+
+  const ogTitle = lang === 'tr'
+    ? 'Mehmet Peker | Psikolog ve Doçent, Ege Üniversitesi'
+    : 'Mehmet Peker | Psychologist & Associate Professor';
+
+  const ogDescription = lang === 'tr'
+    ? 'Ege Üniversitesi Psikoloji Bölümü Doçenti. Duygusal emek, öz-düzenleme ve çalışan iyi oluşu alanlarında araştırmalar. Ölçekler ve yayınlar açık erişimde.'
+    : 'Associate Professor at Ege University. Researching emotional labor, self-regulation, and employee well-being. Scales, publications, and resources shared openly.';
+
   return {
-    ...buildPageMetadata({ lang, path: '', title, description: config.bio.short[lang], type: 'profile' }),
-    title: { absolute: title },
+    ...buildPageMetadata({
+      lang,
+      path: '',
+      title: pageTitle,
+      description: config.bio.short[lang],
+      ogTitle,
+      ogDescription,
+      type: 'profile',
+    }),
+    title: { absolute: pageTitle },
   };
 }
 

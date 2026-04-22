@@ -3,7 +3,7 @@ import type { Locale } from './i18n';
 
 export const SITE_URL = 'https://peker-mehmet.github.io';
 export const SITE_NAME = 'Mehmet Peker';
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/profile.jpg`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/profile.jpeg`;
 
 /**
  * Build a full Metadata object for a given page.
@@ -14,6 +14,8 @@ export function buildPageMetadata({
   path,
   title,
   description,
+  ogTitle,
+  ogDescription,
   image,
   type = 'website',
 }: {
@@ -21,6 +23,8 @@ export function buildPageMetadata({
   path: string;
   title: string;
   description: string;
+  ogTitle?: string;
+  ogDescription?: string;
   image?: string;
   type?: 'website' | 'profile' | 'article';
 }): Metadata {
@@ -30,6 +34,8 @@ export function buildPageMetadata({
   const ogImage = image || DEFAULT_OG_IMAGE;
   const ogLocale = lang === 'tr' ? 'tr_TR' : 'en_US';
   const ogAltLocale = lang === 'tr' ? 'en_US' : 'tr_TR';
+  const resolvedOgTitle = ogTitle ?? title;
+  const resolvedOgDesc  = ogDescription ?? description;
 
   return {
     title,
@@ -43,19 +49,19 @@ export function buildPageMetadata({
       },
     },
     openGraph: {
-      title,
-      description,
+      title: resolvedOgTitle,
+      description: resolvedOgDesc,
       url: canonicalUrl,
       siteName: SITE_NAME,
       locale: ogLocale,
       alternateLocale: [ogAltLocale],
       type,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: resolvedOgTitle }],
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: resolvedOgTitle,
+      description: resolvedOgDesc,
       images: [ogImage],
     },
   };
