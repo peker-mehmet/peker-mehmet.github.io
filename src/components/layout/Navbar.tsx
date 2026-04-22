@@ -66,8 +66,8 @@ function NavLink({
       className={`
         relative font-body text-sm tracking-wide transition-colors duration-200
         ${active
-          ? 'text-navy-700 font-semibold'
-          : 'text-slate-600 hover:text-navy-700'
+          ? 'text-white font-semibold'
+          : 'text-warm-50/80 hover:text-gold-400'
         }
       `}
     >
@@ -75,9 +75,9 @@ function NavLink({
       {/* Gold underline — always rendered, animated in/out */}
       <span
         className={`
-          absolute -bottom-0.5 left-0 h-px bg-gold-400
+          absolute -bottom-0.5 left-0 h-[2.5px] bg-gold-400 rounded-full
           transition-all duration-300 ease-out
-          ${active ? 'w-full' : 'w-0 group-hover:w-full'}
+          ${active ? 'w-full' : 'w-0'}
         `}
       />
     </Link>
@@ -101,7 +101,7 @@ function LangToggle({
     <div
       role="group"
       aria-label={label}
-      className="flex items-center rounded-full border border-warm-200 overflow-hidden bg-warm-50 p-0.5"
+      className="flex items-center rounded-full border border-white/30 overflow-hidden bg-white/10 p-0.5"
     >
       {locales.map((l) => (
         <button
@@ -113,9 +113,10 @@ function LangToggle({
             relative px-3 py-1 font-body text-xs font-bold uppercase tracking-widest
             rounded-full transition-all duration-200 focus-visible:outline-none
             focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-1
+            focus-visible:ring-offset-navy-700
             ${lang === l
-              ? 'bg-navy-700 text-white shadow-sm'
-              : 'text-slate-500 hover:text-navy-700'}
+              ? 'bg-gold-400 text-navy-900 shadow-sm'
+              : 'text-white/70 hover:text-white'}
           `}
         >
           {l}
@@ -144,8 +145,8 @@ function HamburgerButton({
       aria-expanded={open}
       className="
         relative flex h-9 w-9 flex-col items-center justify-center gap-1.5
-        rounded-lg text-slate-600 transition-colors duration-200
-        hover:bg-warm-100 focus-visible:outline-none focus-visible:ring-2
+        rounded-lg text-white transition-colors duration-200
+        hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2
         focus-visible:ring-gold-400
       "
     >
@@ -231,7 +232,7 @@ function MobileDrawer({
         aria-hidden="true"
         onClick={onClose}
         className={`
-          fixed inset-0 z-40 bg-navy-900/40 backdrop-blur-sm
+          fixed inset-0 z-40 bg-navy-900/60 backdrop-blur-sm
           transition-opacity duration-300
           ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
         `}
@@ -245,17 +246,17 @@ function MobileDrawer({
         aria-label="Navigation menu"
         className={`
           fixed top-0 right-0 z-50 h-full w-72 sm:w-80
-          flex flex-col bg-white shadow-card-lg
+          flex flex-col bg-navy-700 shadow-card-lg
           transform transition-transform duration-300 ease-in-out
           ${open ? 'translate-x-0' : 'translate-x-full'}
         `}
       >
         {/* Drawer header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-warm-200">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
           <Link
             href={`/${lang}`}
             onClick={onClose}
-            className="font-display text-base font-semibold text-navy-700 hover:text-gold-600 transition-colors"
+            className="font-display text-base font-semibold text-white hover:text-gold-400 transition-colors"
           >
             {dict.site_name}
           </Link>
@@ -265,12 +266,11 @@ function MobileDrawer({
             aria-label={dict.close_menu}
             className="
               flex h-8 w-8 items-center justify-center rounded-md
-              text-slate-400 hover:text-navy-700 hover:bg-warm-100
+              text-white/60 hover:text-white hover:bg-white/10
               transition-colors duration-150 focus-visible:outline-none
               focus-visible:ring-2 focus-visible:ring-gold-400
             "
           >
-            {/* X icon */}
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round"/>
             </svg>
@@ -295,8 +295,8 @@ function MobileDrawer({
                       transition-colors duration-150 focus-visible:outline-none
                       focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-400
                       ${active
-                        ? 'bg-navy-50 text-navy-700 font-semibold'
-                        : 'text-slate-600 hover:bg-warm-50 hover:text-navy-700'
+                        ? 'bg-white/10 text-white font-semibold'
+                        : 'text-white/70 hover:bg-white/5 hover:text-gold-400'
                       }
                     `}
                   >
@@ -316,8 +316,8 @@ function MobileDrawer({
         </nav>
 
         {/* Drawer footer — language toggle */}
-        <div className="border-t border-warm-200 px-6 py-5 space-y-4">
-          <p className="font-body text-label uppercase tracking-widest text-slate-400">
+        <div className="border-t border-white/10 px-6 py-5 space-y-4">
+          <p className="font-body text-[10px] uppercase tracking-widest text-white/40">
             Language / Dil
           </p>
           <div className="flex gap-2">
@@ -332,8 +332,8 @@ function MobileDrawer({
                   rounded-lg border transition-all duration-200
                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400
                   ${lang === l
-                    ? 'bg-navy-700 text-white border-navy-700'
-                    : 'bg-white text-slate-500 border-warm-200 hover:border-navy-300 hover:text-navy-700'
+                    ? 'bg-gold-400 text-navy-900 border-gold-400'
+                    : 'bg-transparent text-white/70 border-white/20 hover:border-white/50 hover:text-white'
                   }
                 `}
               >
@@ -361,16 +361,16 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     { href: `/${lang}/about`,         label: dict.about },
     { href: `/${lang}/research`,      label: dict.research },
     { href: `/${lang}/publications`,  label: dict.publications },
-    { href: `/${lang}/scales`,          label: dict.scales },
-    { href: `/${lang}/news`,            label: dict.news },
-    { href: `/${lang}/collaborations`,  label: dict.collaborations },
-    { href: `/${lang}/contact`,         label: dict.contact },
+    { href: `/${lang}/scales`,        label: dict.scales },
+    { href: `/${lang}/news`,          label: dict.news },
+    { href: `/${lang}/collaborations`,label: dict.collaborations },
+    { href: `/${lang}/contact`,       label: dict.contact },
   ];
 
   // ── Scroll shadow ─────────────────────────────────────────────────────────
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 8);
-    handler(); // run once on mount
+    handler();
     window.addEventListener('scroll', handler, { passive: true });
     return () => window.removeEventListener('scroll', handler);
   }, []);
@@ -412,10 +412,10 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     <>
       <header
         className={`
-          sticky top-0 z-30 w-full bg-white/95 backdrop-blur-sm
-          border-b border-warm-200
+          sticky top-0 z-30 w-full bg-navy-700
+          border-b border-white/10
           transition-shadow duration-300
-          ${scrolled ? 'shadow-card-md' : 'shadow-none'}
+          ${scrolled ? 'shadow-[0_4px_24px_rgba(14,30,51,0.5)]' : 'shadow-none'}
         `}
       >
         <div className="container-main">
@@ -428,8 +428,8 @@ export default function Navbar({ lang, dict }: NavbarProps) {
               aria-label={`${dict.site_name} — ${dict.home}`}
             >
               <span className="
-                font-display text-lg font-semibold text-navy-700
-                group-hover:text-gold-600 transition-colors duration-200
+                font-display text-xl font-semibold text-white
+                group-hover:text-gold-400 transition-colors duration-200
               ">
                 {dict.site_name}
               </span>
@@ -450,7 +450,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
             {/* ── Desktop right controls ────────────────────────────────── */}
             <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
-              <div className="w-px h-5 bg-warm-200" aria-hidden="true" />
+              <div className="w-px h-5 bg-white/20" aria-hidden="true" />
               <LangToggle
                 lang={lang}
                 targetLang={lang === 'en' ? 'tr' : 'en'}
@@ -463,7 +463,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             <div className="flex lg:hidden items-center gap-3">
               {/* Compact lang toggle on mobile */}
               <div
-                className="flex items-center rounded-full border border-warm-200 overflow-hidden bg-warm-50 p-0.5"
+                className="flex items-center rounded-full border border-white/30 overflow-hidden bg-white/10 p-0.5"
                 role="group"
                 aria-label={dict.switch_lang}
               >
@@ -478,8 +478,8 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                       rounded-full transition-all duration-200
                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400
                       ${lang === l
-                        ? 'bg-navy-700 text-white'
-                        : 'text-slate-500 hover:text-navy-700'}
+                        ? 'bg-gold-400 text-navy-900'
+                        : 'text-white/70 hover:text-white'}
                     `}
                   >
                     {l}
@@ -496,13 +496,9 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           </div>
         </div>
 
-        {/* Gold accent rule below header */}
+        {/* Gold accent rule below header — always visible on navy */}
         <div
-          className={`
-            h-px transition-opacity duration-300
-            bg-gradient-to-r from-transparent via-gold-400/50 to-transparent
-            ${scrolled ? 'opacity-100' : 'opacity-0'}
-          `}
+          className="h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent"
           aria-hidden="true"
         />
       </header>
