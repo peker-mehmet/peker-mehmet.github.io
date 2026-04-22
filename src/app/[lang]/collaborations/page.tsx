@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
 import { getSiteConfig, getCollaborations, type Collaboration } from '@/lib/content';
+import { buildPageMetadata } from '@/lib/metadata';
 import { PageTitle } from '@/components/ui/SectionTitle';
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
@@ -11,13 +12,13 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const [dict, config] = await Promise.all([
-    getDictionary(params.lang),
-    Promise.resolve(getSiteConfig()),
-  ]);
-  return {
-    title: `${(dict as any).collaborations.title} — ${config.owner.name.full}`,
-  };
+  const { lang } = params;
+  const config = getSiteConfig();
+  const title = lang === 'tr' ? 'İş Birlikleri' : 'Collaborations';
+  const description = lang === 'tr'
+    ? `${config.owner.name.full} tarafından yürütülen araştırma ortaklıkları ve iş birlikleri.`
+    : `Research partnerships and collaborations by ${config.owner.name.full}.`;
+  return buildPageMetadata({ lang, path: '/collaborations', title, description });
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────

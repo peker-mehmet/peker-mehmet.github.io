@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
 import { getSiteConfig, getProjects } from '@/lib/content';
+import { buildPageMetadata } from '@/lib/metadata';
 import { PageTitle } from '@/components/ui/SectionTitle';
 import ResearchClient, { type ResearchDict } from '@/components/sections/ResearchClient';
 
@@ -10,14 +11,13 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const [dict, config] = await Promise.all([
-    getDictionary(params.lang),
-    Promise.resolve(getSiteConfig()),
-  ]);
-  return {
-    title: `${(dict as any).research.title} — ${config.owner.name.full}`,
-    description: config.bio.short[params.lang],
-  };
+  const { lang } = params;
+  const config = getSiteConfig();
+  const title = lang === 'tr' ? 'Araştırma' : 'Research';
+  const description = lang === 'tr'
+    ? `${config.owner.name.full} tarafından yürütülen araştırma projeleri ve çalışma alanları.`
+    : `Research projects and areas of investigation by ${config.owner.name.full}.`;
+  return buildPageMetadata({ lang, path: '/research', title, description });
 }
 
 export default async function ResearchPage({

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
 import { getSiteConfig, getTeachingData, type Course, type Supervision } from '@/lib/content';
+import { buildPageMetadata } from '@/lib/metadata';
 import { PageTitle } from '@/components/ui/SectionTitle';
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
@@ -11,13 +12,13 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const [dict, config] = await Promise.all([
-    getDictionary(params.lang),
-    Promise.resolve(getSiteConfig()),
-  ]);
-  return {
-    title: `${(dict as any).teaching.title} — ${config.owner.name.full}`,
-  };
+  const { lang } = params;
+  const config = getSiteConfig();
+  const title = lang === 'tr' ? 'Dersler' : 'Teaching';
+  const description = lang === 'tr'
+    ? `${config.owner.name.full} tarafından verilen dersler ve tez danışmanlığı.`
+    : `Courses taught and student supervision by ${config.owner.name.full}.`;
+  return buildPageMetadata({ lang, path: '/teaching', title, description });
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────

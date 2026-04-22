@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
 import { getSiteConfig, getScales } from '@/lib/content';
+import { buildPageMetadata } from '@/lib/metadata';
 import { PageTitle } from '@/components/ui/SectionTitle';
 import ScalesClient, { type ScalesDict } from '@/components/sections/ScalesClient';
 
@@ -10,14 +11,12 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const [dict, config] = await Promise.all([
-    getDictionary(params.lang),
-    Promise.resolve(getSiteConfig()),
-  ]);
-  return {
-    title: `${(dict as any).scales.title} — ${config.owner.name.full}`,
-    description: config.bio.short[params.lang],
-  };
+  const { lang } = params;
+  const title = lang === 'tr' ? 'Ölçekler' : 'Scales & Instruments';
+  const description = lang === 'tr'
+    ? 'Mehmet Peker tarafından geliştirilen, uyarlanan ve çevrilen psikolojik ölçekler.'
+    : 'Psychological scales developed, adapted, and translated by Mehmet Peker.';
+  return buildPageMetadata({ lang, path: '/scales', title, description });
 }
 
 export default async function ScalesPage({

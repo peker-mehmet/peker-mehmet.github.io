@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
 import { getSiteConfig, getNewsItems } from '@/lib/content';
+import { buildPageMetadata } from '@/lib/metadata';
 import { PageTitle } from '@/components/ui/SectionTitle';
 import NewsClient, { type NewsDict, type NewsItemFlat } from '@/components/sections/NewsClient';
 
@@ -52,14 +53,13 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const [dict, config] = await Promise.all([
-    getDictionary(params.lang),
-    Promise.resolve(getSiteConfig()),
-  ]);
-  return {
-    title: `${(dict as any).news.title} — ${config.owner.name.full}`,
-    description: `News and updates from ${config.owner.name.full}.`,
-  };
+  const { lang } = params;
+  const config = getSiteConfig();
+  const title = lang === 'tr' ? 'Haberler' : 'News';
+  const description = lang === 'tr'
+    ? `${config.owner.name.full} tarafından haberler ve duyurular.`
+    : `News and updates from ${config.owner.name.full}.`;
+  return buildPageMetadata({ lang, path: '/news', title, description });
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────────

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
 import { getScales, type Scale } from '@/lib/content';
+import { buildPageMetadata } from '@/lib/metadata';
 import { PageTitle } from '@/components/ui/SectionTitle';
 import SectionTitle from '@/components/ui/SectionTitle';
 import CopyCitationButton from '@/components/ui/CopyCitationButton';
@@ -21,13 +22,15 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale; id: string };
 }): Promise<Metadata> {
-  const scale = getScales().find((s) => s.id === params.id);
+  const { lang, id } = params;
+  const scale = getScales().find((s) => s.id === id);
   if (!scale) return {};
-  const dict = await getDictionary(params.lang);
-  return {
-    title: scale.name[params.lang] || scale.name.en,
-    description: scale.description[params.lang] || scale.description.en,
-  };
+  const name = scale.name[lang] || scale.name.en;
+  const construct = scale.construct?.[lang] || scale.construct?.en || '';
+  const description = construct
+    ? `${construct} — ${scale.description[lang] || scale.description.en}`
+    : (scale.description[lang] || scale.description.en);
+  return buildPageMetadata({ lang, path: `/scales/${id}`, title: name, description });
 }
 
 // ── Helper components ─────────────────────────────────────────────────────────

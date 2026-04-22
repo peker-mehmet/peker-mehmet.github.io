@@ -3,6 +3,8 @@ import { Crimson_Pro, Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { locales, isValidLocale, type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
+import { getSiteConfig } from '@/lib/content';
+import { DEFAULT_OG_IMAGE } from '@/lib/metadata';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
@@ -30,11 +32,23 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
+  const [dict, config] = await Promise.all([
+    getDictionary(params.lang),
+    Promise.resolve(getSiteConfig()),
+  ]);
+  const ogImage = config.photo.profile || DEFAULT_OG_IMAGE;
   return {
     title: {
       template: `%s | ${dict.nav.site_name}`,
       default: dict.nav.site_name,
+    },
+    openGraph: {
+      siteName: dict.nav.site_name,
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [ogImage],
     },
   };
 }

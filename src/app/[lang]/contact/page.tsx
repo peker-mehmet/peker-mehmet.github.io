@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
 import { getSiteConfig } from '@/lib/content';
+import { buildPageMetadata } from '@/lib/metadata';
 import { PageTitle } from '@/components/ui/SectionTitle';
 import ContactForm, { type ContactDict } from '@/components/sections/ContactForm';
 
@@ -12,14 +13,11 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const [dict, config] = await Promise.all([
-    getDictionary(params.lang),
-    Promise.resolve(getSiteConfig()),
-  ]);
-  return {
-    title: `${(dict as any).contact.title} — ${config.owner.name.full}`,
-    description: config.contact.note[params.lang],
-  };
+  const { lang } = params;
+  const config = getSiteConfig();
+  const title = lang === 'tr' ? 'İletişim' : 'Contact';
+  const description = config.contact.note[lang] || config.bio.short[lang];
+  return buildPageMetadata({ lang, path: '/contact', title, description });
 }
 
 // ── Icons ─────────────────────────────────────────────────────────────────────

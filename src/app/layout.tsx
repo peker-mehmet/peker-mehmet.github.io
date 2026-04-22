@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { SITE_URL } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Academic Website',
-  description: 'Personal academic website',
+  metadataBase: new URL(SITE_URL),
 };
 
 export default function RootLayout({

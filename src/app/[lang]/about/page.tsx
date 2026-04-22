@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
 import { getSiteConfig, type SiteConfig } from '@/lib/content';
+import { buildPageMetadata, personJsonLd, SITE_URL } from '@/lib/metadata';
 import Button from '@/components/ui/Button';
 import SectionTitle, { PageTitle } from '@/components/ui/SectionTitle';
 import BiographySection from '@/components/sections/BiographySection';
@@ -266,15 +267,11 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const [dict, config] = await Promise.all([
-    getDictionary(params.lang),
-    Promise.resolve(getSiteConfig()),
-  ]);
-  const d = (dict as any).about as AboutDict;
-  return {
-    title: `${d.title} — ${config.owner.name.full}`,
-    description: config.bio.short[params.lang],
-  };
+  const { lang } = params;
+  const config = getSiteConfig();
+  const title = lang === 'tr' ? 'Hakkımda' : 'About';
+  const description = config.bio.full[lang]?.[0] || config.bio.short[lang];
+  return buildPageMetadata({ lang, path: '/about', title, description, type: 'profile' });
 }
 
 export default async function AboutPage({
@@ -300,8 +297,22 @@ export default async function AboutPage({
     { key: 'li',      name: d.linkedin,       href: links.linkedin,       icon: <LinkedInIcon />, iconBg: 'bg-sky-50' },
   ].filter((p) => Boolean(p.href));
 
+  const jsonLd = personJsonLd({
+    name: owner.name.full,
+    jobTitle: owner.title.en,
+    affiliation: institution.name.en,
+    url: SITE_URL,
+    image: config.photo.profile || undefined,
+    sameAs: [links.google_scholar, links.orcid, links.researchgate].filter(Boolean),
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* ── Page header ──────────────────────────────────────────────────── */}
       <PageTitle eyebrow={`${owner.title[lang]} · ${institution.department[lang]}`}>
         {d.title}
