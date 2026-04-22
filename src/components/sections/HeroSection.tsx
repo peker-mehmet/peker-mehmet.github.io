@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { type Locale } from '@/lib/i18n';
 import { type SiteConfig } from '@/lib/content';
 import Button from '@/components/ui/Button';
@@ -8,9 +7,14 @@ import Button from '@/components/ui/Button';
 
 type HeroDict = {
   home: {
-    cta_scales: string;
-    cta_publications: string;
     cv_download: string;
+    work_phone: string;
+    university_profile: string;
+  };
+  about: {
+    google_scholar: string;
+    orcid: string;
+    researchgate: string;
   };
 };
 
@@ -30,6 +34,39 @@ function getInitials(name: string): string {
     .join('')
     .toUpperCase()
     .slice(0, 2);
+}
+
+// ── Icons ─────────────────────────────────────────────────────────────────────
+
+function EmailIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.5}
+      strokeLinecap="round" strokeLinejoin="round"
+      className="h-4 w-4 flex-shrink-0 text-gold-500" aria-hidden="true">
+      <rect x="2" y="4" width="16" height="12" rx="2" />
+      <path d="M2 7l8 5 8-5" />
+    </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.5}
+      strokeLinecap="round" strokeLinejoin="round"
+      className="h-4 w-4 flex-shrink-0 text-gold-500" aria-hidden="true">
+      <path d="M3 5a2 2 0 012-2h1.5a1 1 0 01.95.68l.8 2.4a1 1 0 01-.23 1.02L6.9 8.22A11.05 11.05 0 0011.78 13.1l1.12-1.12a1 1 0 011.02-.23l2.4.8A1 1 0 0117 13.5V15a2 2 0 01-2 2h-.5C7.82 17 3 12.18 3 6.5V5z" />
+    </svg>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"
+      className="h-4 w-4" aria-hidden="true">
+      <path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+    </svg>
+  );
 }
 
 // ── Profile photo ──────────────────────────────────────────────────────────────
@@ -96,6 +133,27 @@ function GoldAccent() {
   );
 }
 
+// ── ProfilePill ───────────────────────────────────────────────────────────────
+
+function ProfilePill({ href, label }: { href: string; label: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        inline-flex items-center px-3.5 py-1.5 rounded-full
+        border border-navy-200 font-body text-xs font-semibold text-navy-600
+        tracking-wide transition-all duration-150
+        hover:border-gold-400 hover:text-gold-600 hover:bg-gold-50
+        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400
+      "
+    >
+      {label}
+    </a>
+  );
+}
+
 // ── HeroSection ───────────────────────────────────────────────────────────────
 
 export default function HeroSection({ lang, config, dict }: HeroSectionProps) {
@@ -105,6 +163,14 @@ export default function HeroSection({ lang, config, dict }: HeroSectionProps) {
   const displayName = isDefaultName ? 'Your Name' : owner.name.full;
 
   const cvLink = lang === 'tr' ? (links.cv_tr || links.cv) : links.cv;
+
+  const profileLinks = [
+    { key: 'scholar', label: dict.about.google_scholar, href: links.google_scholar },
+    { key: 'orcid',   label: dict.about.orcid,          href: links.orcid },
+    { key: 'rg',      label: dict.about.researchgate,   href: links.researchgate },
+    { key: 'unisis',  label: 'ÜNİSİS',                  href: links.unisis },
+    { key: 'yoksis',  label: 'YÖKSİS',                  href: links.yoksis },
+  ].filter((p) => Boolean(p.href));
 
   return (
     <section
@@ -176,25 +242,47 @@ export default function HeroSection({ lang, config, dict }: HeroSectionProps) {
               {bio.short[lang]}
             </p>
 
-            {/* CTA buttons */}
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href={`/${lang}/scales`} variant="primary" size="lg">
-                {dict.home.cta_scales}
-              </Button>
-              <Button href={`/${lang}/publications`} variant="outline" size="lg">
-                {dict.home.cta_publications}
-              </Button>
-              {cvLink && (
-                <Button href={cvLink} variant="ghost" size="lg" external>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round"
-                    className="h-4 w-4" aria-hidden="true">
-                    <path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                  </svg>
-                  {dict.home.cv_download}
-                </Button>
+            {/* ── Contact info ─────────────────────────────────────────── */}
+            <div className="mt-7 flex flex-wrap gap-x-6 gap-y-2.5">
+              {links.email && (
+                <a
+                  href={`mailto:${links.email}`}
+                  className="flex items-center gap-2 font-body text-sm text-slate-600 hover:text-navy-700 transition-colors duration-150"
+                >
+                  <EmailIcon />
+                  {links.email}
+                </a>
+              )}
+              {links.phone && (
+                <a
+                  href={`tel:${links.phone.replace(/\s/g, '')}`}
+                  className="flex items-center gap-2 font-body text-sm text-slate-600 hover:text-navy-700 transition-colors duration-150"
+                  aria-label={`${dict.home.work_phone}: ${links.phone}`}
+                >
+                  <PhoneIcon />
+                  {links.phone}
+                </a>
               )}
             </div>
+
+            {/* ── CV download ──────────────────────────────────────────── */}
+            {cvLink && (
+              <div className="mt-5">
+                <Button href={cvLink} variant="gold" size="lg" external>
+                  <DownloadIcon />
+                  {dict.home.cv_download}
+                </Button>
+              </div>
+            )}
+
+            {/* ── Academic profile pills ───────────────────────────────── */}
+            {profileLinks.length > 0 && (
+              <div className="mt-5 flex flex-wrap gap-2" aria-label={dict.home.university_profile}>
+                {profileLinks.map(({ key, label, href }) => (
+                  <ProfilePill key={key} href={href} label={label} />
+                ))}
+              </div>
+            )}
           </div>
 
           {/* ── Photo column ──────────────────────────────────────────── */}

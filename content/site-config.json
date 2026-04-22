@@ -148,6 +148,8 @@
   "links": {
     "email": "mehmet.peker@ege.edu.tr",
 
+    "phone": "+90 232 311 2077",
+
     "google_scholar": "https://scholar.google.com.tr/citations?user=OZ-nc14AAAAJ&hl=tr",
 
     "orcid": "https://orcid.org/0000-0002-9837-892X",
@@ -162,7 +164,10 @@
     "__cv_note": "Path to your CV PDF in /public/downloads/. Provide separate paths per language or use one for both.",
 
     "cv_tr": "/downloads/MPeker_CV-ENG.pdf",
-    "__cv_tr_note": "Turkish CV. Leave same as cv or empty string if you have only one version."
+    "__cv_tr_note": "Turkish CV. Leave same as cv or empty string if you have only one version.",
+
+    "unisis": "https://unisis.ege.edu.tr/researcher=mehmet.peker",
+    "yoksis": ""
   },
 
   "languages": [

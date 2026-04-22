@@ -38,6 +38,7 @@ export type SiteConfig = {
   }[];
   links: {
     email: string;
+    phone: string;
     google_scholar: string;
     orcid: string;
     researchgate: string;
@@ -45,6 +46,8 @@ export type SiteConfig = {
     twitter: string;
     cv: string;
     cv_tr: string;
+    unisis: string;
+    yoksis: string;
   };
   languages: {
     name: BilingualString;
