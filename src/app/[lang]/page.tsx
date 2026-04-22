@@ -5,12 +5,10 @@ import {
   getSiteConfig,
   getPublications,
   getScales,
-  getProjects,
   getNewsItems,
 } from '@/lib/content';
 
 import HeroSection        from '@/components/sections/HeroSection';
-import StatsBar           from '@/components/sections/StatsBar';
 import ResearchInterests  from '@/components/sections/ResearchInterests';
 import Highlights         from '@/components/sections/Highlights';
 import NewsSection        from '@/components/sections/NewsSection';
@@ -36,35 +34,23 @@ export default async function HomePage({
 }) {
   const lang = params.lang;
 
-  const [dict, config, publications, scales, projects, news] = await Promise.all([
+  const [dict, config, publications, scales, news] = await Promise.all([
     getDictionary(lang),
     Promise.resolve(getSiteConfig()),
     Promise.resolve(getPublications()),
     Promise.resolve(getScales()),
-    Promise.resolve(getProjects()),
     Promise.resolve(getNewsItems()),
   ]);
-
-  const activeProjectCount = projects.filter((p) => p.status === 'active').length;
 
   return (
     <>
       {/* 1 ── Hero */}
       <HeroSection lang={lang} config={config} dict={dict} />
 
-      {/* 2 ── Stats bar */}
-      <StatsBar
-        lang={lang}
-        dict={dict}
-        publicationCount={publications.length}
-        scaleCount={scales.length}
-        activeProjectCount={activeProjectCount}
-      />
-
-      {/* 3 ── Research Interests */}
+      {/* 2 ── Research Interests */}
       <ResearchInterests lang={lang} config={config} dict={dict} />
 
-      {/* 4 ── Recent Highlights: publications + scales */}
+      {/* 3 ── Recent Highlights: publications + scales */}
       <Highlights
         lang={lang}
         publications={publications}
@@ -72,10 +58,10 @@ export default async function HomePage({
         dict={dict}
       />
 
-      {/* 5 ── Latest News */}
+      {/* 4 ── Latest News */}
       <NewsSection lang={lang} news={news} dict={dict} />
 
-      {/* 6 ── Social / Connect bar */}
+      {/* 5 ── Social / Connect bar */}
       <SocialBar lang={lang} config={config} dict={dict} />
     </>
   );
