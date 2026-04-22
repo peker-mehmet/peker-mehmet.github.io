@@ -51,7 +51,11 @@
     "type_book": "Kitap",
     "type_book_chapter": "Kitap Bölümü",
     "type_thesis": "Tez",
-    "type_preprint": "Önbaskı"
+    "type_preprint": "Önbaskı",
+    "stat_publications": "Yayın",
+    "stat_scales": "Ölçek",
+    "stat_years_experience": "Yıl Deneyim",
+    "stat_active_projects": "Aktif Proje"
   },
   "about": {
     "title": "Hakkımda",

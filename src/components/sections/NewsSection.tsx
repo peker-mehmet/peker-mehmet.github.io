@@ -108,7 +108,7 @@ export default function NewsSection({ lang, news, dict }: NewsSectionProps) {
   const itemsToShow = news.slice(0, 3);
 
   return (
-    <section className="bg-warm-50 border-y border-warm-200" aria-labelledby="news-heading">
+    <section className="bg-white border-y border-warm-200" aria-labelledby="news-heading">
       <div className="container-main section">
 
         {/* Header row */}

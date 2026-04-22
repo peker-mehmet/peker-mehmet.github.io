@@ -311,7 +311,7 @@ export default function Highlights({ lang, publications, scales, dict }: Highlig
   if (!hasPubs && !hasScales) return null;
 
   return (
-    <section className="bg-white" aria-labelledby="highlights-heading">
+    <section className="bg-warm-50" aria-labelledby="highlights-heading">
       <div className="container-main section">
 
         <SectionTitle id="highlights-heading" as="h2" accent>

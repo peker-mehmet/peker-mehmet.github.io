@@ -51,7 +51,11 @@
     "type_book": "Book",
     "type_book_chapter": "Book Chapter",
     "type_thesis": "Thesis",
-    "type_preprint": "Preprint"
+    "type_preprint": "Preprint",
+    "stat_publications": "Publications",
+    "stat_scales": "Scales",
+    "stat_years_experience": "Years Experience",
+    "stat_active_projects": "Active Projects"
   },
   "about": {
     "title": "About Me",
