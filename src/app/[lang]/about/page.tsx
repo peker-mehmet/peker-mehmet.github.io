@@ -16,6 +16,7 @@ type AboutDict = {
   bio_title: string;
   interests_title: string;
   education_title: string;
+  teaching_experience: string;
   profiles_title: string;
   cv_download: string;
   thesis: string;
@@ -29,7 +30,12 @@ type AboutDict = {
   eyebrow_bio: string;
   eyebrow_interests: string;
   eyebrow_education: string;
+  eyebrow_teaching: string;
   eyebrow_profiles: string;
+  graduate: string;
+  undergraduate: string;
+  lecturer: string;
+  teaching_assistant: string;
 };
 
 // ── Profile photo ─────────────────────────────────────────────────────────────
@@ -260,6 +266,77 @@ function LinkedInIcon() {
   );
 }
 
+// ── Teaching section ──────────────────────────────────────────────────────────
+
+type TeachingCourse = {
+  level: string;
+  role: string;
+  institution: string;
+  department: string;
+  course_en: string;
+  course_tr: string;
+};
+
+function TeachingSection({
+  courses,
+  lang,
+  dict,
+}: {
+  courses: TeachingCourse[];
+  lang: Locale;
+  dict: Pick<AboutDict, 'graduate' | 'undergraduate' | 'lecturer' | 'teaching_assistant'>;
+}) {
+  const ma = courses.filter((c) => c.level === 'M.A.');
+  const ba = courses.filter((c) => c.level === 'B.A.');
+
+  const renderGroup = (group: TeachingCourse[], label: string) => (
+    <div>
+      <p className="font-body text-[0.6875rem] font-semibold uppercase tracking-widest text-gold-600 mb-3">
+        {label}
+      </p>
+      <div className="rounded-xl overflow-hidden border border-warm-200">
+        {group.map((c, i) => {
+          const isLecturer = c.role === 'Lecturer';
+          const courseName = lang === 'tr' ? c.course_tr : c.course_en;
+          return (
+            <div
+              key={i}
+              className={`flex items-start gap-3 sm:gap-4 px-4 py-3 ${
+                i % 2 === 0 ? 'bg-white' : 'bg-warm-50/60'
+              }`}
+            >
+              <span
+                className={`flex-shrink-0 mt-0.5 inline-block px-2 py-[3px] rounded text-[9px] font-semibold uppercase tracking-widest leading-none ${
+                  isLecturer
+                    ? 'bg-navy-100 text-navy-700'
+                    : 'bg-slate-100 text-slate-500'
+                }`}
+              >
+                {isLecturer ? dict.lecturer : dict.teaching_assistant}
+              </span>
+              <div className="flex-1 min-w-0">
+                <p className="font-display text-[0.9rem] font-medium text-navy-700 leading-snug">
+                  {courseName}
+                </p>
+                <p className="mt-0.5 font-body text-[0.75rem] italic text-slate-400">
+                  {c.department}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="space-y-6 max-w-2xl">
+      {ma.length > 0 && renderGroup(ma, dict.graduate)}
+      {ba.length > 0 && renderGroup(ba, dict.undergraduate)}
+    </div>
+  );
+}
+
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export async function generateMetadata({
@@ -287,7 +364,7 @@ export default async function AboutPage({
   ]);
 
   const d = (dict as any).about as AboutDict;
-  const { owner, institution, bio, research_interests, education, links, languages } = config;
+  const { owner, institution, bio, research_interests, education, teaching, links, languages } = config;
   const cvLink = lang === 'tr' ? links.cv_tr || links.cv : links.cv;
 
   const profiles = [
@@ -440,9 +517,19 @@ export default async function AboutPage({
         </div>
       </section>
 
+      {/* ── Teaching experience ─────────────────────────────────────────── */}
+      {teaching && teaching.length > 0 && (
+        <section className="bg-white border-b border-warm-200">
+          <div className="container-main py-14 lg:py-16">
+            <SectionTitle eyebrow={d.eyebrow_teaching}>{d.teaching_experience}</SectionTitle>
+            <TeachingSection courses={teaching} lang={lang} dict={d} />
+          </div>
+        </section>
+      )}
+
       {/* ── Academic profiles ────────────────────────────────────────────── */}
       {profiles.length > 0 && (
-        <section className="bg-white">
+        <section className="bg-warm-50">
           <div className="container-main py-14 lg:py-16">
             <SectionTitle eyebrow={d.eyebrow_profiles}>{d.profiles_title}</SectionTitle>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl">

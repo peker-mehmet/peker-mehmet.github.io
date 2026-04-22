@@ -73,7 +73,13 @@
     "eyebrow_bio": "About",
     "eyebrow_interests": "Focus Areas",
     "eyebrow_education": "Academic Background",
-    "eyebrow_profiles": "Find Me Online"
+    "eyebrow_teaching": "Courses Taught",
+    "eyebrow_profiles": "Find Me Online",
+    "teaching_experience": "Teaching Experience",
+    "graduate": "Graduate",
+    "undergraduate": "Undergraduate",
+    "lecturer": "Lecturer",
+    "teaching_assistant": "Teaching Assistant"
   },
   "research": {
     "title": "Research",

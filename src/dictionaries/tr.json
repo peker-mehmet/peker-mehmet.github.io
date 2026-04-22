@@ -73,7 +73,13 @@
     "eyebrow_bio": "Hakkımda",
     "eyebrow_interests": "Odak Alanları",
     "eyebrow_education": "Akademik Geçmiş",
-    "eyebrow_profiles": "Çevrimiçi Bul"
+    "eyebrow_teaching": "Verilen Dersler",
+    "eyebrow_profiles": "Çevrimiçi Bul",
+    "teaching_experience": "Öğretim Deneyimi",
+    "graduate": "Yüksek Lisans",
+    "undergraduate": "Lisans",
+    "lecturer": "Öğretim Görevlisi",
+    "teaching_assistant": "Araştırma Görevlisi"
   },
   "research": {
     "title": "Araştırma",

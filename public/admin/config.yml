@@ -552,6 +552,18 @@ collections:
                   - { name: en, label: English, widget: string, required: false }
                   - { name: tr, label: Turkish, widget: string, required: false }
 
+          - name: teaching
+            label: Teaching Experience
+            widget: list
+            hint: "Graduate (M.A.) courses first, then Undergraduate (B.A.). Shown on the About page."
+            fields:
+              - { name: level,       label: Level,       widget: select, options: ["M.A.", "B.A."] }
+              - { name: role,        label: Role,        widget: select, options: ["Lecturer", "Teaching Assistant"] }
+              - { name: institution, label: Institution, widget: string, default: "Ege University" }
+              - { name: department,  label: Department,  widget: string, hint: "e.g. Department of Psychology" }
+              - { name: course_en,   label: Course Name (English), widget: string }
+              - { name: course_tr,   label: Course Name (Turkish), widget: string }
+
           - name: links
             label: Links & Academic Profiles
             widget: object

@@ -36,6 +36,14 @@ export type SiteConfig = {
     year: string;
     thesis: BilingualString;
   }[];
+  teaching: {
+    level: string;
+    role: string;
+    institution: string;
+    department: string;
+    course_en: string;
+    course_tr: string;
+  }[];
   links: {
     email: string;
     phone: string;
