@@ -1,90 +1,10 @@
 {
-  "__instructions": "This is the central configuration file for your academic website. Fill in your own details below. Delete all __note keys when you are done. Bilingual fields use { 'en': '...', 'tr': '...' } — fill in both languages.",
-
-  "owner": {
-    "name": {
-      "full": "Mehmet Peker", 
-
-      "display": "M. Peker"
-    },
-
-    "title": {
-      "en": "Associate Professor",
-      "tr": "Doçent Doktor"
-    },
-
-    "position": {
-      "en": "Researcher in Work and Organizational Psychology",
-      "tr": "İş ve Örgüt Psikolojisi Araştırmacısı"
+  "contact": {
+    "note": {
+      "en": "I aim to respond to all messages within five business days. For scale-related requests, please indicate the purpose of use and your institutional affiliation in your message.",
+      "tr": "Tüm iletilere beş iş günü içinde yanıt vermeye özen göstermekteyim. Ölçek taleplerinizde lütfen kullanım amacınızı ve kurumsal bağlantınızı belirtiniz."
     }
   },
-
-  "institution": {
-    "name": {
-      "en": "Ege University",
-      "tr": "Ege Üniversitesi"
-    },
-
-    "department": {
-      "en": "Department of Psychology",
-      "tr": "Psikoloji Bölümü"
-    },
-
-    "faculty": {
-      "en": "Faculty of Letters",
-      "tr": "Edebiyat Fakültesi"
-    },
-
-    "address": {
-      "en": "Ege University, Department of Psychology, 35100, Izmir, Türkiye",
-      "tr": "Ege Üniversitesi, Psikoloji Bölümü, 35100, İzmir, Türkiye"
-    },
-
-    "office": {
-      "en": "Faculty of Letters Building, Floor 3",
-      "tr": "Edebiyat Fakültesi Binası, Kat 3"
-    }
-  },
-
-  "photo": {
-    "profile": "/images/profile.jpeg",
-
-    "alt": {
-      "en": "Photo of Mehmet Peker",
-      "tr": "Fotoğraf: Mehmet Peker"
-    }
-  },
-
-  "bio": {
-    "short": {
-      "en": "Mehmet Peker is an Associate Professor of Psychology at Ege University, where his research focuses on emotional labor, action–state orientation, self- and emotion regulation, and well-being at work. His work appears in journals such as Motivation and Emotion, Journal of Managerial Psychology, and Journal of Personality Assessment, and he actively collaborates with both academic institutions and industry partners on applied psychological research.",
-      "tr": "Mehmet Peker, Ege Üniversitesi Psikoloji Bölümü'nde doçent olarak görev yapmaktadır. Araştırmaları duygusal emek, eylem–durum yönelimi, duygu düzenleme ve çalışan iyi oluşu konularına odaklanmaktadır. Çalışmaları Motivation and Emotion , Journal of Managerial Psychology ve Journal of Personality Assessment gibi uluslararası dergilerde yayımlanmış olup akademik kurumlar ve sektör iş birlikleriyle uygulamalı araştırmalar yürütmektedir."
-    },
-
-    "full": {
-      "en": [
-
-        "Mehmet Peker is an Associate Professor in the Department of Psychology at Ege University, İzmir, Turkey. He completed his B.A. and Ph.D. in Psychology at Middle East Technical University and Ege University, respectively, graduating with High Honors on both occasions. His doctoral dissertation examined the buffering role of action orientation in the emotional labor process through the lens of Personality Systems Interaction Theory.",
-
-        "His research lies at the intersection of work psychology, self-regulation, and emotion. He investigates how individuals manage their emotional experiences at work — particularly through the concepts of emotional labor, action–state orientation, and authentic workplace climates — and how these processes shape engagement, well-being, and performance. He employs a methodologically diverse toolkit including diary studies, longitudinal panel designs, multilevel modeling, structural equation modeling, and Bayesian analyses.",
-
-        "Dr. Peker has published in leading international journals including Nature Human Behaviour, Journal of Managerial Psychology, Journal of Personality Assessment, Motivation and Emotion, and Personality and Individual Differences.He has also contributed to large-scale multinational collaborative projects, with co-authored work spanning dozens of countries.",
-
-        "Beyond his academic work, Dr. Peker collaborates with industry partners on applied psychological research, including projects on gamified personality assessment and workplace safety. He serves as a reviewer for several international journals, holds an Erasmus coordination role at Ege University, and co-founded the Ege University Industrial and Organizational Psychology Workgroup. He teaches courses on industrial-organizational psychology, statistical modeling, and social psychology at both undergraduate and graduate levels."
-      ],
-      "tr": [
-        "Mehmet Peker, Ege Üniversitesi Psikoloji Bölümü'nde doçent olarak görev yapmaktadır. Lisans eğitimini Orta Doğu Teknik Üniversitesi'nde, doktora eğitimini ise Ege Üniversitesi'nde tamamlamış; her iki derecesini de yüksek onur derecesiyle almıştır. Doktora tezi, Kişilik Sistemleri Etkileşim Kuramı çerçevesinde eylem yöneliminin duygusal emek sürecindeki koruyucu rolünü incelemiştir.",
-        
-        "Araştırmaları, iş psikolojisi, öz-düzenleme ve duygu kesişiminde yer almaktadır. Bireylerin iş yerindeki duygusal deneyimlerini nasıl yönettiklerini — özellikle duygusal emek, eylem–durum yönelimi ve samimi duygu iklimi kavramları aracılığıyla — ve bu süreçlerin işe adanmışlık, iyi oluş ve performansı nasıl şekillendirdiğini araştırmaktadır. Günlük çalışmaları, boylamsal panel desenleri, çok düzeyli modelleme, yapısal eşitlik modellemesi ve Bayes analizleri gibi çeşitli yöntemleri bir arada kullanmaktadır.",
-
-        "Nature Human Behaviour, Journal of Managerial Psychology, Journal of Personality Assessment, Motivation and Emotion ve Personality and Individual Differences gibi önde gelen uluslararası dergilerde makaleleri yayımlanmıştır. Onlarca ülkeyi kapsayan çok uluslu iş birliği projelerinde de yer almıştır.",
-
-        "Akademik çalışmalarının yanı sıra, oyunlaştırılmış kişilik değerlendirmesi ve iş yeri güvenliği gibi konularda sektör ortaklarıyla uygulamalı psikoloji projeleri yürütmektedir. Çeşitli uluslararası dergilerin hakemlik süreçlerine katkıda bulunmakta, Ege Üniversitesi'nde Erasmus koordinatörlüğü görevini üstlenmekte ve Ege Üniversitesi Endüstri ve Örgüt Psikolojisi Çalışma Grubu'nun kurucu üyeleri arasında yer almaktadır. Lisans ve lisansüstü düzeyde endüstri-örgüt psikolojisi, istatistiksel modelleme ve sosyal psikoloji dersleri vermektedir."
-      ]
-
-    }
-  },
-
   "research_interests": {
     "en": [
       "Emotional Labor",
@@ -112,7 +32,27 @@
     ],
     "__note": "Shown as a bullet list on the About and Research pages. Keep each item short (3–6 words)."
   },
-
+  "__instructions": "This is the central configuration file for your academic website. Fill in your own details below. Delete all __note keys when you are done. Bilingual fields use { 'en': '...', 'tr': '...' } — fill in both languages.",
+  "bio": {
+    "short": {
+      "en": "Mehmet Peker is an Associate Professor of Psychology at Ege University. His research broadly focuses on work and organizational psychology, motivation and self-regulation, and employee well-being. He collaborates with academic institutions and industry partners on applied psychological research. This website presents Mehmet Peker’s research, academic work, and professional activities.",
+      "tr": "Mehmet Peker, Ege Üniversitesi’nde Doçent olarak görev yapmaktadır. Araştırmaları genel olarak iş ve örgüt psikolojisi, motivasyon ve öz-düzenleme, ile çalışanların iyi oluşu üzerine odaklanmaktadır. Uygulamalı psikoloji araştırmaları kapsamında akademik kurumlar ve sektör paydaşlarıyla iş birliği yürütmektedir. Bu web sitesinde Mehmet Peker’in araştırmaları, akademik çalışmaları ve profesyonel faaliyetleri paylaşılmaktadır."
+    },
+    "full": {
+      "en": [
+        "Mehmet Peker is an Associate Professor in the Department of Psychology at Ege University, İzmir, Turkey. He completed his B.A. and Ph.D. in Psychology at Middle East Technical University and Ege University, respectively, graduating with High Honors on both occasions. His doctoral dissertation examined the buffering role of action orientation in the emotional labor process through the lens of Personality Systems Interaction Theory.",
+        "His research lies at the intersection of work psychology, self-regulation, and emotion. He investigates how individuals manage their emotional experiences at work — particularly through the concepts of emotional labor, action–state orientation, and authentic workplace climates — and how these processes shape engagement, well-being, and performance. He employs a methodologically diverse toolkit including diary studies, longitudinal panel designs, multilevel modeling, structural equation modeling, and Bayesian analyses.",
+        "Dr. Peker has published in leading international journals including Nature Human Behaviour, Journal of Managerial Psychology, Journal of Personality Assessment, Motivation and Emotion, and Personality and Individual Differences.He has also contributed to large-scale multinational collaborative projects, with co-authored work spanning dozens of countries.",
+        "Beyond his academic work, Dr. Peker collaborates with industry partners on applied psychological research, including projects on gamified personality assessment and workplace safety. He serves as a reviewer for several international journals, holds an Erasmus coordination role at Ege University, and co-founded the Ege University Industrial and Organizational Psychology Workgroup. He teaches courses on industrial-organizational psychology, statistical modeling, and social psychology at both undergraduate and graduate levels."
+      ],
+      "tr": [
+        "Mehmet Peker, Ege Üniversitesi Psikoloji Bölümü'nde doçent olarak görev yapmaktadır. Lisans eğitimini Orta Doğu Teknik Üniversitesi'nde, doktora eğitimini ise Ege Üniversitesi'nde tamamlamış; her iki derecesini de yüksek onur derecesiyle almıştır. Doktora tezi, Kişilik Sistemleri Etkileşim Kuramı çerçevesinde eylem yöneliminin duygusal emek sürecindeki koruyucu rolünü incelemiştir.",
+        "Araştırmaları, iş psikolojisi, öz-düzenleme ve duygu kesişiminde yer almaktadır. Bireylerin iş yerindeki duygusal deneyimlerini nasıl yönettiklerini — özellikle duygusal emek, eylem–durum yönelimi ve samimi duygu iklimi kavramları aracılığıyla — ve bu süreçlerin işe adanmışlık, iyi oluş ve performansı nasıl şekillendirdiğini araştırmaktadır. Günlük çalışmaları, boylamsal panel desenleri, çok düzeyli modelleme, yapısal eşitlik modellemesi ve Bayes analizleri gibi çeşitli yöntemleri bir arada kullanmaktadır.",
+        "Nature Human Behaviour, Journal of Managerial Psychology, Journal of Personality Assessment, Motivation and Emotion ve Personality and Individual Differences gibi önde gelen uluslararası dergilerde makaleleri yayımlanmıştır. Onlarca ülkeyi kapsayan çok uluslu iş birliği projelerinde de yer almıştır.",
+        "Akademik çalışmalarının yanı sıra, oyunlaştırılmış kişilik değerlendirmesi ve iş yeri güvenliği gibi konularda sektör ortaklarıyla uygulamalı psikoloji projeleri yürütmektedir. Çeşitli uluslararası dergilerin hakemlik süreçlerine katkıda bulunmakta, Ege Üniversitesi'nde Erasmus koordinatörlüğü görevini üstlenmekte ve Ege Üniversitesi Endüstri ve Örgüt Psikolojisi Çalışma Grubu'nun kurucu üyeleri arasında yer almaktadır. Lisans ve lisansüstü düzeyde endüstri-örgüt psikolojisi, istatistiksel modelleme ve sosyal psikoloji dersleri vermektedir."
+      ]
+    }
+  },
   "education": [
     {
       "degree": {
@@ -145,46 +85,84 @@
       }
     }
   ],
-  "links": {
-    "email": "mehmet.peker@ege.edu.tr",
-
-    "phone": "+90 232 311 2077",
-
-    "google_scholar": "https://scholar.google.com.tr/citations?user=OZ-nc14AAAAJ&hl=tr",
-
-    "orcid": "https://orcid.org/0000-0002-9837-892X",
-
-    "researchgate": "https://www.researchgate.net/profile/Mehmet-Peker?ev=hdr_xprf",
-
-    "linkedin": "https://www.linkedin.com/in/mehmet-peker-a3467a86/",
-
-    "twitter": "",
-
-    "cv": "/downloads/MPeker_CV-ENG.pdf",
-    "__cv_note": "Path to your CV PDF in /public/downloads/. Provide separate paths per language or use one for both.",
-
-    "cv_tr": "/downloads/MPeker_CV-ENG.pdf",
-    "__cv_tr_note": "Turkish CV. Leave same as cv or empty string if you have only one version.",
-
-    "unisis": "https://unisis.ege.edu.tr/researcher=mehmet.peker",
-    "yoksis": ""
+  "photo": {
+    "profile": "/images/profile.jpeg",
+    "alt": {
+      "en": "Photo of Mehmet Peker",
+      "tr": "Fotoğraf: Mehmet Peker"
+    }
   },
-
+  "owner": {
+    "name": {
+      "full": "Mehmet Peker",
+      "display": "M. Peker"
+    },
+    "title": {
+      "en": "Associate Professor",
+      "tr": "Doçent Doktor"
+    },
+    "position": {
+      "en": "Researcher in Work and Organizational Psychology",
+      "tr": "İş ve Örgüt Psikolojisi Araştırmacısı"
+    }
+  },
+  "institution": {
+    "name": {
+      "en": "Ege University",
+      "tr": "Ege Üniversitesi"
+    },
+    "department": {
+      "en": "Department of Psychology",
+      "tr": "Psikoloji Bölümü"
+    },
+    "faculty": {
+      "en": "Faculty of Letters",
+      "tr": "Edebiyat Fakültesi"
+    },
+    "address": {
+      "en": "Ege University, Department of Psychology, 35100, Izmir, Türkiye",
+      "tr": "Ege Üniversitesi, Psikoloji Bölümü, 35100, İzmir, Türkiye"
+    },
+    "office": {
+      "en": "Faculty of Letters Building, Floor 3",
+      "tr": "Edebiyat Fakültesi Binası, Kat 3"
+    }
+  },
+  "links": {
+    "google_scholar": "https://scholar.google.com.tr/citations?user=OZ-nc14AAAAJ&hl=tr",
+    "researchgate": "https://www.researchgate.net/profile/Mehmet-Peker?ev=hdr_xprf",
+    "__cv_tr_note": "Turkish CV. Leave same as cv or empty string if you have only one version.",
+    "yoksis": "",
+    "cv_tr": "/downloads/MPeker_CV-ENG.pdf",
+    "unisis": "https://unisis.ege.edu.tr/researcher=mehmet.peker",
+    "phone": "+90 232 311 2077",
+    "cv": "/downloads/MPeker_CV-ENG.pdf",
+    "twitter": "",
+    "orcid": "https://orcid.org/0000-0002-9837-892X",
+    "email": "mehmet.peker@ege.edu.tr",
+    "__cv_note": "Path to your CV PDF in /public/downloads/. Provide separate paths per language or use one for both.",
+    "linkedin": "https://www.linkedin.com/in/mehmet-peker-a3467a86/"
+  },
   "languages": [
     {
-      "name": { "en": "Turkish", "tr": "Türkçe" },
-      "level": { "en": "Native", "tr": "Anadili" }
+      "name": {
+        "en": "Turkish",
+        "tr": "Türkçe"
+      },
+      "level": {
+        "en": "Native",
+        "tr": "Anadili"
+      }
     },
     {
-      "name": { "en": "English", "tr": "İngilizce" },
-      "level": { "en": "Fluent (C1)", "tr": "İleri Düzey (C1)" }
+      "name": {
+        "en": "English",
+        "tr": "İngilizce"
+      },
+      "level": {
+        "en": "Fluent (C1)",
+        "tr": "İleri Düzey (C1)"
+      }
     }
-  ],
-
-  "contact": {
-    "note": {
-      "en": "I aim to respond to all messages within five business days. For scale-related requests, please indicate the purpose of use and your institutional affiliation in your message. Please note that I am unable to respond to requests that fall outside my areas of expertise.",
-      "tr": "Tüm iletilere beş iş günü içinde yanıt vermeye özen göstermekteyim. Ölçek taleplerinizde lütfen kullanım amacınızı ve kurumsal bağlantınızı belirtiniz. Uzmanlık alanlarımın dışında kalan taleplere yanıt veremeyeceğimi bildirmek isterim."
-    }
-  }
+  ]
 }
