@@ -1,0 +1,19 @@
+{
+  "featured": false,
+  "id": "altpekmes2017",
+  "type": "conference",
+  "title": {
+    "en": "Relationship of dark personality and abusive supervision in organizations"
+  },
+  "authors": [
+    "Altay, G.",
+    "Peker, M.",
+    "Meşe, G."
+  ],
+  "year": 2017,
+  "conference": "15th European Congress of Psychology",
+  "abstract": {
+    "tr": "Bu çalışma, karanlık kişilik özelliklerine sahip yöneticilerin çalışanlara kötü davranma eğiliminin sadece kişiliklerinden değil, iş ortamından da etkilenebileceğini inceliyor. Bulguların, iş ortamındaki koşulların istismarcı yönetimi güçlendirebildiğini ya da zayıflatabildiğini ve bunun çalışanların tükenmişliği ile işyerindeki olumlu davranışları üzerinde sonuçlar doğurabileceğini göstermesi bekleniyor.",
+    "en": "This study examines whether supervisors with darker personality traits are more likely to behave abusively depending not only on their personality but also on the work environment. It is expected to show that workplace conditions can either intensify or reduce abusive supervision, with important consequences for employee burnout and positive workplace behavior."
+  }
+}
