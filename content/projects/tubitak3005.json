@@ -1,0 +1,38 @@
+{
+  "start_date": "2023-11",
+  "collaborators": [
+    {
+      "name": "Nevra Cem Ersoy",
+      "affiliation": "Izmir University of Economics"
+    },
+    {
+      "name": "Onur Cem Doğru",
+      "affiliation": "Afyon Kocatepe University"
+    },
+    {
+      "name": "Zeynep Göksu Beşkaya",
+      "affiliation": "Izmir University of Economics"
+    }
+  ],
+  "featured": false,
+  "end_date": "2025-11",
+  "outputs": [
+    "ersoy2025bct"
+  ],
+  "status": "completed",
+  "role": "Co-Investigator",
+  "title": {
+    "en": "Take Action and Recover!: A randomized controlled trial study for the training program developed to increase recovery experiences during non-work times",
+    "tr": "Harekete Geç ve Yenilen!: İş dışı zamanlarda toparlanma deneyimlerini artırmak için geliştirilen eğitim programına yönelik randomize kontrollü deney çalışması"
+  },
+  "id": "tubitak3005",
+  "description": {
+    "tr": "Bu proje, çalışanların iş dışı zamanlarda daha iyi toparlanmasına yardımcı olmak için geliştirilen iki farklı eğitim programını incelemektedir. Bulgular, hem yüz yüze hem de kısa mesaj temelli eğitimin toparlanma deneyimlerini artırabildiğini, ancak iki yöntemin farklı alanlarda etkili olduğunu göstermiştir. Yüz yüze eğitim özellikle rahatlama ve kontrol duygusunu desteklerken, kısa mesaj temelli eğitim psikolojik olarak işten uzaklaşma, uzmanlaşma, işe adanmışlık ve zindelik gibi alanlarda daha güçlü sonuçlar vermiştir. Genel olarak proje, çalışanların iyi oluşunu desteklemek için toparlanma eğitimlerinin yararlı olduğunu ve kısa mesaj temelli uygulamaların da düşük maliyetli bir alternatif sunabileceğini göstermektedir.",
+    "en": "This project examines two different training programs designed to help employees recover better during their non-work time. The findings show that both face-to-face and text message–based training can improve recovery experiences, but they appear to be effective in different areas. Face-to-face training was especially helpful for relaxation and control, whereas the text message–based training showed stronger effects on psychological detachment, mastery, work engagement, and vigor. Overall, the project suggests that recovery training can support employee well-being and that text message–based programs may offer a useful low-cost alternative."
+  },
+  "funding": {
+    "agency": "TÜBİTAK 3005 - Innovative Solutions Research Projects Support Program in Social Sciences and Humanities ",
+    "grant_number": "223K060",
+    "amount": "12,656 USD"
+  }
+}
