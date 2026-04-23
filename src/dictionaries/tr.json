@@ -144,7 +144,7 @@
   },
   "scales": {
     "title": "Ölçekler & Ölçüm Araçları",
-    "intro": "Ölçüm araçları, doğrudan gözlemlenemeyen psikolojik yapıları nicelendirmek için psikoloji ve eğitim araştırmalarında kullanılan standartlaştırılmış araçlardır. Aşağıda listelenen ölçekler araştırma grubumuz tarafından geliştirilmiş, çevrilmiş veya uyarlanmıştır. Tüm materyaller tekrarlamayı, kültürlerarası karşılaştırmayı ve birikimli bilimi desteklemek amacıyla ücretsiz olarak paylaşılmaktadır.",
+    "intro": "Ölçüm araçları, doğrudan gözlemlenemeyen psikolojik yapıları ölçmek amacıyla bilimsel araştırmalarda kullanılan standartlaştırılmış araçlardır. Aşağıda yer alan ölçekler, benim ve arkadaşlarımın Türkçe için geliştirdiği, çevirdiği veya uyarladığı ölçeklerdir. Bu ölçekler, etik ilkelere uyulması ve atıf verilmesi koşuluyla yalnızca bilimsel araştırmalarda kullanılabilir; kullanımları için ayrıca izin alınmasına gerek yoktur. Ölçeklerin klinik teşhis koymak, psikolojik değerlendirme yapmak, personel seçmek ya da benzer amaçlarla kullanılması; bilimsel ve etik bakımdan uygun değildir.",
     "search_placeholder": "Ad veya yapıya göre ara…",
     "filter_language": "Dil",
     "filter_population": "Hedef kitle",
@@ -199,11 +199,11 @@
     "section_translated": "Faktör Analizi Kanıtı Olan Çeviri Ölçekler",
     "scales_unit": "ölçek",
     "tab_adapted": "Uyarlanan Ölçekler",
-    "tab_adapted_desc": "Kapsamlı psikometrik çalışmalarla Türkçeye uyarlanan ölçekler. Faktör yapısı, güvenirlik ve geçerlik kanıtları Türk örneklemleriyle test edilmiştir.",
+    "tab_adapted_desc": "Ben ve çalışma arkadaşlarım tarafından İngilizceden Türkçeye uyarlanan; psikometrik özellikleri Türk örneklemleri üzerinde test edilmiş ölçeklerdir.",
     "tab_translated": "Çevrilen Ölçekler",
-    "tab_translated_desc": "Türkçeye çevrilen ve faktör analizi ile güvenirlik kanıtları sunulan ölçekler. Kapsamlı bir uyarlama çalışması yapılmamıştır.",
+    "tab_translated_desc": "Ben ve çalışma arkadaşlarım tarafından İngilizceden Türkçeye çevrilen; yalnızca faktör yapısı ve güvenirlik özellikleri incelenmiş ölçeklerdir.",
     "tab_developed": "Geliştirilen Ölçekler",
-    "tab_developed_desc": "Tarafımdan özgün olarak geliştirilen ve psikometrik özellikleri Türk örneklemleriyle test edilmiş ölçekler.",
+    "tab_developed_desc": "Ben ve çalışma arkadaşlarım tarafından geliştirilen; psikometrik özellikleri Türk örneklemleri üzerinde test edilmiş ölçeklerdir.",
     "detail_citation_original": "Orijinal Ölçek İçin Atıf",
     "download_form_and_scoring": "Ölçek Formu ve Puanlama Kılavuzu"
   },

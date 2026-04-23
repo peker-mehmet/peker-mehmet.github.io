@@ -144,7 +144,7 @@
   },
   "scales": {
     "title": "Scales & Measures",
-    "intro": "Measurement scales are standardized instruments used in psychological and educational research to quantify constructs that cannot be directly observed. The scales listed here have been developed, translated, or adapted by our research group. All materials are shared freely to support replication, cross-cultural comparison, and cumulative science.",
+    "intro": "Measurement instruments are standardized tools used in scientific research to assess psychological constructs that cannot be directly observed. The scales listed below were developed, translated, or adapted into Turkish by my colleagues and me. These scales may be used solely for scientific research, provided that ethical principles are followed and proper citation is given; no additional permission is required for their use. The use of these scales for purposes such as clinical diagnosis, psychological assessment, personnel selection, or similar applications is not appropriate from either a scientific or an ethical standpoint.",
     "search_placeholder": "Search by name or construct…",
     "filter_language": "Language",
     "filter_population": "Target population",
@@ -199,11 +199,11 @@
     "section_translated": "Translated Scales with Factor Analytic Evidence",
     "scales_unit": "scales",
     "tab_adapted": "Adapted Scales",
-    "tab_adapted_desc": "Scales adapted into Turkish through comprehensive psychometric studies. Factor structure, reliability, and validity evidence have been tested with Turkish samples.",
+    "tab_adapted_desc": "Scales adapted from English into Turkish by my colleagues and me, with psychometric properties tested on Turkish samples.",
     "tab_translated": "Translated Scales",
-    "tab_translated_desc": "Scales translated into Turkish with factorial and reliability evidence. A full adaptation study has not been conducted.",
+    "tab_translated_desc": "Scales translated from English into Turkish by my colleagues and me, for which only factor structure and reliability have been examined.",
     "tab_developed": "Developed Scales",
-    "tab_developed_desc": "Original scales developed by me, with psychometric properties tested on Turkish samples.",
+    "tab_developed_desc": "Scales developed by my colleagues and me, with psychometric properties tested on Turkish samples.",
     "detail_citation_original": "Citation for Original Scale",
     "download_form_and_scoring": "Scale Form & Scoring Guide"
   },
