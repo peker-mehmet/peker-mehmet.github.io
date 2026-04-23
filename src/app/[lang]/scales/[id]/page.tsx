@@ -13,7 +13,13 @@ import DownloadCard from '@/components/ui/DownloadCard';
 // ── Static params ─────────────────────────────────────────────────────────────
 
 export function generateStaticParams() {
-  return getScales().map((s) => ({ id: s.id }));
+  const langs = ['en', 'tr'];
+  try {
+    const ids = getScales().map((s) => s.id);
+    return langs.flatMap((lang) => ids.map((id) => ({ lang, id })));
+  } catch {
+    return langs.map((lang) => ({ lang, id: 'placeholder' }));
+  }
 }
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
