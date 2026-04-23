@@ -36,7 +36,7 @@
     "en": "Task-related action-state orientation",
     "tr": "Görevle ilişkili eylem-durum yönelimi"
   },
-  "featured": false,
+  "featured": true,
   "abbreviation": "ASO-T",
   "validity_notes": {
     "en": "Validity evidence was supportive and in the expected direction. The final two-factor structure (hesitation and preoccupation) fit the data well and performed better than a one-factor alternative. The scale also showed cross-level isomorphism, meaningful within-person variability, and substantial factor loadings. In addition, its subscales related to theoretically relevant variables as expected: corresponding trait ASO dimensions, procrastination, thought intrusions, conscientiousness, affect, and regulatory depletion. Altogether, the findings provide initial support for factorial and construct validity.",
@@ -53,7 +53,9 @@
   },
   "reliability": {
     "reliability_notes_tr": "Güvenirlik katsayıları kabul edilebilir ile güçlü arasında değişmiştir. Çalışmalar ve farklı kestirim düzeyleri boyunca omega katsayıları .69 ile .90 arasında değişmiştir. Daha özelde, kişi-içi güvenirlik .80 ile .87 arasında; ana çalışmadaki katsayılar ise alt boyutlar boyunca .85 ile .87 arasında bulunmuştur. Genel olarak ölçek, özellikle kişi-içi kullanım için iyi düzeyde güvenirlik göstermektedir.",
-    "reliability_notes_en": "Reliability was acceptable to strong. Across studies and estimation levels, omega coefficients ranged from .69 to .90. More specifically, within-person reliability ranged from .80 to .87, and the main-study coefficients ranged from .85 to .87 across subscales. Overall, the scale appears to provide good reliability, especially for within-person use."
+    "reliability_notes_en": "Reliability was acceptable to strong. Across studies and estimation levels, omega coefficients ranged from .69 to .90. More specifically, within-person reliability ranged from .80 to .87, and the main-study coefficients ranged from .85 to .87 across subscales. Overall, the scale appears to provide good reliability, especially for within-person use.",
+    "en": "Reliability was acceptable to strong. Across studies and estimation levels, omega coefficients ranged from .69 to .90. More specifically, within-person reliability ranged from .80 to .87, and the main-study coefficients ranged from .85 to .87 across subscales. Overall, the scale appears to provide good reliability, especially for within-person use.",
+    "tr": "Güvenirlik katsayıları kabul edilebilir ile güçlü arasında değişmiştir. Çalışmalar ve farklı kestirim düzeyleri boyunca omega katsayıları .69 ile .90 arasında değişmiştir. Daha özelde, kişi-içi güvenirlik .80 ile .87 arasında; ana çalışmadaki katsayılar ise alt boyutlar boyunca .85 ile .87 arasında bulunmuştur. Genel olarak ölçek, özellikle kişi-içi kullanım için iyi düzeyde güvenirlik göstermektedir."
   },
   "original_authors": [
     "Peker, M.",
