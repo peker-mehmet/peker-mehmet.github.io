@@ -1,0 +1,29 @@
+{
+  "active": true,
+  "organization": {
+    "en": "Humanas Teknoloji Anonim Şirketi",
+    "tr": "Humanas Teknoloji Anonim Şirketi"
+  },
+  "id": "humanas2023",
+  "type": "industry",
+  "period_start": "2023",
+  "description": {
+    "tr": "Bu iş birliğinin amacı, çalışan adaylarının kişilik özelliklerini hikâye tabanlı bir mobil uygulama aracılığıyla değerlendirmektir. Süreç kapsamında elde edilen veriler kullanılarak yapay zekâ destekli yöntemlerle kişilik profilleri oluşturulması ve geliştirilen ölçüm aracının geçerlik, güvenirlik ve diğer psikometrik özelliklerinin sınanması hedeflenmektedir. Ayrıca kurumların ihtiyaçları ile adayların bireysel özelliklerini sistematik biçimde eşleştiren bilimsel temelli bir değerlendirme ve öneri altyapısının geliştirilmesi amaçlanmaktadır. Böylece hem ölçme-değerlendirme hem de aday–kurum uyumu açısından uygulamaya dönük, yenilikçi ve veri temelli bir sistem kurulması öngörülmektedir.",
+    "en": "The purpose of this collaboration is to assess job applicants’ personality characteristics through a story-based mobile application. Within this scope, the project aims to generate AI-supported personality profiles from the collected data and to evaluate the validity, reliability, and other psychometric properties of the assessment tool. It also seeks to develop a scientifically grounded system that matches organizational needs with applicants’ individual characteristics in a systematic way. Overall, the goal is to establish an innovative and data-driven framework for both assessment and person–organization fit."
+  },
+  "outputs": [
+    {
+      "en": "A mobile application that measures job applicants’ personality characteristics through scenario- and story-based interactions.",
+      "tr": "Çalışan adaylarının kişilik özelliklerini senaryo ve hikâye temelli etkileşimlerle ölçen bir mobil uygulama."
+    },
+    {
+      "en": "A system that generates personality profiles from assessment data and matches applicant characteristics with organizational needs.",
+      "tr": "Ölçüm verilerinden kişilik profilleri üreten ve aday özelliklerini kurum ihtiyaçlarıyla eşleştiren bir sistem."
+    },
+    {
+      "en": "A scientific report presenting the validity, reliability, and overall psychometric performance of the developed assessment tool.",
+      "tr": "Geliştirilen ölçüm aracının geçerlik, güvenirlik ve genel psikometrik performansını ortaya koyan bilimsel rapor."
+    }
+  ],
+  "website": "https://humanas.io/"
+}
