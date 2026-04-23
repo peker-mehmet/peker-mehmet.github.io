@@ -1,0 +1,25 @@
+{
+  "active": false,
+  "organization": {
+    "en": "Madalyon Kurumsal Psikoloji Odaklı Eğitim Merkezi",
+    "tr": "Madalyon Kurumsal Psikoloji Odaklı Eğitim Merkezi"
+  },
+  "id": "madalyon2022",
+  "type": "industry",
+  "period_start": "2022-09",
+  "period_end": "2023-09",
+  "description": {
+    "en": "This cooperation protocol involved counseling and training in employee well-being, workplace safety, workplace stress, and diversity management. The aim was to strengthen organizational awareness, improve employee experience, and support practical areas of development.",
+    "tr": "Bu iş birliği protokolü kapsamında, çalışan iyi oluşu, işyeri güvenliği, iş stresi ve çeşitlilik yönetimi alanlarında danışmanlık ve eğitim desteği sunulmuştur. Amaç, kurumsal farkındalığı güçlendirmek, çalışan deneyimini iyileştirmek ve uygulamaya dönük gelişim alanlarını desteklemektir."
+  },
+  "outputs": [
+    {
+      "en": "Employee- and organization-focused support covering core workplace issues.",
+      "tr": "Temel işyeri konularını kapsayan çalışan ve kurum odaklı destek programı."
+    },
+    {
+      "en": "Structured content designed to improve knowledge, awareness, and practice.",
+      "tr": "Bilgi, farkındalık ve uygulamayı geliştirmeye yönelik yapılandırılmış içerik."
+    }
+  ]
+}
