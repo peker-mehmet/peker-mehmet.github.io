@@ -191,7 +191,7 @@ collections:
           - { name: en, label: English, widget: string, required: false }
           - { name: tr, label: Turkish, widget: string, required: false }
 
-      - { name: year, label: Original Publication Year, widget: number, value_type: int, required: false }
+      - { name: year, label: Original Publication Year, widget: string, required: false, hint: "e.g. 2022" }
 
       - name: original_authors
         label: Original Authors
@@ -200,7 +200,7 @@ collections:
         field: { label: Author, name: author, widget: string }
         hint: "Leave empty if you are the original author."
 
-      - { name: adaptation_year, label: Adaptation / Translation Year, widget: number, value_type: int, required: false }
+      - { name: adaptation_year, label: Adaptation / Translation Year, widget: string, required: false, hint: "e.g. 2022" }
 
       - name: original_citation
         label: "Orijinal Ölçek Atfı / Original Scale Citation"
@@ -218,7 +218,7 @@ collections:
           - { name: en, label: English, widget: text }
           - { name: tr, label: Turkish, widget: text }
 
-      - { name: item_count, label: Number of Items, widget: number, value_type: int }
+      - { name: item_count, label: Number of Items, widget: string, hint: "e.g. 20 or 12 items per subscale" }
 
       - name: subscales
         label: Subscales / Factors
@@ -226,7 +226,7 @@ collections:
         required: false
         fields:
           - { name: name,       label: Subscale Name, widget: string }
-          - { name: item_count, label: Item Count,    widget: number, value_type: int, required: false }
+          - { name: item_count, label: Item Count,    widget: string, required: false, hint: "e.g. 4" }
           - name: description
             label: Description
             widget: object
@@ -238,18 +238,15 @@ collections:
       - { name: response_format,    label: Response Format,    widget: string, hint: "e.g. 5-point Likert (1 = Strongly Disagree … 5 = Strongly Agree)" }
       - { name: target_population,  label: Target Population,  widget: string, hint: "e.g. University students, Adults (18–65)" }
 
-      - name: languages_available
-        label: Languages Available
-        widget: list
-        field: { label: Language Code, name: lang, widget: string, hint: "ISO 639-1 code: en, tr, de, fr …" }
-
       - name: reliability
         label: Reliability
         widget: object
         required: false
         fields:
-          - { name: cronbach_alpha_total, label: "Cronbach's α (Total Scale)", widget: number, value_type: float, required: false, hint: "e.g. 0.87" }
-          - { name: test_retest,          label: "Test-Retest Reliability",    widget: string, required: false, hint: "e.g. r = .82 over 4 weeks (n = 85)" }
+          - { name: cronbach_alpha_total, label: "Cronbach's α / ω (Total Scale)", widget: string, required: false, hint: "e.g. α = .87 or ω = .91 — free text, any format" }
+          - { name: test_retest,          label: "Test-Retest Reliability",        widget: string, required: false, hint: "e.g. r = .82 over 4 weeks (n = 85)" }
+          - { name: reliability_notes_en, label: "Reliability Notes (English)",    widget: text,   required: false }
+          - { name: reliability_notes_tr, label: "Reliability Notes (Turkish)",    widget: text,   required: false }
 
       - name: validity_notes
         label: Validity Notes

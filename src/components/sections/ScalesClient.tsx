@@ -93,18 +93,14 @@ function ScaleCard({ scale, lang, dict }: { scale: Scale; lang: Locale; dict: Sc
         )}
 
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          {scale.languages_available.map((lc) => (
-            <span key={lc} className="inline-block px-2 py-0.5 bg-navy-50 text-navy-600 border border-navy-100 rounded text-[10px] font-bold font-body tracking-wider">
-              {lc.toUpperCase()}
+          {scale.item_count && (
+            <span className="font-body text-xs text-slate-500">
+              <span className="font-semibold text-slate-700">{scale.item_count}</span> {dict.items}
             </span>
-          ))}
-          <span className="text-slate-300" aria-hidden="true">·</span>
-          <span className="font-body text-xs text-slate-500">
-            <span className="font-semibold text-slate-700">{scale.item_count}</span> {dict.items}
-          </span>
+          )}
           {factorCount > 0 && (
             <>
-              <span className="text-slate-300" aria-hidden="true">·</span>
+              {scale.item_count && <span className="text-slate-300" aria-hidden="true">·</span>}
               <span className="font-body text-xs text-slate-500">
                 <span className="font-semibold text-slate-700">{factorCount}</span> {dict.factors}
               </span>

@@ -85,6 +85,12 @@ function AlphaBadge({ value }: { value: number }) {
   );
 }
 
+function AlphaText({ value }: { value: string }) {
+  return (
+    <span className="font-mono text-sm text-slate-700">{value}</span>
+  );
+}
+
 
 function PillLink({ href, label }: { href: string; label: string }) {
   return (
@@ -128,8 +134,9 @@ export default async function ScaleDetailPage({
 
   const hasSubscales = (scale.subscales?.length ?? 0) > 0;
   const hasPsychometrics =
-    scale.reliability?.cronbach_alpha_total !== undefined ||
-    scale.reliability?.test_retest;
+    Boolean(scale.reliability?.cronbach_alpha_total) ||
+    Boolean(scale.reliability?.cronbach_alpha_subscales && Object.keys(scale.reliability.cronbach_alpha_subscales).length > 0) ||
+    Boolean(scale.reliability?.test_retest);
 
   // Merge scale_form and scoring_guide into one download card
   const primaryFormHref = scale.downloads?.scale_form || scale.downloads?.scoring_guide || '';
@@ -179,11 +186,6 @@ export default async function ScaleDetailPage({
               {scale.abbreviation}
             </span>
           )}
-          {scale.languages_available.map((lc) => (
-            <span key={lc} className="inline-block px-2.5 py-1 bg-navy-50 text-navy-600 border border-navy-100 rounded-full text-xs font-bold font-body tracking-wider">
-              {lc.toUpperCase()}
-            </span>
-          ))}
         </div>
 
         {/* Two-column layout */}
@@ -265,10 +267,10 @@ export default async function ScaleDetailPage({
                 </SectionTitle>
                 <div className="bg-white rounded-xl border border-warm-200 shadow-card overflow-hidden">
                   <div className="p-5 space-y-4">
-                    {scale.reliability?.cronbach_alpha_total !== undefined && (
+                    {scale.reliability?.cronbach_alpha_total && (
                       <div className="flex items-center justify-between">
                         <span className="font-body text-sm text-slate-600">{d.detail_alpha_total}</span>
-                        <AlphaBadge value={scale.reliability.cronbach_alpha_total} />
+                        <AlphaText value={scale.reliability.cronbach_alpha_total} />
                       </div>
                     )}
                     {scale.reliability?.cronbach_alpha_subscales &&

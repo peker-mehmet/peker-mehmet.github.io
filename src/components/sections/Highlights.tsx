@@ -211,17 +211,14 @@ function ScaleCard({
 
       {/* Psychometric meta row */}
       <div className="flex flex-wrap gap-3 mt-4 pt-3 border-t border-warm-100">
-        <MetaPill label={`${scale.item_count} ${dict.items}`} />
+        {scale.item_count && (
+          <MetaPill label={`${scale.item_count} ${dict.items}`} />
+        )}
         {scale.subscales && scale.subscales.length > 0 && (
           <MetaPill label={`${scale.subscales.length} ${dict.subscales}`} />
         )}
-        {alpha !== undefined && (
-          <MetaPill label={`${dict.alpha} = ${alpha.toFixed(2)}`} />
-        )}
-        {scale.languages_available.length > 0 && (
-          <MetaPill
-            label={`${dict.available_in}: ${scale.languages_available.map((l) => l.toUpperCase()).join(' · ')}`}
-          />
+        {alpha && (
+          <MetaPill label={`${dict.alpha} ${alpha}`} />
         )}
       </div>
 

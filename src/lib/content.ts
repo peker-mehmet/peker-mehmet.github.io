@@ -130,7 +130,7 @@ export function getPublications(): Publication[] {
 
 export type Subscale = {
   name: string;
-  item_count?: number;
+  item_count?: string;
   description?: { en: string; tr: string };
 };
 
@@ -140,19 +140,21 @@ export type Scale = {
   abbreviation?: string;
   role?: 'developed' | 'translated' | 'adapted';
   construct?: { en: string; tr: string };
-  year?: number;
+  year?: string;
   original_authors?: string[];
-  adaptation_year?: number | null;
+  adaptation_year?: string;
   description: { en: string; tr: string };
-  item_count: number;
+  item_count?: string;
   subscales?: Subscale[];
-  response_format: string;
-  target_population: string;
-  languages_available: string[];
+  response_format?: string;
+  target_population?: string;
+  languages_available?: string[];
   reliability?: {
-    cronbach_alpha_total?: number;
+    cronbach_alpha_total?: string;
     cronbach_alpha_subscales?: Record<string, number>;
     test_retest?: string;
+    reliability_notes_en?: string;
+    reliability_notes_tr?: string;
   };
   validity_notes?: { en: string; tr: string };
   downloads?: {
