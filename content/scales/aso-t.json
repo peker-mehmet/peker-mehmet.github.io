@@ -1,0 +1,58 @@
+{
+  "item_count": 8,
+  "citation": {
+    "en": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8",
+    "tr": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8"
+  },
+  "subscales": [
+    {
+      "name": "Hesitation / Tereddüt",
+      "item_count": 4,
+      "description": {
+        "en": "Difficulty initiating or getting started on the task; indecisiveness/procrastinatory delay.",
+        "tr": "Göreve başlamada ya da harekete geçmede zorlanma; kararsızlık ve ertelemeye yakın başlatma güçlüğü."
+      }
+    },
+    {
+      "name": "Preoccupation / Saplanma",
+      "item_count": 4,
+      "description": {
+        "en": "Intrusive, uncontrollable off-task thoughts that interfere with focusing on the task.",
+        "tr": "Göreve odaklanmayı bozan, istemsiz ve kontrol edilmesi güç görev-dışı düşünceler."
+      }
+    }
+  ],
+  "name": {
+    "en": "Task-related action-state orientation",
+    "tr": "Görevle ilişkili eylem-durum yönelimi"
+  },
+  "featured": false,
+  "abbreviation": "ASO-T",
+  "validity_notes": {
+    "en": "alidity evidence was supportive and in the expected direction. The final two-factor structure (hesitation and preoccupation) fit the data well and performed better than a one-factor alternative. The scale also showed cross-level isomorphism, meaningful within-person variability, and substantial factor loadings. In addition, its subscales related to theoretically relevant variables as expected: corresponding trait ASO dimensions, procrastination, thought intrusions, conscientiousness, affect, and regulatory depletion. Altogether, the findings provide initial support for factorial and construct validity.",
+    "tr": "Geçerlik kanıtları destekleyici ve kuramsal beklentilerle uyumludur. Nihai iki faktörlü yapı (tereddüt ve meşguliyet) veriye iyi uyum göstermiş ve tek faktörlü alternatife göre daha iyi performans vermiştir. Ölçek ayrıca düzeyler arası izomorfizm, anlamlı kişi-içi değişkenlik ve güçlü faktör yükleri göstermiştir. Buna ek olarak, alt boyutlar kuramsal olarak ilgili değişkenlerle beklenen yönlerde ilişki vermiştir: karşılık gelen trait ASO boyutları, erteleme, düşünce intrüzyonları, sorumluluk, duygulanım ve düzenleyici tükenme. Toplamda bulgular, faktöryel ve yapı geçerliğine ilişkin başlangıç düzeyinde güçlü destek sunmaktadır."
+  },
+  "original_citation": {
+    "en": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8"
+  },
+  "response_format": "5-point Likert-type scale, from 1 = strongly disagree to 5 = strongly agree/5’li Likert tipi ölçek, 1 = kesinlikle katılmıyorum ile 5 = kesinlikle katılıyorum",
+  "role": "developed",
+  "construct": {
+    "en": "Task-related action-state orientation; more specifically, situational/task-specific fluctuations in action–state orientation.",
+    "tr": "Görevle ilişkili eylem-durum yönelimi; daha özelde, eylem-durum yöneliminin durumsal/göreve özgü dalgalanmaları."
+  },
+  "reliability": {
+    "cronbach_alpha_total": ""
+  },
+  "original_authors": [
+    "Peker, M.",
+    "Bağlıcakoğlu, G."
+  ],
+  "id": "ASO-T",
+  "target_population": "Students performing academic tasks; especially suitable for repeated assessment around concrete tasks such as exams, presentations, assignments, and projects. / Akademik görevler yürüten öğrenciler; özellikle sınav, sunum, ödev ve proje gibi somut görevler etrafında tekrarlı ölçümler için uygundur. (Dipnot: ",
+  "description": {
+    "en": "This scale measures how state-oriented a person is with respect to a specific task they completed, focusing on difficulty initiating the task and intrusive thoughts that interfere with staying focused. It is designed for repeated, within-person assessment of momentary or episodic self-regulatory states in relation to academic tasks. Main use cases include diary, longitudinal, and repeated-measures studies examining situational antecedents and consequences of self-regulation in tasks.",
+    "tr": "Bu ölçek, kişinin tamamladığı belirli bir görev bağlamında ne kadar durum yönelimli olduğunu ölçer; özellikle göreve başlamada zorlanma ve göreve odaklanmayı bozan istemsiz/davetsiz düşünceler üzerine odaklanır. Ölçek, akademik görevlerle ilişkili anlık ya da epizodik öz-düzenleme durumlarını kişi-içi düzeyde tekrar tekrar değerlendirmek için tasarlanmıştır. Başlıca kullanım alanları, öz-düzenlemenin görev bağlamındaki öncüllerini ve sonuçlarını inceleyen günlük, boylamsal ve tekrarlı ölçüm çalışmalarıdır."
+  },
+  "year": 2025
+}
