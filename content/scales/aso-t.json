@@ -41,14 +41,13 @@
     "en": "Task-related action-state orientation; more specifically, situational/task-specific fluctuations in action–state orientation.",
     "tr": "Görevle ilişkili eylem-durum yönelimi; daha özelde, eylem-durum yöneliminin durumsal/göreve özgü dalgalanmaları."
   },
-  "reliability": {
-    "cronbach_alpha_total": ""
-  },
+  "reliability": {},
   "original_authors": [
     "Peker, M.",
     "Bağlıcakoğlu, G."
   ],
-  "id": "ASO-T",
+  "id": "aso-t",
+  "languages_available": ["tr"],
   "target_population": "Students performing academic tasks; especially suitable for repeated assessment around concrete tasks such as exams, presentations, assignments, and projects. / Akademik görevler yürüten öğrenciler; özellikle sınav, sunum, ödev ve proje gibi somut görevler etrafında tekrarlı ölçümler için uygundur. (Dipnot: ",
   "description": {
     "en": "This scale measures how state-oriented a person is with respect to a specific task they completed, focusing on difficulty initiating the task and intrusive thoughts that interfere with staying focused. It is designed for repeated, within-person assessment of momentary or episodic self-regulatory states in relation to academic tasks. Main use cases include diary, longitudinal, and repeated-measures studies examining situational antecedents and consequences of self-regulation in tasks.",
