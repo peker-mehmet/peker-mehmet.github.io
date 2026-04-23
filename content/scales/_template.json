@@ -21,27 +21,27 @@
   },
   "__construct_note": "Short label for the construct being measured (e.g. 'Academic Self-Efficacy'). Shown on the scale card.",
 
-  "year": 2024,
-  "__year_note": "Year the scale was developed or your adaptation was published.",
+  "year": "2024",
+  "__year_note": "Year the scale was developed or your adaptation was published. String, e.g. \"2022\".",
 
   "original_authors": [],
   "__original_authors_note": "For translated/adapted scales: list the original authors as ['Lastname, Firstname']. Leave as empty array [] for scales you developed.",
 
   "adaptation_year": null,
-  "__adaptation_year_note": "For translated/adapted scales: year of your adaptation/translation. Leave null if not applicable.",
+  "__adaptation_year_note": "For translated/adapted scales: year of your adaptation/translation as a string (e.g. \"2022\"). Leave null if not applicable.",
 
   "description": {
     "en": "A brief description of what this scale measures, who it is for, and its main use cases.",
     "tr": "Bu ölçeğin ne ölçtüğüne, kime yönelik olduğuna ve temel kullanım alanlarına ilişkin kısa bir açıklama."
   },
 
-  "item_count": 20,
-  "__item_count_note": "Total number of items (questions) in the scale as an integer.",
+  "item_count": "20",
+  "__item_count_note": "Total number of items as a string (e.g. \"20\"). Use a string, not a number.",
 
   "subscales": [
     {
       "name": "Subscale 1 Name",
-      "item_count": 10,
+      "item_count": "10",
       "description": {
         "en": "Brief description of what this subscale measures.",
         "tr": "Bu alt ölçeğin ne ölçtüğünün kısa açıklaması."
@@ -49,14 +49,14 @@
     },
     {
       "name": "Subscale 2 Name",
-      "item_count": 10,
+      "item_count": "10",
       "description": {
         "en": "Brief description of what this subscale measures.",
         "tr": "Bu alt ölçeğin ne ölçtüğünün kısa açıklaması."
       }
     }
   ],
-  "__subscales_note": "Array of subscale objects. Each must have 'name' (string matching the key in cronbach_alpha_subscales), 'item_count' (integer), and 'description' (bilingual). Leave as empty array [] if the scale has no subscales.",
+  "__subscales_note": "Array of subscale objects. Each has 'name' (string), 'item_count' (string, e.g. \"4\"), and 'description' (bilingual). Leave as empty array [] if no subscales.",
 
   "response_format": "5-point Likert (1 = Never, 5 = Always)",
   "__response_format_note": "Describe the response options. E.g. '7-point Likert', 'Yes/No', 'Frequency scale (0-3)'.",
@@ -64,18 +64,11 @@
   "target_population": "University students aged 18-25",
   "__target_population_note": "Who the scale is designed to be used with.",
 
-  "languages_available": ["tr", "en"],
-  "__languages_available_note": "Array of ISO 639-1 language codes for available translations.",
-
   "reliability": {
-    "cronbach_alpha_total": 0.89,
-    "cronbach_alpha_subscales": {
-      "Subscale 1 Name": 0.82,
-      "Subscale 2 Name": 0.85
-    },
-    "__subscale_alpha_note": "Keys must exactly match the 'name' field in each subscale object. Remove this key.",
-    "test_retest": "r = .78 (4-week interval)"
+    "en": "Cronbach α = .87. Subscale alphas ranged from .79 to .91. Test-retest reliability r = .82 (n = 85, 4-week interval).",
+    "tr": "Cronbach α = .87. Alt boyut alfa değerleri .79 ile .91 arasında değişmektedir. Test-tekrar test güvenirliği r = .82 (n = 85, 4 haftalık aralık)."
   },
+  "__reliability_note": "Free-text reliability notes in both languages. Include alpha values, subscale alphas, test-retest, etc. as plain prose. Both keys must be 'en' and 'tr'.",
 
   "validity_notes": {
     "en": "Brief description of validity evidence: factor structure, convergent/discriminant validity, sample characteristics, etc.",
@@ -98,10 +91,16 @@
     "en": "",
     "tr": ""
   },
-  "__original_citation_note": "For translated/adapted scales only: APA-format citation for the original scale. This appears as a second citation box on the detail page under 'Citation for Original Scale'. Leave empty strings for scales you developed.",
+  "__original_citation_note": "For translated/adapted scales only: APA-format citation for the original scale. Shown as a second citation box on the detail page. Leave empty strings for scales you developed.",
 
   "reference_publication": "lastname-2024-keyword",
   "__reference_publication_note": "The 'id' of the publication JSON where this scale was originally published/validated. Leave empty string if not in your publications list.",
+
+  "notes": {
+    "en": "",
+    "tr": ""
+  },
+  "__notes_note": "Any additional information to display on the scale detail page (optional). Leave empty strings if not needed.",
 
   "featured": false,
   "__featured_note": "Set to true to feature this scale at the top of the scales list."

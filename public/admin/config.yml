@@ -218,7 +218,7 @@ collections:
           - { name: en, label: English, widget: text }
           - { name: tr, label: Turkish, widget: text }
 
-      - { name: item_count, label: Number of Items, widget: string, hint: "e.g. 20 or 12 items per subscale" }
+      - { name: item_count, label: Number of Items, widget: string, required: false, hint: "e.g. 20 or 12 items per subscale" }
 
       - name: subscales
         label: Subscales / Factors
@@ -235,8 +235,8 @@ collections:
               - { name: en, label: English, widget: text, required: false }
               - { name: tr, label: Turkish, widget: text, required: false }
 
-      - { name: response_format,    label: Response Format,    widget: string, hint: "e.g. 5-point Likert (1 = Strongly Disagree … 5 = Strongly Agree)" }
-      - { name: target_population,  label: Target Population,  widget: string, hint: "e.g. University students, Adults (18–65)" }
+      - { name: response_format,   label: "Yanıt Formatı / Response Format",   widget: string, required: false, hint: "e.g. 5-point Likert (1 = Strongly Disagree … 5 = Strongly Agree)" }
+      - { name: target_population, label: "Hedef Kitle / Target Population", widget: string, required: false, hint: "e.g. Yetişkinler, Üniversite öğrencileri, 18-65 yaş" }
 
       - name: reliability
         label: Reliability Notes

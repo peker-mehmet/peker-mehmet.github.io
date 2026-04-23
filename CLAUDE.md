@@ -256,6 +256,8 @@ Output goes to `/out/`. Always run this locally before pushing to catch errors e
 
 10. **Formspree endpoint** is hardcoded at the top of `src/components/sections/ContactForm.tsx`. Update `FORMSPREE_ENDPOINT` there if the form ID changes.
 
+11. **Keep CMS config and TypeScript types in sync.** When adding or removing a field, update all three locations together: `public/admin/config.yml` (CMS widget), `src/lib/content.ts` (TypeScript type), and `content/*/\_template.json` (JSON template). Missing `required: false` in the CMS for fields that are optional (`?`) in content.ts forces editors to fill in fields that the website does not actually require. Mismatched field names between JSON data and content.ts cause silent failures (the website reads `undefined` and shows nothing).
+
 ---
 
 ## 9. KNOWN ISSUES & HISTORY
