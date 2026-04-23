@@ -1,0 +1,19 @@
+{
+  "featured": false,
+  "type": "conference",
+  "id": "pekkizmes2017",
+  "title": {
+    "en": "The role of parenting styles and individual characteristics on impulse purchase: A model testing"
+  },
+  "authors": [
+    "Peker, M.",
+    "Kızıltepe, R.",
+    "Meşe, G."
+  ],
+  "year": 2017,
+  "conference": "17th European Association of Work and Organizational Psychology Congress",
+  "abstract": {
+    "tr": "Bu çalışma, dürtüsel satın alma davranışının yalnızca bireysel özelliklerle değil, ailede büyüme biçimiyle de ilişkili olabileceğini inceliyor. Özellikle ebeveynlik tarzlarının, benlik saygısı, öz-denetim ve öz-düzenleme üzerinden dürtüsel satın alma eğilimini etkileyebileceği öne sürülüyor.",
+    "en": "This study examines whether impulse buying may be shaped not only by individual traits but also by the way people were raised in their families. In particular, it suggests that parenting styles may influence impulse buying through self-esteem, self-control, and self-regulation."
+  }
+}
