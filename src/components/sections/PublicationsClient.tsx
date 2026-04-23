@@ -44,6 +44,7 @@ export type PubsDict = {
   items_count_singular: string;
   items_count_plural: string;
   interest_filter_label: string;
+  event: string;
 };
 
 type Tab = 'all' | 'journal' | 'conference' | 'books' | 'theses' | 'invited-talks' | 'presentations';
@@ -283,10 +284,12 @@ function FeaturedCard({
 }: { pub: Publication; lang: Locale; ownerLastName: string; dict: PubsDict }) {
   const title    = pub.title[lang] || pub.title.en;
   const abstract = pub.abstract?.[lang] || pub.abstract?.en || '';
+  const isEvent  = pub.type === 'invited-talk' || pub.type === 'presentation';
   const source   =
     pub.type === 'journal'      ? pub.journal :
     pub.type === 'conference'   ? pub.conference :
     pub.type === 'book-chapter' ? pub.book_title :
+    isEvent                     ? pub.conference :
     pub.publisher ?? '';
 
   return (
@@ -317,7 +320,10 @@ function FeaturedCard({
 
         {/* Source */}
         {source && (
-          <p className="font-body text-sm text-slate-500 italic mb-3">{source}</p>
+          <p className="font-body text-sm text-slate-500 italic mb-3">
+            {isEvent && <span className="not-italic font-medium text-slate-400 text-xs mr-1">{dict.event}:</span>}
+            {source}
+          </p>
         )}
 
         {/* Abstract — shown inline for featured */}
@@ -357,10 +363,12 @@ function PublicationCard({
   const abstract = pub.abstract?.[lang] || pub.abstract?.en || '';
   const citation = buildApa(pub, lang);
 
+  const isEvent = pub.type === 'invited-talk' || pub.type === 'presentation';
   const source =
     pub.type === 'journal'      ? pub.journal :
     pub.type === 'conference'   ? pub.conference :
     pub.type === 'book-chapter' ? pub.book_title :
+    isEvent                     ? pub.conference :
     pub.publisher ?? '';
 
   const meta = [
@@ -393,7 +401,10 @@ function PublicationCard({
 
         {/* Source */}
         {source && (
-          <p className="font-body text-[0.8125rem] text-slate-500 italic mb-1">{source}</p>
+          <p className="font-body text-[0.8125rem] text-slate-500 italic mb-1">
+            {isEvent && <span className="not-italic font-medium text-slate-400 text-xs mr-1">{dict.event}:</span>}
+            {source}
+          </p>
         )}
 
         {/* Metadata */}

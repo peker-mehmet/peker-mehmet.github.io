@@ -146,7 +146,8 @@
     "type_presentation": "Presentation",
     "items_count_singular": "item",
     "items_count_plural": "items",
-    "interest_filter_label": "Filtered by interest:"
+    "interest_filter_label": "Filtered by interest:",
+    "event": "Event"
   },
   "scales": {
     "title": "Scales & Measures",

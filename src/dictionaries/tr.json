@@ -146,7 +146,8 @@
     "type_presentation": "Sunum",
     "items_count_singular": "yayın",
     "items_count_plural": "yayın",
-    "interest_filter_label": "İlgi alanı filtresi:"
+    "interest_filter_label": "İlgi alanı filtresi:",
+    "event": "Etkinlik"
   },
   "scales": {
     "title": "Ölçekler & Ölçüm Araçları",
