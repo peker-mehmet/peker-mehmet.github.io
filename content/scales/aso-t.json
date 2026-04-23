@@ -1,5 +1,12 @@
 {
+  "notes": {
+    "tr": "Ölçek maddelerinden bazıları Diefendorff vd. (2018) tarafından önerilen maddelerdir. O yüzden bu kaynağa da atıf verilmesi uygun olacaktır: \nDiefendorff, J. M., Richard, E. M., Dinh, P. V., & LeNoble, C. (2018). Action-state orientation at work: Dynamic effects in organizational contexts. In N. Baumann, M. Kazén, M. Quirin, & S. L. Koole (Eds.), Why people do the things they do: Building on Julius Kuhl’s contributions to the psychology of motivation and volition (pp. 303–321). Hogrefe.\n\nÖlçek akademik görevler ve üniversite örneklemi içinde geliştirilmiştir. Bu nedenle iş bağlamında kullanılacaksa, görev ifadelerinin bağlama uygunluğu gözden geçirilmeli ve mümkünse yeni örneklemde güvenirlik, faktör yapısı ve genellenebilirlik yeniden sınanmalıdır. Bununla birlikte, ölçeğin görev-özgül ve durum-duyarlı yapısı nedeniyle, uygun uyarlama ve yeni psikometrik sınamalarla iş görevlerinde de kullanılma potansiyeli bulunmaktadır.\n",
+    "en": "Some of the scale items are based on items suggested by Diefendorff et al. (2018). Therefore, it would also be appropriate to cite this source:\nDiefendorff, J. M., Richard, E. M., Dinh, P. V., & LeNoble, C. (2018). Action-state orientation at work: Dynamic effects in organizational contexts. In N. Baumann, M. Kazén, M. Quirin, & S. L. Koole (Eds.), Why people do the things they do: Building on Julius Kuhl’s contributions to the psychology of motivation and volition (pp. 303–321). Hogrefe.\n\nThe scale was developed in the context of academic tasks and tested in a university sample. Therefore, if it is to be used in work settings, the wording should first be checked for contextual fit and, ideally, reliability, factor structure, and generalizability should be re-examined in the new sample. Still, because the measure is task-specific and context-sensitive, it has potential for use with work tasks after appropriate adaptation and fresh psychometric evaluation.\n"
+  },
   "item_count": 8,
+  "languages_available": [
+    "tr"
+  ],
   "citation": {
     "en": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8",
     "tr": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8"
@@ -22,6 +29,9 @@
       }
     }
   ],
+  "downloads": {
+    "scale_form": "/downloads/scales/ASO_T_Instruction_Form_TR_EN.pdf"
+  },
   "name": {
     "en": "Task-related action-state orientation",
     "tr": "Görevle ilişkili eylem-durum yönelimi"
@@ -29,8 +39,8 @@
   "featured": false,
   "abbreviation": "ASO-T",
   "validity_notes": {
-    "en": "alidity evidence was supportive and in the expected direction. The final two-factor structure (hesitation and preoccupation) fit the data well and performed better than a one-factor alternative. The scale also showed cross-level isomorphism, meaningful within-person variability, and substantial factor loadings. In addition, its subscales related to theoretically relevant variables as expected: corresponding trait ASO dimensions, procrastination, thought intrusions, conscientiousness, affect, and regulatory depletion. Altogether, the findings provide initial support for factorial and construct validity.",
-    "tr": "Geçerlik kanıtları destekleyici ve kuramsal beklentilerle uyumludur. Nihai iki faktörlü yapı (tereddüt ve meşguliyet) veriye iyi uyum göstermiş ve tek faktörlü alternatife göre daha iyi performans vermiştir. Ölçek ayrıca düzeyler arası izomorfizm, anlamlı kişi-içi değişkenlik ve güçlü faktör yükleri göstermiştir. Buna ek olarak, alt boyutlar kuramsal olarak ilgili değişkenlerle beklenen yönlerde ilişki vermiştir: karşılık gelen trait ASO boyutları, erteleme, düşünce intrüzyonları, sorumluluk, duygulanım ve düzenleyici tükenme. Toplamda bulgular, faktöryel ve yapı geçerliğine ilişkin başlangıç düzeyinde güçlü destek sunmaktadır."
+    "en": "Validity evidence was supportive and in the expected direction. The final two-factor structure (hesitation and preoccupation) fit the data well and performed better than a one-factor alternative. The scale also showed cross-level isomorphism, meaningful within-person variability, and substantial factor loadings. In addition, its subscales related to theoretically relevant variables as expected: corresponding trait ASO dimensions, procrastination, thought intrusions, conscientiousness, affect, and regulatory depletion. Altogether, the findings provide initial support for factorial and construct validity.",
+    "tr": "Geçerlik kanıtları destekleyici ve kuramsal beklentilerle uyumludur. Nihai iki faktörlü yapı (tereddüt ve saplanma) veriye iyi uyum göstermiş ve tek faktörlü alternatife göre daha iyi performans vermiştir. Ölçek ayrıca düzeyler arası izomorfizm, anlamlı kişi-içi değişkenlik ve güçlü faktör yükleri göstermiştir. Buna ek olarak, alt boyutlar kuramsal olarak ilgili değişkenlerle beklenen yönlerde ilişki vermiştir: karşılık gelen trait ASO boyutları, erteleme, düşünce intrüzyonları, sorumluluk, duygulanım ve düzenleyici tükenme. Toplamda bulgular, faktöryel ve yapı geçerliğine ilişkin başlangıç düzeyinde güçlü destek sunmaktadır."
   },
   "original_citation": {
     "en": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8"
@@ -38,16 +48,18 @@
   "response_format": "5-point Likert-type scale, from 1 = strongly disagree to 5 = strongly agree/5’li Likert tipi ölçek, 1 = kesinlikle katılmıyorum ile 5 = kesinlikle katılıyorum",
   "role": "developed",
   "construct": {
-    "en": "Task-related action-state orientation; more specifically, situational/task-specific fluctuations in action–state orientation.",
-    "tr": "Görevle ilişkili eylem-durum yönelimi; daha özelde, eylem-durum yöneliminin durumsal/göreve özgü dalgalanmaları."
+    "en": "Situational/task-specific fluctuations in action–state orientation",
+    "tr": "Eylem-durum yöneliminin durumsal/göreve özgü dalgalanmaları"
   },
-  "reliability": {},
+  "reliability": {
+    "reliability_notes_tr": "Güvenirlik katsayıları kabul edilebilir ile güçlü arasında değişmiştir. Çalışmalar ve farklı kestirim düzeyleri boyunca omega katsayıları .69 ile .90 arasında değişmiştir. Daha özelde, kişi-içi güvenirlik .80 ile .87 arasında; ana çalışmadaki katsayılar ise alt boyutlar boyunca .85 ile .87 arasında bulunmuştur. Genel olarak ölçek, özellikle kişi-içi kullanım için iyi düzeyde güvenirlik göstermektedir.",
+    "reliability_notes_en": "Reliability was acceptable to strong. Across studies and estimation levels, omega coefficients ranged from .69 to .90. More specifically, within-person reliability ranged from .80 to .87, and the main-study coefficients ranged from .85 to .87 across subscales. Overall, the scale appears to provide good reliability, especially for within-person use."
+  },
   "original_authors": [
     "Peker, M.",
     "Bağlıcakoğlu, G."
   ],
   "id": "aso-t",
-  "languages_available": ["tr"],
   "target_population": "Students performing academic tasks; especially suitable for repeated assessment around concrete tasks such as exams, presentations, assignments, and projects. / Akademik görevler yürüten öğrenciler; özellikle sınav, sunum, ödev ve proje gibi somut görevler etrafında tekrarlı ölçümler için uygundur. (Dipnot: ",
   "description": {
     "en": "This scale measures how state-oriented a person is with respect to a specific task they completed, focusing on difficulty initiating the task and intrusive thoughts that interfere with staying focused. It is designed for repeated, within-person assessment of momentary or episodic self-regulatory states in relation to academic tasks. Main use cases include diary, longitudinal, and repeated-measures studies examining situational antecedents and consequences of self-regulation in tasks.",
