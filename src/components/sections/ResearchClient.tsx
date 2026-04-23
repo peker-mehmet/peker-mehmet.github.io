@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { type Locale } from '@/lib/i18n';
 import { type Project } from '@/lib/content';
 
@@ -301,8 +300,6 @@ function CollaboratorsGrid({ projects, dict }: { projects: Project[]; dict: Rese
 // ── Main component ────────────────────────────────────────────────────────────
 
 export default function ResearchClient({ ongoing, completed, lang, dict }: Props) {
-  const [showCompleted, setShowCompleted] = useState(false);
-
   const allProjects = [...ongoing, ...completed];
 
   return (
@@ -327,46 +324,15 @@ export default function ResearchClient({ ongoing, completed, lang, dict }: Props
       {/* ── Completed ─────────────────────────────────────────────── */}
       {completed.length > 0 && (
         <section className="container-main pb-10 lg:pb-14">
-          <div className="flex items-center gap-4 mb-6">
-            <h2 className="font-display text-2xl font-semibold text-navy-800">
-              {dict.completed_title}
-            </h2>
-            <button
-              onClick={() => setShowCompleted((v) => !v)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-warm-300 bg-white
-                         text-sm font-body text-slate-600 hover:border-navy-300 hover:text-navy-700
-                         transition-colors shadow-card"
-              aria-expanded={showCompleted}
-            >
-              <svg
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${showCompleted ? 'rotate-180' : ''}`}
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-              {showCompleted ? dict.hide_completed : dict.show_completed}
-            </button>
-          </div>
+          <h2 className="font-display text-2xl font-semibold text-navy-800 mb-6">
+            {dict.completed_title}
+          </h2>
 
-          <div
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-5 transition-all duration-300 origin-top
-              ${showCompleted ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden pointer-events-none'}`}
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {completed.map((p) => (
               <ProjectCard key={p.id} project={p} lang={lang} dict={dict} muted />
             ))}
           </div>
-
-          {!showCompleted && (
-            <p className="font-body text-sm text-slate-400 italic">
-              {completed.length} {dict.completed_title.toLowerCase()} — {dict.show_completed.toLowerCase()}
-            </p>
-          )}
         </section>
       )}
 
