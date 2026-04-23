@@ -270,8 +270,13 @@ export type NewsItem = {
 
 export function getNewsItems(): NewsItem[] {
   const dir = path.join(contentDir, 'news');
-  return fs
-    .readdirSync(dir)
+  let files: string[];
+  try {
+    files = fs.readdirSync(dir);
+  } catch {
+    return [];
+  }
+  return files
     .filter((f) => f.endsWith('.md') && !f.startsWith('_') && f.toLowerCase() !== 'readme.md')
     .map((f) => {
       const raw = fs.readFileSync(path.join(dir, f), 'utf-8');
