@@ -9,7 +9,7 @@
     "Doğru, O. C.",
     "Meşe, G."
   ],
-  "featured": false,
+  "featured": true,
   "url": "",
   "journal": "Safety and Health at Work",
   "title": {
@@ -22,5 +22,5 @@
   "type": "journal",
   "id": "PekDogMes2022",
   "year": 2022,
-  "doi": "https://doi.org/10.1016/j.shaw.2022.03.006"
+  "doi": "10.1016/j.shaw.2022.03.006"
 }
