@@ -1,0 +1,26 @@
+{
+  "period_start": "2021-09",
+  "active": false,
+  "outputs": [
+    {
+      "en": "A workplace-based situational judgment test developed to assess the growth mindset levels of İzmir Chamber of Commerce staff.",
+      "tr": "İzmir Ticaret Odası çalışanlarının gelişim odaklı zihin yapısı düzeylerini ölçmek amacıyla geliştirilen, iş yaşamı temelli bir durumsal yargı testi."
+    },
+    {
+      "en": "A report presenting employees’ growth mindset profiles and the findings obtained from the implementation of the developed assessment tool.",
+      "tr": "Çalışanların gelişim odaklı zihin yapısı profillerini ve geliştirilen ölçüm aracının uygulanmasından elde edilen bulguları sunan rapor."
+    }
+  ],
+  "organization": {
+    "en": "Izmir Chamber of Commerce ",
+    "tr": "İzmir Ticaret Odası"
+  },
+  "type": "public",
+  "website": "https://www.izto.org.tr/tr",
+  "id": "izto2021",
+  "description": {
+    "en": "Within the scope of this study, a situational judgment test based on workplace-relevant scenarios was developed and administered to assess the growth mindset levels of İzmir Chamber of Commerce staff. In this way, a context-sensitive measurement tool for evaluating growth mindset in an organizational setting was established.",
+    "tr": "Bu çalışma kapsamında, İzmir Ticaret Odası çalışanlarının gelişim odaklı zihin yapısı düzeylerini ölçmeye yönelik, iş yaşamını yansıtan senaryolara dayalı bir durumsal yargı testi geliştirilmiş ve uygulanmıştır. Böylece gelişim odaklı zihin yapısının kurumsal bağlamda değerlendirilmesine yönelik bağlama duyarlı bir ölçüm aracı ortaya konmuştur."
+  },
+  "period_end": "2022-05"
+}
