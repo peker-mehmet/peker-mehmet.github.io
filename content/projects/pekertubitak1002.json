@@ -1,0 +1,30 @@
+{
+  "start_date": "2023-06",
+  "collaborators": [
+    {
+      "name": "Gülgün Meşe",
+      "affiliation": "Ege University"
+    }
+  ],
+  "featured": false,
+  "end_date": "2024-06",
+  "outputs": [
+    "pekmes2024"
+  ],
+  "status": "completed",
+  "role": "Principal Investigator",
+  "title": {
+    "tr": "Samimi duygu iklimi: Çalışan iyi oluşu, entegrasyonu ve motivasyonu üzerindeki rolünün boylamsal desenlerle incelenmesi",
+    "en": "Climate of Authenticity: Investigating its role on employee well-being, integration, and motivation with longitudinal models"
+  },
+  "id": "pekertubitak1002",
+  "description": {
+    "tr": "Bu proje, çalışanların duygularını işte ne kadar samimi biçimde paylaşabildiğini belirleyen kurum ikliminin, işyerindeki ilişkiler ve motivasyon üzerindeki rolünü incelemektedir. Bulgular, duyguların daha açık ve doğal biçimde ifade edilebildiği bir iş ortamının, çalışanlar arasında güveni, sosyal yakınlığı ve bazı olumlu iş sonuçlarını desteklediğini göstermiştir. Araştırma ayrıca, hem olumlu hem de olumsuz duyguların paylaşılmasının, uygun bir kurum iklimi içinde gerçekleştiğinde çalışanlar için faydalı olabileceğine işaret etmektedir. Genel olarak proje, çalışanların duygularını bastırmak zorunda kalmadığı daha samimi iş ortamlarının sosyal entegrasyon ve işe bağlılık açısından önemli olduğunu ortaya koymaktadır.",
+    "en": "This project examines how the workplace climate surrounding emotional expression shapes employees’ relationships and motivation at work. The findings show that when people can express their emotions more openly and authentically, trust, social connection, and some positive work outcomes are more likely to grow. The study also suggests that both positive and negative emotion sharing can be beneficial when they take place in a supportive organizational climate. Overall, the project highlights that more authentic emotional climates at work may play an important role in social integration and work engagement."
+  },
+  "funding": {
+    "agency": "TÜBİTAK – 1002-Short term R&D Funding Program",
+    "grant_number": "123K037",
+    "amount": "1,560 USD"
+  }
+}
