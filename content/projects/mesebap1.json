@@ -1,0 +1,30 @@
+{
+  "start_date": "2014-09",
+  "collaborators": [
+    {
+      "name": "Gülgün Meşe",
+      "affiliation": "Ege University"
+    }
+  ],
+  "featured": false,
+  "end_date": "2017-09",
+  "outputs": [
+    "pekkusmes2017"
+  ],
+  "status": "completed",
+  "role": "Co-Investigator",
+  "title": {
+    "tr": "Personel seçim sürecinde farklılıkların yönetimi",
+    "en": "Diversity management in personnel selection process"
+  },
+  "id": "mesebap1",
+  "description": {
+    "tr": "Bu proje, işyerinde farklılıkları destekleyen bir kurum ikliminin çalışanlar üzerindeki etkisini incelemektedir. Bulgular, çalışanlar kurumlarını farklılıklara daha açık ve kapsayıcı gördüklerinde, örgütle daha uyumlu hissettiklerini ve kurumu daha adil ve güvenilir bulduklarını göstermiştir. Ayrıca bu olumlu algılar, işten ayrılma niyetinin daha düşük olmasıyla ilişkilidir. Genel olarak çalışma, farklılıkları önemseyen bir iş ortamının çalışan tutumlarını güçlendirebileceğini ortaya koymaktadır",
+    "en": "This project examines how a workplace climate that supports diversity is related to employee attitudes. The findings show that when employees see their organization as more open and inclusive toward differences, they feel a better fit with the organization and view it as more fair and trustworthy. These positive perceptions are also linked to lower intention to leave. Overall, the study suggests that a diversity-supportive workplace climate can strengthen important employee outcomes."
+  },
+  "funding": {
+    "agency": "Ege University Scientific Research Project Coordination Unit",
+    "grant_number": "14/EDB/015",
+    "amount": "4,500 USD"
+  }
+}
