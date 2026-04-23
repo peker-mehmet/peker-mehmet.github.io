@@ -16,7 +16,8 @@
       "Occupational Health & Safety",
       "Personality Assessment",
       "Longitudinal Research Methods",
-      "Multilevel Modeling"
+      "Multilevel Modeling",
+      "Emotions and Affect"
     ],
     "tr": [
       "Duygusal Emek",
@@ -28,7 +29,8 @@
       "İş Sağlığı ve Güvenliği",
       "Kişilik Değerlendirmesi",
       "Boylamsal Araştırma Yöntemleri",
-      "Çok Düzeyli Modelleme"
+      "Çok Düzeyli Modelleme",
+      "Duygular ve Duygulamım"
     ],
     "__note": "Shown as a bullet list on the About and Research pages. Keep each item short (3–6 words)."
   },
@@ -85,64 +87,6 @@
       }
     }
   ],
-  "photo": {
-    "profile": "/images/profile.jpeg",
-    "alt": {
-      "en": "Photo of Mehmet Peker",
-      "tr": "Fotoğraf: Mehmet Peker"
-    }
-  },
-  "owner": {
-    "name": {
-      "full": "Mehmet Peker",
-      "display": "M. Peker"
-    },
-    "title": {
-      "en": "Associate Professor",
-      "tr": "Doçent Doktor"
-    },
-    "position": {
-      "en": "Researcher in Work and Organizational Psychology",
-      "tr": "İş ve Örgüt Psikolojisi Araştırmacısı"
-    }
-  },
-  "institution": {
-    "name": {
-      "en": "Ege University",
-      "tr": "Ege Üniversitesi"
-    },
-    "department": {
-      "en": "Department of Psychology",
-      "tr": "Psikoloji Bölümü"
-    },
-    "faculty": {
-      "en": "Faculty of Letters",
-      "tr": "Edebiyat Fakültesi"
-    },
-    "address": {
-      "en": "Ege University, Department of Psychology, 35100, Izmir, Türkiye",
-      "tr": "Ege Üniversitesi, Psikoloji Bölümü, 35100, İzmir, Türkiye"
-    },
-    "office": {
-      "en": "Faculty of Letters Building, Floor 3",
-      "tr": "Edebiyat Fakültesi Binası, Kat 3"
-    }
-  },
-  "links": {
-    "google_scholar": "https://scholar.google.com.tr/citations?user=OZ-nc14AAAAJ&hl=tr",
-    "researchgate": "https://www.researchgate.net/profile/Mehmet-Peker?ev=hdr_xprf",
-    "__cv_tr_note": "Turkish CV. Leave same as cv or empty string if you have only one version.",
-    "yoksis": "",
-    "cv_tr": "/downloads/MPeker_CV-ENG.pdf",
-    "unisis": "https://unisis.ege.edu.tr/researcher=mehmet.peker",
-    "phone": "+90 232 311 2077",
-    "cv": "/downloads/MPeker_CV-ENG.pdf",
-    "twitter": "",
-    "orcid": "https://orcid.org/0000-0002-9837-892X",
-    "email": "mehmet.peker@ege.edu.tr",
-    "__cv_note": "Path to your CV PDF in /public/downloads/. Provide separate paths per language or use one for both.",
-    "linkedin": "https://www.linkedin.com/in/mehmet-peker-a3467a86/"
-  },
   "teaching": [
     {
       "level": "M.A.",
@@ -241,6 +185,64 @@
       "course_tr": "Genel Psikoloji"
     }
   ],
+  "photo": {
+    "profile": "/images/profile.jpeg",
+    "alt": {
+      "en": "Photo of Mehmet Peker",
+      "tr": "Fotoğraf: Mehmet Peker"
+    }
+  },
+  "owner": {
+    "name": {
+      "full": "Mehmet Peker",
+      "display": "M. Peker"
+    },
+    "title": {
+      "en": "Associate Professor",
+      "tr": "Doçent Doktor"
+    },
+    "position": {
+      "en": "Researcher in Work and Organizational Psychology",
+      "tr": "İş ve Örgüt Psikolojisi Araştırmacısı"
+    }
+  },
+  "institution": {
+    "name": {
+      "en": "Ege University",
+      "tr": "Ege Üniversitesi"
+    },
+    "department": {
+      "en": "Department of Psychology",
+      "tr": "Psikoloji Bölümü"
+    },
+    "faculty": {
+      "en": "Faculty of Letters",
+      "tr": "Edebiyat Fakültesi"
+    },
+    "address": {
+      "en": "Ege University, Department of Psychology, 35100, Izmir, Türkiye",
+      "tr": "Ege Üniversitesi, Psikoloji Bölümü, 35100, İzmir, Türkiye"
+    },
+    "office": {
+      "en": "Faculty of Letters Building, Floor 3",
+      "tr": "Edebiyat Fakültesi Binası, Kat 3"
+    }
+  },
+  "links": {
+    "google_scholar": "https://scholar.google.com.tr/citations?user=OZ-nc14AAAAJ&hl=tr",
+    "researchgate": "https://www.researchgate.net/profile/Mehmet-Peker?ev=hdr_xprf",
+    "__cv_tr_note": "Turkish CV. Leave same as cv or empty string if you have only one version.",
+    "yoksis": "",
+    "cv_tr": "/downloads/MPeker_CV-ENG.pdf",
+    "unisis": "https://unisis.ege.edu.tr/researcher=mehmet.peker",
+    "phone": "+90 232 311 2077",
+    "cv": "/downloads/MPeker_CV-ENG.pdf",
+    "twitter": "",
+    "orcid": "https://orcid.org/0000-0002-9837-892X",
+    "email": "mehmet.peker@ege.edu.tr",
+    "__cv_note": "Path to your CV PDF in /public/downloads/. Provide separate paths per language or use one for both.",
+    "linkedin": "https://www.linkedin.com/in/mehmet-peker-a3467a86/"
+  },
   "languages": [
     {
       "name": {
