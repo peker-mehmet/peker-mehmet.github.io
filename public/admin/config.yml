@@ -275,6 +275,15 @@ collections:
       - { name: reference_publication, label: Related Publication ID, widget: string, required: false,
           hint: "The 'id' of the corresponding entry in Publications — e.g. erken-2024-keyword" }
 
+      - name: notes
+        label: Additional Notes
+        widget: object
+        required: false
+        hint: "Any additional information to display on the scale detail page."
+        fields:
+          - { name: en, label: English, widget: text, required: false }
+          - { name: tr, label: Turkish, widget: text, required: false }
+
       - { name: featured, label: Featured on homepage, widget: boolean, default: false, required: false }
 
   # ── Research Projects ───────────────────────────────────────────────────────

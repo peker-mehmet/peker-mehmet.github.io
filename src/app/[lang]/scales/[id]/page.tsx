@@ -310,6 +310,21 @@ export default async function ScaleDetailPage({
                 </div>
               </section>
             )}
+
+            {/* Additional notes */}
+            {(scale.notes?.en || scale.notes?.tr) && (() => {
+              const note = scale.notes?.[lang] || scale.notes?.en || '';
+              return note ? (
+                <section>
+                  <SectionTitle as="h2" eyebrow={lang === 'tr' ? 'Notlar' : 'Notes'} accent>
+                    {lang === 'tr' ? 'Ek Bilgiler' : 'Additional Notes'}
+                  </SectionTitle>
+                  <div className="surface-inset">
+                    <p className="font-body text-sm text-slate-700 leading-relaxed whitespace-pre-line">{note}</p>
+                  </div>
+                </section>
+              ) : null;
+            })()}
           </div>
 
           {/* ── Right: sticky panel (col 8-12) ─────────────────────── */}

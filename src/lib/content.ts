@@ -165,6 +165,7 @@ export type Scale = {
   citation: { en: string; tr: string };
   original_citation?: { en: string; tr: string };
   reference_publication?: string;
+  notes?: { en?: string; tr?: string };
   featured?: boolean;
 };
 
