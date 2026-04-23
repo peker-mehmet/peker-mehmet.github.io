@@ -1,0 +1,18 @@
+{
+  "featured": false,
+  "id": "peker2024t",
+  "type": "invited-talk",
+  "title": {
+    "en": "Gamification in employee selection: Personality traits measurement with an interactive, story-based phone application",
+    "tr": "Çalışan seçiminde oyunlaştırma: Kişilik özelliklerinin etkileşimli, hikaye tabanlı telefon uygulaması ile ölçümü"
+  },
+  "authors": [
+    "Peker, M."
+  ],
+  "year": 2024,
+  "conference": "Psy-X: Aydınlığı keşfet",
+  "abstract": {
+    "tr": "Bu sunumda, çalışan seçimi bağlamında kişilik özelliklerini ölçmek için hikâye güdümlü ve oyun tarzında tasarlanmış bir mobil değerlendirme yaklaşımı tanıtılmaktadır. Sunum, bu yaklaşımın kullanıcı deneyimini güçlendirme, sahte cevap verme riskini azaltma ve daha zengin veri üretme potansiyelini vurgularken, bağlam ve hikâye öğelerinin ölçüm üzerindeki olası sınırlılıklarına da dikkat çekmektedir.",
+    "en": "This presentation introduces a story-driven, game-styled mobile assessment approach for measuring personality traits in employee selection. It highlights the potential of this approach to improve user experience, reduce the risk of faked responses, and generate richer behavioral data, while also drawing attention to the possible limitations created by context and narrative elements in the measurement process."
+  }
+}
