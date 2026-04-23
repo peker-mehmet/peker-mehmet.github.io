@@ -72,26 +72,6 @@ function DetailRow({ label, value }: { label: string; value: React.ReactNode }) 
   );
 }
 
-function AlphaBadge({ value }: { value: number }) {
-  const color =
-    value >= 0.9 ? 'bg-green-50 text-green-700 border-green-200' :
-    value >= 0.8 ? 'bg-blue-50 text-blue-700 border-blue-200'   :
-    value >= 0.7 ? 'bg-gold-50 text-gold-700 border-gold-200'   :
-                   'bg-red-50 text-red-700 border-red-200';
-  return (
-    <span className={`inline-block px-2 py-0.5 rounded border text-xs font-mono font-semibold ${color}`}>
-      α = {value.toFixed(2)}
-    </span>
-  );
-}
-
-function AlphaText({ value }: { value: string }) {
-  return (
-    <span className="font-mono text-sm text-slate-700">{value}</span>
-  );
-}
-
-
 function PillLink({ href, label }: { href: string; label: string }) {
   return (
     <a
@@ -132,11 +112,9 @@ export default async function ScaleDetailPage({
   const validity    = scale.validity_notes?.[lang] || scale.validity_notes?.en || '';
   const citation    = scale.citation[lang] || scale.citation.en;
 
-  const hasSubscales = (scale.subscales?.length ?? 0) > 0;
-  const hasPsychometrics =
-    Boolean(scale.reliability?.cronbach_alpha_total) ||
-    Boolean(scale.reliability?.cronbach_alpha_subscales && Object.keys(scale.reliability.cronbach_alpha_subscales).length > 0) ||
-    Boolean(scale.reliability?.test_retest);
+  const hasSubscales   = (scale.subscales?.length ?? 0) > 0;
+  const reliabilityText = scale.reliability?.[lang] || scale.reliability?.en || '';
+  const hasReliability  = Boolean(reliabilityText);
 
   // Merge scale_form and scoring_guide into one download card
   const primaryFormHref = scale.downloads?.scale_form || scale.downloads?.scoring_guide || '';
@@ -202,9 +180,12 @@ export default async function ScaleDetailPage({
               <p className="font-body text-body-lg text-slate-700 leading-relaxed mb-6">{description}</p>
 
               <dl>
-                <DetailRow label={d.detail_construct}  value={construct} />
-                <DetailRow label={d.detail_population} value={scale.target_population} />
-                <DetailRow label={d.detail_response}   value={scale.response_format} />
+                <DetailRow label={d.detail_construct}    value={construct} />
+                <DetailRow label={d.detail_population}   value={scale.target_population} />
+                <DetailRow label={d.detail_response}     value={scale.response_format} />
+                {scale.item_count && (
+                  <DetailRow label={d.detail_item_count} value={`${scale.item_count} ${d.items}`} />
+                )}
                 {scale.year && (
                   <DetailRow label={d.detail_year} value={String(scale.year)} />
                 )}
@@ -228,8 +209,7 @@ export default async function ScaleDetailPage({
                 </SectionTitle>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {scale.subscales!.map((sub) => {
-                    const alpha = scale.reliability?.cronbach_alpha_subscales?.[sub.name];
-                    const desc  = sub.description?.[lang] || sub.description?.en || '';
+                    const desc = sub.description?.[lang] || sub.description?.en || '';
                     return (
                       <div key={sub.name} className="relative bg-white rounded-xl border border-warm-200 shadow-card p-4 overflow-hidden">
                         {/* Gold left accent */}
@@ -239,14 +219,11 @@ export default async function ScaleDetailPage({
                             <h3 className="font-display text-[0.95rem] font-semibold text-navy-700 leading-snug flex-1">
                               {sub.name}
                             </h3>
-                            <div className="flex items-center gap-1.5 flex-shrink-0">
-                              {sub.item_count !== undefined && (
-                                <span className="inline-block px-2 py-0.5 bg-navy-50 text-navy-600 border border-navy-100 rounded text-[10px] font-bold font-body">
-                                  {sub.item_count} {d.detail_subscale_items}
-                                </span>
-                              )}
-                              {alpha !== undefined && <AlphaBadge value={alpha} />}
-                            </div>
+                            {sub.item_count && (
+                              <span className="inline-block px-2 py-0.5 bg-navy-50 text-navy-600 border border-navy-100 rounded text-[10px] font-bold font-body flex-shrink-0">
+                                {sub.item_count} {d.detail_subscale_items}
+                              </span>
+                            )}
                           </div>
                           {desc && (
                             <p className="font-body text-xs text-slate-600 leading-relaxed">{desc}</p>
@@ -259,42 +236,14 @@ export default async function ScaleDetailPage({
               </section>
             )}
 
-            {/* Psychometrics */}
-            {hasPsychometrics && (
+            {/* Reliability */}
+            {hasReliability && (
               <section>
                 <SectionTitle as="h2" eyebrow={d.detail_eyebrow_statistics} accent>
                   {d.detail_psychometrics}
                 </SectionTitle>
-                <div className="bg-white rounded-xl border border-warm-200 shadow-card overflow-hidden">
-                  <div className="p-5 space-y-4">
-                    {scale.reliability?.cronbach_alpha_total && (
-                      <div className="flex items-center justify-between">
-                        <span className="font-body text-sm text-slate-600">{d.detail_alpha_total}</span>
-                        <AlphaText value={scale.reliability.cronbach_alpha_total} />
-                      </div>
-                    )}
-                    {scale.reliability?.cronbach_alpha_subscales &&
-                      Object.keys(scale.reliability.cronbach_alpha_subscales).length > 0 && (
-                        <div>
-                          <p className="font-body text-sm text-slate-500 mb-3">{d.detail_alpha_subscales}</p>
-                          <div className="space-y-2">
-                            {Object.entries(scale.reliability.cronbach_alpha_subscales).map(([sub, alpha]) => (
-                              <div key={sub} className="flex items-center justify-between gap-3">
-                                <span className="font-body text-xs text-slate-600 flex-1">{sub}</span>
-                                <AlphaBadge value={alpha} />
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )
-                    }
-                    {scale.reliability?.test_retest && (
-                      <div className="flex items-start justify-between gap-4 pt-3 border-t border-warm-100">
-                        <span className="font-body text-sm text-slate-600">{d.detail_test_retest}</span>
-                        <span className="font-mono text-xs text-slate-700 flex-shrink-0">{scale.reliability.test_retest}</span>
-                      </div>
-                    )}
-                  </div>
+                <div className="surface-inset">
+                  <p className="font-body text-sm text-slate-700 leading-relaxed whitespace-pre-line">{reliabilityText}</p>
                 </div>
               </section>
             )}

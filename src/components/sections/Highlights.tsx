@@ -180,7 +180,7 @@ function ScaleCard({
   lang: Locale;
   dict: HighlightsDict['home'];
 }) {
-  const alpha = scale.reliability?.cronbach_alpha_total;
+  const alpha = scale.reliability?.en || scale.reliability?.tr;
   const hasForm   = Boolean(scale.downloads?.scale_form);
   const hasScoring = Boolean(scale.downloads?.scoring_guide);
 
@@ -216,9 +216,6 @@ function ScaleCard({
         )}
         {scale.subscales && scale.subscales.length > 0 && (
           <MetaPill label={`${scale.subscales.length} ${dict.subscales}`} />
-        )}
-        {alpha && (
-          <MetaPill label={`${dict.alpha} ${alpha}`} />
         )}
       </div>
 

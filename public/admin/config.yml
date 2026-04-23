@@ -239,14 +239,14 @@ collections:
       - { name: target_population,  label: Target Population,  widget: string, hint: "e.g. University students, Adults (18–65)" }
 
       - name: reliability
-        label: Reliability
+        label: Reliability Notes
         widget: object
         required: false
         fields:
-          - { name: cronbach_alpha_total, label: "Cronbach's α / ω (Total Scale)", widget: string, required: false, hint: "e.g. α = .87 or ω = .91 — free text, any format" }
-          - { name: test_retest,          label: "Test-Retest Reliability",        widget: string, required: false, hint: "e.g. r = .82 over 4 weeks (n = 85)" }
-          - { name: reliability_notes_en, label: "Reliability Notes (English)",    widget: text,   required: false }
-          - { name: reliability_notes_tr, label: "Reliability Notes (Turkish)",    widget: text,   required: false }
+          - { name: en, label: "English", widget: text, required: false,
+              hint: "e.g. Cronbach α = .87. Subscale alphas ranged from .79 to .91. Test-retest reliability r = .82 (n = 85, 4-week interval)." }
+          - { name: tr, label: "Türkçe",  widget: text, required: false,
+              hint: "Örn. Cronbach α = .87. Alt boyut alfa değerleri .79 ile .91 arasında değişmektedir." }
 
       - name: validity_notes
         label: Validity Notes

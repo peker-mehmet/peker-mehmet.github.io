@@ -150,11 +150,8 @@ export type Scale = {
   target_population?: string;
   languages_available?: string[];
   reliability?: {
-    cronbach_alpha_total?: string;
-    cronbach_alpha_subscales?: Record<string, number>;
-    test_retest?: string;
-    reliability_notes_en?: string;
-    reliability_notes_tr?: string;
+    en?: string;
+    tr?: string;
   };
   validity_notes?: { en: string; tr: string };
   downloads?: {
