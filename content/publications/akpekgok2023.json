@@ -1,0 +1,20 @@
+{
+  "featured": false,
+  "id": "akpekgok2023",
+  "type": "conference",
+  "title": {
+    "tr": "Sosyal kaygı ve depresyon ilişkisinde bastırma ve sosyal desteğin aracı rolü",
+    "en": "The mediating roles of suppression and social support in the relationship between social anxiety and depression"
+  },
+  "authors": [
+    "Akkuş, K.",
+    "Peker, M.",
+    "Gökdağ, C."
+  ],
+  "year": 2023,
+  "conference": "10th Işık Savaşır Clinical Psychology Symposium",
+  "abstract": {
+    "tr": "Bu çalışma, sosyal kaygının depresyonla neden bu kadar yakından ilişkili olabileceğini inceliyor. Bulgular, sosyal kaygısı yüksek kişilerin duygularını daha çok bastırdığını, bunun da algılanan sosyal desteği azaltarak depresyon belirtilerini güçlendirebildiğini gösteriyor.",
+    "en": "This study examines why social anxiety may be so closely linked to depression. The findings suggest that people with higher social anxiety are more likely to suppress their emotions, which may reduce perceived social support and in turn contribute to stronger depressive symptoms."
+  }
+}
