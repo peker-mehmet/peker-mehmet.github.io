@@ -1,0 +1,21 @@
+{
+  "abstract": {
+    "tr": "Bu çalışma, insanların ahlaki ikilemlerde verdikleri kararların farklı kültürlerde benzer olup olmadığını inceledi. Bulgular, birine doğrudan fiziksel müdahalede bulunmanın, o eylemi ahlaken daha az kabul edilebilir hale getirdiğini ve bu etkinin birçok kültürde görüldüğünü gösterdi. Niyet de yargıları etkiledi, ancak bu etkinin kültürler arasında ne kadar tutarlı olduğu daha belirsiz kaldı. Kısacası, ahlaki kararlarımız kültürden tamamen bağımsız olmasa da bazı temel tepkiler dünya genelinde ortak görünüyor.",
+    "en": "This study examined whether people make similar moral judgments across different cultures when faced with classic moral dilemmas. The findings showed that direct physical involvement in harming someone made the action seem less morally acceptable, and this effect appeared across many cultures. Intent also influenced judgments, although its consistency across cultural groups was less clear. In short, moral decision-making is not entirely culture-free, but some core patterns seem to be widely shared."
+  },
+  "authors_abbreviated": "Bago, B., Kovacs, M., Protzko, J., Nagy, T., Kekecs, Z., Palfi, B., … Peker, M., … & Aczel, B.",
+  "pages": "880–895",
+  "featured": false,
+  "journal": "Nature Human Behaviour",
+  "title": {
+    "en": "Situational factors shape moral judgments in the trolley dilemma in Eastern, Southern, and Western countries in a culturally diverse sample"
+  },
+  "tags": [
+    "Cross-Cultural and Collaborative Research"
+  ],
+  "volume": "6",
+  "type": "journal",
+  "id": "bago2022",
+  "year": 2022,
+  "doi": "10.1038/s41562-022-01319-5"
+}
