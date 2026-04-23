@@ -4,7 +4,7 @@
     "home": "Home",
     "about": "About",
     "research": "Research",
-    "publications": "Publications",
+    "publications": "Research Output",
     "scales": "Scales",
     "news": "News",
     "teaching": "Teaching",
@@ -51,7 +51,9 @@
     "type_book": "Book",
     "type_book_chapter": "Book Chapter",
     "type_thesis": "Thesis",
-    "type_preprint": "Preprint"
+    "type_preprint": "Preprint",
+    "type_invited_talk": "Invited Talk",
+    "type_presentation": "Presentation"
   },
   "about": {
     "title": "About Me",
@@ -109,12 +111,14 @@
     "no_completed": "No completed projects."
   },
   "publications": {
-    "title": "Publications",
+    "title": "Research Output",
     "all": "All",
     "journal": "Journal Articles",
     "conference": "Conference Presentations",
     "book": "Books & Chapters",
     "theses": "Theses & Reports",
+    "invited_talks": "Invited Talks",
+    "presentations": "Presentations",
     "search_placeholder": "Search by title, author, or journal…",
     "all_years": "All years",
     "clear_filters": "Clear filters",
@@ -138,6 +142,8 @@
     "type_book_chapter": "Book Chapter",
     "type_thesis": "Thesis",
     "type_preprint": "Preprint",
+    "type_invited_talk": "Invited Talk",
+    "type_presentation": "Presentation",
     "items_count_singular": "item",
     "items_count_plural": "items",
     "interest_filter_label": "Filtered by interest:"

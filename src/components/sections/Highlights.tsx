@@ -29,6 +29,8 @@ type HighlightsDict = {
     type_book_chapter: string;
     type_thesis: string;
     type_preprint: string;
+    type_invited_talk: string;
+    type_presentation: string;
   };
 };
 
@@ -50,12 +52,14 @@ function formatAuthors(authors: string[]): string {
 
 function pubTypeLabel(type: Publication['type'], dict: HighlightsDict['home']): string {
   const map: Record<Publication['type'], string> = {
-    journal:       dict.type_journal,
-    conference:    dict.type_conference,
-    book:          dict.type_book,
-    'book-chapter':dict.type_book_chapter,
-    thesis:        dict.type_thesis,
-    preprint:      dict.type_preprint,
+    journal:        dict.type_journal,
+    conference:     dict.type_conference,
+    book:           dict.type_book,
+    'book-chapter': dict.type_book_chapter,
+    thesis:         dict.type_thesis,
+    preprint:       dict.type_preprint,
+    'invited-talk': dict.type_invited_talk,
+    presentation:   dict.type_presentation,
   };
   return map[type] ?? type;
 }

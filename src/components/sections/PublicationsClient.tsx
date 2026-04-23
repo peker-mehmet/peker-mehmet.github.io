@@ -14,6 +14,8 @@ export type PubsDict = {
   conference: string;
   book: string;
   theses: string;
+  invited_talks: string;
+  presentations: string;
   search_placeholder: string;
   all_years: string;
   clear_filters: string;
@@ -37,12 +39,14 @@ export type PubsDict = {
   type_book_chapter: string;
   type_thesis: string;
   type_preprint: string;
+  type_invited_talk: string;
+  type_presentation: string;
   items_count_singular: string;
   items_count_plural: string;
   interest_filter_label: string;
 };
 
-type Tab = 'all' | 'journal' | 'conference' | 'books' | 'theses';
+type Tab = 'all' | 'journal' | 'conference' | 'books' | 'theses' | 'invited-talks' | 'presentations';
 
 type Props = {
   publications: Publication[];
@@ -138,22 +142,26 @@ const IconQuestion = () => (
 // ── Type badge ────────────────────────────────────────────────────────────────
 
 const TYPE_STYLE: Record<string, string> = {
-  journal:        'bg-navy-700 text-white',
-  conference:     'bg-gold-100 text-gold-700 border border-gold-200',
-  book:           'bg-slate-100 text-slate-600 border border-slate-200',
-  'book-chapter': 'bg-slate-100 text-slate-600 border border-slate-200',
-  thesis:         'bg-warm-100 text-slate-600 border border-warm-300',
-  preprint:       'bg-warm-100 text-slate-600 border border-warm-300',
+  journal:         'bg-navy-700 text-white',
+  conference:      'bg-gold-100 text-gold-700 border border-gold-200',
+  book:            'bg-slate-100 text-slate-600 border border-slate-200',
+  'book-chapter':  'bg-slate-100 text-slate-600 border border-slate-200',
+  thesis:          'bg-warm-100 text-slate-600 border border-warm-300',
+  preprint:        'bg-warm-100 text-slate-600 border border-warm-300',
+  'invited-talk':  'bg-navy-100 text-navy-700 border border-navy-200',
+  presentation:    'bg-gold-50 text-gold-700 border border-gold-200',
 };
 
 function TypeBadge({ type, dict }: { type: string; dict: PubsDict }) {
   const label =
-    type === 'journal'      ? dict.type_journal      :
-    type === 'conference'   ? dict.type_conference   :
-    type === 'book'         ? dict.type_book         :
-    type === 'book-chapter' ? dict.type_book_chapter :
-    type === 'thesis'       ? dict.type_thesis       :
-    type === 'preprint'     ? dict.type_preprint     : type;
+    type === 'journal'       ? dict.type_journal       :
+    type === 'conference'    ? dict.type_conference    :
+    type === 'book'          ? dict.type_book          :
+    type === 'book-chapter'  ? dict.type_book_chapter  :
+    type === 'thesis'        ? dict.type_thesis        :
+    type === 'preprint'      ? dict.type_preprint      :
+    type === 'invited-talk'  ? dict.type_invited_talk  :
+    type === 'presentation'  ? dict.type_presentation  : type;
   return (
     <span className={`inline-block px-2 py-[3px] rounded text-[10px] font-semibold font-body uppercase tracking-wider flex-shrink-0 ${TYPE_STYLE[type] ?? 'bg-slate-100 text-slate-600'}`}>
       {label}
@@ -474,11 +482,13 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
   // ── Derived data ────────────────────────────────────────────────────────────
 
   const counts = useMemo(() => ({
-    all:        publications.length,
-    journal:    publications.filter(p => p.type === 'journal').length,
-    conference: publications.filter(p => p.type === 'conference').length,
-    books:      publications.filter(p => p.type === 'book' || p.type === 'book-chapter').length,
-    theses:     publications.filter(p => p.type === 'thesis'  || p.type === 'preprint').length,
+    all:           publications.length,
+    journal:       publications.filter(p => p.type === 'journal').length,
+    conference:    publications.filter(p => p.type === 'conference').length,
+    books:         publications.filter(p => p.type === 'book' || p.type === 'book-chapter').length,
+    theses:        publications.filter(p => p.type === 'thesis'  || p.type === 'preprint').length,
+    invitedTalks:  publications.filter(p => p.type === 'invited-talk').length,
+    presentations: publications.filter(p => p.type === 'presentation').length,
   }), [publications]);
 
   const uniqueTypeCount = useMemo(
@@ -488,11 +498,13 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
 
   const tabFiltered = useMemo(() => {
     switch (activeTab) {
-      case 'journal':    return publications.filter(p => p.type === 'journal');
-      case 'conference': return publications.filter(p => p.type === 'conference');
-      case 'books':      return publications.filter(p => p.type === 'book' || p.type === 'book-chapter');
-      case 'theses':     return publications.filter(p => p.type === 'thesis'  || p.type === 'preprint');
-      default:           return publications;
+      case 'journal':        return publications.filter(p => p.type === 'journal');
+      case 'conference':     return publications.filter(p => p.type === 'conference');
+      case 'books':          return publications.filter(p => p.type === 'book' || p.type === 'book-chapter');
+      case 'theses':         return publications.filter(p => p.type === 'thesis' || p.type === 'preprint');
+      case 'invited-talks':  return publications.filter(p => p.type === 'invited-talk');
+      case 'presentations':  return publications.filter(p => p.type === 'presentation');
+      default:               return publications;
     }
   }, [publications, activeTab]);
 
@@ -566,11 +578,13 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
   // ── Tab definitions ─────────────────────────────────────────────────────────
 
   const TABS: { id: Tab; label: string; count: number }[] = [
-    { id: 'all',        label: dict.all,        count: counts.all },
-    { id: 'journal',    label: dict.journal,    count: counts.journal },
-    { id: 'conference', label: dict.conference, count: counts.conference },
-    { id: 'books',      label: dict.book,       count: counts.books },
-    { id: 'theses',     label: dict.theses,     count: counts.theses },
+    { id: 'all',           label: dict.all,           count: counts.all },
+    { id: 'journal',       label: dict.journal,       count: counts.journal },
+    { id: 'conference',    label: dict.conference,    count: counts.conference },
+    { id: 'books',         label: dict.book,          count: counts.books },
+    { id: 'theses',        label: dict.theses,        count: counts.theses },
+    { id: 'invited-talks', label: dict.invited_talks, count: counts.invitedTalks },
+    { id: 'presentations', label: dict.presentations, count: counts.presentations },
   ].filter(t => t.id === 'all' || t.count > 0) as { id: Tab; label: string; count: number }[];
 
   // ── Render ──────────────────────────────────────────────────────────────────

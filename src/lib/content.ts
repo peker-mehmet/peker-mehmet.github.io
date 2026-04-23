@@ -99,7 +99,7 @@ function readJsonDir<T>(folder: string): T[] {
 
 export type Publication = {
   id: string;
-  type: 'journal' | 'conference' | 'book' | 'book-chapter' | 'thesis' | 'preprint';
+  type: 'journal' | 'conference' | 'book' | 'book-chapter' | 'thesis' | 'preprint' | 'invited-talk' | 'presentation';
   title: { en: string; tr: string };
   authors: string[];
   authors_abbreviated?: string;

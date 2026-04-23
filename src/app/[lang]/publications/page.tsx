@@ -12,10 +12,10 @@ export async function generateMetadata({
   params: { lang: Locale };
 }): Promise<Metadata> {
   const { lang } = params;
-  const title = lang === 'tr' ? 'Yayınlar' : 'Publications';
+  const title = lang === 'tr' ? 'Bilimsel Çalışmalar' : 'Research Output';
   const description = lang === 'tr'
-    ? 'Mehmet Peker\'in hakemli dergi makaleleri, kitap bölümleri ve konferans bildirileri.'
-    : 'Peer-reviewed journal articles, book chapters, and conference papers by Mehmet Peker.';
+    ? 'Mehmet Peker\'in hakemli dergi makaleleri, kitap bölümleri, konferans bildirileri, davetli konuşmaları ve sunumları.'
+    : 'Peer-reviewed journal articles, book chapters, conference papers, invited talks, and presentations by Mehmet Peker.';
   return buildPageMetadata({ lang, path: '/publications', title, description });
 }
 

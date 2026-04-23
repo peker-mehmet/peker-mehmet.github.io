@@ -4,7 +4,7 @@
     "home": "Ana Sayfa",
     "about": "Hakkımda",
     "research": "Araştırma",
-    "publications": "Yayınlar",
+    "publications": "Bilimsel Çalışmalar",
     "scales": "Ölçekler",
     "news": "Haberler",
     "teaching": "Dersler",
@@ -51,7 +51,9 @@
     "type_book": "Kitap",
     "type_book_chapter": "Kitap Bölümü",
     "type_thesis": "Tez",
-    "type_preprint": "Önbaskı"
+    "type_preprint": "Önbaskı",
+    "type_invited_talk": "Davetli Konuşma",
+    "type_presentation": "Sunum"
   },
   "about": {
     "title": "Hakkımda",
@@ -109,12 +111,14 @@
     "no_completed": "Tamamlanan proje bulunmamaktadır."
   },
   "publications": {
-    "title": "Yayınlar",
+    "title": "Bilimsel Çalışmalar",
     "all": "Tümü",
     "journal": "Dergi Makaleleri",
     "conference": "Konferans Sunumları",
     "book": "Kitaplar & Bölümler",
     "theses": "Tezler & Raporlar",
+    "invited_talks": "Davetli Konuşmalar",
+    "presentations": "Sunumlar",
     "search_placeholder": "Başlık, yazar veya dergiyle ara…",
     "all_years": "Tüm yıllar",
     "clear_filters": "Filtreleri temizle",
@@ -138,6 +142,8 @@
     "type_book_chapter": "Kitap Bölümü",
     "type_thesis": "Tez",
     "type_preprint": "Önbaskı",
+    "type_invited_talk": "Davetli Konuşma",
+    "type_presentation": "Sunum",
     "items_count_singular": "yayın",
     "items_count_plural": "yayın",
     "interest_filter_label": "İlgi alanı filtresi:"

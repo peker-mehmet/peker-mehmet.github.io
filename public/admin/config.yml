@@ -50,12 +50,14 @@ collections:
         label: Publication Type
         widget: select
         options:
-          - { label: "Journal Article",  value: journal }
-          - { label: "Conference Paper", value: conference }
-          - { label: "Book",             value: book }
-          - { label: "Book Chapter",     value: book-chapter }
-          - { label: "Thesis",           value: thesis }
-          - { label: "Preprint",         value: preprint }
+          - { label: "Journal Article",              value: journal }
+          - { label: "Conference Paper",             value: conference }
+          - { label: "Book",                         value: book }
+          - { label: "Book Chapter",                 value: book-chapter }
+          - { label: "Thesis",                       value: thesis }
+          - { label: "Preprint",                     value: preprint }
+          - { label: "Invited Talk / Davetli Konuşma", value: invited-talk }
+          - { label: "Presentation / Sunum",           value: presentation }
 
       - name: title
         label: Title
