@@ -38,8 +38,34 @@ collections:
     extension: json
     format: json
     identifier_field: id
-    summary: "{{fields.year}} · {{fields.title.en}}"
+    summary: "{{fields.type | upper}} · {{fields.year}} · {{fields.title.en}}"
     slug: "{{fields.id}}"
+    sortable_fields:
+      - year
+      - type
+      - title.en
+    view_filters:
+      - label: "Journal Articles"
+        field: type
+        pattern: journal
+      - label: "Book Chapters"
+        field: type
+        pattern: book-chapter
+      - label: "Conference Papers"
+        field: type
+        pattern: conference
+      - label: "Invited Talks"
+        field: type
+        pattern: invited-talk
+      - label: "Presentations"
+        field: type
+        pattern: presentation
+      - label: "Theses"
+        field: type
+        pattern: thesis
+    view_groups:
+      - label: Year
+        field: year
     fields:
       - name: id
         label: ID (filename)
