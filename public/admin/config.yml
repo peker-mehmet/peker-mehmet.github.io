@@ -108,7 +108,11 @@ collections:
 
       - { name: year,       label: Year,       widget: number, value_type: int }
       - { name: journal,    label: Journal,    widget: string, required: false }
-      - { name: conference, label: Conference, widget: string, required: false }
+      - name: conference
+        label: "Conference / Event Name"
+        widget: string
+        required: false
+        hint: "For journal articles: leave empty. For conference papers: conference name (e.g. EAWOP 2023). For invited talks: event/organization name (e.g. Nuri Bilgin Psikoloji Buluşması). For presentations: symposium or congress name."
       - { name: publisher,  label: Publisher,  widget: string, required: false }
       - { name: book_title, label: Book Title, widget: string, required: false }
 
