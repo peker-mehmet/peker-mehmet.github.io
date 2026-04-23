@@ -1,0 +1,29 @@
+{
+  "active": false,
+  "organization": {
+    "en": "Bosch Termoteknik Isıtma ve Klima Sanayi Ticaret A. Ş.",
+    "tr": "Bosch Termoteknik Isıtma ve Klima Sanayi Ticaret A. Ş."
+  },
+  "id": "bosch2016",
+  "type": "industry",
+  "period_start": "2016-03",
+  "period_end": "2018-09",
+  "description": {
+    "tr": "Bu iş birliği kapsamında, bir kurumun çalışan profili, çalışma süreçleri ve güvenlikle ilişkili kurumsal işleyişi çok yönlü bir yaklaşımla değerlendirilmiştir. Farklı veri toplama ve analiz yöntemlerinin bir arada kullanıldığı çalışma, güçlü yönlerin ve gelişime açık alanların belirlenmesine ve uygulamaya dönük öneriler geliştirilmesine odaklanmıştır.",
+    "en": "This collaboration involved a comprehensive assessment of employee-related factors, work processes, and organizational practices associated with safety. Using multiple data collection and analysis methods, the study focused on identifying strengths, development areas, and practical recommendations for improvement."
+  },
+  "outputs": [
+    {
+      "en": "This collaboration involved a comprehensive assessment of employee-related factors, work processes, and organizational practices associated with safety. Using multiple data collection and analysis methods, the study focused on identifying strengths, development areas, and practical recommendations for improvement.",
+      "tr": "This collaboration involved a comprehensive assessment of employee-related factors, work processes, and organizational practices associated with safety. Using multiple data collection and analysis methods, the study focused on identifying strengths, development areas, and practical recommendations for improvement."
+    },
+    {
+      "en": "A consolidated body of findings generated from multiple methods and data sources.",
+      "tr": "Farklı yöntem ve veri kaynaklarından elde edilen bütünleşik bulgu seti."
+    },
+    {
+      "en": "Action-oriented recommendations to support institutional development and strengthen existing practices.",
+      "tr": "Kurumsal gelişimi desteklemek ve mevcut uygulamaları güçlendirmek için geliştirilen uygulamaya dönük öneriler."
+    }
+  ]
+}
