@@ -102,6 +102,7 @@ export type Publication = {
   type: 'journal' | 'conference' | 'book' | 'book-chapter' | 'thesis' | 'preprint';
   title: { en: string; tr: string };
   authors: string[];
+  authors_abbreviated?: string;
   year: number;
   journal?: string;
   conference?: string;
@@ -120,7 +121,9 @@ export type Publication = {
 };
 
 export function getPublications(): Publication[] {
-  return readJsonDir<Publication>('publications').sort((a, b) => b.year - a.year);
+  return readJsonDir<Publication>('publications')
+    .map(p => ({ ...p, authors: p.authors ?? [] }))
+    .sort((a, b) => b.year - a.year);
 }
 
 // ── Scales ───────────────────────────────────────────────────────────────────

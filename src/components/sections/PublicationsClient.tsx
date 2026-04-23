@@ -54,7 +54,7 @@ type Props = {
 // ── APA citation builder ──────────────────────────────────────────────────────
 
 function buildApa(pub: Publication, lang: Locale): string {
-  const authors = pub.authors.join(', ');
+  const authors = pub.authors_abbreviated || pub.authors.join(', ');
   const title   = pub.title[lang] || pub.title.en;
   const doiStr  = pub.doi  ? ` https://doi.org/${pub.doi}` :
                   pub.url  ? ` ${pub.url}` : '';
@@ -183,6 +183,26 @@ function AuthorList({ authors, ownerLastName }: { authors: string[]; ownerLastNa
   );
 }
 
+// ── Unified author display (handles both array and abbreviated string) ────────
+
+function AuthorDisplay({ pub, ownerLastName }: { pub: Publication; ownerLastName: string }) {
+  if (pub.authors_abbreviated) {
+    if (!ownerLastName) return <>{pub.authors_abbreviated}</>;
+    const regex = new RegExp(`(${ownerLastName})`, 'i');
+    const parts = pub.authors_abbreviated.split(regex);
+    return (
+      <>
+        {parts.map((part, i) =>
+          regex.test(part)
+            ? <span key={i} className="font-semibold text-navy-700">{part}</span>
+            : <span key={i}>{part}</span>
+        )}
+      </>
+    );
+  }
+  return <AuthorList authors={pub.authors} ownerLastName={ownerLastName} />;
+}
+
 // ── Pill link ─────────────────────────────────────────────────────────────────
 
 function PillLink({
@@ -284,7 +304,7 @@ function FeaturedCard({
 
         {/* Authors */}
         <p className="font-body text-sm text-slate-600 mb-1.5">
-          <AuthorList authors={pub.authors} ownerLastName={ownerLastName} />
+          <AuthorDisplay pub={pub} ownerLastName={ownerLastName} />
         </p>
 
         {/* Source */}
@@ -360,7 +380,7 @@ function PublicationCard({
 
         {/* Authors */}
         <p className="font-body text-[0.8125rem] text-slate-600 mb-1.5 leading-relaxed">
-          <AuthorList authors={pub.authors} ownerLastName={ownerLastName} />
+          <AuthorDisplay pub={pub} ownerLastName={ownerLastName} />
         </p>
 
         {/* Source */}
@@ -486,6 +506,7 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
       res = res.filter(p =>
         (p.title[lang] || p.title.en).toLowerCase().includes(q) ||
         p.authors.some(a => a.toLowerCase().includes(q)) ||
+        (p.authors_abbreviated ?? '').toLowerCase().includes(q) ||
         (p.journal     ?? '').toLowerCase().includes(q) ||
         (p.conference  ?? '').toLowerCase().includes(q)
       );

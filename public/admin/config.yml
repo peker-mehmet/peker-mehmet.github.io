@@ -66,10 +66,17 @@ collections:
               hint: "Leave blank or copy English if no Turkish version." }
 
       - name: authors
-        label: Authors
+        label: Authors (individual entries)
         widget: list
+        required: false
         field: { label: Author, name: author, widget: string }
-        hint: "One entry per author. Format: Last, First M. — e.g. Erken, Mehmet"
+        hint: "Use either 'Authors (individual entries)' OR 'Authors (abbreviated string)' — not both. For papers with 10+ authors, use the abbreviated string field. | One entry per author. Format: Last, First M."
+
+      - name: authors_abbreviated
+        label: Authors (abbreviated string)
+        widget: string
+        required: false
+        hint: "Use this INSTEAD OF individual entries for papers with many authors (10+). Format: Buchanan, E., Cuccolo, K., ..., Peker, M., ..., Lewis, S. — Your name will be automatically bolded on the website if it contains 'Peker'"
 
       - { name: year,       label: Year,       widget: number, value_type: int }
       - { name: journal,    label: Journal,    widget: string, required: false }
