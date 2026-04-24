@@ -1,15 +1,17 @@
 # =============================================================================
-# Decap CMS Configuration
-# https://decapcms.org/docs/
+# Sveltia CMS Configuration
+# https://github.com/sveltia/sveltia-cms
 # =============================================================================
-# Backend: Netlify Git Gateway + Netlify Identity
-# Login is managed via the Netlify Identity widget.
+# Backend: GitHub OAuth via Sveltia's free hosted auth proxy
+# No Netlify Identity or Git Gateway needed.
 # =============================================================================
 
 backend:
-  name: git-gateway
+  name: github
+  repo: peker-mehmet/peker-mehmet.github.io
   branch: main
-  site_domain: courageous-clafoutis-36a19d.netlify.app
+  base_url: https://sveltia-cms-auth.pages.dev
+  auth_endpoint: /auth
 
 # Where uploaded media files are stored (relative to project root)
 media_folder: public/images
