@@ -265,7 +265,7 @@ collections:
         label: "Scale Form & Guide (PDF)"
         widget: file
         required: false
-        media_folder: public/downloads/scales
+        media_folder: /public/downloads/scales
         public_folder: /downloads/scales
 
       - name: citation
