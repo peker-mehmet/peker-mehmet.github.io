@@ -1,0 +1,49 @@
+{
+  "id": "tds",
+  "name": {
+    "en": "Task Difficulty Scale",
+    "tr": "Görev Zorluğu Ölçeği"
+  },
+  "abbreviation": "TDS",
+  "role": "translated",
+  "construct": {
+    "en": "Perceived difficulty of a specific academic task",
+    "tr": "Belirli bir akademik görevin algılanan zorluğu"
+  },
+  "year": "1976",
+  "original_authors": [],
+  "adaptation_year": "2025",
+  "original_citation": {
+    "en": "Steers, R. M. (1976). Factors affecting job attitudes in a goal-setting environment. Academy of Management Journal, 19(1), 6–16. https://doi.org/10.5465/255443",
+    "tr": "Steers, R. M. (1976). Factors affecting job attitudes in a goal-setting environment. Academy of Management Journal, 19(1), 6–16. https://doi.org/10.5465/255443"
+  },
+  "description": {
+    "en": "The 4-item task difficulty dimension of the Task-Goal Attribute Questionnaire, adapted to represent a specific academic task.",
+    "tr": "Task-Goal Attribute Questionnaire’ın 4 maddelik görev zorluğu boyutu, belirli bir akademik görevi temsil edecek şekilde uyarlanmıştır."
+  },
+  "item_count": "4",
+  "subscales": [],
+  "response_format_tr": "7’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 7 = Kesinlikle katılıyorum",
+  "response_format_en": "7-point Likert scale, from 1 = strongly disagree to 7 = strongly agree",
+  "target_population_tr": "Görev temelli değerlendirme bağlamlarındaki katılımcılar.",
+  "target_population_en": "Participants in task-based assessment contexts.",
+  "reliability": {
+    "en": "Omega was .79 for anticipated task difficulty and .76 for experienced task difficulty.",
+    "tr": "Beklenen görev zorluğu için omega .79, deneyimlenen görev zorluğu için .76 bulunmuştur."
+  },
+  "validity_notes": {
+    "en": "MCFA for anticipated task difficulty showed acceptable fit after correlating two residuals. Loadings were above the acceptable threshold (.40) ar the within- and between-person levels.",
+    "tr": "Beklenen görev zorluğu için MCFA, iki artık kovaryansı tanımlandıktan sonra kabul edilebilir uyum göstermiştir. Faktör yükleri kişi-içi ve kişiler-arası düzeylerde kabul edilebilir eşiğin (.40) üzerindedir."
+  },
+  "document": "downloads/scales/TDS.pdf",
+  "citation": {
+    "en": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8",
+    "tr": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8"
+  },
+  "reference_publication": "PekerBag2025",
+  "notes": {
+    "en": "The main scale information here focuses on the anticipated task difficulty version. The form document includes both anticipated and experienced versions.",
+    "tr": "Buradaki temel ölçek bilgileri beklenen görev zorluğu sürümüne odaklanmaktadır. Form belgesinde hem beklenen hem deneyimlenen sürümler yer almaktadır."
+  },
+  "featured": false
+}
