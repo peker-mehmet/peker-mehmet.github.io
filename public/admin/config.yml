@@ -10,7 +10,7 @@ backend:
   name: github
   repo: peker-mehmet/peker-mehmet.github.io
   branch: main
-  base_url: https://sveltia-cms-auth.pages.dev
+  base_url: https://cms-oauth-proxy.pekermehmett.workers.dev
   auth_endpoint: /auth
   client_id: Ov23liDa7GLrOVRLEkUB
 
