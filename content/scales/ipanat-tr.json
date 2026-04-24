@@ -1,0 +1,60 @@
+{
+  "id": "ipanat-tr",
+  "name": {
+    "en": "Implicit Positive and Negative Affect Test – Turkish Form",
+    "tr": "Örtük Pozitif ve Negatif Duygulanım Testi – Türkçe Formu"
+  },
+  "abbreviation": "IPANAT-TR",
+  "role": "adapted",
+  "construct": {
+    "en": "Indirectly assessed positive and negative affect",
+    "tr": "Dolaylı olarak değerlendirilen pozitif ve negatif duygulanım"
+  },
+  "year": "2009",
+  "original_authors": [],
+  "adaptation_year": "2021",
+  "original_citation": {
+    "en": "Quirin, M., Kazén, M., & Kuhl, J. (2009). When nonsense sounds happy or helpless: The Implicit Positive and Negative Affect Test (IPANAT). Journal of Personality and Social Psychology, 97(3), 500–516. https://doi.org/10.1037/a0016063",
+    "tr": "Quirin, M., Kazén, M., & Kuhl, J. (2009). When nonsense sounds happy or helpless: The Implicit Positive and Negative Affect Test (IPANAT). Journal of Personality and Social Psychology, 97(3), 500–516. https://doi.org/10.1037/a0016063"
+  },
+  "description": {
+    "en": "An indirect affect measure that assesses implicit positive and negative affect through participants’ evaluations of artificial words on emotion adjectives. 36 ratings in total; 6 artificial words are evaluated on 6 affect adjectives",
+    "tr": "Katılımcıların anlamsız kelimeleri duygu sıfatları açısından değerlendirmeleri üzerinden örtük pozitif ve negatif duygulanımı ölçen dolaylı bir duygulanım ölçümüdür. 36 değerlendirme mevcuttur; 6 anlamsız kelime, 6 duygu sıfatı bakımından değerlendirilir"
+  },
+  "item_count": "36",
+  "subscales": [
+    {
+      "name": "Implicit Positive Affect/Örtük Pozitif Duygulanım",
+      "item_count": "18",
+      "description": null
+    },
+    {
+      "name": "Implicit Negative Affect/Örtük Negatif Duygulanım",
+      "item_count": "18",
+      "description": null
+    }
+  ],
+  "response_format_tr": "4’lü Likert tipi ölçek, 1 = tamamen uyumsuz ile 4 = tamamen uyumlu",
+  "response_format_en": "4-point Likert scale, from 1 = doesn't fit at all  to 4 = fits very well",
+  "target_population_tr": "University students and employees. In this article, it was tested in Turkish student and employee samples.",
+  "target_population_en": "Üniversite öğrencileri ve çalışanlar. Bu makalede Türk öğrenci ve çalışan örneklemlerinde test edilmiştir.",
+  "reliability": {
+    "en": "Internal consistency was .92 for Implicit Positive Affect and .85 for Implicit Negative Affect. One-week and four-week test-retest coefficients ranged from .51 to .75.",
+    "tr": "İç tutarlılık katsayısı Örtük Pozitif Duygulanım için .92, Örtük Negatif Duygulanım için .85’tir. Bir hafta ve dört hafta aralıklı test-tekrar test katsayıları .51 ile .75 arasında değişmiştir."
+  },
+  "validity_notes": {
+    "en": "Principal components analysis showed a clear two-factor structure. Expected relationships with related constructs were mostly confirmed. Measurement invariance analyses indicated full invariance across student and employee samples.",
+    "tr": "Temel bileşenler analizi açık bir iki faktörlü yapı göstermiştir. İlgili yapılarla beklenen ilişkiler büyük ölçüde doğrulanmıştır. Ölçüm değişimsizliği analizleri, öğrenci ve çalışan örneklemleri arasında tam değişimsizliğe işaret etmiştir."
+  },
+  "document": "downloads/scales/IPANAT-TR.pdf",
+  "citation": {
+    "en": "Peker, M., Meşe, G. & Cem Ersoy, N. (2021). Psychometric evaluation of the implicit positive and negative affect test in Turkish samples. Turkish Journal of Psychiatry, 32(1), 43–50. https://doi.org/10.5080/u23558",
+    "tr": "Peker, M., Meşe, G. & Cem Ersoy, N. (2021). Psychometric evaluation of the implicit positive and negative affect test in Turkish samples. Turkish Journal of Psychiatry, 32(1), 43–50. https://doi.org/10.5080/u23558"
+  },
+  "reference_publication": "pekmesersoy",
+  "notes": {
+    "en": "The Turkish form used six artificial words selected through a pilot study. The original artificial words were not retained.",
+    "tr": "Türkçe formda, ön çalışma sonucunda seçilen altı anlamsız kelime kullanılmıştır. Özgün anlamsız kelimeler korunmamıştır."
+  },
+  "featured": false
+}
