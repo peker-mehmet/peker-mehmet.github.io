@@ -1,0 +1,46 @@
+{
+  "id": "rds-sf",
+  "name": {
+    "en": "Regulatory Depletion Scale-Short Form",
+    "tr": "Öz-Düzenleme Tükenmesi Ölçeği-Kısa Form"
+  },
+  "abbreviation": "RDS-SF",
+  "role": "translated",
+  "construct": {
+    "en": "Current level of depletion in regulatory resources",
+    "tr": "Düzenleyici kaynaklarda o anki tükenme düzeyi"
+  },
+  "year": "2014",
+  "original_authors": [],
+  "adaptation_year": "2025",
+  "original_citation": {
+    "en": "Johnson, R. E., Lanaj, K., & Barnes, C. M. (2014). The good and bad of being fair: Effects of procedural and interpersonal justice behaviors on regulatory resources. Journal of Applied Psychology, 99(4), 635–650. https://doi.org/10.1037/a0035647",
+    "tr": "Johnson, R. E., Lanaj, K., & Barnes, C. M. (2014). The good and bad of being fair: Effects of procedural and interpersonal justice behaviors on regulatory resources. Journal of Applied Psychology, 99(4), 635–650. https://doi.org/10.1037/a0035647"
+  },
+  "description": {
+    "en": "A 5-item state regulatory depletion scale used by Johnson et al. (2014) to assess short-term depletion.",
+    "tr": "Johnson vd. (2014) tarafından durumluk tükenmeyi değerlendirmek için kullanılan 5 maddeli ölçek."
+  },
+  "item_count": "5",
+  "subscales": [],
+  "response_format_tr": "7’li Likert tipi ölçek, 1 = Hiç doğru değil ile 7 = Tamamen doğru",
+  "response_format_en": "7-point Likert scale, from 1 = not at all true to 7 = completely true",
+  "target_population_tr": "Tekrarlı ölçüm ya da durumluk değerlendirme bağlamındaki yetişkinler. Bu makalede üniversite öğrencisi örnekleminde test edilmiştir.",
+  "target_population_en": "Adults in repeated-measures or state-assessment contexts. In this article, it was tested in a university student sample.",
+  "reliability": {
+    "en": "Within-person omega was .89 in the pilot study.",
+    "tr": "Pilot çalışmada kişi-içi omega katsayısı .89’dur."
+  },
+  "validity_notes": {
+    "en": "MCFA showed acceptable fit after one residual covariance was freed. Loadings ranged from .73 to 1.00 at the within-person level and from .63 to .94 at the between-person level.",
+    "tr": "MCFA, bir artık kovaryansı serbest bırakıldıktan sonra kabul edilebilir uyum göstermiştir. Faktör yükleri kişi-içi düzeyde .73 ile 1.00, kişiler-arası düzeyde .63 ile .94 arasında değişmiştir."
+  },
+  "document": "",
+  "citation": {
+    "en": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8",
+    "tr": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8"
+  },
+  "reference_publication": "PekerBag2025",
+  "notes": null,
+  "featured": false
+}
