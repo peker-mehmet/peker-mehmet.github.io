@@ -1,0 +1,49 @@
+{
+  "id": "toq-trw",
+  "name": {
+    "en": "Thought Occurrence Questionnaire – Task-Relevant Worries Dimension",
+    "tr": "Düşünce Belirme Anketi – Görevle İlgili Kaygılar Boyutu"
+  },
+  "abbreviation": "TOQ-TRW",
+  "role": "translated",
+  "construct": {
+    "en": "Task-relevant worries during concentration",
+    "tr": "Odaklanma sırasında ortaya çıkan görevle ilgili kaygılar"
+  },
+  "year": "1986",
+  "original_authors": [],
+  "adaptation_year": "2025",
+  "original_citation": {
+    "en": "Sarason, I. G., Sarason, B. R., Keefe, D. E., Hayes, B. E., & Shearin, E. N. (1986). Cognitive interference: Situational determinants and traitlike characteristics. Journal of Personality and Social Psychology, 51(1), 215–226. https://doi.org/10.1037/0022-3514.51.1.215",
+    "tr": "Sarason, I. G., Sarason, B. R., Keefe, D. E., Hayes, B. E., & Shearin, E. N. (1986). Cognitive interference: Situational determinants and traitlike characteristics. Journal of Personality and Social Psychology, 51(1), 215–226. https://doi.org/10.1037/0022-3514.51.1.215"
+  },
+  "description": {
+    "en": "Worries and intrusive thoughts experienced while trying to concentrate on a task.",
+    "tr": "Bir göreve odaklanmaya çalışırken yaşanan kaygılar ve intrüzif düşünceler."
+  },
+  "item_count": "9",
+  "subscales": [],
+  "response_format_tr": "5-point Likert scale, from 1 = never to 5 = very often",
+  "response_format_en": "5’li Likert tipi ölçek, 1 = Hiçbir zaman ile 5 = Çok sık",
+  "target_population_tr": "Odaklanma ya da görev temelli bağlamlardaki yetişkinler.",
+  "target_population_en": "Adults in concentration- or task-focused settings.",
+  "reliability": {
+    "en": "Omega was .84 in the current study.",
+    "tr": "Bu çalışmada omega katsayısı .84’tür."
+  },
+  "validity_notes": {
+    "en": "CFA results indicated that the scale fit the data well.",
+    "tr": "CFA sonuçları, ölçeğin veriye iyi uyum gösterdiğini ortaya koymuştur."
+  },
+  "document": "/downloads/scales/TOQ-TRW.pdf",
+  "citation": {
+    "en": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8",
+    "tr": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8"
+  },
+  "reference_publication": "PekerBag2025",
+  "notes": {
+    "en": "This form includes only the task-relevant worries dimension of the Thought Occurrence Questionnaire.",
+    "tr": "Bu form, Thought Occurrence Questionnaire’ın yalnızca görevle ilgili kaygılar boyutunu içerir."
+  },
+  "featured": false
+}
