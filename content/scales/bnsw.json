@@ -1,0 +1,71 @@
+{
+  "id": "bnsw",
+  "name": {
+    "en": "Basic Need Satisfaction at Work Scale",
+    "tr": "İşte Temel İhtiyaç Doyumu Ölçeği"
+  },
+  "abbreviation": "BNSW",
+  "role": "translated",
+  "construct": {
+    "en": "Degree to which autonomy, competence, and relatedness needs are satisfied at work",
+    "tr": "İşte özerklik, yetkinlik ve ilişkisellik ihtiyaçlarının karşılanma düzeyi"
+  },
+  "year": "2001",
+  "original_authors": [],
+  "adaptation_year": "2023",
+  "original_citation": {
+    "en": "Deci, E. L., Ryan, R. M., Gagné, M., Leone, D. R., Usunov, J., & Kornazheva, B. P. (2001). Need satisfaction, motivation, and well-being in the work organizations of a former Eastern bloc country: A cross-cultural study of self-determination. Personality and Social Psychology Bulletin, 27(8), 930–942. https://doi.org/10.1177/0146167201278002",
+    "tr": "Deci, E. L., Ryan, R. M., Gagné, M., Leone, D. R., Usunov, J., & Kornazheva, B. P. (2001). Need satisfaction, motivation, and well-being in the work organizations of a former Eastern bloc country: A cross-cultural study of self-determination. Personality and Social Psychology Bulletin, 27(8), 930–942. https://doi.org/10.1177/0146167201278002"
+  },
+  "description": {
+    "en": "A work-domain scale that assesses the extent to which employees experience autonomy, competence, and relatedness need satisfaction at work.",
+    "tr": "Çalışanların iş ortamında özerklik, yetkinlik ve ilişkisellik ihtiyaçlarının ne ölçüde karşılandığını değerlendiren bir iş bağlamı ölçeğidir."
+  },
+  "item_count": "21",
+  "subscales": [
+    {
+      "name": "Özerklik/Autonomy",
+      "item_count": "7",
+      "description": {
+        "en": "Feeling choice, voice, and self-direction at work.",
+        "tr": "İşte seçim hakkı, söz hakkı ve öz-yönetim hissi."
+      }
+    },
+    {
+      "name": "Yetkinlik/Competence",
+      "item_count": "6",
+      "description": {
+        "en": "Feeling capable, effective, and successful at work.",
+        "tr": "İşte yeterli, etkili ve başarılı hissetme."
+      }
+    },
+    {
+      "name": "İlişkisellik/Relatedness",
+      "item_count": "8",
+      "description": {
+        "en": "Feeling connected, cared for, and socially accepted at work.",
+        "tr": "İşte bağlı, önemsenen ve sosyal olarak kabul gören biri gibi hissetme."
+      }
+    }
+  ],
+  "response_format_tr": "5-point Likert scale, from 1 = strongly disagree to 5 = strongly agree",
+  "response_format_en": "5’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 5 = Tamamen katılıyorum",
+  "target_population_tr": "Çalışan yetişkinler.",
+  "target_population_en": "Working adults.",
+  "reliability": {
+    "en": "In this study, Cronbach’s alpha values were .66 for autonomy, .66 for competence, and .83 for relatedness.",
+    "tr": "Bu çalışmada Cronbach alfa katsayıları özerklik için .66, yetkinlik için .66 ve ilişkisellik için .83 olarak bulunmuştur."
+  },
+  "validity_notes": {
+    "en": "Item-level CFAs supported the three-factor structure after removing Items 3 and 11. Overall model fit was acceptable. Composite reliability estimates were above .70, whereas AVE values for autonomy and competence were below .50.",
+    "tr": "Madde düzeyindeki CFA sonuçları, 3. ve 11. maddeler çıkarıldıktan sonra üç faktörlü yapıyı desteklemiştir. Genel model uyumu kabul edilebilir düzeydedir. Bileşik güvenirlik katsayıları .70’in üzerindeyken, özerklik ve yetkinlik için AVE değerleri .50’nin altında kalmıştır."
+  },
+  "document": "downloads/scales/BNSW.pdf",
+  "citation": {
+    "en": "Cem Ersoy, N., Peker, M., & Giray, M. D. (2023). Exploring the association between calling and work engagement: Needs satisfaction and meaningful work as mediators. Studies in Psychology, 43(2), 345-366. https://doi.org/10.26650/SP2022-1152304",
+    "tr": "Cem Ersoy, N., Peker, M., & Giray, M. D. (2023). Exploring the association between calling and work engagement: Needs satisfaction and meaningful work as mediators. Studies in Psychology, 43(2), 345-366. https://doi.org/10.26650/SP2022-1152304"
+  },
+  "reference_publication": "ersoypekergiray2023",
+  "notes": null,
+  "featured": false
+}
