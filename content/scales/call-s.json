@@ -1,0 +1,49 @@
+{
+  "id": "call-s",
+  "name": {
+    "en": "Calling Scale",
+    "tr": "Meslek Aşkı (Calling) Ölçeği"
+  },
+  "abbreviation": "CALL-S",
+  "role": "translated",
+  "construct": {
+    "en": "Seeing one’s work as a calling",
+    "tr": "İşini bir meslek aşkı olarak görme"
+  },
+  "year": "2011",
+  "original_authors": [],
+  "adaptation_year": "2023",
+  "original_citation": {
+    "en": "Dobrow, S. R., & Tosti‐Kharas, J. (2011). Calling: The development of a scale measure. Personnel Psychology, 64(4), 1001-1049. https://doi.org/10.1111/j.1744-6570.2011.01234.x",
+    "tr": "Dobrow, S. R., & Tosti‐Kharas, J. (2011). Calling: The development of a scale measure. Personnel Psychology, 64(4), 1001-1049. https://doi.org/10.1111/j.1744-6570.2011.01234.x"
+  },
+  "description": {
+    "en": "A scale that assesses the extent to which a person experiences work as a central, meaningful, and identity-defining calling.",
+    "tr": "Bireyin işini merkezi, anlamlı ve kimliğini tanımlayan bir meslek aşkı olarak algılama düzeyini ölçen bir ölçektir."
+  },
+  "item_count": "12",
+  "subscales": [],
+  "response_format_tr": "5’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 5 = Tamamen katılıyorum",
+  "response_format_en": "5-point Likert scale, from 1 = strongly disagree to 5 = strongly agree",
+  "target_population_tr": "Çalışan yetişkinler. Bu makalede 286 Türk öğretmen örnekleminde test edilmiştir.",
+  "target_population_en": "Working adults. In this article, it was tested in a sample of 286 Turkish teachers.",
+  "reliability": {
+    "en": "Cronbach’s alpha was .90 in this study.",
+    "tr": "Bu çalışmada Cronbach alfa katsayısı .90’dır."
+  },
+  "validity_notes": {
+    "en": "CFA results indicated acceptable fit. Composite reliability was .93, AVE was .55, and factor loadings ranged from .63 to .84.",
+    "tr": "CFA sonuçları kabul edilebilir uyuma işaret etmiştir. Bileşik güvenirlik .93, AVE .55, faktör yükleri ise .63 ile .84 arasında değişmiştir."
+  },
+  "document": "downloads/scales/CALL-S.pdf",
+  "citation": {
+    "en": "Cem Ersoy, N., Peker, M., & Giray, M. D. (2023). Exploring the association between calling and work engagement: Needs satisfaction and meaningful work as mediators. Studies in Psychology, 43(2), 345-366. https://doi.org/10.26650/SP2022-1152304",
+    "tr": "Cem Ersoy, N., Peker, M., & Giray, M. D. (2023). Exploring the association between calling and work engagement: Needs satisfaction and meaningful work as mediators. Studies in Psychology, 43(2), 345-366. https://doi.org/10.26650/SP2022-1152304"
+  },
+  "reference_publication": "ersoypekergiray2023",
+  "notes": {
+    "en": "In the original scale, items are occupation-specific and refer directly to the respondent’s own field (e.g., “I am passionate about playing my instrument / singing / engaging in my artistic specialty / business / being a manager”). In this Turkish version, the item wording was translated in a more generic form, while still using contextually appropriate work-related expressions.",
+    "tr": "Özgün ölçekte maddeler mesleğe/iş alanına özgü biçimde formüle edilmiştir ve katılımcının kendi alanına doğrudan gönderme yapmaktadır (ör., “I am passionate about playing my instrument / singing / engaging in my artistic specialty / business / being a manager”). Bu Türkçe formda ise maddeler, bağlama uygun iş/meslek ifadeleri korunarak daha genel bir dille çevrilmiştir."
+  },
+  "featured": false
+}
