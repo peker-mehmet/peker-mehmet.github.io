@@ -1,0 +1,74 @@
+{
+  "id": "wami",
+  "name": {
+    "en": "Work and Meaning Inventory",
+    "tr": "İş ve Anlam Envanteri"
+  },
+  "abbreviation": "WAMI",
+  "role": "translated",
+  "construct": {
+    "en": "Experiencing work as valued and meaningful",
+    "tr": "İşi değerli ve anlamlı görme"
+  },
+  "year": "2012",
+  "original_authors": [],
+  "adaptation_year": "2023",
+  "original_citation": {
+    "en": "Steger, M. F., Dik, B. J., & Duffy, R. D. (2012). Measuring meaningful work: The work and\nmeaning inventory (WAMI). Journal of Career Assessment, 20(3), 322-337. https://doi.\norg/10.1177/1069072711436160.",
+    "tr": "Steger, M. F., Dik, B. J., & Duffy, R. D. (2012). Measuring meaningful work: The work and\nmeaning inventory (WAMI). Journal of Career Assessment, 20(3), 322-337. https://doi.\norg/10.1177/1069072711436160."
+  },
+  "description": {
+    "en": "Work experienced as personally significant work that feels valuable beyond practical rewards.",
+    "tr": "Pratik kazanımların ötesinde değerli hissedilen, kişisel olarak anlamlı iş deneyimi."
+  },
+  "item_count": "10",
+  "subscales": [
+    {
+      "name": "Pozitif Anlam/Positive Meaning",
+      "item_count": "4",
+      "description": {
+        "en": "The subjective experience that one’s work has personal significance and feels meaningful.",
+        "tr": "Kişinin işini kişisel olarak önemli ve anlamlı deneyimlemesi."
+      }
+    },
+    {
+      "name": "İş Yoluyla Anlam Oluşturma/Meaning-Making through Work",
+      "item_count": "3",
+      "description": {
+        "en": "Experiencing work as an avenue for building meaning in life, deepening self-understanding, and supporting personal growth.",
+        "tr": "İşi, yaşamda anlam oluşturmanın, kendini daha iyi anlamanın ve kişisel gelişimi desteklemenin bir yolu olarak deneyimleme."
+      }
+    },
+    {
+      "name": "Daha Büyük Bir Amaca Hizmet Etme Motivasyonu/Greater Good Motivations",
+      "item_count": "3",
+      "description": {
+        "en": "Perceiving one’s work as contributing to a broader good and making a positive impact beyond the self.",
+        "tr": "İşini, kendisinin ötesinde daha geniş bir iyiliğe katkı sağlayan ve olumlu etki yaratan bir uğraş olarak algılama."
+      }
+    }
+  ],
+  "response_format_tr": "5-point Likert scale, from 1 = strongly disagree to 5 = strongly agree",
+  "response_format_en": "5’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 5 = Tamamen katılıyorum",
+  "target_population_tr": "Çalışan yetişkinler.",
+  "target_population_en": "Working adults.",
+  "reliability": {
+    "en": "Cronbach’s alpha was .88 in this study.",
+    "tr": "Bu çalışmada Cronbach alfa katsayısı .88’dir."
+  },
+  "validity_notes": {
+    "en": "CFA results indicated acceptable fit. Composite reliability was .93, AVE was .58, and factor loadings ranged from .58 to .90.",
+    "tr": "CFA sonuçları kabul edilebilir uyuma işaret etmiştir. Bileşik güvenirlik .93, AVE .58, faktör yükleri ise .58 ile .90 arasında değişmiştir."
+  },
+  "document": "downloads/scales/WAMI.pdf",
+  "citation": {
+    "en": "Cem Ersoy, N., Peker, M., & Giray, M. D. (2023). Exploring the association between calling and work engagement: Needs satisfaction and meaningful work as mediators. Studies in Psychology, 43(2), 345-366. https://doi.org/10.26650/SP2022-1152304",
+    "tr": "Cem Ersoy, N., Peker, M., & Giray, M. D. (2023). Exploring the association between calling and work engagement: Needs satisfaction and meaningful work as mediators. Studies in Psychology, 43(2), 345-366. https://doi.org/10.26650/SP2022-1152304"
+  },
+  "reference_publication": "ersoypekergiray2023",
+  "notes": {
+    "en": "The WAMI can be used either as a total score reflecting overall meaningful work or as a faceted measure using its three subscales. In the original scale article, meaningful work is conceptualized as a multidimensional construct consisting of positive meaning, meaning-making through work, and greater good motivations. In the Turkish translation study, the scale was modeled as a single latent work meaning construct.",
+    "tr": "İş ve Anlam Envanteri, genel anlamlı iş düzeyini yansıtan toplam puan olarak ya da üç alt boyutlu yapısıyla boyutlu biçimde kullanılabilir. Ölçeğin özgün makalesinde anlamlı iş, pozitif anlam, iş yoluyla anlam oluşturma ve daha büyük bir amaca hizmet etme motivasyonu boyutlarından oluşan çok boyutlu bir yapı olarak kavramsallaştırılmıştır. Türkçe çeviri çalışmasında ölçek, tek bir örtük işin anlamı yapısı olarak modellenmiştir."
+  },
+  "featured": false
+}
