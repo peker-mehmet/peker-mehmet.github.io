@@ -12,6 +12,7 @@ backend:
   branch: main
   base_url: https://sveltia-cms-auth.pages.dev
   auth_endpoint: /auth
+  client_id: Ov23liDa7GLrOVRLEkUB
 
 # Where uploaded media files are stored (relative to project root)
 media_folder: public/images
