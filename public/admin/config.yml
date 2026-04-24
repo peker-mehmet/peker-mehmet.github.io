@@ -162,6 +162,8 @@ collections:
     identifier_field: id
     summary: "{{fields.name.en}}{% if fields.abbreviation %} ({{fields.abbreviation}}){% endif %}"
     slug: "{{fields.id}}"
+    media_folder: /public/downloads/scales
+    public_folder: /downloads/scales
     fields:
       - name: id
         label: ID (filename)
@@ -265,8 +267,6 @@ collections:
         label: "Scale Form & Guide (PDF)"
         widget: file
         required: false
-        media_folder: /public/downloads/scales
-        public_folder: /downloads/scales
 
       - name: citation
         label: How to Cite
