@@ -25,7 +25,7 @@
   "subscales": [],
   "response_format_tr": "5-point Likert scale, from 1 = never to 5 = very often",
   "response_format_en": "5’li Likert tipi ölçek, 1 = Hiçbir zaman ile 5 = Çok sık",
-  "target_population_tr": "Odaklanma ya da görev temelli bağlamlardaki yetişkinler.",
+  "target_population_tr": "Odaklanma ya da görev temelli bağlamlardaki katılımcılar.",
   "target_population_en": "Adults in concentration- or task-focused settings.",
   "reliability": {
     "en": "Omega was .84 in the current study.",
