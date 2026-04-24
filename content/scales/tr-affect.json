@@ -1,0 +1,66 @@
+{
+  "id": "tr-affect",
+  "name": {
+    "en": "Task-related positive and negative affect",
+    "tr": "Görevle ilişkili pozitif ve negatif duygulanım"
+  },
+  "abbreviation": "TR-PANA",
+  "role": "translated",
+  "construct": {
+    "en": "Positive and negative affect triggered by a specific completed task",
+    "tr": "Belirli bir tamamlanmış görevin tetiklediği olumlu ve olumsuz duygulanım"
+  },
+  "year": "1999",
+  "original_authors": [],
+  "adaptation_year": "2025",
+  "original_citation": {
+    "en": "This measure was adapted from the short form of the Positive and Negative Affect Schedule (PANAS) developed by Mackinnon et al. (1999). Full APA citation: \nMackinnon, A., Jorm, A. F., Christensen, H., Korten, A. E., Jacomb, P. A., & Rodgers, B. (1999). A short form of the Positive and Negative Affect Schedule: evaluation of factorial validity and invariance across demographic variables in a community sample. Personality and Individual Differences, 27(3), 405–416. https://doi.org/10.1016/s0191-8869(98)00251-7",
+    "tr": "Bu ölçek, Positive and Negative Affect Schedule (PANAS) kısa formundan görevle ilişkili bağlama uyarlanmıştır: Mackinnon, A., Jorm, A. F., Christensen, H., Korten, A. E., Jacomb, P. A., & Rodgers, B. (1999). A short form of the Positive and Negative Affect Schedule: evaluation of factorial validity and invariance across demographic variables in a community sample. Personality and Individual Differences, 27(3), 405–416. https://doi.org/10.1016/s0191-8869(98)00251-7"
+  },
+  "description": {
+    "en": "This scale measures how much a specific task made participants feel positive versus negative affect. It is designed to capture task-specific, state-like affective reactions rather than general affectivity.",
+    "tr": "Bu ölçek, belirli bir görevin katılımcıda ne ölçüde olumlu ve olumsuz duygulanım yarattığını ölçer. Genel duygulanım eğiliminden çok, göreve özgü ve durum benzeri duygusal tepkileri yakalamayı amaçlar."
+  },
+  "item_count": "10",
+  "subscales": [
+    {
+      "name": "Görevle ilişkili pozitif duygulanım/Task-related positive affect",
+      "item_count": "5",
+      "description": {
+        "en": "Positive feelings elicited by the task, such as excitement",
+        "tr": "Görevin ortaya çıkardığı heyecan gibi olumlu duygular"
+      }
+    },
+    {
+      "name": "Görevle ilişkili negatif duygulanım/Task-related negative affect",
+      "item_count": "5",
+      "description": {
+        "en": "Negative feelings elicited by the task, such as feeling upset",
+        "tr": "Görevin ortaya çıkardığı üzülme gibi olumsuz duygular"
+      }
+    }
+  ],
+  "response_format_tr": "1 = çok az ya da hiç ile 5 = Çok fazla",
+  "response_format_en": "1 = very slightly or not at all to 5 = extremely",
+  "target_population_tr": "Görev tamamlayan bireyler; özellikle tekrarlı ölçüm bağlamlarında uygundur. Bu makalede doğrudan hedef kitle, akademik görevler tamamlayan öğrenciler olmuştur.",
+  "target_population_en": "Individuals completing concrete tasks, especially in repeated-measures contexts. In this article, the immediate target was students completing academic tasks.",
+  "reliability": {
+    "en": "Reliability was acceptable to good. Reported omega coefficients ranged from .77 to .85 across the two studies. In the pilot study, within-person ω was .78 for positive affect and .85 for negative affect. In the main study, ω was .77 for positive affect and .81 for negative affect.",
+    "tr": "Güvenirlik kabul edilebilir ile iyi arasındadır. İki çalışma boyunca bildirilen omega katsayıları .77 ile .85 arasında değişmiştir. Pilot çalışmada kişi-içi ω, olumlu duygulanım için .78, olumsuz duygulanım için .85 bulunmuştur. Ana çalışmada ise ω, olumlu duygulanım için .77, olumsuz duygulanım için .81 olarak raporlanmıştır."
+  },
+  "validity_notes": {
+    "en": "Two-factor MCFA showed acceptable fit after correlating two residual pairs. Factor loadings were moderate to strong at the within- and between-person levels. Main-study CFA also modeled positive and negative affect as separate factors.",
+    "tr": "İki faktörlü MCFA, iki artık kovaryansı tanımlandıktan sonra kabul edilebilir uyum göstermiştir. Faktör yükleri kişi-içi ve kişiler-arası düzeylerde orta ile güçlü aralıktadır. Ana çalışmadaki CFA da olumlu ve olumsuz duygulanımı ayrı faktörler olarak modellemiştir."
+  },
+  "document": "",
+  "citation": {
+    "en": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8",
+    "tr": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8"
+  },
+  "reference_publication": "PekerBag2025",
+  "notes": {
+    "en": "",
+    "tr": "Bu form, mevcut çalışmada akademik görevler bağlamında kullanılmış görev-özgül bir durum duygulanımı ölçümüdür. Gerekli uyarlama ve ek psikometrik sınamalarla farklı görev bağlamlarında da kullanılabilir."
+  },
+  "featured": false
+}
