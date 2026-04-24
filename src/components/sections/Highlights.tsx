@@ -21,8 +21,7 @@ type HighlightsDict = {
     subscales: string;
     available_in: string;
     alpha: string;
-    download_form: string;
-    scoring_guide: string;
+    download_form_and_guide: string;
     type_journal: string;
     type_conference: string;
     type_book: string;
@@ -181,8 +180,7 @@ function ScaleCard({
   dict: HighlightsDict['home'];
 }) {
   const alpha = scale.reliability?.en || scale.reliability?.tr;
-  const hasForm   = Boolean(scale.downloads?.scale_form);
-  const hasScoring = Boolean(scale.downloads?.scoring_guide);
+  const hasDocument = Boolean(scale.document);
 
   return (
     <Card as="article" variant="default" padding="md" className="flex flex-col h-full group">
@@ -220,9 +218,9 @@ function ScaleCard({
       </div>
 
       <CardFooter>
-        {hasForm && (
+        {hasDocument && (
           <a
-            href={scale.downloads!.scale_form}
+            href={scale.document!}
             className="inline-flex items-center gap-1.5 font-body text-xs font-semibold
                        text-navy-600 hover:text-gold-600 transition-colors duration-200"
           >
@@ -230,16 +228,7 @@ function ScaleCard({
               strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3" aria-hidden="true">
               <path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
             </svg>
-            {dict.download_form}
-          </a>
-        )}
-        {hasScoring && (
-          <a
-            href={scale.downloads!.scoring_guide}
-            className="inline-flex items-center gap-1.5 font-body text-xs font-semibold
-                       text-slate-500 hover:text-navy-700 transition-colors duration-200"
-          >
-            {dict.scoring_guide}
+            {dict.download_form_and_guide}
           </a>
         )}
       </CardFooter>

@@ -58,11 +58,13 @@
   ],
   "__subscales_note": "Array of subscale objects. Each has 'name' (string), 'item_count' (string, e.g. \"4\"), and 'description' (bilingual). Leave as empty array [] if no subscales.",
 
-  "response_format": "5-point Likert (1 = Never, 5 = Always)",
-  "__response_format_note": "Describe the response options. E.g. '7-point Likert', 'Yes/No', 'Frequency scale (0-3)'.",
+  "response_format_en": "5-point Likert (1 = Never, 5 = Always)",
+  "response_format_tr": "5'li Likert (1 = Hiçbir Zaman, 5 = Her Zaman)",
+  "__response_format_note": "Describe the response options separately for each language. E.g. '7-point Likert', 'Yes/No', 'Frequency scale (0-3)'.",
 
-  "target_population": "University students aged 18-25",
-  "__target_population_note": "Who the scale is designed to be used with.",
+  "target_population_en": "University students aged 18-25",
+  "target_population_tr": "18-25 yaş arası üniversite öğrencileri",
+  "__target_population_note": "Who the scale is designed to be used with, in each language.",
 
   "reliability": {
     "en": "Cronbach α = .87. Subscale alphas ranged from .79 to .91. Test-retest reliability r = .82 (n = 85, 4-week interval).",
@@ -75,11 +77,8 @@
     "tr": "Geçerlilik kanıtlarının kısa açıklaması: faktör yapısı, yakınsak/ayrışan geçerlilik, örneklem özellikleri vb."
   },
 
-  "downloads": {
-    "scale_form": "/downloads/your-scale-form.pdf",
-    "scoring_guide": "/downloads/your-scale-scoring.pdf",
-    "manual": ""
-  },
+  "document": "/downloads/your-scale-form.pdf",
+  "__document_note": "Path to the downloadable PDF (scale form, scoring guide, or combined). E.g. /downloads/scales/scale-form.pdf. Leave empty string if no file available.",
 
   "citation": {
     "en": "Lastname, F. (2024). Full scale name [Abbreviation]. Journal Name, 10(2), 1-20. https://doi.org/10.xxxx/xxxx",

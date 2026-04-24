@@ -31,8 +31,7 @@
     "see_all_publications": "All publications",
     "see_all_scales": "All scales",
     "read_more": "Read more",
-    "download_form": "Download Form",
-    "scoring_guide": "Scoring Guide",
+    "download_form_and_guide": "Scale Form & Guide",
     "connect_title": "Connect",
     "no_publications": "Publications coming soon.",
     "no_scales": "Scales coming soon.",
@@ -181,9 +180,7 @@
     "detail_validity": "Validity Notes",
     "detail_languages": "Available Versions",
     "detail_downloads": "Downloads",
-    "download_form": "Scale Form",
-    "download_scoring": "Scoring Guide",
-    "download_manual": "Technical Manual",
+    "download_form_and_guide": "Scale Form & Guide",
     "download_btn": "Download",
     "detail_citation": "How to Cite",
     "copy_citation": "Copy",
@@ -212,8 +209,7 @@
     "tab_translated_desc": "Scales translated from English into Turkish by my colleagues and me, for which only factor structure and reliability have been examined.",
     "tab_developed": "Developed Scales",
     "tab_developed_desc": "Scales developed by my colleagues and me, with psychometric properties tested on Turkish samples.",
-    "detail_citation_original": "Citation for Original Scale",
-    "download_form_and_scoring": "Scale Form & Scoring Guide"
+    "detail_citation_original": "Citation for Original Scale"
   },
   "news": {
     "title": "News",

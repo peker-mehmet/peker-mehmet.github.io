@@ -116,13 +116,8 @@ export default async function ScaleDetailPage({
   const reliabilityText = scale.reliability?.[lang] || scale.reliability?.en || '';
   const hasReliability  = Boolean(reliabilityText);
 
-  // Merge scale_form and scoring_guide into one download card
-  const primaryFormHref = scale.downloads?.scale_form || scale.downloads?.scoring_guide || '';
-  const formCardLabel = scale.downloads?.scoring_guide
-    ? d.download_form_and_scoring
-    : d.download_form;
-
-  const hasDownloads = Boolean(primaryFormHref || scale.downloads?.manual);
+  const documentHref = scale.document || '';
+  const hasDownloads = Boolean(documentHref);
 
   // Original citation (for translated/adapted scales)
   const originalCitation =
@@ -181,8 +176,8 @@ export default async function ScaleDetailPage({
 
               <dl>
                 <DetailRow label={d.detail_construct}    value={construct} />
-                <DetailRow label={d.detail_population}   value={scale.target_population} />
-                <DetailRow label={d.detail_response}     value={scale.response_format} />
+                <DetailRow label={d.detail_population}   value={lang === 'tr' ? scale.target_population_tr : scale.target_population_en} />
+                <DetailRow label={d.detail_response}     value={lang === 'tr' ? scale.response_format_tr : scale.response_format_en} />
                 {scale.item_count && (
                   <DetailRow label={d.detail_item_count} value={`${scale.item_count} ${d.items}`} />
                 )}
@@ -287,11 +282,8 @@ export default async function ScaleDetailPage({
                     {d.detail_downloads}
                   </h2>
                   <div className="space-y-2.5">
-                    {primaryFormHref && (
-                      <DownloadCard href={primaryFormHref} label={formCardLabel} btnLabel={d.download_btn} />
-                    )}
-                    {scale.downloads?.manual && (
-                      <DownloadCard href={scale.downloads.manual} label={d.download_manual} btnLabel={d.download_btn} />
+                    {documentHref && (
+                      <DownloadCard href={documentHref} label={d.download_form_and_guide} btnLabel={d.download_btn} />
                     )}
                   </div>
                 </div>

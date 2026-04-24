@@ -31,8 +31,7 @@
     "see_all_publications": "Tüm yayınlar",
     "see_all_scales": "Tüm ölçekler",
     "read_more": "Devamını oku",
-    "download_form": "Formu İndir",
-    "scoring_guide": "Puanlama Kılavuzu",
+    "download_form_and_guide": "Ölçek Formu ve Kılavuz",
     "connect_title": "Bağlantılar",
     "no_publications": "Yayınlar yakında eklenecek.",
     "no_scales": "Ölçekler yakında eklenecek.",
@@ -181,9 +180,7 @@
     "detail_validity": "Geçerlilik Notları",
     "detail_languages": "Mevcut Sürümler",
     "detail_downloads": "İndirmeler",
-    "download_form": "Ölçek Formu",
-    "download_scoring": "Puanlama Kılavuzu",
-    "download_manual": "Teknik El Kitabı",
+    "download_form_and_guide": "Ölçek Formu ve Kılavuz",
     "download_btn": "İndir",
     "detail_citation": "Nasıl Atıf Yapılır",
     "copy_citation": "Kopyala",
@@ -212,8 +209,7 @@
     "tab_translated_desc": "Ben ve çalışma arkadaşlarım tarafından İngilizceden Türkçeye çevrilen; yalnızca faktör yapısı ve güvenirlik özellikleri incelenmiş ölçeklerdir.",
     "tab_developed": "Geliştirilen Ölçekler",
     "tab_developed_desc": "Ben ve çalışma arkadaşlarım tarafından geliştirilen; psikometrik özellikleri Türk örneklemleri üzerinde test edilmiş ölçeklerdir.",
-    "detail_citation_original": "Orijinal Ölçek İçin Atıf",
-    "download_form_and_scoring": "Ölçek Formu ve Puanlama Kılavuzu"
+    "detail_citation_original": "Orijinal Ölçek İçin Atıf"
   },
   "news": {
     "title": "Haberler",

@@ -146,19 +146,17 @@ export type Scale = {
   description: { en: string; tr: string };
   item_count?: string;
   subscales?: Subscale[];
-  response_format?: string;
-  target_population?: string;
+  response_format_en?: string;
+  response_format_tr?: string;
+  target_population_en?: string;
+  target_population_tr?: string;
   languages_available?: string[];
   reliability?: {
     en?: string;
     tr?: string;
   };
   validity_notes?: { en: string; tr: string };
-  downloads?: {
-    scale_form?: string;
-    scoring_guide?: string;
-    manual?: string;
-  };
+  document?: string;
   citation: { en: string; tr: string };
   original_citation?: { en: string; tr: string };
   reference_publication?: string;

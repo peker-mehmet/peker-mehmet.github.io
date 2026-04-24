@@ -238,8 +238,10 @@ collections:
               - { name: en, label: English, widget: text, required: false }
               - { name: tr, label: Turkish, widget: text, required: false }
 
-      - { name: response_format,   label: "Yanıt Formatı / Response Format",   widget: string, required: false, hint: "e.g. 5-point Likert (1 = Strongly Disagree … 5 = Strongly Agree)" }
-      - { name: target_population, label: "Hedef Kitle / Target Population", widget: string, required: false, hint: "e.g. Yetişkinler, Üniversite öğrencileri, 18-65 yaş" }
+      - { name: response_format_tr, label: "Yanıt Formatı (TR)", widget: text, required: false }
+      - { name: response_format_en, label: "Response Format (EN)", widget: text, required: false }
+      - { name: target_population_tr, label: "Hedef Kitle (TR)", widget: text, required: false }
+      - { name: target_population_en, label: "Target Population (EN)", widget: text, required: false }
 
       - name: reliability
         label: Reliability Notes
@@ -259,14 +261,12 @@ collections:
           - { name: en, label: English, widget: text, required: false }
           - { name: tr, label: Turkish, widget: text, required: false }
 
-      - name: downloads
-        label: Downloadable Files
-        widget: object
+      - name: document
+        label: "Scale Form & Guide (PDF)"
+        widget: file
         required: false
-        fields:
-          - { name: scale_form,    label: Scale Form,    widget: string, required: false, hint: "Path in /public — e.g. /downloads/scale-form.pdf. If both Scale Form and Scoring Guide are set, they are shown as a single merged download button on the site." }
-          - { name: scoring_guide, label: Scoring Guide, widget: string, required: false, hint: "Path in /public — e.g. /downloads/scoring-guide.pdf. Merged with Scale Form into one download card on the detail page when both are present." }
-          - { name: manual,        label: Manual,        widget: string, required: false }
+        media_folder: /public/downloads/scales
+        public_folder: /downloads/scales
 
       - name: citation
         label: How to Cite

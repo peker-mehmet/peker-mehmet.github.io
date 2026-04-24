@@ -43,8 +43,10 @@
       }
     }
   ],
-  "response_format": "5-point Likert-type scale, from 1 = strongly disagree to 5 = strongly agree/5'li Likert tipi ölçek, 1 = hiç katılmıyorum ile 5 = kesinlikle katılıyorum",
-  "target_population": "Students performing academic tasks; especially suitable for repeated assessment around concrete tasks such as exams, presentations, assignments, and projects. / Akademik görevler yürüten öğrenciler; özellikle sınav, sunum, ödev ve proje gibi somut görevler etrafında tekrarlı ölçümler için uygundur.",
+  "response_format_en": "5-point Likert-type scale, from 1 = strongly disagree to 5 = strongly agree",
+  "response_format_tr": "5'li Likert tipi ölçek, 1 = hiç katılmıyorum ile 5 = kesinlikle katılıyorum",
+  "target_population_en": "Students performing academic tasks; especially suitable for repeated assessment around concrete tasks such as exams, presentations, assignments, and projects.",
+  "target_population_tr": "Akademik görevler yürüten öğrenciler; özellikle sınav, sunum, ödev ve proje gibi somut görevler etrafında tekrarlı ölçümler için uygundur.",
   "reliability": {
     "en": "Reliability was acceptable to strong. Across studies and estimation levels, omega coefficients ranged from .69 to .90. More specifically, within-person reliability ranged from .80 to .87, and the main-study coefficients ranged from .85 to .87 across subscales. Overall, the scale appears to provide good reliability, especially for within-person use.",
     "tr": "Güvenirlik katsayıları kabul edilebilir ile güçlü arasında değişmiştir. Çalışmalar ve farklı kestirim düzeyleri boyunca omega katsayıları .69 ile .90 arasında değişmiştir. Daha özelde, kişi-içi güvenirlik .80 ile .87 arasında; ana çalışmadaki katsayılar ise alt boyutlar boyunca .85 ile .87 arasında bulunmuştur. Genel olarak ölçek, özellikle kişi-içi kullanım için iyi düzeyde güvenirlik göstermektedir."
@@ -53,11 +55,7 @@
     "en": "Validity evidence was supportive and in the expected direction. The final two-factor structure (hesitation and preoccupation) fit the data well and performed better than a one-factor alternative. The scale also showed cross-level isomorphism, meaningful within-person variability, and substantial factor loadings. In addition, its subscales related to theoretically relevant variables as expected: corresponding trait ASO dimensions, procrastination, thought intrusions, conscientiousness, affect, and regulatory depletion. Altogether, the findings provide initial support for factorial and construct validity.",
     "tr": "Geçerlik kanıtları destekleyici ve kuramsal beklentilerle uyumludur. Nihai iki faktörlü yapı (tereddüt ve saplanma) veriye iyi uyum göstermiş ve tek faktörlü alternatife göre daha iyi performans vermiştir. Ölçek ayrıca düzeyler arası izomorfizm, anlamlı kişi-içi değişkenlik ve güçlü faktör yükleri göstermiştir. Buna ek olarak, alt boyutlar kuramsal olarak ilgili değişkenlerle beklenen yönlerde ilişki vermiştir: karşılık gelen trait ASO boyutları, erteleme, düşünce intrüzyonları, sorumluluk, duygulanım ve düzenleyici tükenme. Toplamda bulgular, faktöryel ve yapı geçerliğine ilişkin başlangıç düzeyinde güçlü destek sunmaktadır."
   },
-  "downloads": {
-    "scale_form": "/downloads/scales/ASO_T_Instruction_Form_TR_EN.pdf",
-    "scoring_guide": "",
-    "manual": ""
-  },
+  "document": "/downloads/scales/ASO_T_Instruction_Form_TR_EN.pdf",
   "citation": {
     "en": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8",
     "tr": "Peker, M., & Bağlıcakoğlu, G. (2025). Task-related fluctuations in action-state orientation: Roles of anticipated task difficulty and task-related affect. Motivation and Emotion, 49(2), 103-119. https://doi.org/10.1007/s11031-024-10108-8"
