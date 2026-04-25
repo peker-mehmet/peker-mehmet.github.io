@@ -221,6 +221,14 @@
       "department": "Department of Philosophy",
       "course_en": "Introduction to Psychology",
       "course_tr": "Genel Psikoloji"
+    },
+    {
+      "level": "M.A.",
+      "role": "Lecturer",
+      "institution": "Ege University",
+      "department": "Department of Psychology",
+      "course_en": "Current Research in Industrial and Organizational Psychology",
+      "course_tr": "Endüstri ve Örgüt Psikolojisinde Güncel Araştırmalar"
     }
   ],
   "links": {
