@@ -1,0 +1,66 @@
+{
+  "id": "sbs",
+  "name": {
+    "en": "Safety Behavior Scale",
+    "tr": "Güvenlik Davranışı Ölçeği"
+  },
+  "abbreviation": "SBS",
+  "role": "translated",
+  "construct": {
+    "en": "Degree of performing safety-related work behaviors",
+    "tr": "İş güvenliğiyle ilişkili davranışları gösterme düzeyi"
+  },
+  "year": "2006",
+  "original_authors": [],
+  "adaptation_year": "2022",
+  "original_citation": {
+    "en": "Neal, A., & Griffin, M. A. (2006). A study of the lagged relationships among safety climate, safety motivation, safety behavior, and accidents at the individual and group levels. Journal of Applied Psychology, 91(4), 946–953. https://doi.org/10.1037/0021-9010.91.4.946",
+    "tr": "Neal, A., & Griffin, M. A. (2006). A study of the lagged relationships among safety climate, safety motivation, safety behavior, and accidents at the individual and group levels. Journal of Applied Psychology, 91(4), 946–953. https://doi.org/10.1037/0021-9010.91.4.946"
+  },
+  "description": {
+    "en": "A measure of employees’ safety-related task behaviors and discretionary safety-supporting behaviors.",
+    "tr": "Çalışanların güvenlikle ilgili görev davranışlarını ve güvenliği destekleyen gönüllü davranışlarını ölçen bir ölçek."
+  },
+  "item_count": "6",
+  "subscales": [
+    {
+      "name": "Güvenlik kurallarına uyma/Safety compliance",
+      "item_count": "3",
+      "description": {
+        "en": "Cormplying safety behaviors required to maintain personal and workplace safety.",
+        "tr": "Kişisel ve işyeri güvenliğini sürdürmek için gerekli temel güvenlik kurallarına uyma."
+      }
+    },
+    {
+      "name": "Güvenlik katılımı/Safety participation",
+      "item_count": "3",
+      "description": {
+        "en": "Voluntary behaviors that help develop and support a safer work environment.",
+        "tr": "Daha güvenli bir çalışma ortamının geliştirilmesine ve desteklenmesine yardımcı olan gönüllü davranışlar."
+      }
+    }
+  ],
+  "response_format_tr": "5’li Likert tipi ölçek; 1 = hiç katılmıyorum, 5 = kesinlikle katılıyorum",
+  "response_format_en": "5-point Likert-type scale, from 1 = strongly disagree to 5 = strongly agree",
+  "target_population_tr": "İş güvenliği bağlamındaki çalışanlar",
+  "target_population_en": "Employees in workplace safety contexts",
+  "reliability": {
+    "en": "Cronbach’s alpha = .73 for safety compliance and .70 for safety participation",
+    "tr": "Cronbach alfa = güvenlik kurallarına uyma için .73, güvenlik katılımı için .70"
+  },
+  "validity_notes": {
+    "en": "CFA results supported the distinctiveness of safety compliance and safety participation from the other study constructs.",
+    "tr": "DFA sonuçları güvenlik uyumu ve güvenlik katılımının diğer çalışma değişkenlerinden ayırt edilebilir olduğunu desteklemiştir."
+  },
+  "document": "/downloads/scales/SBS.pdf",
+  "citation": {
+    "en": "Peker, M., Doğru, O. C., & Meşe, G. (2022). Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance. Safety and Health at Work, 13, 192–200. https://doi.org/10.1016/j.shaw.2022.03.006",
+    "tr": "Peker, M., Doğru, O. C., & Meşe, G. (2022). Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance. Safety and Health at Work, 13, 192–200. https://doi.org/10.1016/j.shaw.2022.03.006"
+  },
+  "reference_publication": "PekDogMes2022",
+  "notes": {
+    "en": "In the relevant literature, this construct is also discussed under the broader concept of “safety performance,” in addition to “safety behavior.”",
+    "tr": "Bu yapı, ilgili literatürde “güvenlik davranışı” yanında “güvenlik performansı” kavramı altında da ele alınmaktadır."
+  },
+  "featured": false
+}
