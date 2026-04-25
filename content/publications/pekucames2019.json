@@ -1,24 +1,33 @@
 {
-  "abstract": {
-    "tr": "Bu çalışma, çalışanların işte duygularını yönetme sürecinin gün içinde değişebildiğini ve bu sürecin ne kadar yıpratıcı olacağının iş ortamına da bağlı olduğunu incelemeyi amaçlıyor. Özellikle, kurumun duygusal beklentileri daha az baskın olduğunda ve çalışan kendini kurumun değerleriyle daha uyumlu hissettiğinde, duygusal emeğin olumsuz etkilerinin azalabileceği ve bunun daha iyi performans, daha yüksek işe adanmışlık ve daha az yorgunlukla ilişkili olabileceği öne sürülüyor.",
-    "en": "This study aims to examine how the emotional effort employees make at work can vary from day to day, and how the work environment may shape whether this process becomes more or less draining. In particular, it suggests that when emotional display rules feel less demanding and employees feel more aligned with their organization’s values, emotional labor may have fewer harmful effects and may be linked to better performance, higher work engagement, and less need for recovery."
+  "id": "pekucames2019",
+  "type": "conference",
+  "title": {
+    "en": "The role of display rule saliency and person-organization value fit on emotional labor: A multilevel investigation",
+    "tr": ""
   },
   "authors": [
     "Peker, M.",
     "Uca, B.",
     "Meşe, G."
   ],
-  "featured": false,
+  "authors_abbreviated": "",
+  "year": 2019,
+  "journal": "",
+  "conference": "16th European Congress of Psychology",
+  "publisher": "",
+  "book_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
   "url": "https://ecp2019.ru/doc/Book_of_Abstracts_ecp_2019.pdf",
-  "title": {
-    "en": "The role of display rule saliency and person-organization value fit on emotional labor: A multilevel investigation"
+  "pdf": "",
+  "abstract": {
+    "en": "This study aims to examine how the emotional effort employees make at work can vary from day to day, and how the work environment may shape whether this process becomes more or less draining. In particular, it suggests that when emotional display rules feel less demanding and employees feel more aligned with their organization’s values, emotional labor may have fewer harmful effects and may be linked to better performance, higher work engagement, and less need for recovery.",
+    "tr": "Bu çalışma, çalışanların işte duygularını yönetme sürecinin gün içinde değişebildiğini ve bu sürecin ne kadar yıpratıcı olacağının iş ortamına da bağlı olduğunu incelemeyi amaçlıyor. Özellikle, kurumun duygusal beklentileri daha az baskın olduğunda ve çalışan kendini kurumun değerleriyle daha uyumlu hissettiğinde, duygusal emeğin olumsuz etkilerinin azalabileceği ve bunun daha iyi performans, daha yüksek işe adanmışlık ve daha az yorgunlukla ilişkili olabileceği öne sürülüyor."
   },
   "tags": [
-    "Work and Academic Engagement",
-    "Well-Being in Work and Life"
+    "Emotional Labor"
   ],
-  "type": "conference",
-  "id": "pekucames2019",
-  "conference": "16th European Congress of Psychology",
-  "year": 2019
+  "featured": false
 }
