@@ -1,18 +1,32 @@
 {
-  "featured": false,
-  "title": {
-    "en": "On the horns of a dilemma: How bystander-helping intention is affected by perceived organizational support, relational identification with the supervisor, perceived victim responsibility, and bystander empathy?"
-  },
   "id": "ersoypeker2019",
   "type": "conference",
+  "title": {
+    "en": "On the horns of a dilemma: How bystander-helping intention is affected by perceived organizational support, relational identification with the supervisor, perceived victim responsibility, and bystander empathy?",
+    "tr": ""
+  },
   "authors": [
     "Cem Ersoy, N.",
     "Peker, M."
   ],
+  "authors_abbreviated": "",
+  "year": 2019,
+  "journal": "",
   "conference": "19th European Association of Work and Organizational Psychology Congress",
+  "publisher": "",
+  "book_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "pdf": "",
   "abstract": {
-    "tr": "Bu çalışma, işyerinde zorbalığa uğrayan birine yardım etme isteğinin yalnızca kişisel özelliklere değil, iş ortamına ve kişiler arası ilişkilere de bağlı olduğunu gösteriyor. Bulgular, özellikle empati düzeyi, mağdurun ne kadar sorumlu görüldüğü ve çalışanın yöneticisiyle özdeşleşme düzeyinin, bir görgü tanığının yardım edip etmeyeceğini birlikte etkilediğini ortaya koyuyor.",
-    "en": "This study shows that willingness to help someone being bullied at work depends not only on personal qualities, but also on the workplace context and interpersonal relationships. The findings suggest that empathy, how responsible the victim is seen to be, and how strongly employees identify with their supervisor can work together to shape whether bystanders intend to help."
+    "en": "This study shows that willingness to help someone being bullied at work depends not only on personal qualities, but also on the workplace context and interpersonal relationships. The findings suggest that empathy, how responsible the victim is seen to be, and how strongly employees identify with their supervisor can work together to shape whether bystanders intend to help.",
+    "tr": "Bu çalışma, işyerinde zorbalığa uğrayan birine yardım etme isteğinin yalnızca kişisel özelliklere değil, iş ortamına ve kişiler arası ilişkilere de bağlı olduğunu gösteriyor. Bulgular, özellikle empati düzeyi, mağdurun ne kadar sorumlu görüldüğü ve çalışanın yöneticisiyle özdeşleşme düzeyinin, bir görgü tanığının yardım edip etmeyeceğini birlikte etkilediğini ortaya koyuyor."
   },
-  "year": 2019
+  "tags": [
+    "Leadership and Power"
+  ],
+  "featured": false
 }
