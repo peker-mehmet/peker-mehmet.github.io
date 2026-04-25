@@ -1,0 +1,63 @@
+{
+  "id": "SPANAS",
+  "name": {
+    "en": "State Positive and Negative Affect Schedule",
+    "tr": "Durumluk Pozitif ve Negatif Duygulanım Ölçeği"
+  },
+  "abbreviation": "SPANAS",
+  "role": "translated",
+  "construct": {
+    "en": "Degree of daily positive and negative affect",
+    "tr": "Günlük olumlu ve olumsuz duygulanım düzeyi"
+  },
+  "year": "2000",
+  "original_authors": [],
+  "adaptation_year": "2019",
+  "original_citation": {
+    "en": "Watson, D., Clark, L. A., & Tellegen, A. (1988). Development and validation of brief measures of positive and negative affect: The PANAS scales. Journal of Personality and Social Psychology, 54, 1063-1070. https://doi.org/10.1037/0022-3514.54.6.1063\n\nGençöz, T. (2000). Pozitif ve negatif duygu ölçeği: Geçerlik ve güvenirlik çalışması. Türk Psikoloji Dergisi, 15, 19-26.",
+    "tr": "Watson, D., Clark, L. A., & Tellegen, A. (1988). Development and validation of brief measures of positive and negative affect: The PANAS scales. Journal of Personality and Social Psychology, 54, 1063-1070. https://doi.org/10.1037/0022-3514.54.6.1063\n\nGençöz, T. (2000). Pozitif ve negatif duygu ölçeği: Geçerlik ve güvenirlik çalışması. Türk Psikoloji Dergisi, 15, 19-26."
+  },
+  "description": {
+    "en": "A mood-adjective checklist assessing how strongly individuals experienced daily positive and negative affective states.",
+    "tr": "Bireylerin günlük olumlu ve olumsuz duygulanım durumlarını ne düzeyde yaşadıklarını duygu sıfatları üzerinden ölçer."
+  },
+  "item_count": "20",
+  "subscales": [
+    {
+      "name": "Pozitif Duygulanım/Positive Affect",
+      "item_count": "10",
+      "description": {
+        "en": "Pleasant and activating affective states such as interest, enthusiasm, alertness, and activity.",
+        "tr": "İlgi, heves, dikkat açıklığı ve aktiflik gibi olumlu ve etkinleştirici duygulanım durumları."
+      }
+    },
+    {
+      "name": "Negatif Duygulanım/Negative Affect",
+      "item_count": "10",
+      "description": {
+        "en": "Unpleasant affective states such as distress, guilt, fear, irritability, and nervousness.",
+        "tr": "Sıkıntı, suçluluk, korku, asabilik ve tedirginlik gibi olumsuz duygulanım durumları."
+      }
+    }
+  ],
+  "response_format_tr": "5-point Likert format ranging from 1 = very slightly or not at all to 5 = extremely.",
+  "response_format_en": "1 = çok az veya hiç ile 5 = çok fazla arasında derecelendirilen 5’li Likert format.",
+  "target_population_tr": "Yetişkin katılımcılar",
+  "target_population_en": "Adult participants",
+  "reliability": {
+    "en": "Multilevel reliability values were .84/.98 for positive affect and .82/.97 for negative affect at within-/between-person levels.",
+    "tr": "Çok düzeyli güvenirlik değerleri kişi içi/kişiler arası düzeylerde olumlu duygulanım için .84/.98 ve olumsuz duygulanım için .82/.97’dir."
+  },
+  "validity_notes": {
+    "en": "MCFA provided partial support for the two-factor state structure. RMSEA indicated acceptable fit, whereas CFI, TLI, and SRMR(w) suggested modest fit. Residual covariances between two item pairs were freely estimated.",
+    "tr": "ÇDDFA sonuçları iki faktörlü durumluk yapıya kısmi destek sunmuştur. RMSEA kabul edilebilir uyuma, CFI, TLI ve SRMR(w) ise sınırlı/orta düzeyde uyuma işaret etmektedir. İki madde çifti arasındaki artık değer kovaryansları serbest bırakılmıştır."
+  },
+  "document": "/downloads/scales/SPANAS.pdf",
+  "citation": {
+    "en": "Peker, M. (2019). The buffering role of action-state orientation in emotional labor process: Personality Systems Interaction Theory approach. (Publication No. 616930) [Doctoral dissertation, Ege University].",
+    "tr": "Peker, M. (2019). Duygusal emek sürecinde eylem yöneliminin koruyucu rolü: Kişilik sistemleri etkileşim kuramı yaklaşımı (Yayın No. 616930) [Doktora tezi, Ege Üniversitesi]."
+  },
+  "reference_publication": "",
+  "notes": null,
+  "featured": false
+}
