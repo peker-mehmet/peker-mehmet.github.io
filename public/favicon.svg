@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <!-- Navy background circle -->
-  <circle cx="50" cy="50" r="49" fill="#1e3a5f"/>
-  <!-- Gold inner ring border -->
-  <circle cx="50" cy="50" r="43.5" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
+  <!-- Navy square background with rounded corners -->
+  <rect x="0" y="0" width="100" height="100" rx="15" ry="15" fill="#1e3a5f"/>
+  <!-- Gold inner border, inset ~8% from edges -->
+  <rect x="8" y="8" width="84" height="84" rx="9" ry="9" fill="none" stroke="#c9a84c" stroke-width="2"/>
   <!-- MP text -->
   <text
-    x="50" y="36"
+    x="50" y="40"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="23"
-    font-weight="600"
+    font-size="40"
+    font-weight="bold"
     fill="#c9a84c"
     text-anchor="middle"
     dominant-baseline="middle">MP</text>
   <!-- Gold horizontal divider -->
-  <line x1="30" y1="51" x2="70" y2="51" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Psi symbol -->
+  <line x1="22" y1="55" x2="78" y2="55" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Psi symbol (~40% of MP font size) -->
   <text
-    x="50" y="68"
+    x="50" y="70"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="23"
+    font-size="17"
     fill="#c9a84c"
     text-anchor="middle"
     dominant-baseline="middle">Ψ</text>
