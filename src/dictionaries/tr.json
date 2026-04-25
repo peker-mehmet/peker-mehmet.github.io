@@ -80,7 +80,13 @@
     "graduate": "Yüksek Lisans",
     "undergraduate": "Lisans",
     "lecturer": "Öğretim Görevlisi",
-    "teaching_assistant": "Araştırma Görevlisi"
+    "teaching_assistant": "Araştırma Görevlisi",
+    "generate_cv": "CV Oluştur",
+    "cv_modal_title": "Akademik CV",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!",
+    "download_txt": "İndir (.txt)",
+    "close": "Kapat"
   },
   "research": {
     "title": "Araştırma",

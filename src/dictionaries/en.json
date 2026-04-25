@@ -80,7 +80,13 @@
     "graduate": "Graduate",
     "undergraduate": "Undergraduate",
     "lecturer": "Lecturer",
-    "teaching_assistant": "Teaching Assistant"
+    "teaching_assistant": "Teaching Assistant",
+    "generate_cv": "Generate CV",
+    "cv_modal_title": "Academic CV",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "download_txt": "Download (.txt)",
+    "close": "Close"
   },
   "research": {
     "title": "Research",

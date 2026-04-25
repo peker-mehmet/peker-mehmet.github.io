@@ -3,11 +3,15 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
-import { getSiteConfig, type SiteConfig } from '@/lib/content';
+import {
+  getSiteConfig, getPublications, getScales, getProjects, getCollaborations,
+  type SiteConfig,
+} from '@/lib/content';
 import { buildPageMetadata, personJsonLd, SITE_URL } from '@/lib/metadata';
 import Button from '@/components/ui/Button';
 import SectionTitle, { PageTitle } from '@/components/ui/SectionTitle';
 import BiographySection from '@/components/sections/BiographySection';
+import CVGenerator from '@/components/CVGenerator';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -36,6 +40,12 @@ type AboutDict = {
   undergraduate: string;
   lecturer: string;
   teaching_assistant: string;
+  generate_cv: string;
+  cv_modal_title: string;
+  copy: string;
+  copied: string;
+  download_txt: string;
+  close: string;
 };
 
 // ── Profile photo ─────────────────────────────────────────────────────────────
@@ -358,9 +368,13 @@ export default async function AboutPage({
 }) {
   const lang = params.lang;
 
-  const [dict, config] = await Promise.all([
+  const [dict, config, publications, scales, projects, collaborations] = await Promise.all([
     getDictionary(lang),
     Promise.resolve(getSiteConfig()),
+    Promise.resolve(getPublications()),
+    Promise.resolve(getScales()),
+    Promise.resolve(getProjects()),
+    Promise.resolve(getCollaborations()),
   ]);
 
   const d = (dict as any).about as AboutDict;
@@ -439,24 +453,35 @@ export default async function AboutPage({
                 </div>
               )}
 
-              {/* CV download */}
-              {cvLink && (
-                <Button href={cvLink} variant="gold" size="lg" external>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={1.75}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-4 w-4"
-                    aria-hidden="true"
-                  >
-                    <path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                  </svg>
-                  {d.cv_download}
-                </Button>
-              )}
+              {/* CV actions */}
+              <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
+                {cvLink && (
+                  <Button href={cvLink} variant="gold" size="lg" external>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={1.75}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4"
+                      aria-hidden="true"
+                    >
+                      <path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    {d.cv_download}
+                  </Button>
+                )}
+                <CVGenerator
+                  lang={lang}
+                  config={config}
+                  publications={publications}
+                  scales={scales}
+                  projects={projects}
+                  collaborations={collaborations}
+                  dict={d}
+                />
+              </div>
             </div>
           </div>
         </div>
