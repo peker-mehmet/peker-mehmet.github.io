@@ -1,21 +1,29 @@
 {
-  "abstract": {
-    "tr": "Bu çalışma, bir kelimenin görülmesinin ona anlamca yakın başka bir kelimeyi daha hızlı tanımayı kolaylaştırıp kolaylaştırmadığını 19 farklı dilde inceledi. 25 binden fazla katılımcıdan elde edilen veriler, bu etkinin birçok dilde güvenilir biçimde ortaya çıktığını gösterdi. Ancak etkinin gücü dilden dile değişiyordu. Çalışma, insan zihninin anlam bağlantılarını nasıl kurduğunu daha geniş ve kültürel olarak daha çeşitli bir örneklemle göstermesi açısından önem taşıyor.",
-    "en": "This study examined whether seeing one word helps people recognize a related word more quickly across 19 different languages. Using data from more than 25,000 participants, the researchers showed that this effect is reliable across many languages, but that its strength differs from one language to another. The study is important because it tests a well-known finding in a much larger and more culturally diverse sample than earlier research."
+  "id": "Buchanan2025",
+  "type": "journal",
+  "title": {
+    "en": "Measuring the semantic priming effect across many languages",
+    "tr": ""
   },
   "authors_abbreviated": "Buchanan, E., Cuccolo, K., Heyman, T., van Berkel, N., Coles, N., Iyer, A., … Peker, M., … & Lewis, S.",
-  "pages": "182–201",
-  "featured": false,
+  "year": 2025,
   "journal": "Nature Human Behaviour",
-  "title": {
-    "en": "Measuring the semantic priming effect across many languages"
+  "conference": "",
+  "publisher": "",
+  "book_title": "",
+  "volume": "10",
+  "issue": "",
+  "pages": "182–201",
+  "doi": "10.1038/s41562-025-02254-x",
+  "url": "",
+  "pdf": "",
+  "abstract": {
+    "en": "This study examined whether seeing one word helps people recognize a related word more quickly across 19 different languages. Using data from more than 25,000 participants, the researchers showed that this effect is reliable across many languages, but that its strength differs from one language to another. The study is important because it tests a well-known finding in a much larger and more culturally diverse sample than earlier research.",
+    "tr": "Bu çalışma, bir kelimenin görülmesinin ona anlamca yakın başka bir kelimeyi daha hızlı tanımayı kolaylaştırıp kolaylaştırmadığını 19 farklı dilde inceledi. 25 binden fazla katılımcıdan elde edilen veriler, bu etkinin birçok dilde güvenilir biçimde ortaya çıktığını gösterdi. Ancak etkinin gücü dilden dile değişiyordu. Çalışma, insan zihninin anlam bağlantılarını nasıl kurduğunu daha geniş ve kültürel olarak daha çeşitli bir örneklemle göstermesi açısından önem taşıyor."
   },
   "tags": [
-    "Cross-Cultural and Collaborative Research"
+    "Cross-Cultural and Collaborative Research",
+    "Measurement"
   ],
-  "volume": "10",
-  "type": "journal",
-  "id": "Buchanan2025",
-  "year": 2025,
-  "doi": "10.1038/s41562-025-02254-x"
+  "featured": false
 }
