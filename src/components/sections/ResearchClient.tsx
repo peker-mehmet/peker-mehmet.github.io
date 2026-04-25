@@ -16,6 +16,7 @@ export type ResearchDict = {
   role_pi: string;
   role_co_pi: string;
   role_collaborator: string;
+  role_co_investigator: string;
   status_active: string;
   status_completed: string;
   status_planned: string;
@@ -47,6 +48,7 @@ function roleLabel(role: string, dict: ResearchDict) {
   if (role === 'Principal Investigator') return dict.role_pi;
   if (role === 'Co-PI') return dict.role_co_pi;
   if (role === 'Collaborator') return dict.role_collaborator;
+  if (role === 'Co-Investigator') return dict.role_co_investigator;
   return role;
 }
 
@@ -54,6 +56,7 @@ const ROLE_STYLE: Record<string, string> = {
   'Principal Investigator': 'bg-navy-700 text-white',
   'Co-PI':                  'bg-navy-100 text-navy-700 border border-navy-200',
   'Collaborator':           'bg-slate-100 text-slate-600 border border-slate-200',
+  'Co-Investigator':        'bg-slate-100 text-slate-600 border border-slate-200',
 };
 
 function roleBadgeStyle(role: string) {

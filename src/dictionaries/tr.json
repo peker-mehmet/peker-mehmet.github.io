@@ -99,6 +99,7 @@
     "role_pi": "Yürütücü Araştırmacı",
     "role_co_pi": "Ortak Yürütücü",
     "role_collaborator": "Araştırmacı",
+    "role_co_investigator": "Araştırmacı",
     "status_active": "Devam Ediyor",
     "status_completed": "Tamamlandı",
     "status_planned": "Planlanan",

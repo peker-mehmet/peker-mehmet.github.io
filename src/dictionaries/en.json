@@ -99,6 +99,7 @@
     "role_pi": "Principal Investigator",
     "role_co_pi": "Co-PI",
     "role_collaborator": "Collaborator",
+    "role_co_investigator": "Co-Investigator",
     "status_active": "Active",
     "status_completed": "Completed",
     "status_planned": "Planned",
