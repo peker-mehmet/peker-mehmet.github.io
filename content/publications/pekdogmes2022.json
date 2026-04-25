@@ -1,26 +1,34 @@
 {
-  "abstract": {
-    "tr": "Bu çalışma, işyerinde güvenlik konusunda üst yönetimin verdiği mesajların çalışanların güvenli davranışlarını nasıl etkilediğini inceledi. Bulgular, bu etkinin özellikle çalışanların amirlerinin güvenlik konusunda söyledikleriyle yaptıklarının tutarlı olduğuna inandıklarında daha güçlü olduğunu gösterdi. Yani yöneticiler güvenliği önemli gördüğünü söylemekle kalmayıp bunu davranışlarıyla da gösterdiğinde, çalışanlar güvenliğe daha fazla önem veriyor ve daha güvenli davranıyor. Kısacası, işyerinde güvenlik kültürünün etkili olması için sadece kurallar değil, yöneticilerin güven veren tutarlı davranışları da önemli.",
-    "en": "This study examined how employees’ perceptions of top management’s commitment to safety influence their safety behavior at work. The findings showed that this effect was stronger when employees believed their supervisors were consistent in what they said and did about safety. In other words, when supervisors not only talk about safety but also act accordingly, employees become more motivated about safety and behave more safely. In short, a strong safety culture depends not only on formal policies, but also on supervisors behaving in ways that make those messages credible."
+  "id": "PekDogMes2022",
+  "type": "journal",
+  "title": {
+    "en": "Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance",
+    "tr": ""
   },
-  "pages": "192–200",
   "authors": [
     "Peker, M.",
     "Doğru, O. C.",
     "Meşe, G."
   ],
-  "featured": true,
-  "url": "",
+  "authors_abbreviated": "",
+  "year": 2022,
   "journal": "Safety and Health at Work",
-  "title": {
-    "en": "Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance"
+  "conference": "",
+  "publisher": "",
+  "book_title": "",
+  "volume": "13",
+  "issue": "",
+  "pages": "192–200",
+  "doi": "10.1016/j.shaw.2022.03.006",
+  "url": "",
+  "pdf": "",
+  "abstract": {
+    "en": "This study examined how employees’ perceptions of top management’s commitment to safety influence their safety behavior at work. The findings showed that this effect was stronger when employees believed their supervisors were consistent in what they said and did about safety. In other words, when supervisors not only talk about safety but also act accordingly, employees become more motivated about safety and behave more safely. In short, a strong safety culture depends not only on formal policies, but also on supervisors behaving in ways that make those messages credible.",
+    "tr": "Bu çalışma, işyerinde güvenlik konusunda üst yönetimin verdiği mesajların çalışanların güvenli davranışlarını nasıl etkilediğini inceledi. Bulgular, bu etkinin özellikle çalışanların amirlerinin güvenlik konusunda söyledikleriyle yaptıklarının tutarlı olduğuna inandıklarında daha güçlü olduğunu gösterdi. Yani yöneticiler güvenliği önemli gördüğünü söylemekle kalmayıp bunu davranışlarıyla da gösterdiğinde, çalışanlar güvenliğe daha fazla önem veriyor ve daha güvenli davranıyor. Kısacası, işyerinde güvenlik kültürünün etkili olması için sadece kurallar değil, yöneticilerin güven veren tutarlı davranışları da önemli."
   },
   "tags": [
-    "Occupational Health & Safety"
+    "Workplace Climate",
+    "Leadership and Power"
   ],
-  "volume": "13",
-  "type": "journal",
-  "id": "PekDogMes2022",
-  "year": 2022,
-  "doi": "10.1016/j.shaw.2022.03.006"
+  "featured": true
 }
