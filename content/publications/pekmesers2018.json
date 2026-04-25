@@ -1,22 +1,34 @@
 {
-  "abstract": {
-    "tr": "Bu çalışma, bilinçli olarak fark edilmeyen örtük olumlu ve olumsuz duyguları ölçmeyi amaçlayan IPANAT testinin Türkçe örneklemde ne kadar güvenilir ve geçerli olduğunu incelemeyi amaçlıyor. Kısacası, araştırma Türkçede otomatik ve örtük duygusal süreçleri ölçebilecek uygun bir araç geliştirip değerlendirmeye odaklanıyor.",
-    "en": "This study aims to examine whether the IPANAT, a test designed to measure less conscious implicit positive and negative affect, is a reliable and valid tool in a Turkish sample. In short, it focuses on adapting and evaluating a measure that can capture more automatic emotional processes in Turkish-speaking participants."
+  "id": "pekmesers2018",
+  "type": "conference",
+  "title": {
+    "en": "Psychometric evaluation of implicit positive affect and negative affect test (IPANAT) in a Turkish sample",
+    "tr": ""
   },
   "authors": [
     "Peker, M.",
     "Meşe, G.",
     "Cem Ersoy, N."
   ],
-  "featured": false,
-  "title": {
-    "en": "Psychometric evaluation of implicit positive affect and negative affect test (IPANAT) in a Turkish sample"
+  "authors_abbreviated": "",
+  "year": 2018,
+  "journal": "",
+  "conference": "5th International Symposium on Brain and Cognitive Science",
+  "publisher": "",
+  "book_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "pdf": "",
+  "abstract": {
+    "en": "This study aims to examine whether the IPANAT, a test designed to measure less conscious implicit positive and negative affect, is a reliable and valid tool in a Turkish sample. In short, it focuses on adapting and evaluating a measure that can capture more automatic emotional processes in Turkish-speaking participants.",
+    "tr": "Bu çalışma, bilinçli olarak fark edilmeyen örtük olumlu ve olumsuz duyguları ölçmeyi amaçlayan IPANAT testinin Türkçe örneklemde ne kadar güvenilir ve geçerli olduğunu incelemeyi amaçlıyor. Kısacası, araştırma Türkçede otomatik ve örtük duygusal süreçleri ölçebilecek uygun bir araç geliştirip değerlendirmeye odaklanıyor."
   },
   "tags": [
-    "Measurement"
+    "Measurement",
+    "Emotions and Affect"
   ],
-  "type": "conference",
-  "id": "pekmesers2018",
-  "conference": "5th International Symposium on Brain and Cognitive Science",
-  "year": 2018
+  "featured": false
 }
