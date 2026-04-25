@@ -1,0 +1,46 @@
+{
+  "id": "coa",
+  "name": {
+    "en": "Climate of Authenticity Scale",
+    "tr": "Samim Duygu İklimi Ölçeği"
+  },
+  "abbreviation": "COA",
+  "role": "translated",
+  "construct": {
+    "en": "A work climate that accepts authentic emotional expression",
+    "tr": "Samimi duygusal ifadeyi kabul eden iş iklimi"
+  },
+  "year": "2012",
+  "original_authors": [],
+  "adaptation_year": "2023",
+  "original_citation": {
+    "en": "Grandey, A., Foo, S. C., Groth, M., & Goodwin, R. E. (2012). Free to be you and me: A climate of authenticity alleviates burnout from emotional labor. Journal of Occupational Health Psychology, 17(1), 1–14. https://doi.org/10.1037/a0025102",
+    "tr": "Grandey, A., Foo, S. C., Groth, M., & Goodwin, R. E. (2012). Free to be you and me: A climate of authenticity alleviates burnout from emotional labor. Journal of Occupational Health Psychology, 17(1), 1–14. https://doi.org/10.1037/a0025102"
+  },
+  "description": {
+    "en": "Shared perceptions that genuine emotions can be expressed safely and openly in the work unit.",
+    "tr": "İş biriminde gerçek duyguların güvenli ve açık biçimde ifade edilebildiğine ilişkin paylaşılan algılar."
+  },
+  "item_count": "6",
+  "subscales": [],
+  "response_format_tr": "5-point Likert scale, from 1 = strongly disagree to 5 = strongly agree",
+  "response_format_en": "5’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 5 = Kesinlikle katılıyorum",
+  "target_population_tr": "Working adults in team, department, or work-unit contexts.",
+  "target_population_en": "Takım, departman ya da iş birimi bağlamında çalışan yetişkinler.",
+  "reliability": {
+    "en": "Single-level alpha was .71; multilevel reliability estimates were .60 at the person level and .92 at the work-unit level.",
+    "tr": "Çeviri çalışmasında tek düzeyli alfa .71; çok düzeyli güvenirlik katsayıları kişi düzeyinde .60 ve iş birimi düzeyinde .92 olarak bulunmuştur."
+  },
+  "validity_notes": {
+    "en": "CFA results showed that one item displayed poor psychometric performance and was removed. After this revision, the 6-item version showed very good fit in both single-level and multilevel CFA.",
+    "tr": "CFA sonuçları bir maddenin zayıf psikometrik performans gösterdiğini ortaya koymuş ve bu madde çıkarılmıştır. Bu revizyondan sonra 6 maddelik sürüm hem tek düzeyli hem de çok düzeyli CFA’da çok iyi uyum göstermiştir."
+  },
+  "document": "/downloads/scales/COA.pdf",
+  "citation": {
+    "en": "Peker, M., & Ersoy, N. C. (2023). Disentangling person and work unit level relationships between a climate of authenticity and work engagement: The mediating role of surface acting in interactions with work unit members. Current Psychology, 42, 26317–26330. https://doi.org/10.1007/s12144-022-03683-x",
+    "tr": "Peker, M., & Ersoy, N. C. (2023). Disentangling person and work unit level relationships between a climate of authenticity and work engagement: The mediating role of surface acting in interactions with work unit members. Current Psychology, 42, 26317–26330. https://doi.org/10.1007/s12144-022-03683-x"
+  },
+  "reference_publication": "PekerErsoy2023",
+  "notes": null,
+  "featured": false
+}
