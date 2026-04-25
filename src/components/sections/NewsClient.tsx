@@ -56,7 +56,8 @@ const CATEGORY_ORDER: Category[] = [
 
 function formatDate(dateStr: string): string {
   if (!dateStr) return '';
-  const parts = dateStr.split('-').map(Number);
+  const s = typeof dateStr === 'string' ? dateStr : String(dateStr).slice(0, 10);
+  const parts = s.split('-').map(Number);
   const date = new Date(parts[0], (parts[1] ?? 1) - 1, parts[2] ?? 1);
   return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }

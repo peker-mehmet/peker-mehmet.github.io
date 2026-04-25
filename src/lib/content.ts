@@ -279,6 +279,11 @@ export function getNewsItems(): NewsItem[] {
     .map((f) => {
       const raw = fs.readFileSync(path.join(dir, f), 'utf-8');
       const { data, content } = matter(raw);
+      // gray-matter (js-yaml) auto-parses bare YAML dates (YYYY-MM-DD) as Date objects.
+      // Coerce back to an ISO date string so downstream code can safely call .split().
+      if (data.date instanceof Date) {
+        data.date = data.date.toISOString().slice(0, 10);
+      }
       return { slug: f.replace(/\.md$/, ''), ...data, content } as NewsItem;
     })
     .filter((item) => !!item.date)
