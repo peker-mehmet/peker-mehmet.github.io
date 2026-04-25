@@ -1,0 +1,46 @@
+{
+  "id": "satc",
+  "name": {
+    "en": "Surface Acting Toward Coworkers Scale",
+    "tr": "İş Arkadaşlarına Yönelik Yüzeysel Davranma Ölçeği"
+  },
+  "abbreviation": "SATC",
+  "role": "translated",
+  "construct": {
+    "en": "Degree of suppressing real emotions in coworker interactions",
+    "tr": "İş arkadaşlarıyla etkileşimlerde gerçek duyguları bastırma düzeyi"
+  },
+  "year": "2012",
+  "original_authors": [],
+  "adaptation_year": "2023",
+  "original_citation": {
+    "en": "Ozcelik, H. (2013). An empirical analysis of surface acting in intra-organizational relationships. Journal of Organizational Behavior, 34(3), 291–309. https://doi.org/10.1002/job.1798",
+    "tr": "Ozcelik, H. (2013). An empirical analysis of surface acting in intra-organizational relationships. Journal of Organizational Behavior, 34(3), 291–309. https://doi.org/10.1002/job.1798"
+  },
+  "description": {
+    "en": "Regulating emotional displays toward coworkers by suppressing true feelings and showing emotions that are not genuinely felt.",
+    "tr": "İş arkadaşlarına yönelik duygusal ifadeleri, gerçek duyguları bastırarak ve gerçekte hissedilmeyen duyguları göstererek düzenleme."
+  },
+  "item_count": "5",
+  "subscales": [],
+  "response_format_tr": "5’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 5 = Kesinlikle katılıyorum",
+  "response_format_en": "5-point Likert scale, from 1 = strongly disagree to 5 = strongly agree.",
+  "target_population_tr": "Working adults in coworker or work-unit interaction contexts.",
+  "target_population_en": "İş arkadaşlarıyla ya da iş birimi içinde etkileşim yaşayan çalışan yetişkinler.",
+  "reliability": {
+    "en": "Reliability was acceptable; the single-level alpha was 0.84, and the work-unit-level alpha was .89.",
+    "tr": "Tek düzeyli alfa 0.84, iş birimi düzeyindeki alfa ise .89 olarak raporlanmıştır."
+  },
+  "validity_notes": {
+    "en": "CFA results supported a one-factor structure. The single-level CFA showed acceptable fit, and the multilevel CFA also showed good fit after allowing a residual covariance between Items 4 and 5.",
+    "tr": "Tek düzeyli CFA kabul edilebilir uyum göstermiş, 4. ve 5. maddeler arasında artık kovaryansı tanımlandıktan sonra çok düzeyli CFA da iyi uyum vermiştir."
+  },
+  "document": "/downloads/scales/SATC.pdf",
+  "citation": {
+    "en": "Peker, M., & Ersoy, N. C. (2023). Disentangling person and work unit level relationships between a climate of authenticity and work engagement: The mediating role of surface acting in interactions with work unit members. Current Psychology, 42, 26317–26330. https://doi.org/10.1007/s12144-022-03683-x",
+    "tr": "Peker, M., & Ersoy, N. C. (2023). Disentangling person and work unit level relationships between a climate of authenticity and work engagement: The mediating role of surface acting in interactions with work unit members. Current Psychology, 42, 26317–26330. https://doi.org/10.1007/s12144-022-03683-x"
+  },
+  "reference_publication": "PekerErsoy2023",
+  "notes": null,
+  "featured": false
+}
