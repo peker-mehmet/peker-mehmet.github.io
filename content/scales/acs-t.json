@@ -1,0 +1,74 @@
+{
+  "id": "acs-t",
+  "name": {
+    "en": "Action Control Scale",
+    "tr": "Eylem Kontrolü Ölçeği"
+  },
+  "abbreviation": "ACS-T",
+  "role": "adapted",
+  "construct": {
+    "en": "Individual differences in using volitional abilities to initiate and maintain intended actions",
+    "tr": "Hedefleri başlatma ve sürdürmeyi sağlayan düzenleme becerilerindeki bireysel farklılıklar"
+  },
+  "year": "1994",
+  "original_authors": [],
+  "adaptation_year": "2022",
+  "original_citation": {
+    "en": "Kuhl, J. (1994). Action and state orientation: Psychometric properties of the Action Control Scales (ACS-90). In J. Kuhl & J. Beckmann (Eds.), Volition and personality: Action versus state orientation (pp. 47–59). Hogrefe.",
+    "tr": "Kuhl, J. (1994). Action and state orientation: Psychometric properties of the Action Control Scales (ACS-90). In J. Kuhl & J. Beckmann (Eds.), Volition and personality: Action versus state orientation (pp. 47–59). Hogrefe."
+  },
+  "description": {
+    "en": "Action–state orientation refers to individual differences in using volitional self-regulatory abilities to disengage from goal-interfering thoughts and affect, initiate intended actions under demanding conditions, and maintain goal pursuit until completion.",
+    "tr": "Eylem–durum yönelimi, bireylerin hedefe müdahale eden düşünce ve duygulardan kopma, zorlayıcı koşullarda amaçlanan eylemi başlatma ve hedefi tamamlanana kadar sürdürme gibi iradeye bağlı öz-düzenleme becerilerini kullanmadaki farklılıklarını ifade eder."
+  },
+  "item_count": "23",
+  "subscales": [
+    {
+      "name": "Saplanma-Kopma/Preoccupation-Disengagement",
+      "item_count": "9",
+      "description": {
+        "en": "Ability to disengage from intrusive thoughts and negative affect that interfere with goal pursuit.",
+        "tr": "Hedef gerçekleştirmeyi engelleyen müdahaleci düşünce ve olumsuz duygulardan kopabilme becerisi."
+      }
+    },
+    {
+      "name": "Tereddüt-Başlama/Hesitation-Initiative",
+      "item_count": "8",
+      "description": {
+        "en": "Ability to initiate intended actions, especially under difficult or demanding conditions.",
+        "tr": "Özellikle zorlayıcı koşullarda amaçlanan eylemleri başlatabilme becerisi."
+      }
+    },
+    {
+      "name": "Yılma-Kararlılık/Volatility-Persistence",
+      "item_count": "6",
+      "description": {
+        "en": "Ability to maintain attention and persist in intended actions until completion.",
+        "tr": "Dikkati koruyarak amaçlanan eylemleri tamamlanana kadar sürdürebilme becerisi."
+      }
+    }
+  ],
+  "response_format_tr": "Forced-choice format; each item presents two alternatives, one action-oriented and one state-oriented.",
+  "response_format_en": "Zorunlu seçim formatında, her maddede biri eylem yönelimini, diğeri durum yönelimini yansıtan iki seçenek bulunur.",
+  "target_population_tr": "Adults and university students",
+  "target_population_en": "Yetişkinler ve üniversite öğrencileri",
+  "reliability": {
+    "en": "İnternal consistency was higher for preoccupation and hesitation and lower for volatility. In the revised 23-item form, alpha values were around .73–.77 for preoccupation, .80–.82 for hesitation, and .61–.63 for volatility across studies. Test–retest estimates were also reported.",
+    "tr": "İç tutarlılık saplanma/kopma ve tereddüt/başlama için daha yüksek, yılma/kararlılık için daha düşüktür. Gözden geçirilmiş 23 maddelik formda alfa değerleri çalışmalar arasında saplanma/kopma için yaklaşık .73–.77, tereddüt/başlama için .80–.82, yılma/kararlılık için .61–.63 düzeyindedir. Test–tekrar test bulguları da raporlanmıştır."
+  },
+  "validity_notes": {
+    "en": "CFA results supported the revised 23-item three-factor structure in student and employee samples. Construct validity was supported through associations with achievement motivation, cognitive failures, cognitive emotion regulation, affect, personality traits, and emotional labor variables.",
+    "tr": "DFA sonuçları gözden geçirilmiş 23 maddelik üç faktörlü yapıyı öğrenci ve çalışan örneklemlerinde desteklemiştir. Yapı geçerliği; başarı motivasyonu, bilişsel hatalar, bilişsel duygu düzenleme, duygu durum, kişilik özellikleri ve duygusal emek değişkenleriyle ilişkiler üzerinden desteklenmiştir."
+  },
+  "document": "/downloads/scales/ACS-T.pdf",
+  "citation": {
+    "en": "Peker, M., & Meşe, G. (2022). Psychometric evaluation of the Action Control Scale in Turkish samples and the relationship of action–state orientation with emotional labor. Journal of Personality Assessment, 104(5), 637–649. https://doi.org/10.1080/00223891.2021.1981344",
+    "tr": "Peker, M., & Meşe, G. (2022). Psychometric evaluation of the Action Control Scale in Turkish samples and the relationship of action–state orientation with emotional labor. Journal of Personality Assessment, 104(5), 637–649. https://doi.org/10.1080/00223891.2021.1981344"
+  },
+  "reference_publication": "pekermese2022",
+  "notes": {
+    "en": "The preoccupation/disengagement dimension is also referred to as failure- (or threat) related action-state orientation, the hesitation/initiative dimension as demand-related action-state orientation, and the volatility/persistence dimension as performance-related action-state orientation.",
+    "tr": "Saplanma/kopma boyutu başarısızlıkla (veya tehditle) ilişkili eylem-durum yönelimi, tereddüt/başlama boyutu taleple ilişkili eylem-durum yönelimi, yılma/kararlılık boyutu ise performansla ilişkili eylem-durum yönelimi olarak da adlandırılmaktadır."
+  },
+  "featured": true
+}
