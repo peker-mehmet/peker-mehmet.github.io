@@ -1,0 +1,46 @@
+{
+  "id": "sms",
+  "name": {
+    "en": "Safety Motivation Scale",
+    "tr": "Güvenlik Motivasyonu Ölçeği"
+  },
+  "abbreviation": "SMS",
+  "role": "translated",
+  "construct": {
+    "en": "İş güvenliğini önemli ve çaba göstermeye değer görme düzeyi",
+    "tr": "Seeing workplace safety as important and worth the effort"
+  },
+  "year": "2006",
+  "original_authors": [],
+  "adaptation_year": "2022",
+  "original_citation": {
+    "en": "Neal, A., & Griffin, M. A. (2006). A study of the lagged relationships among safety climate, safety motivation, safety behavior, and accidents at the individual and group levels. Journal of Applied Psychology, 91(4), 946–953. https://doi.org/10.1037/0021-9010.91.4.946",
+    "tr": "Neal, A., & Griffin, M. A. (2006). A study of the lagged relationships among safety climate, safety motivation, safety behavior, and accidents at the individual and group levels. Journal of Applied Psychology, 91(4), 946–953. https://doi.org/10.1037/0021-9010.91.4.946"
+  },
+  "description": {
+    "en": "Employee motivation to invest effort in maintaining and improving safety at work.",
+    "tr": "Çalışanın işyerinde güvenliği sürdürme ve iyileştirme yönünde çaba göstermeye yönelik motivasyonu."
+  },
+  "item_count": "3",
+  "subscales": [],
+  "response_format_tr": "5’li Likert tipi ölçek; 1 = hiç katılmıyorum, 5 = kesinlikle katılıyorum",
+  "response_format_en": "5-point Likert-type scale, from 1 = strongly disagree to 5 = strongly agree",
+  "target_population_tr": "İş güvenliği bağlamındaki çalışanlar",
+  "target_population_en": "Employees in workplace safety contexts",
+  "reliability": {
+    "en": "Cronbach’s alpha = .87",
+    "tr": "Cronbach alpha = .87"
+  },
+  "validity_notes": {
+    "en": "CFA results supported the distinctiveness of safety motivation from safety climate, supervisor behavioral integrity, safety compliance, and safety participation.",
+    "tr": "DFA sonuçları güvenlik motivasyonunun güvenlik iklimi, amirin güvenlik konusundaki davranışsal bütünlüğü, güvenlik uyumu ve güvenlik katılımından ayırt edilebilir olduğunu desteklemiştir."
+  },
+  "document": "/downloads/scales/SMS.pdf",
+  "citation": {
+    "en": "Peker, M., Doğru, O. C., & Meşe, G. (2022). Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance. Safety and Health at Work, 13, 192–200. https://doi.org/10.1016/j.shaw.2022.03.006",
+    "tr": "Peker, M., Doğru, O. C., & Meşe, G. (2022). Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance. Safety and Health at Work, 13, 192–200. https://doi.org/10.1016/j.shaw.2022.03.006"
+  },
+  "reference_publication": "",
+  "notes": null,
+  "featured": false
+}
