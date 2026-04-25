@@ -1,0 +1,43 @@
+{
+  "id": "povc",
+  "name": {
+    "en": "Person–Organization Value Congruence Scale",
+    "tr": "Kişi-Kurum Değer Uyumu Ölçeği"
+  },
+  "abbreviation": "POVC",
+  "role": "translated",
+  "construct": {
+    "en": "Degree of perceived value similarity with the organization",
+    "tr": "Kurumla değer benzerliği algısı düzeyi"
+  },
+  "year": "2002",
+  "original_authors": [],
+  "adaptation_year": "2019",
+  "original_citation": {
+    "en": "Cable, D. M., & DeRue, D. S. (2002). The convergent and discriminant validity of subjective fit perceptions. Journal of Applied Psychology, 87(5), 875–884. https://doi.org/10.1037/0021-9010.87.5.875",
+    "tr": "Cable, D. M., & DeRue, D. S. (2002). The convergent and discriminant validity of subjective fit perceptions. Journal of Applied Psychology, 87(5), 875–884. https://doi.org/10.1037/0021-9010.87.5.875"
+  },
+  "description": {
+    "en": "A subjective fit measure assessing the perceived overlap between employees’ personal values and organizational values.",
+    "tr": "Çalışanın kişisel değerleri ile kurum değerleri arasındaki algılanan örtüşmeyi ölçen öznel uyum ölçeği."
+  },
+  "item_count": "3",
+  "subscales": [],
+  "response_format_tr": "7-point Likert-type scale, from 1 = very little to 7 = very much",
+  "response_format_en": "7’li Likert tipi ölçek; 1 = çok az, 7 = çok fazla",
+  "target_population_tr": "Employees",
+  "target_population_en": "Çalışanlar",
+  "reliability": {
+    "en": "Cronbach’s alpha = .95",
+    "tr": "Cronbach alfa = .95"
+  },
+  "validity_notes": null,
+  "document": "/downloads/scales/POVC.pdf",
+  "citation": {
+    "en": "Peker, M. (2019). The buffering role of action-state orientation in emotional labor process: Personality Systems Interaction Theory approach [Doktora tezi, Ege Üniversitesi].",
+    "tr": "Peker, M. (2019). Duygusal emek sürecinde eylem yöneliminin koruyucu rolü: Kişilik sistemleri etkileşim kuramı yaklaşımı [Doktora tezi, Ege Üniversitesi]."
+  },
+  "reference_publication": "",
+  "notes": null,
+  "featured": false
+}
