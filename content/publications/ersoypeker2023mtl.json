@@ -1,18 +1,32 @@
 {
-  "featured": false,
-  "type": "conference",
   "id": "ersoypeker2023mtl2",
+  "type": "conference",
   "title": {
-    "en": "Implicit leadership theory and motivation to lead as predictors of leader emergence: The role of culture of honor"
+    "en": "Implicit leadership theory and motivation to lead as predictors of leader emergence: The role of culture of honor",
+    "tr": ""
   },
   "authors": [
     "Cem Ersoy, N.",
     "Peker, M."
   ],
+  "authors_abbreviated": "",
   "year": 2023,
+  "journal": "",
   "conference": "21st European Association of Work and Organizational Psychology Congress",
+  "publisher": "",
+  "book_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "pdf": "",
   "abstract": {
-    "tr": "Bu bildiride, çalışanların kendilerini liderliğe ne kadar uygun gördüklerinin, lider olma isteklerini ve başkaları tarafından lider olarak görülmelerini nasıl etkilediği incelenmektedir. Ayrıca araştırma, Türkiye gibi onur kültürlerinde bu ilişkinin daha da güçlenebileceğini; özellikle güç, erkeklik, duyarlılık ya da yaratıcılık gibi liderlikle ilişkilendirilen özelliklerin kültürel değerlerle birlikte daha etkili hale gelebileceğini ele almaktadır.",
-    "en": "This presentation examines how employees’ views of themselves in relation to leadership qualities shape their motivation to lead and, in turn, whether they are seen as leaders by others. It also explores whether this link becomes stronger in an honor culture like Turkey, where traits such as strength, masculinity, sensitivity, and creativity may carry added importance in leadership perceptions."
-  }
+    "en": "This presentation examines how employees’ views of themselves in relation to leadership qualities shape their motivation to lead and, in turn, whether they are seen as leaders by others. It also explores whether this link becomes stronger in an honor culture like Turkey, where traits such as strength, masculinity, sensitivity, and creativity may carry added importance in leadership perceptions.",
+    "tr": "Bu bildiride, çalışanların kendilerini liderliğe ne kadar uygun gördüklerinin, lider olma isteklerini ve başkaları tarafından lider olarak görülmelerini nasıl etkilediği incelenmektedir. Ayrıca araştırma, Türkiye gibi onur kültürlerinde bu ilişkinin daha da güçlenebileceğini; özellikle güç, erkeklik, duyarlılık ya da yaratıcılık gibi liderlikle ilişkilendirilen özelliklerin kültürel değerlerle birlikte daha etkili hale gelebileceğini ele almaktadır."
+  },
+  "tags": [
+    "Leadership and Power"
+  ],
+  "featured": false
 }
