@@ -1,0 +1,49 @@
+{
+  "id": "TMSC",
+  "name": {
+    "en": "Top-management Safety Climate Perceptions Scale",
+    "tr": "Üst Yönetim Güvenlik İklimi Algısı Ölçeği"
+  },
+  "abbreviation": "TMSC",
+  "role": "translated",
+  "construct": {
+    "en": "Perceived top-management priority for workplace safety",
+    "tr": "Üst yönetimin iş güvenliğine verdiği önceliği algılama düzeyi"
+  },
+  "year": "2005",
+  "original_authors": [],
+  "adaptation_year": "2022",
+  "original_citation": {
+    "en": "Zohar, D., & Luria, G. (2005). A multilevel model of safety climate: Cross-Level relationships between organization and Group-Level climates. Journal of Applied Psychology, 90(4), 616–628. https://doi.org/10.1037/0021-9010.90.4.616",
+    "tr": "Zohar, D., & Luria, G. (2005). A multilevel model of safety climate: Cross-Level relationships between organization and Group-Level climates. Journal of Applied Psychology, 90(4), 616–628. https://doi.org/10.1037/0021-9010.90.4.616"
+  },
+  "description": {
+    "en": "Employee perception of the extent to which top management prioritizes workplace safety and supports this priority through decisions, practices, and resources.",
+    "tr": "Üst yönetimin iş güvenliğini ne ölçüde önceliklendirdiğine ve bu önceliği karar, uygulama ve kaynaklarla ne ölçüde desteklediğine ilişkin çalışan algısı."
+  },
+  "item_count": "16",
+  "subscales": [],
+  "response_format_tr": "5’li Likert tipi ölçek; 1 = hiç katılmıyorum, 5 = kesinlikle katılıyorum.",
+  "response_format_en": "5-point Likert-type scale, from 1 = strongly disagree to 5 = strongly agree.",
+  "target_population_tr": "Employees in workplace safety contexts",
+  "target_population_en": "İş güvenliği bağlamındaki çalışanlar",
+  "reliability": {
+    "en": "Cronbach’s alpha = .92.",
+    "tr": "Cronbach alfa değeri = .92"
+  },
+  "validity_notes": {
+    "en": "CFA results supported the distinctiveness of safety climate from supervisor behavioral integrity, safety motivation, safety compliance, and safety participation. The five-factor model fit the data after allowing correlated residuals among selected item pairs.",
+    "tr": "DFA sonuçları güvenlik ikliminin yönetici davranışsal bütünlüğü, güvenlik motivasyonu, güvenlik uyumu ve güvenlik katılımından ayırt edilebilir olduğunu desteklemiştir. Beş faktörlü model, seçili madde çiftleri arasında ilişkili hata terimleri tanımlandıktan sonra veriye uyum göstermiştir."
+  },
+  "document": "/downloads/scales/TMSC.pdf",
+  "citation": {
+    "en": "Peker, M., Doğru, O. C., & Meşe, G. (2022). Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance. Safety and Health at Work, 13, 192–200. https://doi.org/10.1016/j.shaw.2022.03.006",
+    "tr": "Peker, M., Doğru, O. C., & Meşe, G. (2022). Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance. Safety and Health at Work, 13, 192–200. https://doi.org/10.1016/j.shaw.2022.03.006"
+  },
+  "reference_publication": "PekDogMes2022",
+  "notes": {
+    "en": "In Peker et al. (2022), the scale was translated into Turkish and used as employee perceptions of top-management safety climate; a separate Turkish adaptation/validation study was not reported.",
+    "tr": "Peker vd. (2022) çalışmasında ölçek Türkçeye çevrilerek çalışanların üst yönetim güvenlik iklimi algılarını ölçmek için kullanılmış; ayrı bir Türkçe uyarlama/geçerleme çalışması raporlanmamıştır."
+  },
+  "featured": false
+}
