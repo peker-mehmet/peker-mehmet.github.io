@@ -1,28 +1,36 @@
 {
-  "abstract": {
-    "tr": "Bu çalışma, çalışanların duygularını doğal ve samimi biçimde ifade edebildiği bir iş ortamının işe adanmışlıkla nasıl ilişkili olduğunu inceledi. Bulgular, böyle bir ortamda çalışanların gerçek duygularını saklama ya da rol yapma ihtiyacının daha az olduğunu gösterdi. Ayrıca, işe adanmışlıktaki artışın önemli bir kısmı da bu düşük “yüzeysel rol yapma” ihtiyacıyla açıklanıyordu. Kısacası, çalışanlar duygularını bastırmak zorunda kalmadıklarında işlerine daha bağlı olabiliyor.",
-    "en": "This study examined how a work environment that allows people to express their real emotions is related to work engagement. The findings showed that in such environments, employees felt less need to hide their true feelings or fake emotional expressions. This lower need for surface acting also helped explain why employees were more engaged at work. In short, when people do not have to suppress their emotions to fit in, they are more likely to feel engaged in their work."
+  "id": "PekerErsoy2023",
+  "type": "journal",
+  "title": {
+    "en": "Disentangling person and work unit level relationships between a climate of authenticity and work engagement: The mediating role of surface acting in interactions with work unit members",
+    "tr": ""
   },
-  "pages": "26317–26330",
   "authors": [
     "Peker, M.",
     "Cem Ersoy, N."
   ],
-  "featured": false,
+  "authors_abbreviated": "",
+  "year": 2023,
   "journal": "Current Psychology",
-  "title": {
-    "en": "Disentangling person and work unit level relationships between a climate of authenticity and work engagement: The mediating role of surface acting in interactions with work unit members"
+  "conference": "",
+  "publisher": "",
+  "book_title": "",
+  "volume": "42",
+  "issue": "",
+  "pages": "26317–26330",
+  "doi": "10.1007/s12144-022-03683-x",
+  "url": "",
+  "pdf": "",
+  "abstract": {
+    "en": "This study examined how a work environment that allows people to express their real emotions is related to work engagement. The findings showed that in such environments, employees felt less need to hide their true feelings or fake emotional expressions. This lower need for surface acting also helped explain why employees were more engaged at work. In short, when people do not have to suppress their emotions to fit in, they are more likely to feel engaged in their work.",
+    "tr": "Bu çalışma, çalışanların duygularını doğal ve samimi biçimde ifade edebildiği bir iş ortamının işe adanmışlıkla nasıl ilişkili olduğunu inceledi. Bulgular, böyle bir ortamda çalışanların gerçek duygularını saklama ya da rol yapma ihtiyacının daha az olduğunu gösterdi. Ayrıca, işe adanmışlıktaki artışın önemli bir kısmı da bu düşük “yüzeysel rol yapma” ihtiyacıyla açıklanıyordu. Kısacası, çalışanlar duygularını bastırmak zorunda kalmadıklarında işlerine daha bağlı olabiliyor."
   },
   "tags": [
     "Emotional Labor",
-    "Authentic Workplace Climate",
+    "Workplace Climate",
     "Work and Academic Engagement",
     "Multilevel Modeling",
     "Self-Regulation and Emotion Regulation"
   ],
-  "volume": "42",
-  "type": "journal",
-  "id": "PekerErsoy2023",
-  "year": 2023,
-  "doi": "10.1007/s12144-022-03683-x"
+  "featured": false
 }
