@@ -37,6 +37,11 @@
   70%       { transform: translate(-15px, -10px) scale(0.96); }
 }
 
+@keyframes hero-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
 /* Platform-branded profile pills — each pill sets --pill-hover-bg and
    --pill-hover-text as inline CSS variables; hover reads them here.    */
 .profile-pill {

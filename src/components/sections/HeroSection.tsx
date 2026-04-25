@@ -3,6 +3,7 @@ import { type Locale } from '@/lib/i18n';
 import { type SiteConfig, type Publication, type Scale, type Project, type Collaboration } from '@/lib/content';
 import Button from '@/components/ui/Button';
 import CVGenerator from '@/components/CVGenerator';
+import HeroScrollHint from '@/components/sections/HeroScrollHint';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -410,6 +411,11 @@ export default function HeroSection({ lang, config, dict, publications, scales, 
           </div>
 
         </div>
+      </div>
+
+      {/* Scroll hint */}
+      <div className="relative z-10">
+        <HeroScrollHint />
       </div>
 
       {/* Bottom fade into next section */}
