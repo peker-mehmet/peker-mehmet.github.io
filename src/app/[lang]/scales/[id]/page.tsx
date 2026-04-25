@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
 import { getScales, type Scale } from '@/lib/content';
-import { buildPageMetadata } from '@/lib/metadata';
+import { buildPageMetadata, SITE_URL } from '@/lib/metadata';
 import { PageTitle } from '@/components/ui/SectionTitle';
 import SectionTitle from '@/components/ui/SectionTitle';
 import CopyCitationButton from '@/components/ui/CopyCitationButton';
@@ -32,12 +32,34 @@ export async function generateMetadata({
   const { lang, id } = params;
   const scale = getScales().find((s) => s.id === id);
   if (!scale) return {};
-  const name = scale.name[lang] || scale.name.en;
-  const construct = scale.construct?.[lang] || scale.construct?.en || '';
-  const description = construct
-    ? `${construct} — ${scale.description[lang] || scale.description.en}`
-    : (scale.description[lang] || scale.description.en);
-  return buildPageMetadata({ lang, path: `/scales/${id}`, title: name, description });
+
+  const name       = scale.name[lang] || scale.name.en;
+  const abbr       = scale.abbreviation || '';
+  const construct  = scale.construct?.[lang] || scale.construct?.en || '';
+  const rawDesc    = scale.description[lang] || scale.description.en;
+  const population = lang === 'tr'
+    ? (scale.target_population_tr || '')
+    : (scale.target_population_en || '');
+
+  // "ASO-T | Akademik Stres Ölçeği | Mehmet Peker"
+  const title = [abbr, name, 'Mehmet Peker'].filter(Boolean).join(' | ');
+
+  // Compact description with context cues, max 155 chars
+  const fullDesc = [construct, population, rawDesc].filter(Boolean).join(' — ');
+  const description = fullDesc.length > 155 ? fullDesc.slice(0, 152) + '...' : fullDesc;
+
+  const roleTermTr = scale.role === 'developed' ? 'geliştirilen ölçek'
+    : scale.role === 'adapted' ? 'uyarlanan ölçek' : 'çevrilen ölçek';
+  const roleTermEn = scale.role === 'developed' ? 'developed scale'
+    : scale.role === 'adapted' ? 'adapted scale' : 'translated scale';
+  const keywords = [
+    scale.name.en, scale.name.tr, abbr,
+    'Mehmet Peker', 'ölçek', 'scale', 'psikolojik ölçek', 'psychological scale',
+    construct, roleTermTr, roleTermEn, population,
+  ].filter(Boolean);
+
+  const base = buildPageMetadata({ lang, path: `/scales/${id}`, title, description, type: 'article' });
+  return { ...base, keywords };
 }
 
 // ── Helper components ─────────────────────────────────────────────────────────
@@ -129,8 +151,31 @@ export default async function ScaleDetailPage({
   const doiMatch = citation.match(/https?:\/\/doi\.org\/[^\s]+/);
   const doiUrl = doiMatch ? doiMatch[0] : null;
 
+  // JSON-LD structured data (Dataset schema)
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: [scale.abbreviation, name].filter(Boolean).join(' — '),
+    description: scale.description[lang] || scale.description.en,
+    creator: { '@type': 'Person', name: 'Mehmet Peker', url: SITE_URL },
+    inLanguage: ['tr', 'en'],
+    keywords: [
+      scale.name.en, scale.name.tr, scale.abbreviation,
+      scale.construct?.en, scale.construct?.tr,
+      scale.target_population_en, scale.target_population_tr,
+    ].filter(Boolean).join(', '),
+    url: `${SITE_URL}/${lang}/scales/${scale.id}`,
+    ...(scale.year ? { dateCreated: String(scale.year) } : {}),
+    ...(scale.adaptation_year ? { dateModified: String(scale.adaptation_year) } : {}),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* ── Page header ─────────────────────────────────────────── */}
       <PageTitle
         eyebrow={scale.abbreviation ? `${scale.abbreviation} · ${construct}` : construct}
