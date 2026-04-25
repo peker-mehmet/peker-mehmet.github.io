@@ -1,42 +1,47 @@
 {
-  "contact": {
-    "note": {
-      "en": "I aim to respond to all messages within five business days. For scale-related requests, please indicate the purpose of use and your institutional affiliation in your message.",
-      "tr": "Tüm iletilere beş iş günü içinde yanıt vermeye özen göstermekteyim. Ölçek taleplerinizde lütfen kullanım amacınızı ve kurumsal bağlantınızı belirtiniz."
+  "owner": {
+    "name": {
+      "full": "Mehmet Peker",
+      "display": "M. Peker"
+    },
+    "title": {
+      "en": "Associate Professor",
+      "tr": "Doçent Doktor"
+    },
+    "position": {
+      "en": "Researcher in Work and Organizational Psychology",
+      "tr": "İş ve Örgüt Psikolojisi Araştırmacısı"
     }
   },
-  "research_interests": {
-    "en": [
-      "Emotional Labor",
-      "Action–State Orientation",
-      "Self-Regulation and Emotion Regulation",
-      "Well-Being in Work and Life",
-      "Work and Academic Engagement",
-      "Workplace Climate",
-      "Occupational Health & Safety",
-      "Measurement",
-      "Longitudinal Research Methods",
-      "Multilevel Modeling",
-      "Emotions and Affect",
-      "Cross-Cultural and Collaborative Research"
-    ],
-    "tr": [
-      "Duygusal Emek",
-      "Eylem–Durum Yönelimi",
-      "Öz-Düzenleme ve Duygu Düzenleme",
-      "İşte ve Yaşamda İyi Oluş",
-      "İşe ve Akademik Çalışmalara Adanmışlık",
-      "Samimi Duygu İklimi",
-      "İş Yeri İklimi",
-      "Ölçme",
-      "Boylamsal Araştırma Yöntemleri",
-      "Çok Düzeyli Modelleme",
-      "Duygular ve Duygulamım",
-      "Kültürlerarası ve İşbirlikli Araştırma"
-    ],
-    "__note": "Shown as a bullet list on the About and Research pages. Keep each item short (3–6 words)."
+  "institution": {
+    "name": {
+      "en": "Ege University",
+      "tr": "Ege Üniversitesi"
+    },
+    "department": {
+      "en": "Department of Psychology",
+      "tr": "Psikoloji Bölümü"
+    },
+    "faculty": {
+      "en": "Faculty of Letters",
+      "tr": "Edebiyat Fakültesi"
+    },
+    "address": {
+      "en": "Ege University, Department of Psychology, 35100, Izmir, Türkiye",
+      "tr": "Ege Üniversitesi, Psikoloji Bölümü, 35100, İzmir, Türkiye"
+    },
+    "office": {
+      "en": "Faculty of Letters Building, Floor 3",
+      "tr": "Edebiyat Fakültesi Binası, Kat 3"
+    }
   },
-  "__instructions": "This is the central configuration file for your academic website. Fill in your own details below. Delete all __note keys when you are done. Bilingual fields use { 'en': '...', 'tr': '...' } — fill in both languages.",
+  "photo": {
+    "profile": "/images/profile.jpeg",
+    "alt": {
+      "en": "Photo of Mehmet Peker",
+      "tr": "Fotoğraf: Mehmet Peker"
+    }
+  },
   "bio": {
     "short": {
       "en": "Mehmet Peker is an Associate Professor of Psychology at Ege University. His research broadly focuses on work and organizational psychology, motivation and self-regulation, and employee well-being. He collaborates with academic institutions and industry partners on applied psychological research. This website presents Mehmet Peker’s research, academic work, and professional activities.",
@@ -56,6 +61,39 @@
         "Akademik çalışmalarının yanı sıra, oyunlaştırılmış kişilik değerlendirmesi ve iş yeri güvenliği gibi konularda sektör ortaklarıyla uygulamalı psikoloji projeleri yürütmektedir. Çeşitli uluslararası dergilerin hakemlik süreçlerine katkıda bulunmakta, Ege Üniversitesi'nde Erasmus koordinatörlüğü görevini üstlenmekte ve Ege Üniversitesi Endüstri ve Örgüt Psikolojisi Çalışma Grubu'nun kurucu üyeleri arasında yer almaktadır. Lisans ve lisansüstü düzeyde endüstri-örgüt psikolojisi, istatistiksel modelleme ve sosyal psikoloji dersleri vermektedir."
       ]
     }
+  },
+  "research_interests": {
+    "en": [
+      "Emotional Labor",
+      "Action–State Orientation",
+      "Self-Regulation and Emotion Regulation",
+      "Well-Being in Work and Life",
+      "Work and Academic Engagement",
+      "Workplace Climate",
+      "Occupational Health & Safety",
+      "Measurement",
+      "Longitudinal Research Methods",
+      "Multilevel Modeling",
+      "Emotions and Affect",
+      "Cross-Cultural and Collaborative Research",
+      "Leadership and Power"
+    ],
+    "tr": [
+      "Duygusal Emek",
+      "Eylem–Durum Yönelimi",
+      "Öz-Düzenleme ve Duygu Düzenleme",
+      "İşte ve Yaşamda İyi Oluş",
+      "İşe ve Akademik Çalışmalara Adanmışlık",
+      "Samimi Duygu İklimi",
+      "İş Yeri İklimi",
+      "Ölçme",
+      "Boylamsal Araştırma Yöntemleri",
+      "Çok Düzeyli Modelleme",
+      "Duygular ve Duygulamım",
+      "Kültürlerarası ve İşbirlikli Araştırma",
+      "Liderlik ve Güç"
+    ],
+    "__note": "Shown as a bullet list on the About and Research pages. Keep each item short (3–6 words)."
   },
   "education": [
     {
@@ -187,63 +225,20 @@
       "course_tr": "Genel Psikoloji"
     }
   ],
-  "photo": {
-    "profile": "/images/profile.jpeg",
-    "alt": {
-      "en": "Photo of Mehmet Peker",
-      "tr": "Fotoğraf: Mehmet Peker"
-    }
-  },
-  "owner": {
-    "name": {
-      "full": "Mehmet Peker",
-      "display": "M. Peker"
-    },
-    "title": {
-      "en": "Associate Professor",
-      "tr": "Doçent Doktor"
-    },
-    "position": {
-      "en": "Researcher in Work and Organizational Psychology",
-      "tr": "İş ve Örgüt Psikolojisi Araştırmacısı"
-    }
-  },
-  "institution": {
-    "name": {
-      "en": "Ege University",
-      "tr": "Ege Üniversitesi"
-    },
-    "department": {
-      "en": "Department of Psychology",
-      "tr": "Psikoloji Bölümü"
-    },
-    "faculty": {
-      "en": "Faculty of Letters",
-      "tr": "Edebiyat Fakültesi"
-    },
-    "address": {
-      "en": "Ege University, Department of Psychology, 35100, Izmir, Türkiye",
-      "tr": "Ege Üniversitesi, Psikoloji Bölümü, 35100, İzmir, Türkiye"
-    },
-    "office": {
-      "en": "Faculty of Letters Building, Floor 3",
-      "tr": "Edebiyat Fakültesi Binası, Kat 3"
-    }
-  },
   "links": {
-    "google_scholar": "https://scholar.google.com.tr/citations?user=OZ-nc14AAAAJ&hl=tr",
-    "researchgate": "https://www.researchgate.net/profile/Mehmet-Peker?ev=hdr_xprf",
-    "__cv_tr_note": "Turkish CV. Leave same as cv or empty string if you have only one version.",
-    "yoksis": "",
-    "cv_tr": "/downloads/MPeker_CV-ENG.pdf",
-    "unisis": "https://unisis.ege.edu.tr/researcher=mehmet.peker",
-    "phone": "+90 232 311 2077",
-    "cv": "/downloads/MPeker_CV-ENG.pdf",
-    "twitter": "",
-    "orcid": "https://orcid.org/0000-0002-9837-892X",
     "email": "mehmet.peker@ege.edu.tr",
-    "__cv_note": "Path to your CV PDF in /public/downloads/. Provide separate paths per language or use one for both.",
-    "linkedin": "https://www.linkedin.com/in/mehmet-peker-a3467a86/"
+    "phone": "+90 232 311 2077",
+    "google_scholar": "https://scholar.google.com.tr/citations?user=OZ-nc14AAAAJ&hl=tr",
+    "orcid": "https://orcid.org/0000-0002-9837-892X",
+    "researchgate": "https://www.researchgate.net/profile/Mehmet-Peker?ev=hdr_xprf",
+    "unisis": "https://unisis.ege.edu.tr/researcher=mehmet.peker",
+    "yoksis": "",
+    "linkedin": "https://www.linkedin.com/in/mehmet-peker-a3467a86/",
+    "twitter": "",
+    "cv": "/downloads/MPeker_CV-ENG.pdf",
+    "cv_tr": "/downloads/MPeker_CV-ENG.pdf",
+    "__cv_tr_note": "Turkish CV. Leave same as cv or empty string if you have only one version.",
+    "__cv_note": "Path to your CV PDF in /public/downloads/. Provide separate paths per language or use one for both."
   },
   "languages": [
     {
@@ -266,5 +261,12 @@
         "tr": "İleri Düzey (C1)"
       }
     }
-  ]
+  ],
+  "contact": {
+    "note": {
+      "en": "I aim to respond to all messages within five business days. For scale-related requests, please indicate the purpose of use and your institutional affiliation in your message.",
+      "tr": "Tüm iletilere beş iş günü içinde yanıt vermeye özen göstermekteyim. Ölçek taleplerinizde lütfen kullanım amacınızı ve kurumsal bağlantınızı belirtiniz."
+    }
+  },
+  "__instructions": "This is the central configuration file for your academic website. Fill in your own details below. Delete all __note keys when you are done. Bilingual fields use { 'en': '...', 'tr': '...' } — fill in both languages."
 }
