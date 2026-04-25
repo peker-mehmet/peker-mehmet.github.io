@@ -1,0 +1,74 @@
+{
+  "id": "sels",
+  "name": {
+    "en": "State Emotional Labor Scale",
+    "tr": "Durumluk Duygusal Emek Ölçeği"
+  },
+  "abbreviation": "SELS",
+  "role": "translated",
+  "construct": {
+    "en": "Degree of daily emotional labor in customer interactions",
+    "tr": "Müşteri etkileşimlerinde günlük sergilenen duygusal emek düzeyi"
+  },
+  "year": "2012",
+  "original_authors": [],
+  "adaptation_year": "2019",
+  "original_citation": {
+    "en": "Diefendorff, J. M., Croyle, M. H., & Gosserand, R. H. (2005). The dimensionality and antecedents of emotional labor strategies. Journal of Vocational Behavior, 66(2), 339–357. https://doi.org/10.1016/j.jvb.2004.02.001\n\nBasım, H. N., & Beğenirbaş, M. (2012). Çalışma yaşamında duygusal emek: Bir ölçek uyarlama çalışması. Yönetim Ve Ekonomi Dergisi, 19(1), 77-90. https://izlik.org/JA58BB62UU",
+    "tr": "Diefendorff, J. M., Croyle, M. H., & Gosserand, R. H. (2005). The dimensionality and antecedents of emotional labor strategies. Journal of Vocational Behavior, 66(2), 339–357. https://doi.org/10.1016/j.jvb.2004.02.001\n\nBasım, H. N., & Beğenirbaş, M. (2012). Çalışma yaşamında duygusal emek: Bir ölçek uyarlama çalışması. Yönetim Ve Ekonomi Dergisi, 19(1), 77-90. https://izlik.org/JA58BB62UU"
+  },
+  "description": {
+    "en": "Daily emotional labor strategies used by employees to regulate felt or displayed emotions during customer interactions, including surface acting, deep acting, and naturally felt emotional displays.",
+    "tr": "Çalışanların müşteri etkileşimlerinde hissettikleri ya da sergiledikleri duyguları düzenleme biçimlerini günlük düzeyde ölçer; yüzeysel davranma, derin davranma ve doğal duygu gösterimlerini kapsar."
+  },
+  "item_count": "13",
+  "subscales": [
+    {
+      "name": "Yüzeysel Davranma/Surface Acting",
+      "item_count": "6",
+      "description": {
+        "en": "Pretending or changing outward emotional expressions toward customers.",
+        "tr": "Müşterilere yönelik dışsal duygu ifadelerini değiştirme ya da rol yapma."
+      }
+    },
+    {
+      "name": "Derin Davranma/",
+      "item_count": "Deep 4Acting",
+      "description": {
+        "en": "Trying to actually experience the emotions that should be displayed to customers.",
+        "tr": "Müşterilere gösterilmesi gereken duyguları gerçekten yaşamaya çalışma."
+      }
+    },
+    {
+      "name": "Doğal Duygular/Naturally Felt Emotions",
+      "item_count": "3",
+      "description": {
+        "en": "Displaying sincere and naturally felt emotions toward customers.",
+        "tr": "Müşterilere samimi ve doğal biçimde hissedilen duyguları gösterme."
+      }
+    }
+  ],
+  "response_format_tr": "5-point Likert format ranging from 1 = never to 5 = always.",
+  "response_format_en": "1 = hiçbir zaman ile 5 = her zaman arasında derecelendirilen 5’li Likert format.",
+  "target_population_tr": "Employees who interact with customers, patients, or students.",
+  "target_population_en": "Müşteri, hasta ya da öğrenci etkileşimi olan çalışanlar.",
+  "reliability": {
+    "en": "Multilevel reliability values were .82/.96 for surface acting, .79/.98 for deep acting, and .86/.99 for natural emotions at within-/between-person levels.",
+    "tr": "Çok düzeyli güvenirlik değerleri kişi içi/kişiler arası düzeylerde yüzeysel davranma için .82/.96, derin davranma için .79/.98 ve doğal duygular için .86/.99’dur."
+  },
+  "validity_notes": {
+    "en": "Multilevel CFA results indicated that the state-adapted scale structure fit the data.",
+    "tr": "Çok düzeyli doğrulayıcı faktör analizi sonuçları, durumluk uyarlanan ölçek yapısının veriye uyum gösterdiğini ortaya koymuştur."
+  },
+  "document": "",
+  "citation": {
+    "en": "Peker, M. (2019). The buffering role of action-state orientation in emotional labor process: Personality Systems Interaction Theory approach (Publication No. 616930) [Doctoral dissertation, Ege University].",
+    "tr": "Peker, M. (2019). Duygusal emek sürecinde eylem yöneliminin koruyucu rolü: Kişilik Sistemleri Etkileşim Kuramı yaklaşımı (Yayın No. 616930) [Doktora tezi, Ege Üniversitesi]."
+  },
+  "reference_publication": "",
+  "notes": {
+    "en": "Peker (2019) prepared occupation-specific forms by using student/school, patient/institution, and customer/company wording. The analytic model focused on surface acting and deep acting. \n\nThe original Emotional Labor Scale developed by Diefendorff et al. (2005) consisted of 14 items. In the Turkish adaptation study, one item was removed because its factor loadings on two factors were too close to each other, leaving a 13-item Turkish form with three subscales: surface acting, deep acting, and naturally felt emotions (Basım & Beğenirbaş, 2012). The state/daily version used in Peker’s doctoral dissertation followed this Turkish adapted form by adding “today” to the beginning of the items (Peker, 2019).",
+    "tr": "Peker (2019) çalışmasında öğretmenler, hemşireler ve beyaz yaka çalışanlar için öğrenci/okul, hasta/kurum ve müşteri/şirket ifadeleriyle mesleğe özgü formlar hazırlanmıştır. Analitik modelde yüzeysel davranma ve derin davranma boyutlarına odaklanılmıştır.\n\nDiefendorff ve arkadaşları (2005) tarafından geliştirilen Duygusal Emek Ölçeği özgün formda 14 maddeden oluşmaktadır. Türkçe uyarlama çalışmasında bir madde, iki faktörde birbirine çok yakın yük değerleri verdiği için ölçekten çıkarılmış ve Türkçe form yüzeysel rol yapma, derinden rol yapma ve doğal duygular olmak üzere üç alt boyutlu 13 maddelik yapı ile kullanılmıştır (Basım & Beğenirbaş, 2012). Peker’in doktora tezinde kullanılan durumluk/günlük form da bu Türkçe uyarlamayı takip etmiş ve maddelerin başına “bugün” ifadesi eklenerek uygulanmıştır (Peker, 2019)."
+  },
+  "featured": false
+}
