@@ -1,0 +1,63 @@
+{
+  "id": "sads",
+  "name": {
+    "en": "State Affective Delivery Performance Scale",
+    "tr": "Durumluk Duygu Performansı Ölçeği"
+  },
+  "abbreviation": "SADS",
+  "role": "translated",
+  "construct": {
+    "en": "Degree of warm and friendly emotional display in daily service interactions",
+    "tr": "Günlük hizmet etkileşimlerinde sıcak ve arkadaşça duygu gösterimi düzeyi"
+  },
+  "year": "2003",
+  "original_authors": [],
+  "adaptation_year": "2019",
+  "original_citation": {
+    "en": "Grandey, A. A. (2003). When “the show must go on”: Surface acting and deep acting as determinants of emotional exhaustion and peer-rated service delivery. Academy of Management Journal, 46, 86-96. https://doi.org/10.5465/30040678",
+    "tr": "Grandey, A. A. (2003). When “the show must go on”: Surface acting and deep acting as determinants of emotional exhaustion and peer-rated service delivery. Academy of Management Journal, 46, 86-96. https://doi.org/10.5465/30040678"
+  },
+  "description": {
+    "en": "Daily performance of socially appropriate, warm, and sincere emotional displays toward customers.",
+    "tr": "Gün içinde müşterilere yönelik sosyal olarak uygun, sıcak ve içten duygu gösterimi."
+  },
+  "item_count": "9",
+  "subscales": [
+    {
+      "name": "Duygu Performansı/Affective Delivery",
+      "item_count": "6",
+      "description": {
+        "en": "Displaying warm, friendly, and appropriate emotions toward customers.",
+        "tr": "Müşterilere sıcak, arkadaşça ve uygun duygular sergileme."
+      }
+    },
+    {
+      "name": "Kendini kaybetme-karakterden çıkma/Breaking Character",
+      "item_count": "3",
+      "description": {
+        "en": "Showing negative emotions when sad or angry during customer interactions.",
+        "tr": "Müşteri etkileşimlerinde üzgün ya da kızgın olduğunda bu duyguları dışa vurma."
+      }
+    }
+  ],
+  "response_format_tr": "1 = hiç katılmıyorum ile 5 = tamamen katılıyorum arasında derecelendirilen 5’li Likert format.",
+  "response_format_en": "5-point Likert format ranging from 1 = strongly disagree to 5 = strongly agree.",
+  "target_population_tr": "Müşteri, hasta ya da öğrenci etkileşimi olan çalışanlar.",
+  "target_population_en": "Employees who interact with customers, patients, or students.",
+  "reliability": {
+    "en": "Multilevel reliability values were .89/.98 for affective delivery and .67/.83 for breaking character at within-/between-person levels.",
+    "tr": "Çok düzeyli güvenirlik değerleri kişi içi/kişiler arası düzeylerde duygu performansı için .89/.98 ve kendini kaybetme için .67/.83’tür."
+  },
+  "validity_notes": {
+    "en": "Multilevel CFA results indicated that the state-adapted scale structure fit the data.",
+    "tr": "Çok düzeyli doğrulayıcı faktör analizi sonuçları, durumluk uyarlanan ölçek yapısının veriye uyum gösterdiğini ortaya koymuştur."
+  },
+  "document": "/downloads/scales/SADS.pdf",
+  "citation": {
+    "en": "Peker, M. (2019). The buffering role of action-state orientation in emotional labor process: Personality Systems Interaction Theory approach. (Publication No. 616930) [Doctoral dissertation, Ege University].",
+    "tr": "Peker, M. (2019). Duygusal emek sürecinde eylem yöneliminin koruyucu rolü: Kişilik sistemleri etkileşim kuramı yaklaşımı (Yayın No. 616930) [Doktora tezi, Ege Üniversitesi]."
+  },
+  "reference_publication": "",
+  "notes": null,
+  "featured": false
+}
