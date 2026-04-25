@@ -1,0 +1,46 @@
+{
+  "id": "SBIS",
+  "name": {
+    "en": "Supervisor Behavioral Integrity for Safety Scale",
+    "tr": "Yöneticinin Güvenliğe İlişkin Söz-Eylem Tutarlılığı Ölçeği"
+  },
+  "abbreviation": "SBIS",
+  "role": "translated",
+  "construct": {
+    "en": "Perceived alignment between the supervisor’s safety-related words and actions",
+    "tr": "Yöneticinin güvenlikle ilgili sözleri ve davranışları arasındaki algılanan uyum"
+  },
+  "year": "2012",
+  "original_authors": [],
+  "adaptation_year": "2022",
+  "original_citation": {
+    "en": "Leroy, H., Dierynck, B., Anseel, F., Simons, T., Halbesleben, J. R. B., McCaughey, D., Savage, G. T., & Sels, L. (2012). Behavioral integrity for safety, priority of safety, psychological safety, and patient safety: A team-level study. Journal of Applied Psychology, 97(6), 1273–1281. https://doi.org/10.1037/a0030076",
+    "tr": "Leroy, H., Dierynck, B., Anseel, F., Simons, T., Halbesleben, J. R. B., McCaughey, D., Savage, G. T., & Sels, L. (2012). Behavioral integrity for safety, priority of safety, psychological safety, and patient safety: A team-level study. Journal of Applied Psychology, 97(6), 1273–1281. https://doi.org/10.1037/a0030076"
+  },
+  "description": {
+    "en": "Employee perception of whether the supervisor’s safety-related promises, instructions, and practices are consistent.",
+    "tr": "Çalışanın, amirinin güvenlikle ilgili söz, talimat ve uygulamalarının ne ölçüde tutarlı olduğuna ilişkin algısı."
+  },
+  "item_count": "6",
+  "subscales": [],
+  "response_format_tr": "5’li Likert tipi ölçek; 1 = hiç katılmıyorum, 5 = kesinlikle katılıyorum",
+  "response_format_en": "5-point Likert-type scale, from 1 = completely disagree to 5 = completely agree",
+  "target_population_tr": "Employees in workplace safety contexts",
+  "target_population_en": "İş güvenliği bağlamındaki çalışanlar",
+  "reliability": {
+    "en": "Cronbach’s alpha was .87.",
+    "tr": "Cronbach alfa değeri .87’dir."
+  },
+  "validity_notes": {
+    "en": "CFA results supported the distinctiveness of supervisor behavioral integrity for safety from top-management safety climate, safety motivation, safety compliance, and safety participation.",
+    "tr": "DFA sonuçları amirin güvenlik konusundaki davranışsal bütünlüğünün üst yönetim güvenlik iklimi, güvenlik motivasyonu, güvenlik uyumu ve güvenlik katılımından ayırt edilebilir olduğunu desteklemiştir."
+  },
+  "document": "/downloads/scales/SBIS.pdf",
+  "citation": {
+    "en": "Peker, M., Doğru, O. C., & Meşe, G. (2022). Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance. Safety and Health at Work, 13, 192–200. https://doi.org/10.1016/j.shaw.2022.03.006",
+    "tr": "Peker, M., Doğru, O. C., & Meşe, G. (2022). Role of supervisor behavioral integrity for safety on the relationship between top-management safety climate, safety motivation and safety performance. Safety and Health at Work, 13, 192–200. https://doi.org/10.1016/j.shaw.2022.03.006"
+  },
+  "reference_publication": "PekDogMes2022",
+  "notes": null,
+  "featured": false
+}
