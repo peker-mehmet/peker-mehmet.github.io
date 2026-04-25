@@ -1,19 +1,35 @@
 {
-  "featured": false,
   "id": "pekmes2024",
   "type": "conference",
   "title": {
-    "tr": "Samimi duygu iklimi algısından işteki ilişki ihtiyacı doyumuna: Duygu düzenleme beklentileri ve duygu paylaşımlarının aracı rolleri",
-    "en": "From the perception of climate of authenticity to the relationship need satisfaction at work: The mediating roles of emotion regulation expectations and emotion sharing"
+    "en": "From the perception of climate of authenticity to the relationship need satisfaction at work: The mediating roles of emotion regulation expectations and emotion sharing",
+    "tr": "Samimi duygu iklimi algısından işteki ilişki ihtiyacı doyumuna: Duygu düzenleme beklentileri ve duygu paylaşımlarının aracı rolleri"
   },
   "authors": [
     "Peker, M.",
     "Meşe, G."
   ],
+  "authors_abbreviated": "",
   "year": 2024,
+  "journal": "",
   "conference": "1st Congress of Industrial and Organizational Psychology",
+  "publisher": "",
+  "book_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "pdf": "",
   "abstract": {
-    "tr": "Bu çalışma, çalışanların duygularını samimi biçimde paylaşabildiği bir iş ortamının, özellikle olumlu duyguların paylaşımı üzerinden kişiler arası yakınlık ve bağlılık hissini güçlendirdiğini gösteriyor. Bulgular, pozitif duygu paylaşımlarının ilişki ihtiyacını desteklediğini, negatif duygu paylaşımlarının ise aynı ölçüde belirleyici olmadığını ortaya koyuyor.",
-    "en": "This study shows that a workplace climate where employees can express emotions authentically helps strengthen feelings of closeness and connection, especially through the sharing of positive emotions. The findings suggest that positive emotion sharing supports relational need satisfaction, whereas negative emotion sharing does not play the same clear role."
-  }
+    "en": "This study shows that a workplace climate where employees can express emotions authentically helps strengthen feelings of closeness and connection, especially through the sharing of positive emotions. The findings suggest that positive emotion sharing supports relational need satisfaction, whereas negative emotion sharing does not play the same clear role.",
+    "tr": "Bu çalışma, çalışanların duygularını samimi biçimde paylaşabildiği bir iş ortamının, özellikle olumlu duyguların paylaşımı üzerinden kişiler arası yakınlık ve bağlılık hissini güçlendirdiğini gösteriyor. Bulgular, pozitif duygu paylaşımlarının ilişki ihtiyacını desteklediğini, negatif duygu paylaşımlarının ise aynı ölçüde belirleyici olmadığını ortaya koyuyor."
+  },
+  "tags": [
+    "Workplace Climate",
+    "Emotions and Affect",
+    "Self-Regulation and Emotion Regulation",
+    "Well-Being in Work and Life"
+  ],
+  "featured": false
 }
