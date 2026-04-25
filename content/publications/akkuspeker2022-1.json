@@ -1,19 +1,32 @@
 {
-  "featured": false,
   "id": "Akkuşpeker2022",
-  "title": {
-    "tr": "Olumlu Değerlendirilme Korkusu ve Yalnızlık Arasındaki İlişkinin İncelenmesi",
-    "en": "Investigating the association between fear of positive evaluation and loneliness"
-  },
   "type": "conference",
-  "conference": "International Ege Congress on Social Sciences & Humanities",
+  "title": {
+    "en": "Investigating the association between fear of positive evaluation and loneliness",
+    "tr": "Olumlu Değerlendirilme Korkusu ve Yalnızlık Arasındaki İlişkinin İncelenmesi"
+  },
   "authors": [
     "Akkuş, K.",
     "Peker, M."
   ],
+  "authors_abbreviated": "",
+  "year": 2022,
+  "journal": "",
+  "conference": "International Ege Congress on Social Sciences & Humanities",
+  "publisher": "",
+  "book_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "pdf": "",
   "abstract": {
-    "tr": "Bu çalışma, insanların yalnızca olumsuz değil, olumlu değerlendirilmekten de kaygı duyabildiğini ve bunun yalnızlıkla ilişkili olabileceğini inceliyor. Bulgular, başkaları tarafından olumlu görülmekten rahatsız olmanın, depresyon belirtileri ve olumsuz değerlendirilme korkusu hesaba katılsa bile daha yüksek yalnızlıkla bağlantılı olduğunu gösteriyor. Kısacası, ilgi görmek ya da beğenilmekten duyulan rahatsızlık da insanların yakın ilişki kurmasını zorlaştırabilir.",
-    "en": "This study examines whether being afraid of positive evaluation—not just negative evaluation—may be linked to loneliness. The findings show that discomfort with being seen positively by others was associated with greater loneliness, even after accounting for depression and fear of negative evaluation. In short, feeling uneasy about praise or approval may also make it harder for people to build close and satisfying relationships."
+    "en": "This study examines whether being afraid of positive evaluation—not just negative evaluation—may be linked to loneliness. The findings show that discomfort with being seen positively by others was associated with greater loneliness, even after accounting for depression and fear of negative evaluation. In short, feeling uneasy about praise or approval may also make it harder for people to build close and satisfying relationships.",
+    "tr": "Bu çalışma, insanların yalnızca olumsuz değil, olumlu değerlendirilmekten de kaygı duyabildiğini ve bunun yalnızlıkla ilişkili olabileceğini inceliyor. Bulgular, başkaları tarafından olumlu görülmekten rahatsız olmanın, depresyon belirtileri ve olumsuz değerlendirilme korkusu hesaba katılsa bile daha yüksek yalnızlıkla bağlantılı olduğunu gösteriyor. Kısacası, ilgi görmek ya da beğenilmekten duyulan rahatsızlık da insanların yakın ilişki kurmasını zorlaştırabilir."
   },
-  "year": 2022
+  "tags": [
+    "Well-Being in Work and Life"
+  ],
+  "featured": false
 }
