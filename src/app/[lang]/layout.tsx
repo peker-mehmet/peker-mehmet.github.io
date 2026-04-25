@@ -43,6 +43,15 @@ export async function generateMetadata({
       template: `%s | ${dict.nav.site_name}`,
       default: dict.nav.site_name,
     },
+    icons: {
+      icon: [
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+      ],
+      apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+    },
     openGraph: {
       siteName: dict.nav.site_name,
       images: [{ url: ogImage, width: 1200, height: 630 }],
