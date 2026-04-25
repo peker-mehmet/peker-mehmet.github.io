@@ -1,28 +1,30 @@
 {
-  "active": true,
   "id": "inci2025",
   "organization": {
     "en": "İnci GS Yuasa Akü Sanayi ve Ticaret Anonim Şirketi",
     "tr": "İnci GS Yuasa Akü Sanayi ve Ticaret Anonim Şirketi"
   },
   "type": "industry",
+  "active": true,
   "period_start": "2025",
+  "period_end": "",
   "description": {
     "en": "This collaboration covers the use of artificial intelligence and machine learning–supported analyses to examine how employees’ psychosocial characteristics and work-related behaviors are associated with safety behaviors and to develop predictive models based on these factors.",
     "tr": "Bu işbirliği, çalışanların psikososyal özellikleri ve işle ilişkili davranışlarının güvenlik davranışlarıyla nasıl ilişkili olduğunu incelemek ve bu faktörlere dayalı makine öğrenmesi destekli tahmin modelleri geliştirmek amacıyla yapay zekâ temelli analizlerin kullanılmasını kapsamaktadır."
   },
   "outputs": [
     {
-      "en": "Çalışanların psikososyal özellikleri ve işle ilişkili davranışlarına dayanarak güvenlik davranışlarını öngören bir makine öğrenmesi modeli.",
-      "tr": "A machine learning model that estimates safety behaviors based on employees’ psychosocial characteristics and work-related behaviors."
+      "en": "A machine learning model that estimates safety behaviors based on employees’ psychosocial characteristics and work-related behaviors.",
+      "tr": "Çalışanların psikososyal özellikleri ve işle ilişkili davranışlarına dayanarak güvenlik davranışlarını öngören bir makine öğrenmesi modeli."
     },
     {
-      "tr": "Güvenli ya da riskli işyeri davranışlarıyla en güçlü biçimde ilişkili psikososyal etmenleri ortaya koyan analitik rapor.",
-      "en": "An analytical report identifying the psychosocial factors most strongly associated with safer or riskier workplace behaviors."
+      "en": "An analytical report identifying the psychosocial factors most strongly associated with safer or riskier workplace behaviors.",
+      "tr": "Güvenli ya da riskli işyeri davranışlarıyla en güçlü biçimde ilişkili psikososyal etmenleri ortaya koyan analitik rapor."
     },
     {
-      "tr": "Elde edilen bulgulara dayalı olarak güvenlik eğitimleri, müdahaleleri ve önleme stratejileri için somut öneriler.",
-      "en": "Practical recommendations for improving safety interventions, training, and prevention strategies based on model findings."
+      "en": "Practical recommendations for improving safety interventions, training, and prevention strategies based on model findings.",
+      "tr": "Elde edilen bulgulara dayalı olarak güvenlik eğitimleri, müdahaleleri ve önleme stratejileri için somut öneriler."
     }
-  ]
+  ],
+  "website": ""
 }
