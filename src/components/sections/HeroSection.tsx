@@ -141,14 +141,14 @@ function ProfilePhoto({ config, lang }: { config: SiteConfig; lang: Locale }) {
           animation: 'orb-drift-slow 18s linear infinite',
         }}
       />
-      <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden
+      <div className="relative w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden
                       border-4 border-white shadow-card-lg ring-2 ring-gold-400/30 ring-offset-4 ring-offset-white">
         {!isPlaceholder ? (
           <Image
             src={config.photo.profile}
             alt={config.photo.alt[lang]}
             fill
-            sizes="(max-width: 640px) 224px, (max-width: 1024px) 256px, 288px"
+            sizes="(max-width: 640px) 240px, (max-width: 1024px) 288px, 320px"
             className="object-cover"
             priority
           />
@@ -299,7 +299,7 @@ export default function HeroSection({ lang, config, dict, publications, scales, 
       </div>
 
       {/* ── Content ──────────────────────────────────────────────────── */}
-      <div className="container-main section relative z-10">
+      <div className="container-main section !pt-10 lg:!pt-14 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* ── Text column ──────────────────────────────────────────── */}

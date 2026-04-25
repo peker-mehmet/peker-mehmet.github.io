@@ -107,6 +107,8 @@ function NewsRow({
 export default function NewsSection({ lang, news, dict }: NewsSectionProps) {
   const itemsToShow = news.slice(0, 3);
 
+  if (itemsToShow.length === 0) return null;
+
   return (
     <section className="bg-white border-y border-warm-200" aria-labelledby="news-heading">
       <div className="container-main section">

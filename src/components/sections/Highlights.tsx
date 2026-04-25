@@ -88,7 +88,7 @@ function PublicationCard({
   const isExternal = !pub.pdf || pub.doi || pub.url;
 
   return (
-    <Card as="article" variant="default" padding="md" className="flex flex-col h-full group">
+    <Card as="article" variant="default" padding="md" className="flex flex-col h-full group hover:-translate-y-1 hover:shadow-md transition-all duration-200">
 
       {/* Type badge + year */}
       <div className="flex items-center justify-between gap-2 mb-3">
@@ -183,7 +183,7 @@ function ScaleCard({
   const hasDocument = Boolean(scale.document);
 
   return (
-    <Card as="article" variant="default" padding="md" className="flex flex-col h-full group">
+    <Card as="article" variant="default" padding="md" className="flex flex-col h-full group hover:-translate-y-1 hover:shadow-md transition-all duration-200">
 
       {/* Name + abbreviation */}
       <div className="flex items-start justify-between gap-2 mb-3">
