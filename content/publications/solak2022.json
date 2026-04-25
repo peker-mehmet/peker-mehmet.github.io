@@ -1,26 +1,35 @@
 {
-  "abstract": {
-    "tr": "Bu çalışma, COVID-19 aşısına karşı tereddüdün ve aşı olma niyetinin hangi psikolojik eğilimlerle ilişkili olduğunu inceledi. Bulgular, mikroplardan kaçınma eğilimi yüksek kişilerin daha fazla kesinlik ihtiyacı duyduğunu, bunun da aşı tereddüdünü artırarak aşı olma niyetini düşürdüğünü gösterdi. Buna karşılık, kendini hastalıklara yakalanmaya daha açık gören kişiler aşı olmaya daha istekliydi. Kısacası, hastalıktan korunma isteği her zaman aşıya yöneltmiyor; bu isteğin nasıl düşünüldüğü de sonucu değiştiriyor.",
-    "en": "This study examined the psychological factors linked to COVID-19 vaccine hesitancy and willingness to get vaccinated. The findings showed that people with stronger germ aversion had a greater need for certainty, which increased vaccine hesitancy and in turn lowered vaccination intention. In contrast, people who saw themselves as more likely to get sick were more willing to be vaccinated. In short, concern about disease does not always lead to vaccination; how that concern is processed also matters."
+  "id": "solak2022",
+  "type": "journal",
+  "title": {
+    "en": "Linking the behavioral immune system to COVID-19 vaccination intention: The mediating role of the need for cognitive closure and vaccine hesitancy",
+    "tr": ""
   },
-  "pages": "e111245",
   "authors": [
     "Solak, Ç.",
     "Peker-Dural, H.",
     "Karlıdağ, S.",
     "Peker, M."
   ],
-  "featured": false,
+  "authors_abbreviated": "",
+  "year": 2022,
   "journal": "Personality and Individual Differences",
-  "title": {
-    "en": "Linking the behavioral immune system to COVID-19 vaccination intention: The mediating role of the need for cognitive closure and vaccine hesitancy"
+  "conference": "",
+  "publisher": "",
+  "book_title": "",
+  "volume": "185",
+  "issue": "",
+  "pages": "e111245",
+  "doi": "10.1016/j.paid.2021.111245",
+  "url": "",
+  "pdf": "",
+  "abstract": {
+    "en": "This study examined the psychological factors linked to COVID-19 vaccine hesitancy and willingness to get vaccinated. The findings showed that people with stronger germ aversion had a greater need for certainty, which increased vaccine hesitancy and in turn lowered vaccination intention. In contrast, people who saw themselves as more likely to get sick were more willing to be vaccinated. In short, concern about disease does not always lead to vaccination; how that concern is processed also matters.",
+    "tr": "Bu çalışma, COVID-19 aşısına karşı tereddüdün ve aşı olma niyetinin hangi psikolojik eğilimlerle ilişkili olduğunu inceledi. Bulgular, mikroplardan kaçınma eğilimi yüksek kişilerin daha fazla kesinlik ihtiyacı duyduğunu, bunun da aşı tereddüdünü artırarak aşı olma niyetini düşürdüğünü gösterdi. Buna karşılık, kendini hastalıklara yakalanmaya daha açık gören kişiler aşı olmaya daha istekliydi. Kısacası, hastalıktan korunma isteği her zaman aşıya yöneltmiyor; bu isteğin nasıl düşünüldüğü de sonucu değiştiriyor."
   },
   "tags": [
-    "Well-Being in Work and Life"
+    "Well-Being in Work and Life",
+    "Cross-Cultural and Collaborative Research"
   ],
-  "volume": "185",
-  "type": "journal",
-  "id": "solak2022",
-  "year": 2022,
-  "doi": "10.1016/j.paid.2021.111245"
+  "featured": false
 }
