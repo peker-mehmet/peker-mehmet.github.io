@@ -5,6 +5,8 @@ import {
   getSiteConfig,
   getPublications,
   getScales,
+  getProjects,
+  getCollaborations,
   getNewsItems,
 } from '@/lib/content';
 import { buildPageMetadata, personJsonLd, SITE_URL } from '@/lib/metadata';
@@ -56,11 +58,13 @@ export default async function HomePage({
 }) {
   const lang = params.lang;
 
-  const [dict, config, publications, scales, news] = await Promise.all([
+  const [dict, config, publications, scales, projects, collaborations, news] = await Promise.all([
     getDictionary(lang),
     Promise.resolve(getSiteConfig()),
     Promise.resolve(getPublications()),
     Promise.resolve(getScales()),
+    Promise.resolve(getProjects()),
+    Promise.resolve(getCollaborations()),
     Promise.resolve(getNewsItems()),
   ]);
 
@@ -81,7 +85,15 @@ export default async function HomePage({
       />
 
       {/* 1 ── Hero */}
-      <HeroSection lang={lang} config={config} dict={dict} />
+      <HeroSection
+        lang={lang}
+        config={config}
+        dict={dict}
+        publications={publications}
+        scales={scales}
+        projects={projects}
+        collaborations={collaborations}
+      />
 
       {/* 2 ── Research Interests */}
       <ResearchInterests lang={lang} config={config} dict={dict} />

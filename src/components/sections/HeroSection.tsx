@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { type Locale } from '@/lib/i18n';
-import { type SiteConfig } from '@/lib/content';
+import { type SiteConfig, type Publication, type Scale, type Project, type Collaboration } from '@/lib/content';
 import Button from '@/components/ui/Button';
+import CVGenerator from '@/components/CVGenerator';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -15,6 +16,12 @@ type HeroDict = {
     google_scholar: string;
     orcid: string;
     researchgate: string;
+    generate_cv: string;
+    cv_modal_title: string;
+    copy: string;
+    copied: string;
+    download_txt: string;
+    close: string;
   };
 };
 
@@ -22,6 +29,10 @@ type HeroSectionProps = {
   lang: Locale;
   config: SiteConfig;
   dict: HeroDict;
+  publications: Publication[];
+  scales: Scale[];
+  projects: Project[];
+  collaborations: Collaboration[];
 };
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -174,7 +185,7 @@ function GoldAccent() {
 
 // ── HeroSection ───────────────────────────────────────────────────────────────
 
-export default function HeroSection({ lang, config, dict }: HeroSectionProps) {
+export default function HeroSection({ lang, config, dict, publications, scales, projects, collaborations }: HeroSectionProps) {
   const { owner, institution, bio, links } = config;
 
   const isDefaultName = owner.name.full === 'Your Full Name';
@@ -347,15 +358,24 @@ export default function HeroSection({ lang, config, dict }: HeroSectionProps) {
               )}
             </div>
 
-            {/* ── CV download ──────────────────────────────────────────── */}
-            {cvLink && (
-              <div className="mt-5">
+            {/* ── CV actions ───────────────────────────────────────────── */}
+            <div className="mt-5 flex flex-wrap gap-3">
+              {cvLink && (
                 <Button href={cvLink} variant="gold" size="lg" external>
                   <DownloadIcon />
                   {dict.home.cv_download}
                 </Button>
-              </div>
-            )}
+              )}
+              <CVGenerator
+                lang={lang}
+                config={config}
+                publications={publications}
+                scales={scales}
+                projects={projects}
+                collaborations={collaborations}
+                dict={dict.about}
+              />
+            </div>
 
             {/* ── Academic profile pills ───────────────────────────────── */}
             {profileLinks.length > 0 && (
