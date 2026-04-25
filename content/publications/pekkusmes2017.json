@@ -1,19 +1,33 @@
 {
-  "featured": false,
   "id": "pekkusmes2017",
   "type": "conference",
   "title": {
-    "en": "Relationship of diversity climate perception and person-organization fit"
+    "en": "Relationship of diversity climate perception and person-organization fit",
+    "tr": ""
   },
   "authors": [
     "Peker, M.",
     "Kuşçu, F.",
     "Meşe, G."
   ],
+  "authors_abbreviated": "",
   "year": 2017,
+  "journal": "",
   "conference": "15th European Congress of Psychology",
+  "publisher": "",
+  "book_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "pdf": "",
   "abstract": {
-    "tr": "Bu çalışma, çalışanların çeşitlilik konusundaki bakış açılarının yöneticilerinkiyle ne kadar uyumlu olduğunun işyerindeki tutumlarını nasıl etkilediğini inceliyor. Temel beklenti, bu uyum arttıkça çalışanların kuruma daha fazla güvenmesi ve işten ayrılma niyetinin azalması, uyumsuzluk arttıkça ise tersinin görülmesidir.",
-    "en": "This study examines how the match between employees’ and supervisors’ views on diversity may shape workplace attitudes. The main expectation is that greater alignment will be linked to more organizational trust and lower intention to leave, whereas mismatch will be associated with the opposite pattern."
-  }
+    "en": "This study examines how the match between employees’ and supervisors’ views on diversity may shape workplace attitudes. The main expectation is that greater alignment will be linked to more organizational trust and lower intention to leave, whereas mismatch will be associated with the opposite pattern.",
+    "tr": "Bu çalışma, çalışanların çeşitlilik konusundaki bakış açılarının yöneticilerinkiyle ne kadar uyumlu olduğunun işyerindeki tutumlarını nasıl etkilediğini inceliyor. Temel beklenti, bu uyum arttıkça çalışanların kuruma daha fazla güvenmesi ve işten ayrılma niyetinin azalması, uyumsuzluk arttıkça ise tersinin görülmesidir."
+  },
+  "tags": [
+    "Workplace Climate"
+  ],
+  "featured": false
 }
