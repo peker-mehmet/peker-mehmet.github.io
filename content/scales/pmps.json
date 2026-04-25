@@ -1,0 +1,49 @@
+{
+  "id": "pmps",
+  "name": {
+    "en": "Preference for the Merit Principle Scale",
+    "tr": "Liyakat İlkesi Tercihi Ölçeği"
+  },
+  "abbreviation": "PMPS",
+  "role": "adapted",
+  "construct": {
+    "en": "Degree of endorsing merit-based resource allocation",
+    "tr": "Liyakate dayalı kaynak dağıtımını benimseme düzeyi"
+  },
+  "year": "1999",
+  "original_authors": [],
+  "adaptation_year": "2016",
+  "original_citation": {
+    "en": "Davey, L. M., Bobocel, D. R., Hing, L. S. S., & Zanna, M. P. (1999). Preference for the merit principle scale: an individual difference measure of distributive justice preferences. Social Justice Research, 12(3), 223–240. https://doi.org/10.1023/a:1022148418210",
+    "tr": "Davey, L. M., Bobocel, D. R., Hing, L. S. S., & Zanna, M. P. (1999). Preference for the merit principle scale: an individual difference measure of distributive justice preferences. Social Justice Research, 12(3), 223–240. https://doi.org/10.1023/a:1022148418210"
+  },
+  "description": {
+    "en": "A measure of individual preference for distributing resources according to people’s contributions and qualifications.",
+    "tr": "Kaynakların bireylerin katkı ve niteliklerine göre dağıtılmasını tercih etme eğilimini ölçen bir ölçek."
+  },
+  "item_count": "8",
+  "subscales": [],
+  "response_format_tr": "7’li Likert tipi ölçek; 1 = hiç katılmıyorum, 7 = kesinlikle katılıyorum",
+  "response_format_en": "7-point Likert-type scale, from 1 = strongly disagree to 7 = strongly agree",
+  "target_population_tr": "Adult participants",
+  "target_population_en": "Yetişkin katılımcılar",
+  "reliability": {
+    "en": "THe Turkish form showed Cronbach’s alpha of .75. Item-total correlations ranged from .35 to .52, inter-item correlations ranged from .12 to .46, and test–retest reliability was .73.",
+    "tr": "Türkçe formda Cronbach alfa katsayısı .75 olarak hesaplanmıştır. Madde-toplam korelasyonları .35 ile .52, maddeler arası korelasyonlar .12 ile .46 arasında değişmiş; test-tekrar test güvenirliği .73 olarak bulunmuştur."
+  },
+  "validity_notes": {
+    "en": "CFA supported a one-factor 8-item Turkish form after removing seven items from the original 15-item form. The final model showed acceptable fit, and factor loadings ranged from .41 to .64.",
+    "tr": "DFA sonuçları, özgün 15 maddelik formdan yedi madde çıkarıldıktan sonra tek faktörlü 8 maddelik Türkçe formu desteklemiştir. Son model kabul edilebilir uyum göstermiş ve faktör yükleri .41 ile .64 arasında değişmiştir."
+  },
+  "document": "/downloads/scales/PMPS.pdf",
+  "citation": {
+    "en": "Özeralp, K., Peker, M., & Meşe, G. (2016, September 5–7). Liyakat İlkesi Tercihi Ölçeği’nin (LİTÖ) Türkçe uyarlama çalışması [Turkish adaptation of the Preference for the Merit Principle Scale]. [Poster presentation]. 19th National Congress of Psychology, İzmir, Turkey.",
+    "tr": "Özeralp, K., Peker, M., & Meşe, G. (2016, September 5–7). Liyakat İlkesi Tercihi Ölçeği’nin (LİTÖ) Türkçe uyarlama çalışması [Turkish adaptation of the Preference for the Merit Principle Scale]. [Poster presentation]. 19th National Congress of Psychology, İzmir, Turkey."
+  },
+  "reference_publication": "",
+  "notes": {
+    "en": "The original scale was developed as a 15-item one-factor measure. In the Turkish adaptation, Items 1, 9, 10, 11, 12, 13, and 14 were removed; the retained items were 2, 3, 4, 5, 6, 7, 8, and 15.",
+    "tr": "Özgün ölçek 15 maddelik tek faktörlü bir ölçüm aracı olarak geliştirilmiştir. Türkçe uyarlamada 1, 9, 10, 11, 12, 13 ve 14. maddeler çıkarılmış; 2, 3, 4, 5, 6, 7, 8 ve 15. maddeler korunmuştur."
+  },
+  "featured": false
+}
