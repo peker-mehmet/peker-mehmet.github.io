@@ -23,6 +23,8 @@ export type ScalesDict = {
   section_adapted: string;
   section_translated: string;
   scales_unit: string;
+  tab_all: string;
+  tab_all_desc: string;
   tab_adapted: string;
   tab_adapted_desc: string;
   tab_translated: string;
@@ -32,7 +34,7 @@ export type ScalesDict = {
   [key: string]: string;
 };
 
-type Tab = 'adapted' | 'translated' | 'developed';
+type Tab = 'all' | 'adapted' | 'translated' | 'developed';
 
 type Props = {
   scales: Scale[];
@@ -128,19 +130,18 @@ function ScaleCard({ scale, lang, dict }: { scale: Scale; lang: Locale; dict: Sc
 
 export default function ScalesClient({ scales, lang, dict }: Props) {
   const counts = useMemo(() => ({
+    all:        scales.length,
     adapted:    scales.filter(s => s.role === 'adapted').length,
     translated: scales.filter(s => s.role === 'translated').length,
     developed:  scales.filter(s => s.role === 'developed').length,
   }), [scales]);
 
-  // Default to the first non-empty tab in order: adapted → translated → developed
-  const [activeTab, setActiveTab] = useState<Tab>(() =>
-    counts.adapted > 0 ? 'adapted' : counts.translated > 0 ? 'translated' : 'developed'
-  );
+  const [activeTab, setActiveTab] = useState<Tab>('all');
   const [search, setSearch] = useState('');
 
   const TABS: { id: Tab; label: string; desc: string }[] = (
     [
+      { id: 'all'        as Tab, label: dict.tab_all,        desc: dict.tab_all_desc },
       { id: 'adapted'    as Tab, label: dict.tab_adapted,    desc: dict.tab_adapted_desc },
       { id: 'translated' as Tab, label: dict.tab_translated, desc: dict.tab_translated_desc },
       { id: 'developed'  as Tab, label: dict.tab_developed,  desc: dict.tab_developed_desc },
@@ -148,7 +149,7 @@ export default function ScalesClient({ scales, lang, dict }: Props) {
   ).filter(t => counts[t.id] > 0);
 
   const filtered = useMemo(() => {
-    let res = scales.filter(s => s.role === activeTab);
+    let res = activeTab === 'all' ? scales : scales.filter(s => s.role === activeTab);
     if (search.trim()) {
       const q = search.toLowerCase();
       res = res.filter(s =>

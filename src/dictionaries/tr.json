@@ -203,6 +203,8 @@
     "section_adapted": "Uyarlanan ve Psikometrik Özellikleri Test Edilen Ölçekler",
     "section_translated": "Faktör Analizi Kanıtı Olan Çeviri Ölçekler",
     "scales_unit": "ölçek",
+    "tab_all": "Tümü",
+    "tab_all_desc": "Ben ve çalışma arkadaşlarım tarafından geliştirilen, uyarlanan ve çevrilen tüm psikolojik ölçekler.",
     "tab_adapted": "Uyarlanan Ölçekler",
     "tab_adapted_desc": "Ben ve çalışma arkadaşlarım tarafından İngilizceden Türkçeye uyarlanan; psikometrik özellikleri Türk örneklemleri üzerinde test edilmiş ölçeklerdir.",
     "tab_translated": "Çevrilen Ölçekler",
