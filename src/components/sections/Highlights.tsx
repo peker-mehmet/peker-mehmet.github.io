@@ -4,6 +4,7 @@ import { type Publication, type Scale } from '@/lib/content';
 import SectionTitle from '@/components/ui/SectionTitle';
 import Card, { CardBody, CardFooter } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
+import JournalBadge from '@/components/ui/JournalBadge';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -105,6 +106,13 @@ function PublicationCard({
                      group-hover:text-navy-600 transition-colors">
         {pub.title[lang] || pub.title.en}
       </h3>
+
+      {/* Journal badge */}
+      {pub.journal && (
+        <div className="mb-2">
+          <JournalBadge journal={pub.journal} />
+        </div>
+      )}
 
       <CardBody className="flex-1 space-y-1.5">
         {/* Authors */}

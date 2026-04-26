@@ -4,6 +4,7 @@ import { useState, useMemo, useCallback, useEffect } from 'react';
 import { type Locale } from '@/lib/i18n';
 import { type Publication } from '@/lib/content';
 import { trackDownload } from '@/lib/analytics';
+import JournalBadge from '@/components/ui/JournalBadge';
 
 // ── Dict type ─────────────────────────────────────────────────────────────────
 
@@ -313,6 +314,13 @@ function FeaturedCard({
           {title}
         </h3>
 
+        {/* Journal badge */}
+        {pub.journal && (
+          <div className="mb-2">
+            <JournalBadge journal={pub.journal} />
+          </div>
+        )}
+
         {/* Authors */}
         <p className="font-body text-sm text-slate-600 mb-1.5">
           <AuthorDisplay pub={pub} ownerLastName={ownerLastName} />
@@ -393,6 +401,13 @@ function PublicationCard({
         <h3 className="font-display text-[1.075rem] font-semibold text-navy-800 leading-snug mb-2">
           {title}
         </h3>
+
+        {/* Journal badge */}
+        {pub.journal && (
+          <div className="mb-2">
+            <JournalBadge journal={pub.journal} />
+          </div>
+        )}
 
         {/* Authors */}
         <p className="font-body text-[0.8125rem] text-slate-600 mb-1.5 leading-relaxed">
