@@ -22,6 +22,7 @@ type HeroDict = {
     copy: string;
     copied: string;
     download_txt: string;
+    download_docx: string;
     close: string;
   };
 };

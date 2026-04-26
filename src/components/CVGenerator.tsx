@@ -18,6 +18,7 @@ type CVDict = {
   copy: string;
   copied: string;
   download_txt: string;
+  download_docx: string;
   close: string;
 };
 
@@ -183,13 +184,212 @@ function buildCVText(
   return lines.join('\n');
 }
 
+// ── .docx builder (dynamic import keeps it out of the initial bundle) ─────────
+
+async function buildDocx(
+  lang: Locale,
+  config: SiteConfig,
+  publications: Publication[],
+  scales: Scale[],
+  projects: Project[],
+  collaborations: Collaboration[],
+): Promise<Blob> {
+  const {
+    Document, Packer, Paragraph, TextRun, Footer, AlignmentType, BorderStyle,
+  } = await import('docx');
+
+  const isTr      = lang === 'tr';
+  const NAVY      = '1e3a5f';
+  const BODY_SZ   = 22; // 11 pt in half-points
+  const HEAD_SZ   = 28; // 14 pt
+  const TITLE_SZ  = 44; // 22 pt
+  const FONT      = 'Calibri';
+  const INCH      = 1440; // twips per inch
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+
+  const title = (text: string) =>
+    new Paragraph({
+      children: [new TextRun({ text, bold: true, size: TITLE_SZ, color: NAVY, font: FONT })],
+      spacing: { after: 320 },
+    });
+
+  const sectionHeading = (text: string): InstanceType<typeof Paragraph>[] => [
+    new Paragraph({
+      children: [new TextRun({ text, bold: true, size: HEAD_SZ, color: NAVY, font: FONT })],
+      spacing: { before: 400, after: 40 },
+    }),
+    // Thin horizontal rule below heading
+    new Paragraph({
+      children: [],
+      border: {
+        bottom: { color: NAVY, space: 1, style: BorderStyle.SINGLE, size: 6 },
+      },
+      spacing: { after: 160 },
+    }),
+  ];
+
+  const body = (text: string) =>
+    new Paragraph({
+      children: [new TextRun({ text, size: BODY_SZ, font: FONT })],
+      spacing: { after: 80 },
+    });
+
+  const spacer = () => new Paragraph({ children: [], spacing: { after: 80 } });
+
+  // ── Collect paragraphs ─────────────────────────────────────────────────────
+
+  const children: InstanceType<typeof Paragraph>[] = [];
+
+  // Document title
+  children.push(title(isTr ? 'Akademik CV — Mehmet Peker' : 'Academic CV — Mehmet Peker'));
+
+  // 1. Personal Info
+  children.push(...sectionHeading(isTr ? 'KİŞİSEL BİLGİLER' : 'PERSONAL INFORMATION'));
+  children.push(body(`${isTr ? 'Ad Soyad' : 'Name'}: ${config.owner.name.full}`));
+  children.push(body(`${isTr ? 'Unvan' : 'Title'}: ${config.owner.title[lang]}`));
+  children.push(body(`${isTr ? 'Pozisyon' : 'Position'}: ${config.owner.position[lang]}`));
+  children.push(body(`${isTr ? 'Kurum' : 'Institution'}: ${config.institution.name[lang]}`));
+  children.push(body(`${isTr ? 'Bölüm' : 'Department'}: ${config.institution.department[lang]}`));
+  if (config.links.email)         children.push(body(`E-posta: ${config.links.email}`));
+  if (config.links.orcid)         children.push(body(`ORCID: ${config.links.orcid}`));
+  if (config.links.google_scholar) children.push(body(`Google Scholar: ${config.links.google_scholar}`));
+  if (config.links.researchgate)  children.push(body(`ResearchGate: ${config.links.researchgate}`));
+
+  // 2. Publications
+  children.push(...sectionHeading(isTr ? 'YAYINLAR' : 'PUBLICATIONS'));
+  if (publications.length === 0) {
+    children.push(body(isTr ? '(Yayın bulunamadı)' : '(No publications found)'));
+  } else {
+    const sorted = [...publications].sort((a, b) => b.year - a.year);
+    for (const pub of sorted) {
+      const pubTitle  = pub.title[lang] || pub.title.en;
+      const authors   = pub.authors_abbreviated || pub.authors.join(', ');
+      let line        = `${authors} (${pub.year}). ${pubTitle}.`;
+
+      if (pub.journal) {
+        line += ` ${pub.journal}`;
+        if (pub.volume) line += `, ${pub.volume}`;
+        if (pub.issue)  line += `(${pub.issue})`;
+        if (pub.pages)  line += `, ${pub.pages}`;
+        line += '.';
+      } else if (pub.conference) {
+        line += ` ${pub.conference}.`;
+      } else if (pub.book_title) {
+        if (pub.editors && pub.editors.length > 0) {
+          line += ` In ${pub.editors.join(', ')} (Eds.), ${pub.book_title}.`;
+        } else {
+          line += ` ${pub.book_title}.`;
+        }
+        if (pub.publisher) line += ` ${pub.publisher}.`;
+      } else if (pub.publisher) {
+        line += ` ${pub.publisher}.`;
+      }
+
+      if (pub.doi) {
+        line += ` https://doi.org/${pub.doi.replace(/^https?:\/\/doi\.org\//, '')}`;
+      } else if (pub.url) {
+        line += ` ${pub.url}`;
+      }
+
+      children.push(body(line));
+      children.push(spacer());
+    }
+  }
+
+  // 3. Measurement Tools
+  children.push(...sectionHeading(isTr ? 'ÖLÇME ARAÇLARI' : 'MEASUREMENT TOOLS'));
+  if (scales.length === 0) {
+    children.push(body(isTr ? '(Ölçek bulunamadı)' : '(No scales found)'));
+  } else {
+    for (const scale of scales) {
+      const scaleName = scale.name[lang] || scale.name.en;
+      const abbr      = scale.abbreviation ? ` [${scale.abbreviation}]` : '';
+      const year      = scale.year ? ` (${scale.year}).` : '.';
+      const url       = `https://peker-mehmet.github.io/${lang}/scales/${scale.id}`;
+      children.push(body(`Peker, M.${year} ${scaleName}${abbr}. ${url}`));
+      children.push(spacer());
+    }
+  }
+
+  // 4. Projects
+  children.push(...sectionHeading(isTr ? 'PROJELER' : 'PROJECTS'));
+  if (projects.length === 0) {
+    children.push(body(isTr ? '(Proje bulunamadı)' : '(No projects found)'));
+  } else {
+    for (const proj of projects) {
+      const projTitle = proj.title[lang] || proj.title.en;
+      const startYear = proj.start_date?.split('-')[0] ?? '';
+      const endYear   = proj.end_date
+        ? proj.end_date.split('-')[0]
+        : isTr ? 'devam ediyor' : 'ongoing';
+      const period    = startYear ? `${startYear}–${endYear}` : '';
+      const funder    = proj.funding?.agency ?? '';
+      const meta      = [proj.role, period, funder].filter(Boolean).join(', ');
+      children.push(body(`${projTitle}${meta ? ` (${meta})` : ''}`));
+      children.push(spacer());
+    }
+  }
+
+  // 5. Collaborations
+  children.push(...sectionHeading(isTr ? 'İŞ BİRLİKLERİ' : 'COLLABORATIONS'));
+  if (collaborations.length === 0) {
+    children.push(body(isTr ? '(İş birliği bulunamadı)' : '(No collaborations found)'));
+  } else {
+    for (const collab of collaborations) {
+      const org    = collab.organization[lang] || collab.organization.en;
+      const desc   = collab.description[lang]  || collab.description.en;
+      const end    = collab.active
+        ? (isTr ? 'devam ediyor' : 'present')
+        : (collab.period_end ?? '');
+      const period = `${collab.period_start}–${end}`;
+      children.push(body(`${org} (${period})`));
+      if (desc) children.push(body(desc));
+      children.push(spacer());
+    }
+  }
+
+  // ── Timestamp footer ───────────────────────────────────────────────────────
+
+  const dateStr = new Date().toLocaleDateString(isTr ? 'tr-TR' : 'en-US', {
+    year: 'numeric', month: 'long', day: 'numeric',
+  });
+  const footerText = isTr
+    ? `Bu CV ${dateStr} tarihinde otomatik olarak oluşturulmuştur. · https://peker-mehmet.github.io`
+    : `Automatically generated on ${dateStr}. · https://peker-mehmet.github.io`;
+
+  const doc = new Document({
+    sections: [{
+      properties: {
+        page: {
+          margin: { top: INCH, right: INCH, bottom: INCH, left: INCH },
+        },
+      },
+      footers: {
+        default: new Footer({
+          children: [
+            new Paragraph({
+              children: [new TextRun({ text: footerText, size: 18, color: '888888', font: FONT })],
+              alignment: AlignmentType.CENTER,
+            }),
+          ],
+        }),
+      },
+      children,
+    }],
+  });
+
+  return Packer.toBlob(doc);
+}
+
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function CVGenerator({
   lang, config, publications, scales, projects, collaborations, dict,
 }: Props) {
-  const [open,   setOpen]   = useState(false);
-  const [copied, setCopied] = useState(false);
+  const [open,           setOpen]          = useState(false);
+  const [copied,         setCopied]        = useState(false);
+  const [docxLoading,    setDocxLoading]   = useState(false);
 
   // Build once; all inputs are static server-rendered props
   const cvText = buildCVText(lang, config, publications, scales, projects, collaborations);
@@ -211,6 +411,23 @@ export default function CVGenerator({
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+  }
+
+  async function handleDownloadDocx() {
+    setDocxLoading(true);
+    try {
+      const blob = await buildDocx(lang, config, publications, scales, projects, collaborations);
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = 'cv-mehmet-peker.docx';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } finally {
+      setDocxLoading(false);
+    }
   }
 
   return (
@@ -325,7 +542,6 @@ export default function CVGenerator({
                 >
                   {copied ? (
                     <>
-                      {/* Check icon */}
                       <svg viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5 text-green-600" aria-hidden="true">
                         <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                       </svg>
@@ -333,7 +549,6 @@ export default function CVGenerator({
                     </>
                   ) : (
                     <>
-                      {/* Clipboard icon */}
                       <svg viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5" aria-hidden="true">
                         <path d="M8 2a1.5 1.5 0 00-1.5 1.5v1h-1A1.5 1.5 0 004 6v10.5A1.5 1.5 0 005.5 18h9a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5h-1v-1A1.5 1.5 0 0012 2H8zm0 1.5h4v1.5H8V3.5zm-2.5 3H5.5v9h9v-9h-.5V8a.5.5 0 01-.5.5H8a.5.5 0 01-.5-.5V6.5h-2z" />
                       </svg>
@@ -342,30 +557,48 @@ export default function CVGenerator({
                   )}
                 </button>
 
-                {/* Download */}
+                {/* Download .txt */}
                 <button
                   onClick={handleDownload}
                   className="
+                    inline-flex items-center gap-1.5 px-4 py-2 rounded-md font-body text-sm font-medium
+                    border border-warm-300 bg-white text-slate-700
+                    hover:border-navy-300 hover:text-navy-700
+                    transition-all duration-150
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400
+                  "
+                >
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.75}
+                    strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5" aria-hidden="true">
+                    <path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M3 17h14" />
+                  </svg>
+                  {dict.download_txt}
+                </button>
+
+                {/* Download .docx */}
+                <button
+                  onClick={handleDownloadDocx}
+                  disabled={docxLoading}
+                  className="
                     inline-flex items-center gap-1.5 px-4 py-2 rounded-md font-body text-sm font-semibold
                     bg-gold-400 text-navy-900 hover:bg-gold-500 active:bg-gold-600
+                    disabled:opacity-60 disabled:cursor-not-allowed
                     shadow-sm transition-all duration-150
                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2
                   "
                 >
-                  {/* Download icon */}
-                  <svg
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={1.75}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-3.5 h-3.5"
-                    aria-hidden="true"
-                  >
-                    <path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M3 17h14" />
-                  </svg>
-                  {dict.download_txt}
+                  {docxLoading ? (
+                    <svg className="w-3.5 h-3.5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                    </svg>
+                  ) : (
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.75}
+                      strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5" aria-hidden="true">
+                      <path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M3 17h14" />
+                    </svg>
+                  )}
+                  {dict.download_docx}
                 </button>
               </div>
             </div>
