@@ -292,12 +292,12 @@ function MobileDrawer({
                     href={href}
                     onClick={onClose}
                     className={`
-                      flex items-center gap-3 px-4 py-3 rounded-lg font-body text-sm
+                      flex items-center gap-3 py-3 rounded-lg font-body text-sm
                       transition-colors duration-150 focus-visible:outline-none
                       focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-400
                       ${active
-                        ? 'bg-white/10 text-white font-semibold'
-                        : 'text-white/70 hover:bg-white/5 hover:text-gold-400'
+                        ? 'bg-navy-800/70 text-gold-400 font-semibold border-l-2 border-gold-400 pl-3 pr-4'
+                        : 'px-4 text-white/70 hover:bg-white/5 hover:text-gold-400'
                       }
                     `}
                   >

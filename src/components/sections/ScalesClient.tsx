@@ -96,14 +96,14 @@ function ScaleCard({ scale, lang, dict }: { scale: Scale; lang: Locale; dict: Sc
 
         <div className="flex flex-wrap items-center gap-2 mb-3">
           {scale.item_count && (
-            <span className="font-body text-xs text-slate-500">
+            <span className="font-body text-sm md:text-xs text-slate-500">
               <span className="font-semibold text-slate-700">{scale.item_count}</span> {dict.items}
             </span>
           )}
           {factorCount > 0 && (
             <>
               {scale.item_count && <span className="text-slate-300" aria-hidden="true">·</span>}
-              <span className="font-body text-xs text-slate-500">
+              <span className="font-body text-sm md:text-xs text-slate-500">
                 <span className="font-semibold text-slate-700">{factorCount}</span> {dict.factors}
               </span>
             </>

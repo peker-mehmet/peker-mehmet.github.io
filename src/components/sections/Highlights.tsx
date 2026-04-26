@@ -246,7 +246,7 @@ function ScaleCard({
 
 function MetaPill({ label }: { label: string }) {
   return (
-    <span className="font-body text-[0.7rem] text-slate-500 bg-warm-50 border border-warm-200
+    <span className="font-body text-sm md:text-[0.7rem] text-slate-500 bg-warm-50 border border-warm-200
                      rounded-full px-2.5 py-0.5 leading-none whitespace-nowrap">
       {label}
     </span>
