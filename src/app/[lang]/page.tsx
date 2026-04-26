@@ -73,8 +73,13 @@ export default async function HomePage({
     jobTitle: config.owner.title.en,
     affiliation: config.institution.name.en,
     url: SITE_URL,
-    image: config.photo.profile || undefined,
-    sameAs: [config.links.google_scholar, config.links.orcid, config.links.researchgate].filter(Boolean),
+    image: config.photo.profile ? `${SITE_URL}${config.photo.profile}` : undefined,
+    sameAs: [
+      config.links.google_scholar,
+      config.links.orcid,
+      config.links.researchgate,
+      config.links.linkedin,
+    ].filter(Boolean),
   });
 
   return (
