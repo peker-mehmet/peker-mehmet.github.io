@@ -23,10 +23,10 @@
   },
   "item_count": "3",
   "subscales": [],
-  "response_format_tr": "7-point Likert-type scale, from 1 = very little to 7 = very much",
-  "response_format_en": "7’li Likert tipi ölçek; 1 = çok az, 7 = çok fazla",
-  "target_population_tr": "Employees",
-  "target_population_en": "Çalışanlar",
+  "response_format_tr": "7’li Likert tipi ölçek; 1 = çok az, 7 = çok fazla",
+  "response_format_en": "7-point Likert-type scale, from 1 = very little to 7 = very much",
+  "target_population_tr": "Çalışanlar",
+  "target_population_en": "Employees",
   "reliability": {
     "en": "Cronbach’s alpha = .95",
     "tr": "Cronbach alfa = .95"

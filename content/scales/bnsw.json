@@ -48,8 +48,8 @@
       }
     }
   ],
-  "response_format_tr": "5-point Likert scale, from 1 = strongly disagree to 5 = strongly agree",
-  "response_format_en": "5’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 5 = Tamamen katılıyorum",
+  "response_format_tr": "5’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 5 = Tamamen katılıyorum",
+  "response_format_en": "5-point Likert scale, from 1 = strongly disagree to 5 = strongly agree",
   "target_population_tr": "Çalışan yetişkinler.",
   "target_population_en": "Working adults.",
   "reliability": {

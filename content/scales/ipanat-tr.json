@@ -36,8 +36,8 @@
   ],
   "response_format_tr": "4’lü Likert tipi ölçek, 1 = tamamen uyumsuz ile 4 = tamamen uyumlu",
   "response_format_en": "4-point Likert scale, from 1 = doesn't fit at all  to 4 = fits very well",
-  "target_population_tr": "University students and employees. In this article, it was tested in Turkish student and employee samples.",
-  "target_population_en": "Üniversite öğrencileri ve çalışanlar. Bu makalede Türk öğrenci ve çalışan örneklemlerinde test edilmiştir.",
+  "target_population_tr": "Üniversite öğrencileri ve çalışanlar. Bu makalede Türk öğrenci ve çalışan örneklemlerinde test edilmiştir.",
+  "target_population_en": "University students and employees. In this article, it was tested in Turkish student and employee samples.",
   "reliability": {
     "en": "Internal consistency was .92 for Implicit Positive Affect and .85 for Implicit Negative Affect. One-week and four-week test-retest coefficients ranged from .51 to .75.",
     "tr": "İç tutarlılık katsayısı Örtük Pozitif Duygulanım için .92, Örtük Negatif Duygulanım için .85’tir. Bir hafta ve dört hafta aralıklı test-tekrar test katsayıları .51 ile .75 arasında değişmiştir."

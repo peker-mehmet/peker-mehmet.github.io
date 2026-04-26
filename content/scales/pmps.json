@@ -25,8 +25,8 @@
   "subscales": [],
   "response_format_tr": "7’li Likert tipi ölçek; 1 = hiç katılmıyorum, 7 = kesinlikle katılıyorum",
   "response_format_en": "7-point Likert-type scale, from 1 = strongly disagree to 7 = strongly agree",
-  "target_population_tr": "Adult participants",
-  "target_population_en": "Yetişkin katılımcılar",
+  "target_population_tr": "Yetişkin katılımcılar",
+  "target_population_en": "Adult participants",
   "reliability": {
     "en": "THe Turkish form showed Cronbach’s alpha of .75. Item-total correlations ranged from .35 to .52, inter-item correlations ranged from .12 to .46, and test–retest reliability was .73.",
     "tr": "Türkçe formda Cronbach alfa katsayısı .75 olarak hesaplanmıştır. Madde-toplam korelasyonları .35 ile .52, maddeler arası korelasyonlar .12 ile .46 arasında değişmiş; test-tekrar test güvenirliği .73 olarak bulunmuştur."

@@ -48,10 +48,10 @@
       }
     }
   ],
-  "response_format_tr": "5-point Likert format ranging from 1 = never to 5 = always.",
-  "response_format_en": "1 = hiçbir zaman ile 5 = her zaman arasında derecelendirilen 5’li Likert format.",
-  "target_population_tr": "Employees who interact with customers, patients, or students.",
-  "target_population_en": "Müşteri, hasta ya da öğrenci etkileşimi olan çalışanlar.",
+  "response_format_tr": "1 = hiçbir zaman ile 5 = her zaman arasında derecelendirilen 5’li Likert format.",
+  "response_format_en": "5-point Likert format ranging from 1 = never to 5 = always.",
+  "target_population_tr": "Müşteri, hasta ya da öğrenci etkileşimi olan çalışanlar.",
+  "target_population_en": "Employees who interact with customers, patients, or students.",
   "reliability": {
     "en": "Multilevel reliability values were .82/.96 for surface acting, .79/.98 for deep acting, and .86/.99 for natural emotions at within-/between-person levels.",
     "tr": "Çok düzeyli güvenirlik değerleri kişi içi/kişiler arası düzeylerde yüzeysel davranma için .82/.96, derin davranma için .79/.98 ve doğal duygular için .86/.99’dur."

@@ -25,8 +25,8 @@
   "subscales": [],
   "response_format_tr": "5’li Likert tipi ölçek; 1 = hiç katılmıyorum, 5 = kesinlikle katılıyorum",
   "response_format_en": "5-point Likert-type scale, from 1 = completely disagree to 5 = completely agree",
-  "target_population_tr": "Employees in workplace safety contexts",
-  "target_population_en": "İş güvenliği bağlamındaki çalışanlar",
+  "target_population_tr": "İş güvenliği bağlamındaki çalışanlar",
+  "target_population_en": "Employees in workplace safety contexts",
   "reliability": {
     "en": "Cronbach’s alpha was .87.",
     "tr": "Cronbach alfa değeri .87’dir."

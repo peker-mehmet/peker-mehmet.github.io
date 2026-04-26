@@ -48,12 +48,12 @@
       }
     }
   ],
-  "response_format_tr": "Forced-choice format; each item presents two alternatives, one action-oriented and one state-oriented.",
-  "response_format_en": "Zorunlu seçim formatında, her maddede biri eylem yönelimini, diğeri durum yönelimini yansıtan iki seçenek bulunur.",
-  "target_population_tr": "Adults and university students",
-  "target_population_en": "Yetişkinler ve üniversite öğrencileri",
+  "response_format_tr": "Zorunlu seçim formatında, her maddede biri eylem yönelimini, diğeri durum yönelimini yansıtan iki seçenek bulunur.",
+  "response_format_en": "Forced-choice format; each item presents two alternatives, one action-oriented and one state-oriented.",
+  "target_population_tr": "Yetişkinler ve üniversite öğrencileri",
+  "target_population_en": "Adults and university students",
   "reliability": {
-    "en": "İnternal consistency was higher for preoccupation and hesitation and lower for volatility. In the revised 23-item form, alpha values were around .73–.77 for preoccupation, .80–.82 for hesitation, and .61–.63 for volatility across studies. Test–retest estimates were also reported.",
+    "en": "Internal consistency was higher for preoccupation and hesitation and lower for volatility. In the revised 23-item form, alpha values were around .73–.77 for preoccupation, .80–.82 for hesitation, and .61–.63 for volatility across studies. Test–retest estimates were also reported.",
     "tr": "İç tutarlılık saplanma/kopma ve tereddüt/başlama için daha yüksek, yılma/kararlılık için daha düşüktür. Gözden geçirilmiş 23 maddelik formda alfa değerleri çalışmalar arasında saplanma/kopma için yaklaşık .73–.77, tereddüt/başlama için .80–.82, yılma/kararlılık için .61–.63 düzeyindedir. Test–tekrar test bulguları da raporlanmıştır."
   },
   "validity_notes": {

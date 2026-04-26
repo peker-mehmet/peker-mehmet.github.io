@@ -509,7 +509,7 @@ export default function CVGenerator({
                 value={cvText}
                 onClick={(e) => e.currentTarget.select()}
                 className="
-                  w-full min-h-[52vh] font-mono text-[0.7rem] leading-relaxed
+                  w-full min-h-[35vh] sm:min-h-[52vh] font-mono text-[0.7rem] leading-relaxed
                   text-slate-700 bg-warm-50 border border-warm-200 rounded-lg p-4
                   resize-none cursor-text
                   focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent
@@ -520,20 +520,13 @@ export default function CVGenerator({
             </div>
 
             {/* Footer */}
-            <div className="flex items-center justify-between gap-3 px-5 py-4 border-t border-warm-200 bg-warm-50 flex-shrink-0">
-              <button
-                onClick={() => setOpen(false)}
-                className="font-body text-sm text-slate-500 hover:text-slate-700 transition-colors px-3 py-1.5 rounded-md hover:bg-warm-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
-              >
-                {dict.close}
-              </button>
-
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 px-5 py-4 border-t border-warm-200 bg-warm-50 flex-shrink-0">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 order-first sm:order-last">
                 {/* Copy */}
                 <button
                   onClick={handleCopy}
                   className="
-                    inline-flex items-center gap-1.5 px-4 py-2 rounded-md font-body text-sm font-medium
+                    inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-2 rounded-md font-body text-sm font-medium
                     border border-warm-300 bg-white text-slate-700
                     hover:border-navy-300 hover:text-navy-700
                     transition-all duration-150
@@ -561,7 +554,7 @@ export default function CVGenerator({
                 <button
                   onClick={handleDownload}
                   className="
-                    inline-flex items-center gap-1.5 px-4 py-2 rounded-md font-body text-sm font-medium
+                    inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-2 rounded-md font-body text-sm font-medium
                     border border-warm-300 bg-white text-slate-700
                     hover:border-navy-300 hover:text-navy-700
                     transition-all duration-150
@@ -580,7 +573,7 @@ export default function CVGenerator({
                   onClick={handleDownloadDocx}
                   disabled={docxLoading}
                   className="
-                    inline-flex items-center gap-1.5 px-4 py-2 rounded-md font-body text-sm font-semibold
+                    inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-2 rounded-md font-body text-sm font-semibold
                     bg-gold-400 text-navy-900 hover:bg-gold-500 active:bg-gold-600
                     disabled:opacity-60 disabled:cursor-not-allowed
                     shadow-sm transition-all duration-150
@@ -601,6 +594,13 @@ export default function CVGenerator({
                   {dict.download_docx}
                 </button>
               </div>
+
+              <button
+                onClick={() => setOpen(false)}
+                className="order-last sm:order-first w-full sm:w-auto text-center font-body text-sm text-slate-500 hover:text-slate-700 transition-colors px-3 py-1.5 rounded-md hover:bg-warm-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+              >
+                {dict.close}
+              </button>
             </div>
 
           </div>

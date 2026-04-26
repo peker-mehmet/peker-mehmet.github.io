@@ -23,10 +23,10 @@
   },
   "item_count": "6",
   "subscales": [],
-  "response_format_tr": "5-point Likert scale, from 1 = strongly disagree to 5 = strongly agree",
-  "response_format_en": "5’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 5 = Kesinlikle katılıyorum",
-  "target_population_tr": "Working adults in team, department, or work-unit contexts.",
-  "target_population_en": "Takım, departman ya da iş birimi bağlamında çalışan yetişkinler.",
+  "response_format_tr": "5’li Likert tipi ölçek, 1 = Hiç katılmıyorum ile 5 = Kesinlikle katılıyorum",
+  "response_format_en": "5-point Likert scale, from 1 = strongly disagree to 5 = strongly agree",
+  "target_population_tr": "Takım, departman ya da iş birimi bağlamında çalışan yetişkinler.",
+  "target_population_en": "Working adults in team, department, or work-unit contexts.",
   "reliability": {
     "en": "Single-level alpha was .71; multilevel reliability estimates were .60 at the person level and .92 at the work-unit level.",
     "tr": "Çeviri çalışmasında tek düzeyli alfa .71; çok düzeyli güvenirlik katsayıları kişi düzeyinde .60 ve iş birimi düzeyinde .92 olarak bulunmuştur."

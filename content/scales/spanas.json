@@ -40,8 +40,8 @@
       }
     }
   ],
-  "response_format_tr": "5-point Likert format ranging from 1 = very slightly or not at all to 5 = extremely.",
-  "response_format_en": "1 = çok az veya hiç ile 5 = çok fazla arasında derecelendirilen 5’li Likert format.",
+  "response_format_tr": "1 = çok az veya hiç ile 5 = çok fazla arasında derecelendirilen 5’li Likert format.",
+  "response_format_en": "5-point Likert format ranging from 1 = very slightly or not at all to 5 = extremely.",
   "target_population_tr": "Yetişkin katılımcılar",
   "target_population_en": "Adult participants",
   "reliability": {
