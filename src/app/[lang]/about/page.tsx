@@ -282,8 +282,8 @@ function LinkedInIcon() {
 type TeachingCourse = {
   level: string;
   role: string;
-  institution: string;
-  department: string;
+  institution: { en: string; tr: string };
+  department: { en: string; tr: string };
   course_en: string;
   course_tr: string;
 };
@@ -309,6 +309,7 @@ function TeachingSection({
         {group.map((c, i) => {
           const isLecturer = c.role === 'Lecturer';
           const courseName = lang === 'tr' ? c.course_tr : c.course_en;
+          const deptName = c.department[lang] || c.department.en;
           return (
             <div
               key={i}
@@ -330,7 +331,7 @@ function TeachingSection({
                   {courseName}
                 </p>
                 <p className="mt-0.5 font-body text-[0.75rem] italic text-slate-400">
-                  {c.department}
+                  {deptName}
                 </p>
               </div>
             </div>

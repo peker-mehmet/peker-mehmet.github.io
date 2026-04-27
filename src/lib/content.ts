@@ -39,8 +39,8 @@ export type SiteConfig = {
   teaching: {
     level: string;
     role: string;
-    institution: string;
-    department: string;
+    institution: BilingualString;
+    department: BilingualString;
     course_en: string;
     course_tr: string;
   }[];

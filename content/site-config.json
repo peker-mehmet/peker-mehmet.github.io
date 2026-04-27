@@ -129,104 +129,104 @@
     {
       "level": "M.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
-      "course_en": "Advanced Industrial and Organizational Psychology",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
+      "course_en": "İleri Endüstri ve Örgüt Psikolojisi (Advanced Industrial and Organizational Psychology)",
       "course_tr": "İleri Endüstri ve Örgüt Psikolojisi"
     },
     {
       "level": "M.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
-      "course_en": "Statistical Modeling",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
+      "course_en": "İstatistiksel Modelleme (Statistical Modeling)",
       "course_tr": "İstatistiksel Modelleme"
     },
     {
       "level": "B.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
-      "course_en": "Industrial and Organizational Psychology I",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
+      "course_en": "Endüstri ve Örgüt Psikolojisi I (Industrial and Organizational Psychology I)",
       "course_tr": "Endüstri ve Örgüt Psikolojisi I"
     },
     {
       "level": "B.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
       "course_en": "Industrial and Organizational Psychology II",
-      "course_tr": "Endüstri ve Örgüt Psikolojisi II"
+      "course_tr": "Industrial and Organizational Psychology II"
     },
     {
       "level": "B.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Sociology",
-      "course_en": "Social Psychology II",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Sociology", "tr": "Sosyoloji Bölümü" },
+      "course_en": "Sosyal Psikoloji II (Social Psychology II)",
       "course_tr": "Sosyal Psikoloji II"
     },
     {
       "level": "B.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
       "course_en": "Basic Concepts in Psychology",
-      "course_tr": "Psikolojide Temel Kavramlar"
+      "course_tr": "Basic Concepts in Psychology"
     },
     {
       "level": "B.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Sociology",
-      "course_en": "Social Psychology I",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Sociology", "tr": "Sosyoloji Bölümü" },
+      "course_en": "Sosyal Psikoloji I (Social Psychology I)",
       "course_tr": "Sosyal Psikoloji I"
     },
     {
       "level": "B.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
-      "course_en": "Understanding Human Behavior",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
+      "course_en": "İnsan Davranışlarını Anlamak (Understanding Human Behavior)",
       "course_tr": "İnsan Davranışlarını Anlamak"
     },
     {
       "level": "B.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
       "course_en": "Readings in Psychology IV",
-      "course_tr": "Psikolojide Okumalar IV"
+      "course_tr": "Readings in Psychology IV"
     },
     {
       "level": "B.A.",
       "role": "Teaching Assistant",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
-      "course_en": "Industrial and Organizational Psychology II",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
+      "course_en": "Endüstri ve Örgüt Psikolojisi II (Industrial and Organizational Psychology II)",
       "course_tr": "Endüstri ve Örgüt Psikolojisi II"
     },
     {
       "level": "B.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
       "course_en": "Fundamental Text of Psychology",
-      "course_tr": "Psikolojinin Temel Metinleri"
+      "course_tr": "Fundamental Text of Psychology"
     },
     {
       "level": "B.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Philosophy",
-      "course_en": "Introduction to Psychology",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Philosophy", "tr": "Felsefe Bölümü" },
+      "course_en": "Genel Psikoloji (Introduction to Psychology)",
       "course_tr": "Genel Psikoloji"
     },
     {
       "level": "M.A.",
       "role": "Lecturer",
-      "institution": "Ege University",
-      "department": "Department of Psychology",
+      "institution": { "en": "Ege University", "tr": "Ege Üniversitesi" },
+      "department": { "en": "Department of Psychology", "tr": "Psikoloji Bölümü" },
       "course_en": "Current Research in Industrial and Organizational Psychology",
       "course_tr": "Endüstri ve Örgüt Psikolojisinde Güncel Araştırmalar"
     }
