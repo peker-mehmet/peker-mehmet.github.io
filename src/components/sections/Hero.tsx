@@ -53,7 +53,7 @@ export default function Hero({ lang, dict }: { lang: Locale; dict: Dict }) {
 
         {/* CTAs */}
         <div className="flex flex-wrap gap-3 justify-center">
-          <Button href={`/${lang}/research`} variant="primary" size="lg">
+          <Button href={`/${lang}/publications`} variant="primary" size="lg">
             {dict.home.cta_research}
           </Button>
           <Button href={`/${lang}/contact`} variant="outline" size="lg">

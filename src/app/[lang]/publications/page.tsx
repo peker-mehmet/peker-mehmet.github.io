@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/getDictionary';
-import { getSiteConfig, getPublications } from '@/lib/content';
+import { getSiteConfig, getPublications, getProjects } from '@/lib/content';
 import { buildPageMetadata } from '@/lib/metadata';
 import { PageTitle } from '@/components/ui/SectionTitle';
 import PublicationsClient, { type PubsDict } from '@/components/sections/PublicationsClient';
@@ -26,13 +26,18 @@ export default async function PublicationsPage({
 }) {
   const lang = params.lang;
 
-  const [dict, config, publications] = await Promise.all([
+  const [dict, config, publications, projects] = await Promise.all([
     getDictionary(lang),
     Promise.resolve(getSiteConfig()),
     Promise.resolve(getPublications()),
+    Promise.resolve(getProjects()),
   ]);
 
+  const ongoing   = projects.filter((p) => p.status === 'active' || p.status === 'planned' || p.status === 'submitted');
+  const completed = projects.filter((p) => p.status === 'completed');
+
   const d = (dict as any).publications as PubsDict;
+  const researchDict = (dict as any).research;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -71,6 +76,9 @@ export default async function PublicationsPage({
         lang={lang}
         ownerName={config.owner.name.full}
         dict={d}
+        ongoing={ongoing}
+        completed={completed}
+        researchDict={researchDict}
       />
     </>
   );

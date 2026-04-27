@@ -2,9 +2,10 @@
 
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import { type Locale } from '@/lib/i18n';
-import { type Publication } from '@/lib/content';
+import { type Publication, type Project } from '@/lib/content';
 import { trackDownload } from '@/lib/analytics';
 import JournalBadge from '@/components/ui/JournalBadge';
+import ProjectsTab, { type ResearchDict } from './ProjectsTab';
 
 // ── Dict type ─────────────────────────────────────────────────────────────────
 
@@ -17,6 +18,7 @@ export type PubsDict = {
   theses: string;
   invited_talks: string;
   presentations: string;
+  projects_tab: string;
   search_placeholder: string;
   all_years: string;
   clear_filters: string;
@@ -48,13 +50,16 @@ export type PubsDict = {
   event: string;
 };
 
-type Tab = 'all' | 'journal' | 'conference' | 'books' | 'theses' | 'invited-talks' | 'presentations';
+type Tab = 'all' | 'journal' | 'conference' | 'books' | 'theses' | 'invited-talks' | 'presentations' | 'projects';
 
 type Props = {
   publications: Publication[];
   lang: Locale;
   ownerName: string;
   dict: PubsDict;
+  ongoing: Project[];
+  completed: Project[];
+  researchDict: ResearchDict;
 };
 
 // ── APA citation builder ──────────────────────────────────────────────────────
@@ -487,7 +492,7 @@ function PublicationCard({
 
 // ── Main export ───────────────────────────────────────────────────────────────
 
-export default function PublicationsClient({ publications, lang, ownerName, dict }: Props) {
+export default function PublicationsClient({ publications, lang, ownerName, dict, ongoing, completed, researchDict }: Props) {
   const [activeTab,          setActiveTab]          = useState<Tab>('all');
   const [search,             setSearch]             = useState('');
   const [yearFilter,         setYearFilter]         = useState('');
@@ -498,11 +503,14 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
 
   const ownerLastName = ownerName.split(' ').filter(Boolean).pop() ?? '';
 
-  // Read ?interest= query param from URL on mount (compatible with static export)
+  // Read ?interest= and ?tab= query params from URL on mount (compatible with static export)
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const interest = params.get('interest');
     if (interest) setInterestFilter(interest);
+    const tab = params.get('tab') as Tab | null;
+    const validTabs: Tab[] = ['all', 'journal', 'conference', 'books', 'theses', 'invited-talks', 'presentations', 'projects'];
+    if (tab && validTabs.includes(tab)) setActiveTab(tab);
   }, []);
 
   // ── Derived data ────────────────────────────────────────────────────────────
@@ -515,7 +523,8 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
     theses:        publications.filter(p => p.type === 'thesis'  || p.type === 'preprint').length,
     invitedTalks:  publications.filter(p => p.type === 'invited-talk').length,
     presentations: publications.filter(p => p.type === 'presentation').length,
-  }), [publications]);
+    projects:      ongoing.length + completed.length,
+  }), [publications, ongoing, completed]);
 
   const uniqueTypeCount = useMemo(
     () => new Set(publications.map(p => p.type)).size,
@@ -611,7 +620,8 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
     { id: 'theses',        label: dict.theses,        count: counts.theses },
     { id: 'invited-talks', label: dict.invited_talks, count: counts.invitedTalks },
     { id: 'presentations', label: dict.presentations, count: counts.presentations },
-  ].filter(t => t.id === 'all' || t.count > 0) as { id: Tab; label: string; count: number }[];
+    { id: 'projects',      label: dict.projects_tab,  count: counts.projects },
+  ].filter(t => t.id === 'all' || t.id === 'projects' || t.count > 0) as { id: Tab; label: string; count: number }[];
 
   // ── Render ──────────────────────────────────────────────────────────────────
 
@@ -661,63 +671,65 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
         </div>
       </div>
 
-      {/* ── Search & filter bar ─────────────────────────────────── */}
-      <div className="bg-warm-50 border-b border-warm-200">
-        <div className="container-main py-4">
-          <div className="flex flex-col sm:flex-row gap-3">
-            {/* Search input */}
-            <div className="relative flex-1">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2">
-                <IconSearch />
-              </span>
-              <input
-                type="search"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder={dict.search_placeholder}
-                className="w-full pl-9 pr-4 py-2.5 rounded-lg border border-warm-300 bg-white
-                           text-sm font-body text-slate-700 placeholder:text-slate-400
-                           focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent
-                           shadow-card"
-              />
-            </div>
+      {/* ── Search & filter bar — hidden on projects tab ────────── */}
+      {activeTab !== 'projects' && (
+        <div className="bg-warm-50 border-b border-warm-200">
+          <div className="container-main py-4">
+            <div className="flex flex-col sm:flex-row gap-3">
+              {/* Search input */}
+              <div className="relative flex-1">
+                <span className="absolute left-3 top-1/2 -translate-y-1/2">
+                  <IconSearch />
+                </span>
+                <input
+                  type="search"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder={dict.search_placeholder}
+                  className="w-full pl-9 pr-4 py-2.5 rounded-lg border border-warm-300 bg-white
+                             text-sm font-body text-slate-700 placeholder:text-slate-400
+                             focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent
+                             shadow-card"
+                />
+              </div>
 
-            {/* Year filter */}
-            <div className="relative">
-              <select
-                value={yearFilter}
-                onChange={(e) => setYearFilter(e.target.value)}
-                className="appearance-none pl-4 pr-9 py-2.5 rounded-lg border border-warm-300 bg-white
-                           text-sm font-body text-slate-700
-                           focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent
-                           shadow-card cursor-pointer"
-              >
-                <option value="">{dict.all_years}</option>
-                {years.map(y => (
-                  <option key={y} value={String(y)}>{y}</option>
-                ))}
-              </select>
-              <span className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">
-                <IconChevronDown />
-              </span>
-            </div>
+              {/* Year filter */}
+              <div className="relative">
+                <select
+                  value={yearFilter}
+                  onChange={(e) => setYearFilter(e.target.value)}
+                  className="appearance-none pl-4 pr-9 py-2.5 rounded-lg border border-warm-300 bg-white
+                             text-sm font-body text-slate-700
+                             focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent
+                             shadow-card cursor-pointer"
+                >
+                  <option value="">{dict.all_years}</option>
+                  {years.map(y => (
+                    <option key={y} value={String(y)}>{y}</option>
+                  ))}
+                </select>
+                <span className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">
+                  <IconChevronDown />
+                </span>
+              </div>
 
-            {/* Clear filters */}
-            {hasFilters && (
-              <button
-                onClick={() => { setSearch(''); setYearFilter(''); setInterestFilter(''); }}
-                className="px-4 py-2.5 rounded-lg border border-warm-300 bg-white text-sm font-body text-slate-600
-                           hover:border-navy-300 hover:text-navy-700 transition-colors shadow-card"
-              >
-                {dict.clear_filters}
-              </button>
-            )}
+              {/* Clear filters */}
+              {hasFilters && (
+                <button
+                  onClick={() => { setSearch(''); setYearFilter(''); setInterestFilter(''); }}
+                  className="px-4 py-2.5 rounded-lg border border-warm-300 bg-white text-sm font-body text-slate-600
+                             hover:border-navy-300 hover:text-navy-700 transition-colors shadow-card"
+                >
+                  {dict.clear_filters}
+                </button>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* ── Active interest filter chip ─────────────────────────── */}
-      {interestFilter && (
+      {activeTab !== 'projects' && interestFilter && (
         <div className="bg-gold-50 border-b border-gold-200">
           <div className="container-main py-3 flex items-center gap-3">
             <span className="font-body text-xs font-semibold text-gold-700 uppercase tracking-wider flex-shrink-0">
@@ -740,8 +752,18 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
         </div>
       )}
 
-      {/* ── Main content ────────────────────────────────────────── */}
-      <div className="container-main py-10 lg:py-14">
+      {/* ── Projects tab content ─────────────────────────────────── */}
+      {activeTab === 'projects' && (
+        <ProjectsTab
+          ongoing={ongoing}
+          completed={completed}
+          lang={lang}
+          dict={researchDict}
+        />
+      )}
+
+      {/* ── Main publications content ────────────────────────────── */}
+      {activeTab !== 'projects' && <div className="container-main py-10 lg:py-14">
 
         {/* Featured section — only on "all" tab with no active filters */}
         {featured.length > 0 && (
@@ -825,7 +847,7 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
             </section>
           ))}
         </div>
-      </div>
+      </div>}
     </>
   );
 }

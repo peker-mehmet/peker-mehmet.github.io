@@ -12,7 +12,6 @@ type NavDict = {
   site_name: string;
   home: string;
   about: string;
-  research: string;
   publications: string;
   scales: string;
   news: string;
@@ -360,7 +359,6 @@ export default function Navbar({ lang, dict }: NavbarProps) {
   const navLinks = [
     { href: `/${lang}`,               label: dict.home },
     { href: `/${lang}/about`,         label: dict.about },
-    { href: `/${lang}/research`,      label: dict.research },
     { href: `/${lang}/publications`,  label: dict.publications },
     { href: `/${lang}/scales`,        label: dict.scales },
     { href: `/${lang}/news`,          label: dict.news },

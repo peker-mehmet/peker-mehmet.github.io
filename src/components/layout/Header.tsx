@@ -9,7 +9,6 @@ type Dict = {
   nav: {
     home: string;
     about: string;
-    research: string;
     publications: string;
     teaching: string;
     contact: string;
@@ -23,7 +22,6 @@ export default function Header({ lang, dict }: { lang: Locale; dict: Dict }) {
   const navLinks = [
     { href: `/${lang}`,              label: dict.nav.home },
     { href: `/${lang}/about`,        label: dict.nav.about },
-    { href: `/${lang}/research`,     label: dict.nav.research },
     { href: `/${lang}/publications`, label: dict.nav.publications },
     { href: `/${lang}/teaching`,     label: dict.nav.teaching },
     { href: `/${lang}/contact`,      label: dict.nav.contact },

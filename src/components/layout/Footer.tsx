@@ -9,7 +9,6 @@ type FooterDict = {
     site_name: string;
     home: string;
     about: string;
-    research: string;
     publications: string;
     scales: string;
     news: string;
@@ -124,7 +123,6 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: FooterDict 
   const navLinks = [
     { href: `/${lang}`,               label: dict.nav.home },
     { href: `/${lang}/about`,         label: dict.nav.about },
-    { href: `/${lang}/research`,      label: dict.nav.research },
     { href: `/${lang}/publications`,  label: dict.nav.publications },
     { href: `/${lang}/scales`,        label: dict.nav.scales },
     { href: `/${lang}/news`,            label: dict.nav.news },

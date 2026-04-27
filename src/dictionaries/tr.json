@@ -3,7 +3,6 @@
     "site_name": "Mehmet Peker",
     "home": "Ana Sayfa",
     "about": "Hakkımda",
-    "research": "Araştırma",
     "publications": "Bilimsel Çalışmalar",
     "scales": "Ölçekler",
     "news": "Haberler",
@@ -154,7 +153,8 @@
     "items_count_singular": "yayın",
     "items_count_plural": "yayın",
     "interest_filter_label": "İlgi alanı filtresi:",
-    "event": "Etkinlik"
+    "event": "Etkinlik",
+    "projects_tab": "Projeler"
   },
   "scales": {
     "title": "Ölçekler & Ölçüm Araçları",

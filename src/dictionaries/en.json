@@ -3,7 +3,6 @@
     "site_name": "Mehmet Peker",
     "home": "Home",
     "about": "About",
-    "research": "Research",
     "publications": "Research Output",
     "scales": "Scales",
     "news": "News",
@@ -154,7 +153,8 @@
     "items_count_singular": "item",
     "items_count_plural": "items",
     "interest_filter_label": "Filtered by interest:",
-    "event": "Event"
+    "event": "Event",
+    "projects_tab": "Projects"
   },
   "scales": {
     "title": "Scales & Measures",
