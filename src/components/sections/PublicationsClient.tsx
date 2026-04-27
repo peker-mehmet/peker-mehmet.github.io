@@ -527,8 +527,8 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
   }), [publications, ongoing, completed]);
 
   const uniqueTypeCount = useMemo(
-    () => new Set(publications.map(p => p.type)).size,
-    [publications]
+    () => new Set(publications.map(p => p.type)).size + (counts.projects > 0 ? 1 : 0),
+    [publications, counts.projects]
   );
 
   const tabFiltered = useMemo(() => {
@@ -615,12 +615,12 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
   const TABS: { id: Tab; label: string; count: number }[] = [
     { id: 'all',           label: dict.all,           count: counts.all },
     { id: 'journal',       label: dict.journal,       count: counts.journal },
+    { id: 'projects',      label: dict.projects_tab,  count: counts.projects },
     { id: 'conference',    label: dict.conference,    count: counts.conference },
     { id: 'books',         label: dict.book,          count: counts.books },
     { id: 'theses',        label: dict.theses,        count: counts.theses },
     { id: 'invited-talks', label: dict.invited_talks, count: counts.invitedTalks },
     { id: 'presentations', label: dict.presentations, count: counts.presentations },
-    { id: 'projects',      label: dict.projects_tab,  count: counts.projects },
   ].filter(t => t.id === 'all' || t.id === 'projects' || t.count > 0) as { id: Tab; label: string; count: number }[];
 
   // ── Render ──────────────────────────────────────────────────────────────────
@@ -632,7 +632,7 @@ export default function PublicationsClient({ publications, lang, ownerName, dict
         <div className="container-main">
           {/* Stat line */}
           <p className="pt-3 pb-0.5 font-body text-xs text-slate-400">
-            <span className="font-semibold text-navy-700">{publications.length}</span>{' '}
+            <span className="font-semibold text-navy-700">{publications.length + counts.projects}</span>{' '}
             {dict.total}{' · '}
             <span className="font-semibold text-navy-700">{uniqueTypeCount}</span>{' '}
             {dict.types}
