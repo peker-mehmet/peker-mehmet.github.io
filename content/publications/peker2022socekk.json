@@ -1,25 +1,33 @@
 {
-  "abstract": {
-    "tr": "Bu bölüm, eylem yönelimi ve durum yönelimi kavramlarını bu kez sosyal ilişkiler açısından ele alıyor. Temel nokta şu: İnsanların niyetlerini hayata geçirme biçimi yalnızca bireysel bir mesele değil; sosyal destek, yakın ilişkiler, değerler ve iş ortamı gibi sosyal bağlamlar da bu süreci etkiliyor. Bölüm, eylem yönelimli olmanın romantik ilişkilerde, iş ilişkilerinde ve sosyal motivasyonlarda daha işlevsel sonuçlarla ilişkili olabileceğini; buna karşılık uygun sosyal koşulların durum yönelimli kişilerin olumsuz etkilerini de azaltabildiğini gösteriyor. Kısacası, bu bölüm öz-denetim süreçlerinin sosyal dünyanın dışında değil, tam içinde işlediğini anlatıyor.",
-    "en": "This chapter looks at action orientation and state orientation from a social perspective. Its main argument is that turning intentions into action is not only an individual matter; social support, close relationships, values, and work environments also shape this process. The chapter shows that action orientation is often linked to more functional outcomes in romantic relationships, workplace interactions, and social motivations, while supportive social conditions can also reduce some of the negative effects associated with state orientation. In short, the chapter argues that self-regulation does not operate outside the social world, but within it."
+  "id": "Peker2022socekk",
+  "type": "book-chapter",
+  "title": {
+    "en": "Action–state orientation in social contexts",
+    "tr": "Sosyal bağlamlarda eylem–durum yönelimi"
   },
-  "book_title": "Ben, diğeri ve biz: Sosyal Psikoloji",
-  "pages": "147–172",
   "authors": [
     "Peker, M."
   ],
-  "featured": false,
+  "authors_abbreviated": "",
+  "year": 2022,
+  "journal": "",
+  "conference": "",
+  "publisher": "Nobel Publishing",
+  "book_title": "Ben, diğeri ve biz: Sosyal Psikoloji",
+  "editors": [
+    "M. B. Bulut"
+  ],
+  "volume": "",
+  "issue": "",
+  "pages": "147–172",
   "url": "https://www.nobelyayin.com/ben-digeri-ve-biz-sosyal-psikoloji-18567.html",
-  "title": {
-    "tr": "Sosyal bağlamlarda eylem–durum yönelimi",
-    "en": "Action–state orientation in social contexts"
+  "abstract": {
+    "en": "This chapter looks at action orientation and state orientation from a social perspective. Its main argument is that turning intentions into action is not only an individual matter; social support, close relationships, values, and work environments also shape this process. The chapter shows that action orientation is often linked to more functional outcomes in romantic relationships, workplace interactions, and social motivations, while supportive social conditions can also reduce some of the negative effects associated with state orientation. In short, the chapter argues that self-regulation does not operate outside the social world, but within it.",
+    "tr": "Bu bölüm, eylem yönelimi ve durum yönelimi kavramlarını bu kez sosyal ilişkiler açısından ele alıyor. Temel nokta şu: İnsanların niyetlerini hayata geçirme biçimi yalnızca bireysel bir mesele değil; sosyal destek, yakın ilişkiler, değerler ve iş ortamı gibi sosyal bağlamlar da bu süreci etkiliyor. Bölüm, eylem yönelimli olmanın romantik ilişkilerde, iş ilişkilerinde ve sosyal motivasyonlarda daha işlevsel sonuçlarla ilişkili olabileceğini; buna karşılık uygun sosyal koşulların durum yönelimli kişilerin olumsuz etkilerini de azaltabildiğini gösteriyor. Kısacası, bu bölüm öz-denetim süreçlerinin sosyal dünyanın dışında değil, tam içinde işlediğini anlatıyor."
   },
   "tags": [
     "Action–State Orientation",
     "Well-Being in Work and Life"
   ],
-  "type": "book-chapter",
-  "id": "Peker2022socekk",
-  "publisher": "Nobel Publishing",
-  "year": 2022
+  "featured": false
 }
