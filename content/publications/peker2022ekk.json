@@ -1,24 +1,34 @@
 {
-  "abstract": {
-    "tr": "Bu bölüm, insanların bir şeyi gerçekten istemelerine rağmen neden bazen harekete geçemediklerini açıklayan Eylem Kontrolü Kuramını tanıtıyor. Temel fikir, bir hedefi istemekle onu başlatıp sürdürebilmenin aynı şey olmadığı; yani motivasyonun yanında güçlü bir öz-denetim ve “eyleme geçirme” sürecine de ihtiyaç olduğudur. Bölüm ayrıca eylem yönelimi ve durum yönelimi ayrımını, duyguların ve benlik süreçlerinin bu mekanizmaları nasıl etkilediğini ve kuramın eğitimden işe, klinik alandan spora kadar pek çok alanda neden önemli olduğunu açıklıyor. Kısacası, bu bölüm niyet ile davranış arasındaki boşluğu anlamak için kapsamlı bir çerçeve sunuyor.",
-    "en": "This chapter introduces Action Control Theory, which explains why people sometimes fail to act even when they genuinely want to. Its core idea is that wanting a goal and being able to start and maintain action toward that goal are not the same thing; motivation alone is often not enough without strong self-regulation and volitional control. The chapter also explains the distinction between action orientation and state orientation, shows how emotions and self-related processes shape these mechanisms, and highlights why the theory matters across fields such as education, work, clinical psychology, and sport. In short, the chapter offers a broad framework for understanding the gap between intention and action."
+  "id": "Peker2022ekk",
+  "type": "book-chapter",
+  "title": {
+    "en": "Action Control Theory",
+    "tr": "Eylem Kontrolü Kuramı"
   },
-  "book_title": "Sosyal psikoloji kuramları III",
-  "pages": "121–150",
   "authors": [
     "Peker, M."
   ],
-  "featured": false,
+  "authors_abbreviated": "",
+  "year": 2022,
+  "journal": "",
+  "conference": "",
+  "publisher": "Nobel Publishing",
+  "book_title": "Sosyal psikoloji kuramları III",
+  "editors": [
+    "M. B. Bulut"
+  ],
+  "volume": "",
+  "issue": "",
+  "pages": "121–150",
+  "doi": "",
   "url": "https://www.nobelyayin.com/sosyal-psikoloji-kuramlari-iii-19066.html",
-  "title": {
-    "en": "Action Control Theory",
-    "tr": "Eylem Kontrolü Kuramı "
+  "pdf": "",
+  "abstract": {
+    "en": "This chapter introduces Action Control Theory, which explains why people sometimes fail to act even when they genuinely want to. Its core idea is that wanting a goal and being able to start and maintain action toward that goal are not the same thing; motivation alone is often not enough without strong self-regulation and volitional control. The chapter also explains the distinction between action orientation and state orientation, shows how emotions and self-related processes shape these mechanisms, and highlights why the theory matters across fields such as education, work, clinical psychology, and sport. In short, the chapter offers a broad framework for understanding the gap between intention and action.",
+    "tr": "Bu bölüm, insanların bir şeyi gerçekten istemelerine rağmen neden bazen harekete geçemediklerini açıklayan Eylem Kontrolü Kuramını tanıtıyor. Temel fikir, bir hedefi istemekle onu başlatıp sürdürebilmenin aynı şey olmadığı; yani motivasyonun yanında güçlü bir öz-denetim ve “eyleme geçirme” sürecine de ihtiyaç olduğudur. Bölüm ayrıca eylem yönelimi ve durum yönelimi ayrımını, duyguların ve benlik süreçlerinin bu mekanizmaları nasıl etkilediğini ve kuramın eğitimden işe, klinik alandan spora kadar pek çok alanda neden önemli olduğunu açıklıyor. Kısacası, bu bölüm niyet ile davranış arasındaki boşluğu anlamak için kapsamlı bir çerçeve sunuyor."
   },
   "tags": [
     "Action–State Orientation"
   ],
-  "type": "book-chapter",
-  "id": "Peker2022ekk",
-  "publisher": "Nobel Publishing",
-  "year": 2022
+  "featured": false
 }
