@@ -72,11 +72,11 @@ This is a personal academic website showcasing research, publications, scales/in
 │   │       ├── layout.tsx      # Locale layout (Navbar + Footer)
 │   │       ├── page.tsx        # Home page
 │   │       ├── about/          # About page (bio, education, interests, languages)
-│   │       ├── publications/   # Publications list with filters
+│   │       ├── publications/   # Publications + Projects tab (filters, search, year)
 │   │       ├── scales/
 │   │       │   ├── page.tsx    # Scales list grouped by role
 │   │       │   └── [id]/       # Individual scale detail page
-│   │       ├── research/       # Research projects (active/planned/completed)
+│   │       ├── research/       # Client-side redirect → /publications?tab=projects
 │   │       ├── news/           # News feed with category filter
 │   │       ├── collaborations/ # Collaboration cards with stats bar
 │   │       ├── teaching/       # Courses + supervision + office hours
@@ -94,7 +94,8 @@ This is a personal academic website showcasing research, publications, scales/in
 │   │   │   ├── Highlights.tsx
 │   │   │   ├── NewsSection.tsx / NewsClient.tsx
 │   │   │   ├── PublicationsClient.tsx
-│   │   │   ├── ResearchClient.tsx
+│   │   │   ├── ProjectsTab.tsx     # Projects tab inside PublicationsClient
+│   │   │   ├── ResearchClient.tsx  # Project cards logic (used by ProjectsTab)
 │   │   │   ├── ScalesClient.tsx
 │   │   │   ├── SocialBar.tsx
 │   │   │   └── ContactForm.tsx
@@ -196,10 +197,10 @@ Full palettes: `navy`, `gold`, `warm`, `slate` — all defined in `tailwind.conf
 | `/` | `src/app/page.tsx` | — (redirects to `/tr/`, handles identity tokens) |
 | `/[lang]/` | `src/app/[lang]/page.tsx` | `getSiteConfig()`, `getPublications()`, `getProjects()`, `getScales()`, `getNewsItems()` |
 | `/[lang]/about` | `src/app/[lang]/about/page.tsx` | `getSiteConfig()` |
-| `/[lang]/publications` | `src/app/[lang]/publications/page.tsx` | `getPublications()` |
+| `/[lang]/publications` | `src/app/[lang]/publications/page.tsx` | `getPublications()`, `getProjects()` — publications list with type tabs + a "Projeler/Projects" tab that renders project cards |
 | `/[lang]/scales` | `src/app/[lang]/scales/page.tsx` | `getScales()` (grouped by role: developed → adapted → translated) |
 | `/[lang]/scales/[id]` | `src/app/[lang]/scales/[id]/page.tsx` | `getScales()` (single scale detail) |
-| `/[lang]/research` | `src/app/[lang]/research/page.tsx` | `getProjects()` |
+| `/[lang]/research` | `src/app/[lang]/research/page.tsx` | — (client-side redirect to `/[lang]/publications?tab=projects`; kept for backwards-compat with external links) |
 | `/[lang]/news` | `src/app/[lang]/news/page.tsx` | `getNewsItems()` |
 | `/[lang]/collaborations` | `src/app/[lang]/collaborations/page.tsx` | `getCollaborations()` |
 | `/[lang]/teaching` | `src/app/[lang]/teaching/page.tsx` | `getTeachingData()` |
@@ -207,8 +208,14 @@ Full palettes: `navy`, `gold`, `warm`, `slate` — all defined in `tailwind.conf
 
 **Client vs server components:**
 - Most pages are server components (no `'use client'`).
-- Interactive pages use a client component for their dynamic parts: `PublicationsClient.tsx`, `ResearchClient.tsx`, `ScalesClient.tsx`, `NewsClient.tsx`, `ContactForm.tsx`.
+- Interactive pages use a client component for their dynamic parts: `PublicationsClient.tsx`, `ProjectsTab.tsx`, `ResearchClient.tsx`, `ScalesClient.tsx`, `NewsClient.tsx`, `ContactForm.tsx`.
 - The server page passes pre-fetched data + dictionary as props to the client component.
+
+**Publications page tab system:**
+- `PublicationsClient.tsx` renders a sticky tab bar. Tabs for publication types (journal, conference, etc.) are shown only when they have content (`count > 0`). The "Projeler/Projects" tab is always shown.
+- When the "Projeler" tab is active, the search/year filter bar is hidden and `ProjectsTab.tsx` renders instead of the publications list.
+- `ProjectsTab.tsx` is a thin wrapper around `ResearchClient.tsx`, which contains the actual project card and collaborators grid logic.
+- The active tab can be set via the `?tab=` URL query parameter (e.g. `?tab=projects`). This is how the `/research` redirect lands on the correct tab.
 
 ---
 
@@ -278,6 +285,12 @@ Output goes to `/out/`. Always run this locally before pushing to catch errors e
 - Netlify Identity email links (password reset, invitations) land on the root `/` with a hash like `#recovery_token=xxx`.
 - The root `app/page.tsx` is a client component that detects these tokens and redirects to `/admin/` + hash before doing the normal `/tr/` redirect.
 - `public/admin/index.html` also logs token detection so the Netlify Identity widget can handle it.
+
+### Research page merged into Publications as a tab
+- **Change:** The standalone "Araştırma / Research" nav item was removed. Research projects now live as a "Projeler / Projects" tab inside the Bilimsel Çalışmalar / Research Output page (`/[lang]/publications`).
+- **Redirect:** `/[lang]/research/page.tsx` was converted to a client-side redirect (`router.replace`) pointing to `/[lang]/publications?tab=projects`. This preserves any external links (Google Scholar profiles, CV PDFs, etc.) without producing a 404.
+- **Component chain:** `PublicationsClient` → `ProjectsTab` → `ResearchClient`. Do not delete `ResearchClient.tsx` — it is still the source of all project card and collaborators grid logic.
+- **Nav:** `research` was removed from `NavDict` in `Navbar.tsx`, `FooterDict.nav` in `Footer.tsx`, and the legacy `Header.tsx`. It was also removed from both dictionaries' `nav` object. The `"research": { ... }` section block in the dictionaries was intentionally kept — it is still consumed by `ResearchClient` via `dict.research`.
 
 ### `public/index.html` vs Next.js generated root
 - A `public/index.html` exists as a fallback redirect handler.
