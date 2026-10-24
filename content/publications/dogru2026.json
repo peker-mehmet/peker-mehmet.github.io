@@ -1,0 +1,32 @@
+{
+  "id": "dogru2026",
+  "type": "journal",
+  "title": {
+    "en": "Behavior Change Techniques Taxonomy: Turkish Translation and Use in Psychological Research",
+    "tr": "Davranış Değiştirme Teknikleri Taksonomisi: Türkçe Çevirisi ve Psikoloji Araştırmalarında Kullanımı"
+  },
+  "authors": [],
+  "authors_abbreviated": "Doğru, O. C., Peker, M., & Yavaşlar-Doğru, Y.",
+  "year": 2026,
+  "journal": "Turkish Psychological Articles",
+  "conference": "",
+  "publisher": "",
+  "book_title": "",
+  "editors": [],
+  "volume": "29",
+  "issue": "56",
+  "pages": "45-87",
+  "doi": "10.31828/tpy13019979",
+  "url": "",
+  "pdf": "",
+  "abstract": {
+    "en": "Various behavior change techniques are used to help people become more physically active, reduce aggression, or follow workplace safety rules. However, describing the same techniques using different terms can make studies difficult to compare and interventions difficult to replicate. In this study, we translated the Behavior Change Techniques Taxonomy v1—a system that defines and classifies these techniques using a shared language—into Turkish. Using examples involving physical activity, aggression among young people, and workplace safety, we illustrated how techniques can be identified and used in interventions. We also discussed the system’s limitations and practical considerations for its use. The study aims to help researchers and practitioners describe behavior change interventions more clearly and consistently, making it easier to compare and build on their work.",
+    "tr": "İnsanların daha fazla hareket etmesini, saldırgan davranışlarını azaltmasını veya iş yerinde güvenlik kurallarına uymasını desteklemek için çeşitli davranış değiştirme teknikleri kullanılır. Ancak aynı tekniklerin farklı adlarla tanımlanması, çalışmaların karşılaştırılmasını ve uygulamaların tekrarlanmasını zorlaştırabilir. Bu çalışmada, bu teknikleri ortak bir dil altında tanımlayan ve sınıflandıran Davranış Değiştirme Teknikleri Taksonomisi v1’i Türkçeye kazandırdık. Fiziksel aktivite, gençlerde saldırganlık ve iş güvenliği örnekleri üzerinden, tekniklerin müdahalelerde nasıl belirlenip kullanılabileceğini gösterdik. Ayrıca sistemin sınırlılıklarını ve kullanımında dikkat edilmesi gereken noktaları ele aldık. Çalışma, araştırmacıların ve uygulayıcıların davranış değiştirme müdahalelerini daha açık, tutarlı ve karşılaştırılabilir biçimde tanımlamalarını desteklemeyi amaçlıyor."
+  },
+  "tags": [
+    "Öz-Düzenleme ve Duygu Düzenleme",
+    "İşte ve Yaşamda İyi Oluş",
+    "Ölçme"
+  ],
+  "featured": false
+}
