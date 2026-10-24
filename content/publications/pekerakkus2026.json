@@ -16,13 +16,21 @@
   "publisher": "",
   "book_title": "",
   "editors": [],
-  "volume": "",
+  "volume": "262",
   "issue": "",
-  "pages": "",
+  "pages": "113966",
   "doi": "https://doi.org/10.1016/j.paid.2026.113966",
   "url": "",
   "pdf": "",
-  "abstract": null,
-  "tags": [],
+  "abstract": {
+    "en": "People often turn to others to help manage difficult emotions. But do depressive symptoms increase this tendency, and does turning to others predict a reduction in symptoms over time? We assessed 492 adults three times over six months to examine these relationships. People with higher depressive symptoms subsequently became more likely to turn to others to regulate their emotions. However, neither how often they did so nor how helpful they perceived it to be predicted later changes in depressive symptoms. Depressive symptoms also did not predict changes in how helpful people found this support. These findings suggest that depressive symptoms may prompt greater interpersonal support-seeking, but seeking support more often does not necessarily translate into symptom improvement.",
+    "tr": "İnsanlar zorlayıcı duygularıyla başa çıkmak için sıklıkla başkalarına yönelir. Peki, depresif belirtiler bu yönelimi artırır mı ve başkalarına yönelmek zamanla belirtilerin azalmasını sağlar mı? Bu çalışmada, 492 yetişkini altı ay boyunca üç kez değerlendirerek bu ilişkileri inceledik. Depresif belirtileri daha yüksek olan kişilerin, zaman içinde duygularını düzenlemek için başkalarına daha fazla yöneldiğini bulduk. Ancak başkalarına yönelme sıklığı ve bunu ne kadar yararlı buldukları, depresif belirtilerde sonraki değişimleri öngörmedi. Depresif belirtiler de başkalarından alınan yardımın ne kadar yararlı bulunduğundaki değişimi öngörmedi. Bulgular, depresif belirtilerin kişilerarası destek arayışını artırabileceğini, ancak bu arayışın tek başına belirtilerin azalacağı anlamına gelmediğini gösteriyor."
+  },
+  "tags": [
+    "Self-Regulation and Emotion Regulation",
+    "Emotions and Affect",
+    "Longitudinal Research Methods",
+    "Well-Being in Work and Life"
+  ],
   "featured": false
 }
